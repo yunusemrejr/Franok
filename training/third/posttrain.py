@@ -31,24 +31,24 @@ def log(**fields):
 def losses(model, x, y, preference=False, opening=None):
     device = model.embed.weight.device
     x = torch.as_tensor(x, device=device)
-    y = torch.as_tensor(y, device=device)
+    labels = torch.as_tensor(y)
+    # Index on the host when minibatches originate in NumPy. A vocabulary
+    # projection for a prompt or padding position has zero supervised gradient.
+    rows, positions = torch.where(labels != -100)
+    targets = labels[rows, positions].to(device)
+    counts = torch.bincount(rows, minlength=x.shape[0]).to(device)
+    rows, positions = rows.to(device), positions.to(device)
     with torch.autocast(
         device.type, enabled=device.type == "cuda", dtype=torch.bfloat16
     ):
-        features = None
-        if preference:
-            states = model.hidden(x)
-            features = labelled_states(states, y, opening)
-            logits = F.linear(states, model.embed.weight)
-        else:
-            logits = model(x)
-        flat = F.cross_entropy(
-            logits.flatten(0, 1), y.flatten(), ignore_index=-100, reduction="none"
+        states = model.hidden(x)
+        features = (
+            labelled_states(states, labels.to(device), opening) if preference else None
         )
-        token = flat.view_as(y)
-        counts = (y != -100).sum(1)
-        per = token.sum(1) / counts.clamp_min(1)
-        # A terse correct answer gets its own training weight alongside a long reply.
+        logits = F.linear(states[rows, positions], model.embed.weight)
+        token = F.cross_entropy(logits, targets, reduction="none")
+        sums = token.new_zeros(x.shape[0]).index_add(0, rows, token)
+        per = sums / counts.clamp_min(1)
         positive = 0.5 * (per.mean() + token.sum() / counts.sum().clamp_min(1))
     return positive, per, features
 

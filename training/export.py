@@ -9,19 +9,31 @@ import numpy as np
 from safetensors import safe_open
 
 
-def quantize_grouped(group, bits, optimize, importance=None):
+def quantize_grouped(group, bits, optimize, importance=None, full_range=False):
     """Minimize squared weight error over several scale candidates per group of 32."""
     metric = 1.0 if importance is None else importance
     limit = 2 ** (bits - 1) - 1
+    # The signed scale can place the extra negative code on the larger extreme.
+    # Existing runtimes already read four-bit codes as -8 through +7.
+    sign = 1.0
+    low = -limit
+    if full_range:
+        if bits != 4 or not optimize:
+            raise ValueError("Full-range fitting requires Q4 least squares")
+        minimum = group.min(1, keepdims=True)
+        maximum = group.max(1, keepdims=True)
+        sign = np.where(-minimum >= maximum, np.float32(1), np.float32(-1))
+        group = group * sign
+        low = -8
     initial = np.maximum(np.max(np.abs(group), axis=1, keepdims=True) / limit, 1e-12)
     scale = initial
-    ints = np.rint(group / scale).clip(-limit, limit)
+    ints = np.rint(group / scale).clip(low, limit)
     if bits == 4 and optimize:
         best = np.sum(metric * (group - scale * ints) ** 2, axis=1, keepdims=True)
         for fraction in (1.0, 0.88, 0.76):
             step = initial * fraction
             for _ in range(2):
-                candidate = np.rint(group / step).clip(-limit, limit)
+                candidate = np.rint(group / step).clip(low, limit)
                 # Least-squares scale for a fixed set of codes. Zero groups retain a finite scale.
                 step = np.maximum(
                     np.sum(metric * candidate * group, axis=1, keepdims=True)
@@ -37,14 +49,47 @@ def quantize_grouped(group, bits, optimize, importance=None):
                 scale = np.where(take, step, scale)
                 ints = np.where(take, candidate, ints)
                 best = np.minimum(best, error)
-    return scale.astype("<f4"), ints.astype("int8")
+    return (scale * sign).astype("<f4"), ints.astype("int8")
 
 
-def export(run, out, tokenizer, bits=4, optimize=True, calibration=None):
+def refine_block(group, scale, codes, covariance, low):
+    """Minimize estimated output error using correlations within each 32-weight group."""
+    q = codes.astype("float32")
+    error = group / scale - q
+    gradient = np.einsum("bi,bij->bj", error, covariance)
+    for column in range(group.shape[1]):
+        ideal = q[:, column] + gradient[:, column] / covariance[:, column, column]
+        moved = np.rint(ideal).clip(low, 7) - q[:, column]
+        indices = np.flatnonzero(moved)
+        q[indices, column] += moved[indices]
+        gradient[indices] -= moved[indices, None] * covariance[indices, column]
+    projected = np.einsum("bi,bij->bj", q, covariance)
+    denominator = (projected * q).sum(1, keepdims=True)
+    np.divide(
+        (projected * group).sum(1, keepdims=True),
+        denominator,
+        out=scale,
+        where=denominator > 1e-12,
+    )
+    return scale, q.astype("int8")
+
+
+def export(
+    run,
+    out,
+    tokenizer,
+    bits=4,
+    optimize=True,
+    calibration=None,
+    full_range=False,
+    covariance=False,
+):
     if bits not in (4, 8):
         raise ValueError("Supported weight widths are 4 and 8")
     if calibration is not None and (bits != 4 or not optimize):
         raise ValueError("Activation weighting requires a least-squares Q4 export")
+    if covariance and calibration is None:
+        raise ValueError("Supply a measured block-covariance calibration")
     out.mkdir(parents=True, exist_ok=True)
     weights = out / f"model.q{bits}"
     catalog = {}
@@ -73,6 +118,14 @@ def export(run, out, tokenizer, bits=4, optimize=True, calibration=None):
                     ):
                         raise ValueError("Invalid channel importance for " + key)
                     metric = metric.reshape(banks, groups_per_row, 32)
+                cov = None
+                if covariance:
+                    cov = calibration[key + ".cov32"]
+                    if (
+                        cov.shape != (banks, groups_per_row, 32, 32)
+                        or not np.isfinite(cov).all()
+                    ):
+                        raise ValueError("Invalid block covariance for " + key)
                 for first in range(0, len(blocks), 32768):
                     group = blocks[first : first + 32768].astype("float32")
                     weights_for_groups = None
@@ -81,8 +134,13 @@ def export(run, out, tokenizer, bits=4, optimize=True, calibration=None):
                         bank = indices // (a.shape[-2] * groups_per_row)
                         weights_for_groups = metric[bank, indices % groups_per_row]
                     scale, q = quantize_grouped(
-                        group, bits, optimize, weights_for_groups
+                        group, bits, optimize, weights_for_groups, full_range
                     )
+                    if cov is not None:
+                        metric_blocks = cov[bank, indices % groups_per_row]
+                        scale, q = refine_block(
+                            group, scale, q, metric_blocks, -8 if full_range else -7
+                        )
                     if bits == 4:
                         biased = (q + 8).astype("uint8")
                         payload = biased[:, :16] | (biased[:, 16:] << 4)
@@ -118,6 +176,8 @@ def export(run, out, tokenizer, bits=4, optimize=True, calibration=None):
                     if calibration is not None
                     else ("least-squares" if bits == 4 and optimize else "peak")
                 ),
+                full_range=full_range,
+                block_covariance=covariance,
                 config=cfg,
                 tensors=catalog,
                 bytes=weights.stat().st_size,
@@ -146,6 +206,16 @@ if __name__ == "__main__":
         type=Path,
         help="Per-channel importance measured by training.calibration",
     )
+    p.add_argument(
+        "--full-range",
+        action="store_true",
+        help="Fit all sixteen Q4 codes with signed scales",
+    )
+    p.add_argument(
+        "--covariance",
+        action="store_true",
+        help="Fit Q4 codes with measured within-block activation covariance",
+    )
     args = p.parse_args()
     calibration = None
     if args.calibration:
@@ -158,4 +228,6 @@ if __name__ == "__main__":
         args.bits,
         args.scale == "least-squares",
         calibration,
+        args.full_range,
+        args.covariance,
     )

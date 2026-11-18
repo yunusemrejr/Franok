@@ -14,15 +14,28 @@ import json
 
 
 @torch.inference_mode()
-def collect(model, batches):
+def collect(model, batches, block_covariance=False):
     totals = {}
     contexts = {}
+    grams = {}
 
     def add(name, x, mask):
         # First dimension is the bank (one for a shared projection).
         weight = mask[..., None]
         acc = (x.float().square() * weight).sum(1)
         counts = weight.sum(1)
+        if block_covariance:
+            bank, positions, width = x.shape
+            values = (
+                (x.float() * weight)
+                .reshape(bank, positions, width // 32, 32)
+                .transpose(1, 2)
+            )
+            products = values.transpose(-1, -2) @ values
+            if name in grams:
+                grams[name].add_(products)
+            else:
+                grams[name] = products.double()
         if name not in totals:
             totals[name] = (acc.double(), counts.double())
         else:
@@ -98,6 +111,13 @@ def collect(model, batches):
         var = var / var.mean(-1, keepdim=True)
         importance = 0.25 + 0.75 * var
         result[name] = importance.cpu().numpy().astype("float32")
+        if block_covariance:
+            covariance = grams[name] / count[:, :, None, None]
+            # Normalize each bank and shrink its empirical matrix toward the identity.
+            mean = covariance.diagonal(dim1=-2, dim2=-1).mean(dim=(1, 2))
+            covariance = 0.75 * covariance / mean[:, None, None, None].clamp_min(1e-10)
+            covariance.diagonal(dim1=-2, dim2=-1).add_(0.25)
+            result[name + ".cov32"] = covariance.cpu().numpy().astype("float32")
     return result
 
 
@@ -107,6 +127,11 @@ def main():
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--batches", type=int, default=72)
     p.add_argument("--threads", type=int, default=3)
+    p.add_argument(
+        "--block-covariance",
+        action="store_true",
+        help="Also measure within-group channel products",
+    )
     a = p.parse_args()
     torch.set_num_threads(a.threads)
     cfg = Config(**json.loads((a.run / "config.json").read_text()))
@@ -119,7 +144,7 @@ def main():
         for j in range(a.batches):
             yield data.batch(rng, (64, 128, 256, 512)[j % 4], 1024)
 
-    values = collect(model, batches())
+    values = collect(model, batches(), a.block_covariance)
     a.out.parent.mkdir(exist_ok=True, parents=True)
     np.savez(a.out, **values)
     print(len(values), "measured matrices", flush=True)

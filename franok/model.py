@@ -20,10 +20,15 @@ class Config:
     window: int = 256
 
 
-def routing(tokens, layer, banks):
+def routing(tokens, layer, banks, previous_anchor=None):
     """Indices to gather positions in bank order and to undo that gather."""
     groups = tokens.reshape(tokens.shape[0], -1, banks)
-    anchors = F.pad(groups[:, :-1, -1], (1, 0))
+    ends = groups[:, :-1, -1]
+    anchors = (
+        F.pad(ends, (1, 0))
+        if previous_anchor is None
+        else torch.cat((previous_anchor[:, None], ends), 1)
+    )
     rotation = ((anchors >> (layer % 4)) + layer) % banks
     slots = torch.arange(banks, device=tokens.device)
     return (slots - rotation[..., None]) % banks, (slots + rotation[..., None]) % banks
@@ -64,13 +69,14 @@ class Block(nn.Module):
         q, k, v = rope(heads(q), cos, sin), rope(heads(k), cos, sin), heads(v)
         return q, k, v
 
-    def attend(self, x, q, k, v, causal):
+    def attend(self, x, q, k, v, causal, mask=None):
         repeat = self.c.heads // self.c.kv_heads
         attended = F.scaled_dot_product_attention(
             q,
             k.repeat_interleave(repeat, 1),
             v.repeat_interleave(repeat, 1),
             is_causal=causal,
+            attn_mask=mask,
         )
         attention = attended.transpose(1, 2).reshape_as(x)
         projected = self.out(attention)
@@ -78,13 +84,17 @@ class Block(nn.Module):
             projected = projected + self.lora_out(attention)
         return x + projected
 
-    def forward(self, x, routes, cos, sin, cache=None):
+    def forward(self, x, routes, cos, sin, cache=None, history=None, mask=None):
         c = self.c
         b, t, d = x.shape
         q, k, v = self.project_qkv(x, cos, sin)
+        if history is not None:
+            past_k, past_v = history
+            k = torch.cat((past_k.expand(b, -1, -1, -1), k), 2)
+            v = torch.cat((past_v.expand(b, -1, -1, -1), v), 2)
         if cache is not None:
             cache.append((k, v))
-        x = self.attend(x, q, k, v, causal=True)
+        x = self.attend(x, q, k, v, causal=history is None, mask=mask)
         ordered, restore = routes
         # Each bank owns exactly b*t/banks rows, including in the backward pass.
         h = self.post(x).reshape(b, -1, c.banks, d)

@@ -15,6 +15,7 @@ from tokenizers import decoders
 from franok.lora import attach, merge, save_adapter
 from franok.model import Config, Franok
 from franok.preference import ReplyPreference
+from franok.rollout import GroupDecoder
 from .preference import dialogue_source
 from training.extended.rl import reward
 from training.extended.train import save_net
@@ -119,10 +120,18 @@ def main():
     folder = OUT / "dialogue-reward"
     if (folder / "validation.json").exists():
         proof = json.loads((folder / "validation.json").read_text())
-        if all(
-            proof[l]["whole"]["pairs"] >= 32 and proof[l]["whole"]["accuracy"] >= 0.58
-            for l in LANGUAGES
-        ):
+
+        def qualified(values):
+            whole = values["whole"]
+            directional = [values["by_length"][k] for k in ("shorter", "longer")]
+            return (
+                whole["pairs"] >= 32
+                and whole["accuracy"] >= 0.58
+                and all(v["pairs"] >= 8 for v in directional)
+                and np.mean([v["accuracy"] for v in directional]) >= 0.55
+            )
+
+        if all(qualified(proof[l]) for l in LANGUAGES):
             scorer = (
                 ReplyPreference(model.c.width).to(device).eval().requires_grad_(False)
             )
@@ -142,9 +151,8 @@ def main():
         with (OUT / "rl.jsonl").open("a") as f:
             f.write(json.dumps(fields) + "\n")
 
-    def logits(ids):
-        with torch.autocast(device, dtype=torch.bfloat16):
-            values = model(ids).float()
+    def mask_roles(values):
+        values = values.float()
         values[..., 0:2] = -1e9
         values[..., 3:7] = -1e9
         return values
@@ -161,16 +169,19 @@ def main():
             if kind == "dialogue"
             else min(26, max(6, len(tok.encode(answer).ids) + 6))
         )
-        for _ in range(maximum):
-            lp = logits(ids)[:, -1].log_softmax(-1)
-            ids1 = lp.argmax(-1) if greedy else torch.multinomial(lp.exp(), 1)[:, 0]
-            ids1 = torch.where(live, ids1, 2)
-            oldlogs.append(lp.gather(1, ids1[:, None])[:, 0])
-            tokens.append(ids1)
-            live &= ids1 != 2
-            ids = torch.cat((ids, ids1[:, None]), dim=1)
-            if not live.any():
-                break
+        with torch.autocast(device, dtype=torch.bfloat16):
+            decoder = GroupDecoder(model, ids[0], count)
+            for _ in range(maximum):
+                lp = mask_roles(decoder.logits()).log_softmax(-1)
+                ids1 = lp.argmax(-1) if greedy else torch.multinomial(lp.exp(), 1)[:, 0]
+                ids1 = torch.where(live, ids1, 2)
+                oldlogs.append(lp.gather(1, ids1[:, None])[:, 0])
+                tokens.append(ids1)
+                live &= ids1 != 2
+                ids = torch.cat((ids, ids1[:, None]), dim=1)
+                if not live.any():
+                    break
+                decoder.advance(ids1)
         generated = torch.stack(tokens, 1)
         mask = F.pad((generated == 2).cumsum(1)[:, :-1], (1, 0)) == 0
         decoded = [
@@ -237,7 +248,10 @@ def main():
         advantage = (values - values.mean()) / (std + 1e-4)
 
         def logp():
-            lp = logits(ids[:, :-1])[:, -seq.shape[1] :].log_softmax(-1)
+            with torch.autocast(device, dtype=torch.bfloat16):
+                states = model.hidden(ids[:, :-1])[:, -seq.shape[1] :]
+                values = F.linear(states, model.embed.weight)
+            lp = mask_roles(values).log_softmax(-1)
             return lp.gather(-1, seq[:, :, None]).squeeze(-1)
 
         with torch.no_grad():

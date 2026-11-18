@@ -88,6 +88,7 @@ class DialogueReward:
             rng = np.random.default_rng(99157)
             results = Counter()
             intervals = Counter()
+            length_checks = Counter()
             for upper in (128, 256, 512):
                 for _ in range(10):
                     x, y, names = conversations.batch(
@@ -106,11 +107,33 @@ class DialogueReward:
                     for name, cut in [("whole", None), ("opening", 20)]:
                         feat = labelled_states(states, y, cut)
                         good, bad = self.head(feat).chunk(2)
-                        results[name] += int((good > bad).sum())
+                        wins = good > bad
+                        results[name] += int(wins.sum())
                         intervals[name] += len(good)
+                        if name == "whole":
+                            positive, negative = (y != -100).sum(1).chunk(2)
+                            for label, selected in {
+                                "shorter": positive < negative,
+                                "longer": positive > negative,
+                                "similar": (positive - negative).abs() <= 8,
+                            }.items():
+                                length_checks[label + "_wins"] += int(
+                                    (wins & selected).sum()
+                                )
+                                length_checks[label + "_n"] += int(selected.sum())
+
             output[lang] = {
                 k: dict(wins=results[k], pairs=n, accuracy=results[k] / n)
                 for k, n in intervals.items()
+            }
+            output[lang]["by_length"] = {
+                k: dict(
+                    wins=length_checks[k + "_wins"],
+                    pairs=length_checks[k + "_n"],
+                    accuracy=length_checks[k + "_wins"]
+                    / max(1, length_checks[k + "_n"]),
+                )
+                for k in ("shorter", "longer", "similar")
             }
         (self.root / "validation.json").write_text(json.dumps(output, indent=2) + "\n")
         return output

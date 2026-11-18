@@ -46,7 +46,21 @@ def main():
         assert all(p.grad is None for p in model.parameters())
         reward.save()
     score.backward()
-    assert model.embed.weight.grad is not None
+    reduced = {name: param.grad.clone() for name, param in model.named_parameters()}
+    model.zero_grad(set_to_none=True)
+    dense = torch.nn.functional.cross_entropy(
+        model(torch.as_tensor(x)).flatten(0, 1),
+        alias.flatten(),
+        ignore_index=-100,
+        reduction="none",
+    ).view_as(alias)
+    mask = alias != -100
+    reference = 0.5 * ((dense.sum(1) / mask.sum(1)).mean() + dense.sum() / mask.sum())
+    torch.testing.assert_close(score, reference)
+    reference.backward()
+    for name, param in model.named_parameters():
+        torch.testing.assert_close(param.grad, reduced[name], atol=2e-6, rtol=2e-5)
+
     print(
         "Only the reward head learned from detached reply comparisons. The language-model gradient stayed intact."
     )
