@@ -96,6 +96,7 @@ onmessage = async ({ data }) => {
       seconds: (performance.now() - start) / 1000,
       prompt: prompt.ids.length,
       used: prompt.used,
+      shortened: prompt.shortened,
       systemTokens: prompt.systemTokens,
       truncated: prompt.truncated,
     });

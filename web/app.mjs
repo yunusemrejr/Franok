@@ -2,7 +2,7 @@ import { unsupportedOutput, languageNotice } from './language.mjs';
 import { calculate } from './calculator.mjs';
 import { conversationAction } from './conversation.mjs';
 import { diagram } from './diagram.mjs';
-import { retrieve, recallMessage } from './session.mjs';
+import { retrieve, recallMessage, excerpt } from './session.mjs';
 import { defaults, settings } from './config.mjs';
 import { loadSessions, saveSession, saveDraft, removeSession, activeId, setActive } from './store.mjs';
 
@@ -288,7 +288,7 @@ function message(t, index) {
     details.append(summary, description);
     for (const source of t.usage.used || []) {
       const btn = document.createElement('button');
-      btn.textContent = 'Turn ' + (source + 1);
+      btn.textContent = 'Turn ' + (source + 1) + (t.usage.shortened?.includes(source) ? ' · excerpt' : '');
       btn.onclick = () => highlight(source);
       details.append(btn);
     }
@@ -392,6 +392,7 @@ function startWorker() {
         seconds: d.seconds,
         prompt: d.prompt,
         used: d.used,
+        shortened: d.shortened,
         systemTokens: d.systemTokens,
         truncated: d.truncated,
       };
@@ -428,10 +429,11 @@ $('composer').onsubmit = (e) => {
     role: 'user',
     text,
     at: Date.now(),
-    ...(Number.isInteger(current.quote) ? { quote: current.quote } : {}),
+    ...(Number.isInteger(current.quote) ? { quote: current.quote, quoteFocus: current.quoteFocus } : {}),
     ...(Number.isInteger(social?.source) ? { revisit: social.source } : {}),
   });
   delete current.quote;
+  delete current.quoteFocus;
   current.draft = '';
   if (recall || (social?.text && !canonicalGreeting)) {
     current.turns.push({
@@ -554,7 +556,7 @@ for (const id of ['slot', 'anchor', 'layer']) $(id).oninput = diagram;
 $('filter').oninput = history;
 function search() {
   const q = $('query').value.trim(),
-    hits = q ? retrieve(current.turns, q, 20) : [];
+    hits = q ? retrieve(current.turns, q, 20, current.lang) : [];
   const list = $('matches');
   list.replaceChildren();
   if (q && !hits.length) list.textContent = 'No matching turns.';
@@ -563,7 +565,7 @@ function search() {
     row.className = 'matchrow';
     const jump = document.createElement('button'),
       attach = document.createElement('button');
-    jump.textContent = 'Turn ' + (h.index + 1) + ' · ' + h.turn.text.slice(0, 150);
+    jump.textContent = 'Turn ' + (h.index + 1) + ' · ' + excerpt(h.turn.text, h.focus, current.lang, 150);
     jump.onclick = () => {
       $('search').close();
       highlight(h.index);
@@ -573,6 +575,7 @@ function search() {
     attach.setAttribute('aria-label', 'Attach turn ' + (h.index + 1) + ' to next message');
     attach.onclick = () => {
       current.quote = h.index;
+      current.quoteFocus = h.focus;
       save();
       $('search').close();
       paint();
@@ -591,6 +594,7 @@ $('find').onclick = () => {
 $('query').oninput = search;
 $('quotechip').querySelector('button').onclick = () => {
   delete current.quote;
+  delete current.quoteFocus;
   save();
   paint();
 };

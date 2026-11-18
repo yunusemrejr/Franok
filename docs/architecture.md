@@ -51,7 +51,7 @@ Each bank expands 512 features into 2,048. All projections omit bias. The final 
 | **Total** | **314,061,312** |
 | **Parameters on one token's path, including the vocabulary head** | **49,820,160** |
 
-The extended release trains up to 1,024 positions. The first release trained to 256. The application keeps complete saved sessions, retrieves earlier messages by term overlap weighted by inverse document frequency, and bounds their contribution to each prompt. Search returns the original saved turn and lets the user attach it to a new message. An attachment gets prompt budget first and its local citation survives a restart. The source turn stays available in full even when only its first tokens fit the neural window. This application feature can retrieve text older than the neural window. Approximate keyword retrieval can miss paraphrases.
+The extended release trains up to 1,024 positions. The first release trained to 256. The application keeps complete saved sessions, retrieves earlier messages by term overlap weighted by inverse document frequency, and fits them into the space left by the current question and system instructions. Search returns the original saved turn and lets the user attach it to a new message. An attachment gets prompt budget first and its local citation survives a restart. A long attachment includes the passage around the search match. Recent turns stay complete whenever there is room. A long reply keeps its beginning and ending, and its citation is marked as an excerpt. The source turn stays available in full. This application feature can retrieve text older than the neural window. Approximate keyword retrieval can miss paraphrases.
 
 ### Finding an exact quote in a long chat
 

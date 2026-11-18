@@ -82,3 +82,22 @@ assert.match(conversationAction('wdym', [
   { role: 'user', text: 'hi' },
   { role: 'assistant', text: 'An unrelated answer from an earlier version.' },
 ], 'en').text, /You said hello/);
+
+const sentence = 'The last word is coriander.';
+const previous = [{role:'user',text:'Tell me the ingredient.'},{role:'assistant',text:'First, check the recipe. '.repeat(15)+sentence}];
+const preserved=buildPrompt(tok,[...previous,{role:'user',text:'Which was the last word?'}],'en',900,{recall:false});
+const has = (ids,text) => ids.some((_,i) => tok.encode(text).every((b,j) => ids[i+j]===b));
+assert(has(preserved.ids,sentence));
+assert.deepEqual(preserved.shortened,[]);
+const longReply=buildPrompt(tok,[{role:'assistant',text:'First caveat. '+'Example '.repeat(500)+sentence},{role:'user',text:'Last word?'}],'en',400);
+assert(has(longReply.ids,sentence) && has(longReply.ids,'First caveat.'));
+assert.deepEqual(longReply.shortened,[0]);
+const searchText='Genel notlar. '.repeat(260)+'IŞIK numarası K99-71. Gün tamamlandı.';
+const late=[{role:'user',text:searchText},...Array.from({length:50},()=>({role:'user',text:'Genel notlar.'}))];
+const cited=recallMessage('/hatırla genel ışık',late,'tr');
+assert(cited.text.startsWith('Mesaj 1 · ') && cited.text.includes('IŞIK numarası K99-71'));
+const attached=buildPrompt(tok,[...late,{role:'user',text:'Kod neydi?',quote:0,quoteFocus:'ışık'}],'tr',400);
+assert(has(attached.ids,'IŞIK numarası K99-71') && attached.ids.length<=400);
+const short=Array.from({length:12},(_,i)=>({role:i%2?'assistant':'user',text:String(i)}));
+assert.equal(buildPrompt(tok,[...short,{role:'user',text:'Continue.'}],'en',400,{recall:false}).used.length,12);
+console.log('Preserved recent answers and found a late Turkish citation in a long session.');

@@ -1,21 +1,50 @@
 import { defaults, settings } from './config.mjs';
-export const terms = (text) =>
-  text
+const wordPattern = /[\p{L}\p{M}\p{N}]+/gu;
+const normalized = (s, lang) =>
+  s
     .normalize('NFKC')
-    .toLocaleLowerCase('en')
-    .replace(/i\u0307/g, 'i')
-    .match(/[\p{L}\p{N}]+/gu) || [];
-export function retrieve(turns, query, count = 3) {
-  const needles = [...new Set(terms(query))];
-  const docs = turns.map((turn, index) => ({ turn, index, words: new Set(terms(turn.text)) }));
-  const weights = new Map(
-    needles.map((k) => [
-      k,
-      Math.log(1 + (docs.length + 0.5) / (0.5 + docs.filter((d) => d.words.has(k)).length)),
-    ]),
-  );
+    .toLocaleLowerCase(lang === 'tr' ? 'tr' : 'en')
+    .replace(/i\u0307/g, 'i');
+export const terms = (text, lang = 'en') => normalized(text, lang).match(wordPattern) || [];
+const lexicalCache = new WeakMap();
+function indexedWords(turn, lang) {
+  const cached = lexicalCache.get(turn);
+  if (cached && cached.text === turn.text && cached.lang === lang) return cached.words;
+  const words = new Set(terms(turn.text, lang));
+  lexicalCache.set(turn, { text: turn.text, lang, words });
+  return words;
+}
+const locate = (text, term, lang) => {
+  if (!term) return -1;
+  for (const m of text.matchAll(wordPattern)) if (normalized(m[0], lang) === term) return m.index;
+  return -1;
+};
+export function excerpt(text, term, lang, width = 240) {
+  if (text.length <= width) return text;
+  const at = locate(text, term, lang);
+  const start = Math.max(0, Math.min(text.length - width, at - Math.floor(width / 4)));
+  return (start ? '…' : '') + text.slice(start, start + width) + (start + width < text.length ? '…' : '');
+}
+export function retrieve(turns, query, count = 3, lang = 'en') {
+  const needles = [...new Set(terms(query, lang))];
+  if (!needles.length) return [];
+  const docs = turns.map((turn, index) => ({ turn, index, words: indexedWords(turn, lang) }));
+  const weighted = needles
+    .map((term) => ({
+      term,
+      weight: Math.log(1 + (docs.length + 0.5) / (0.5 + docs.filter((d) => d.words.has(term)).length)),
+    }))
+    .sort((a, b) => b.weight - a.weight);
   return docs
-    .map((d) => ({ ...d, score: needles.reduce((s, k) => s + (d.words.has(k) ? weights.get(k) : 0), 0) }))
+    .map((d) => {
+      const matches = weighted.filter((entry) => d.words.has(entry.term));
+      return {
+        turn: d.turn,
+        index: d.index,
+        focus: matches[0]?.term,
+        score: matches.reduce((sum, entry) => sum + entry.weight, 0),
+      };
+    })
     .filter((d) => d.score > 0)
     .sort((a, b) => b.score - a.score || b.index - a.index)
     .slice(0, count);
@@ -33,34 +62,24 @@ export function recallMessage(text, turns, lang) {
           : 'Type /recall followed by a word from an earlier message.',
       sources: [],
     };
-  const messages = turns
-    .map((turn, id) => ({ ...turn, id }))
-    .filter((turn) => turn.role === 'user' && !recallCommand.test(turn.text.trim()));
-  const hits = retrieve(messages, query, 3);
-  const needles = new Set(terms(query));
-  const quotes = hits.map(({ turn }) => {
-    const source = turn.text;
-    const match = Array.from(source.matchAll(/[\p{L}\p{M}\p{N}]+/gu)).find((m) =>
-      needles.has(terms(m[0])[0]),
-    );
-    const start = Math.max(0, (match?.index || 0) - 60);
-    const end = Math.min(source.length, start + 240);
-    return (
-      (lang === 'tr' ? 'Mesaj ' : 'Turn ') +
-      (turn.id + 1) +
-      ' · ' +
-      (start ? '…' : '') +
-      source.slice(start, end) +
-      (end < source.length ? '…' : '')
-    );
+  const sourceIds = [];
+  const messages = turns.filter((turn, index) => {
+    if (turn.role !== 'user' || recallCommand.test(turn.text.trim())) return false;
+    sourceIds.push(index);
+    return true;
   });
+  const hits = retrieve(messages, query, 3, lang);
+  const quotes = hits.map(
+    ({ turn, focus, index }) =>
+      (lang === 'tr' ? 'Mesaj ' : 'Turn ') + (sourceIds[index] + 1) + ' · ' + excerpt(turn.text, focus, lang),
+  );
   return {
     text:
       quotes.join('\n\n') ||
       (lang === 'tr'
         ? 'Önceki mesajlarında eşleşen kelime bulunamadı.'
         : 'No matching words in your earlier messages.'),
-    sources: hits.map(({ turn }) => turn.id),
+    sources: hits.map(({ index }) => sourceIds[index]),
   };
 }
 export function buildPrompt(tok, turns, lang, limit, raw = {}, systemConditioned = true, pinned = []) {
@@ -84,26 +103,72 @@ export function buildPrompt(tok, turns, lang, limit, raw = {}, systemConditioned
   const tail = [3, ...ids.slice(-Math.max(1, cap)), 4];
   let space = limit - prefix.length - tail.length;
   const snippets = [];
-  function take(index, max) {
-    if (space < 5 || snippets.some((s) => s.index === index)) return;
+  function take(index, max, focus) {
+    if (space < 4 || snippets.some((s) => s.index === index)) return;
     const t = turns[index],
       role = t.role === 'user' ? 3 : 4;
-    const span = tok.encode(t.text).slice(0, Math.min(max, space - 2));
+    const budget = Math.min(Math.floor(max), space) - (role === 4 ? 2 : 1);
+    if (budget < 1) return;
+    const all = tok.encode(t.text);
+    let span = all;
+    if (all.length > budget) {
+      const at = locate(t.text, focus, lang);
+      if (at >= 0) {
+        const left = Math.floor(budget / 4);
+        const before = left ? tok.encode(t.text.slice(0, at)).slice(-left) : [];
+        span = [...before, ...tok.encode(t.text.slice(at)).slice(0, budget - before.length)];
+      } else {
+        const gap = tok.encode(' … ');
+        if (budget < gap.length + 6) span = all.slice(-budget);
+        else {
+          const head = Math.floor((budget - gap.length) / 3);
+          span = [...all.slice(0, head), ...gap, ...all.slice(-(budget - head - gap.length))];
+        }
+      }
+    }
     const seq = [role, ...span, ...(role === 4 ? [2] : [])];
-    snippets.push({ index, seq });
+    snippets.push({ index, seq, partial: span.length < all.length });
     space -= seq.length;
   }
-  if (attached) take(current.quote, Math.min(240, Math.ceil(limit / 3)));
-  for (const index of pins) take(index, Math.floor(pinnedBudget / pins.length) - 2);
-  const hist = turns.slice(0, -1),
-    n = Math.min(hist.length, limit > 400 ? 6 : 2);
-  for (let i = hist.length - 1; i >= hist.length - n; i--) take(i, limit > 400 ? 112 : 44);
-  if (config.recall && space >= 5)
-    for (const h of retrieve(hist.slice(0, hist.length - n), current.text, 4)) take(h.index, 96);
+  if (attached) take(current.quote, Math.min(300, Math.ceil(limit / 3)), current.quoteFocus);
+  for (const index of pins) take(index, Math.floor(pinnedBudget / pins.length), undefined);
+  const hist = turns.slice(0, -1);
+  const recentStart = Math.max(0, hist.length - 4);
+  const stop = new Set([
+    'the',
+    'that',
+    'this',
+    'and',
+    'what',
+    'was',
+    'are',
+    'bir',
+    'biraz',
+    'için',
+    'ile',
+    'mı',
+    'mi',
+    'ne',
+  ]);
+  const search = terms(current.text, lang)
+    .filter((word) => word.length >= 3 && !stop.has(word))
+    .join(' ');
+  if (config.recall && search && recentStart && space > 48) {
+    const reserve = Math.min(164, Math.floor(space * 0.19));
+    const hits = retrieve(hist.slice(0, recentStart), search, 2, lang);
+    for (const hit of hits) take(hit.index, reserve / hits.length, hit.focus);
+  }
+  for (let i = hist.length - 1; i >= Math.max(0, hist.length - 24) && space >= 4; i--) {
+    // Preserve room for the question preceding a long assistant reply.
+    const keep =
+      i > 0 && hist[i].role === 'assistant' && i >= recentStart ? Math.min(160, Math.floor(space * 0.28)) : 0;
+    take(i, space - keep, undefined);
+  }
   const ordered = snippets.sort((a, b) => a.index - b.index);
   return {
     ids: [...prefix, ...ordered.flatMap((s) => s.seq), ...tail],
     used: ordered.map((s) => s.index),
+    shortened: ordered.filter((s) => s.partial).map((s) => s.index),
     systemTokens: Math.max(0, prefix.length - 3),
     truncated: ids.length > cap,
   };
