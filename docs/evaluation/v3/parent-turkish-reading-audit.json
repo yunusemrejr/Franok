@@ -1,0 +1,1 @@
+{"train": {"total": 99502, "contains_record_code": 99502, "answer_is_record_code": 19910, "question_asks_record_code": 19910}, "val": {"total": 498, "contains_record_code": 498, "answer_is_record_code": 90, "question_asks_record_code": 90}}
