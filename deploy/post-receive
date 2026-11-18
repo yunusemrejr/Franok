@@ -2,7 +2,7 @@
 set -euo pipefail
 root="$HOME/franok.yunusemrevurgun.com"
 mkdir -p "$root/r"
-while read -r old rev ref; do
+while read -r _ rev ref; do
   [[ "$ref" == refs/heads/main ]] || continue
   [[ "$rev" == "$(git rev-parse refs/heads/main)" ]] || continue
   stage=$(mktemp -d "$root/r/.incoming-XXXXXXXX")

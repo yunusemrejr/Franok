@@ -1,0 +1,44 @@
+{
+  "files": {
+    "en": [
+      "wikimedia/wikipedia",
+      "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "20231101.en/train-00000-of-00041.parquet"
+    ],
+    "tr": [
+      "wikimedia/wikipedia",
+      "b04c8d1ceb2f5cd4588862100d08de323dccfbaa",
+      "20231101.tr/train-00000-of-00002.parquet"
+    ],
+    "oasst": [
+      "OpenAssistant/oasst1",
+      "fdf72ae0827c1cda404aff25b6603abec9e3399b",
+      "data/train-00000-of-00001-b42a775f407cee45.parquet"
+    ],
+    "dolly": [
+      "databricks/databricks-dolly-15k",
+      "bdd27f4d94b9c1f951818a7da7fd7aeea5dbff1a",
+      "databricks-dolly-15k.jsonl"
+    ],
+    "instructions": [
+      "merve/turkish_instructions",
+      "ed3381a23d9328b02054456d8ca5bdc157f617d5",
+      "instructions.csv"
+    ],
+    "reading": [
+      "GoktugD/turkish-extractive-qa-1.5m",
+      "8d1453c6643e6c76d6ecae9a63094f47748b474b",
+      "data/train-00000-of-00015.parquet"
+    ]
+  },
+  "tokens": {
+    "train-tr-text": 29243450,
+    "train-en-chat": 6692790,
+    "train-tr-chat": 5907217,
+    "train-en-text": 29925506,
+    "val-tr-chat": 60105,
+    "val-en-chat": 70857,
+    "val-tr-text": 307766,
+    "val-en-text": 359032
+  }
+}

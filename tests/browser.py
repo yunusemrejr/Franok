@@ -1,7 +1,7 @@
 """Run full chat, session persistence, search, diagram, and mobile layout checks."""
 import argparse,json,time
 from pathlib import Path
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright,expect
 
 def verify(page,url,folder):
     issues=[]
@@ -18,7 +18,7 @@ def verify(page,url,folder):
     page.locator("#draft").fill("Merhaba! İzmir hakkında bir cümle yaz.")
     start=time.monotonic()
     page.locator("#send").click()
-    page.wait_for_function("!document.querySelector('#send').disabled",timeout=240000)
+    expect(page.locator("#send")).to_be_enabled(timeout=240000)
     status=page.locator("#status").inner_text()
     assert "Generated locally" in status,(status,issues)
     reply=page.locator(".message.assistant p").last.inner_text()

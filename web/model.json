@@ -1,0 +1,682 @@
+{
+  "format": "franok-q4-v1",
+  "config": {
+    "vocab": 8192,
+    "width": 512,
+    "layers": 12,
+    "heads": 8,
+    "kv_heads": 2,
+    "hidden": 2048,
+    "banks": 8,
+    "window": 256
+  },
+  "tensors": {
+    "blocks.0.down": {
+      "offset": 0,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.0.out.weight": {
+      "offset": 5242880,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.0.post.weight": {
+      "offset": 5406720,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.0.pre.weight": {
+      "offset": 5408768,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.0.qkv.weight": {
+      "offset": 5410816,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.0.up": {
+      "offset": 5656576,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.1.down": {
+      "offset": 16142336,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.1.out.weight": {
+      "offset": 21385216,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.1.post.weight": {
+      "offset": 21549056,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.1.pre.weight": {
+      "offset": 21551104,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.1.qkv.weight": {
+      "offset": 21553152,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.1.up": {
+      "offset": 21798912,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.10.down": {
+      "offset": 32284672,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.10.out.weight": {
+      "offset": 37527552,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.10.post.weight": {
+      "offset": 37691392,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.10.pre.weight": {
+      "offset": 37693440,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.10.qkv.weight": {
+      "offset": 37695488,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.10.up": {
+      "offset": 37941248,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.11.down": {
+      "offset": 48427008,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.11.out.weight": {
+      "offset": 53669888,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.11.post.weight": {
+      "offset": 53833728,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.11.pre.weight": {
+      "offset": 53835776,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.11.qkv.weight": {
+      "offset": 53837824,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.11.up": {
+      "offset": 54083584,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.2.down": {
+      "offset": 64569344,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.2.out.weight": {
+      "offset": 69812224,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.2.post.weight": {
+      "offset": 69976064,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.2.pre.weight": {
+      "offset": 69978112,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.2.qkv.weight": {
+      "offset": 69980160,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.2.up": {
+      "offset": 70225920,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.3.down": {
+      "offset": 80711680,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.3.out.weight": {
+      "offset": 85954560,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.3.post.weight": {
+      "offset": 86118400,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.3.pre.weight": {
+      "offset": 86120448,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.3.qkv.weight": {
+      "offset": 86122496,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.3.up": {
+      "offset": 86368256,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.4.down": {
+      "offset": 96854016,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.4.out.weight": {
+      "offset": 102096896,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.4.post.weight": {
+      "offset": 102260736,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.4.pre.weight": {
+      "offset": 102262784,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.4.qkv.weight": {
+      "offset": 102264832,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.4.up": {
+      "offset": 102510592,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.5.down": {
+      "offset": 112996352,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.5.out.weight": {
+      "offset": 118239232,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.5.post.weight": {
+      "offset": 118403072,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.5.pre.weight": {
+      "offset": 118405120,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.5.qkv.weight": {
+      "offset": 118407168,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.5.up": {
+      "offset": 118652928,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.6.down": {
+      "offset": 129138688,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.6.out.weight": {
+      "offset": 134381568,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.6.post.weight": {
+      "offset": 134545408,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.6.pre.weight": {
+      "offset": 134547456,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.6.qkv.weight": {
+      "offset": 134549504,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.6.up": {
+      "offset": 134795264,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.7.down": {
+      "offset": 145281024,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.7.out.weight": {
+      "offset": 150523904,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.7.post.weight": {
+      "offset": 150687744,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.7.pre.weight": {
+      "offset": 150689792,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.7.qkv.weight": {
+      "offset": 150691840,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.7.up": {
+      "offset": 150937600,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.8.down": {
+      "offset": 161423360,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.8.out.weight": {
+      "offset": 166666240,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.8.post.weight": {
+      "offset": 166830080,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.8.pre.weight": {
+      "offset": 166832128,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.8.qkv.weight": {
+      "offset": 166834176,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.8.up": {
+      "offset": 167079936,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.9.down": {
+      "offset": 177565696,
+      "bytes": 5242880,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q4"
+    },
+    "blocks.9.out.weight": {
+      "offset": 182808576,
+      "bytes": 163840,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.9.post.weight": {
+      "offset": 182972416,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.9.pre.weight": {
+      "offset": 182974464,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.9.qkv.weight": {
+      "offset": 182976512,
+      "bytes": 245760,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q4"
+    },
+    "blocks.9.up": {
+      "offset": 183222272,
+      "bytes": 10485760,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q4"
+    },
+    "embed.weight": {
+      "offset": 193708032,
+      "bytes": 2621440,
+      "shape": [
+        8192,
+        512
+      ],
+      "type": "q4"
+    },
+    "norm.weight": {
+      "offset": 196329472,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    }
+  },
+  "bytes": 196331520,
+  "sha256": "cbd7161f6862a19e29ddb3158becc513f3afa9f64080d327b00a97831fb2fe11"
+}

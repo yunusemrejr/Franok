@@ -1,0 +1,38 @@
+{
+  "slices": [
+    "English text",
+    "English chat",
+    "Turkish text",
+    "Turkish chat"
+  ],
+  "results": [
+    {
+      "tokens": 48,
+      "fp_nll": 4.0510632584726345,
+      "q4_nll": 4.124082027614017,
+      "top1_agreement": 0.8958333333333334,
+      "logit_cosine": 0.9973679679017299
+    },
+    {
+      "tokens": 48,
+      "fp_nll": 4.1242697065320355,
+      "q4_nll": 4.1548908130444575,
+      "top1_agreement": 0.9375,
+      "logit_cosine": 0.997085148679457
+    },
+    {
+      "tokens": 48,
+      "fp_nll": 3.7415469050151486,
+      "q4_nll": 3.794434768525424,
+      "top1_agreement": 0.8541666666666666,
+      "logit_cosine": 0.9951933182497285
+    },
+    {
+      "tokens": 48,
+      "fp_nll": 5.030179819978149,
+      "q4_nll": 5.030034288535961,
+      "top1_agreement": 0.8541666666666666,
+      "logit_cosine": 0.9966207619960207
+    }
+  ]
+}
