@@ -75,12 +75,6 @@ if (release.video) {
 }
 if (release.installer) {
   const pkg = { ...release.installer };
-  if (!native) {
-    const proof = await fetch('./installer.json')
-      .then((r) => (r.ok ? r.json() : null))
-      .catch(() => null);
-    if (proof?.file === pkg.file) Object.assign(pkg, proof);
-  }
   $('downloaddeb').href = pkg.url;
   $('packageinfo').textContent =
     'Ubuntu · amd64 · ' + pkg.version + (pkg.bytes ? ' · ' + Math.round(pkg.bytes / 1e6) + ' MB' : '');
@@ -90,6 +84,16 @@ if (release.installer) {
     '. The desktop app downloads the Q8 weights on first use.';
   $('debsha').textContent = pkg.sha256 || '';
   $('debsha').parentElement.hidden = !pkg.sha256;
+  if (!native) {
+    fetch('./installer.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(proof => {
+        if (proof?.file !== pkg.file) return;
+        $('packageinfo').textContent = 'Ubuntu · amd64 · ' + pkg.version + ' · ' + Math.round(proof.bytes / 1e6) + ' MB';
+        $('debsha').textContent = proof.sha256;
+        $('debsha').parentElement.hidden = !proof.sha256;
+      }).catch(() => {});
+  }
 } else {
   $('downloaddeb').textContent = 'Install from source ↗';
   $('downloaddeb').href = 'https://github.com/yunusemrejr/Franok/blob/main/docs/deployment.md#ubuntu';
@@ -742,6 +746,7 @@ $('find').onclick = () => {
   $('search').showModal();
   $('query').focus();
 };
+$('find').disabled = false;
 $('query').oninput = $('semanticSearch').onchange = search;
 $('search').addEventListener('close', () => {
   ++searchSequence;

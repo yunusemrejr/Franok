@@ -86,7 +86,7 @@
             <svg><use href="#menuicon" /></svg></button
           ><span id="viewname">New conversation</span>
           <div class="tools">
-            <button id="find" class="icon" title="Find in session" aria-label="Find in session">
+            <button id="find" disabled class="icon" title="Find in session" aria-label="Find in session">
               <svg><use href="#searchicon" /></svg></button
             ><button id="actions" class="icon" title="Session actions" aria-label="Session actions">
               •••
@@ -335,6 +335,6 @@
         ><button id="reallydelete" class="danger">Delete session</button>
       </div>
     </dialog>
-    <script type="module" src="./app.mjs"></script>
+    <script data-cfasync="false" type="module" src="./app.mjs"></script>
   </body>
 </html>
