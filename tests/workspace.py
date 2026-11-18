@@ -40,6 +40,7 @@ def verify(url):
         a.locator("#controls").click()
         a.locator("#sysprompt").fill("Tek cümle ile cevap ver.")
         a.get_by_role("button", name="Save controls").click()
+        expect(a.locator("#prefs")).not_to_be_visible()
         a.locator("#draft").fill("0,2 + 0,1")
         a.locator("#send").click()
         expect(a.locator(".message.assistant .body p").last).to_have_text("0,3")
@@ -55,6 +56,7 @@ def verify(url):
         assert a.locator("#turn-0").evaluate("e => e.classList.contains('hit')")
         b = ctx.new_page()
         b.goto(url)
+        expect(b.locator("#sessions button[aria-current=true]")).to_be_visible(timeout=30000)
         expect(b.locator("#draft")).to_have_value("")
 
         def rename(page, name):
