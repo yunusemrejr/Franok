@@ -1,0 +1,110 @@
+{
+  "parent": {
+    "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+    "seed": 4419073,
+    "summary": {
+      "en": {
+        "windows": 96,
+        "bytes": 22435,
+        "bits": 35408.71504981289,
+        "bits_per_byte": 1.5782801448545973
+      },
+      "en-web": {
+        "windows": 32,
+        "bytes": 7952,
+        "bits": 13106.990817057858,
+        "bits_per_byte": 1.6482634327286039
+      },
+      "en-web-more": {
+        "windows": 32,
+        "bytes": 7934,
+        "bits": 12743.612906198905,
+        "bits_per_byte": 1.6062027862615207
+      },
+      "en-stories": {
+        "windows": 32,
+        "bytes": 6549,
+        "bits": 9558.11132655614,
+        "bits_per_byte": 1.4594764584755138
+      },
+      "tr": {
+        "windows": 96,
+        "bytes": 31303,
+        "bits": 51913.977447820536,
+        "bits_per_byte": 1.6584345732939507
+      },
+      "tr-web": {
+        "windows": 32,
+        "bytes": 10761,
+        "bits": 18164.33838243763,
+        "bits_per_byte": 1.6879786620609263
+      },
+      "tr-web-more": {
+        "windows": 32,
+        "bytes": 10615,
+        "bits": 18078.17460105911,
+        "bits_per_byte": 1.703078153656063
+      },
+      "tr-stories": {
+        "windows": 32,
+        "bytes": 9927,
+        "bits": 15671.464464323783,
+        "bits_per_byte": 1.5786707428552214
+      }
+    }
+  },
+  "peer": {
+    "weights": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "seed": 4419073,
+    "summary": {
+      "en": {
+        "windows": 96,
+        "bytes": 22435,
+        "bits": 18567.428611835025,
+        "bits_per_byte": 0.8276099225244049
+      },
+      "en-web": {
+        "windows": 32,
+        "bytes": 7952,
+        "bits": 7092.957324453353,
+        "bits_per_byte": 0.891971494523812
+      },
+      "en-web-more": {
+        "windows": 32,
+        "bytes": 7934,
+        "bits": 6853.3748866632795,
+        "bits_per_byte": 0.8637981959494933
+      },
+      "en-stories": {
+        "windows": 32,
+        "bytes": 6549,
+        "bits": 4621.096400718389,
+        "bits_per_byte": 0.7056186289079843
+      },
+      "tr": {
+        "windows": 96,
+        "bytes": 31303,
+        "bits": 62600.26269183622,
+        "bits_per_byte": 1.9998167169867496
+      },
+      "tr-web": {
+        "windows": 32,
+        "bytes": 10761,
+        "bits": 21417.977606174096,
+        "bits_per_byte": 1.9903333896639808
+      },
+      "tr-web-more": {
+        "windows": 32,
+        "bytes": 10615,
+        "bits": 21317.213934136427,
+        "bits_per_byte": 2.0082161030745573
+      },
+      "tr-stories": {
+        "windows": 32,
+        "bytes": 9927,
+        "bits": 19865.07115152568,
+        "bits_per_byte": 2.001115256525202
+      }
+    }
+  }
+}

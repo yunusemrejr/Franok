@@ -56,3 +56,9 @@ In a separate 1,000-turn collection, 24 short notes were mixed with 976 held-out
 ### CPU decoding speed
 
 On one Ryzen 5 7530U, both models ran in PyTorch float32 with three CPU threads and their own tokenizers. Both processed the same UTF-8 continuation at batch size one. After a warm-up, the median of five timed runs put Franok v0.2 at 45–57 tokens/s and SmolLM2-360M-Instruct at 7–10 tokens/s across two prompt lengths per language. Measured in output bytes per second, Franok was 3.5–4.0 times faster on the English text and 10.5–13.6 times faster on the Turkish text. The Turkish continuations require different token counts with the two vocabularies. These figures describe warm, teacher-forced decoding on this CPU. [Benchmark and exact texts](../../../tools/decoder_speed.py) · [Timings and revisions](cpu-speed.json)
+
+### Predicting identical English and Turkish text
+
+The byte-level test gives each model the same passage prefix and scores exactly the same continuation. For each language it samples 32 windows each from the two held-out web collections and from stories. Tokenization must preserve the entire string and the boundary between prefix and target. The score is the sum of negative log probabilities in bits divided by the number of UTF-8 target bytes. Lower values mean the model assigned higher probability to the text. Each model can use its own vocabulary.
+
+Across 22,435 English target bytes, Franok v0.2 used 1.578 bits/byte and SmolLM2-360M-Instruct used 0.828. Across 31,303 Turkish bytes, Franok used 1.658 and SmolLM2 used 2.000. These likelihood measurements complement the separate reading and conversation tests. [Evaluator and fixed sample seed](../../../tools/byte_fluency.py) · [Baseline results by source](language-baselines.json)
