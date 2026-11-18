@@ -297,6 +297,7 @@ def main():
     # This is the actual final FP32 merge on the training VM, before rounding.
     full = OUT / "fp32"
     full.mkdir(exist_ok=True)
+    (full / "config.json").write_text((OUT / "config.json").read_text())
     save_file(
         {k: v.detach().cpu().contiguous() for k, v in model.state_dict().items()},
         str(full / "model.safetensors"),
