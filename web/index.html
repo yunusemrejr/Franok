@@ -106,7 +106,7 @@
               </div>
               <form id="composer">
                 <textarea
-                  id="draft"
+                  id="draft" disabled
                   rows="3"
                   maxlength="16000"
                   aria-label="Message"
@@ -114,17 +114,17 @@
                 ></textarea>
                 <div class="composebar">
                   <div class="composecontrols">
-                    <select id="lang" aria-label="Response language">
+                    <select id="lang" disabled aria-label="Response language">
                       <option value="en">English</option>
                       <option value="tr">Türkçe</option></select
-                    ><button id="controls" type="button" class="quiet">
+                    ><button id="controls" disabled type="button" class="quiet">
                       <svg><use href="#tune" /></svg>Controls
                     </button>
                     <button id="readerOpen" type="button" class="quiet" hidden aria-label="Ask about a passage">
                       <svg aria-hidden="true"><use href="#book" /></svg><span>Read a passage</span>
                     </button>
                   </div>
-                  <button id="send" type="submit" class="primary">
+                  <button id="send" disabled type="submit" class="primary">
                     Send <svg><use href="#arrow" /></svg></button
                   ><button id="stop" type="button" class="primary" hidden>Stop ■</button>
                 </div>

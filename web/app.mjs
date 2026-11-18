@@ -268,7 +268,8 @@ function message(t, index) {
   item.append(h, body);
   const isSource = Number.isInteger(t.questionEnd);
   const source = isSource ? t : current.turns[t.reading?.source];
-  if (Number.isInteger(source?.questionEnd)) {
+  const sourceStart = t.reading?.sourceStart ?? (Number.isInteger(source?.questionEnd) ? source.questionEnd + 2 : null);
+  if (source && Number.isInteger(sourceStart)) {
     const details = document.createElement('details'),
       summary = document.createElement('summary');
     const tr = current.lang === 'tr';
@@ -283,7 +284,7 @@ function message(t, index) {
     details.append(summary);
     details.ontoggle = () => {
       if (!details.open || details.children.length > 1) return;
-      const passage = source.text.slice(source.questionEnd + 2);
+      const passage = source.text.slice(sourceStart);
       const content = document.createElement('p');
       if (t.reading?.accepted) {
         const bytes = new TextEncoder().encode(passage),
@@ -510,7 +511,9 @@ $('readerOpen').onclick = () => {
     ? 'Franok, kaynak metinden doğrudan alıntılayabileceği kısa bir yanıt arar.'
     : 'Franok looks for a short answer it can quote directly from this text.';
   $('readSource').textContent = tr ? 'Yanıtı bul' : 'Find answer';
-  $('sourceText').value = Number.isInteger(current.quote) ? current.turns[current.quote]?.text || '' : '';
+  const attached = current.turns[current.quote];
+  const start = Number.isInteger(attached?.questionEnd) ? attached.questionEnd + 2 : 0;
+  $('sourceText').value = attached?.text.slice(start) || '';
   $('sourceQuestion').value = $('draft').value;
   $('readingDialog').showModal();
   ($('sourceText').value ? $('sourceQuestion') : $('sourceText')).focus();
@@ -521,17 +524,20 @@ $('readingForm').onsubmit = (e) => {
   const question = $('sourceQuestion').value.trim(),
     passage = $('sourceText').value;
   if (!question || !passage.trim()) return;
-  const source = current.turns.length;
+  const attached = current.turns[current.quote];
+  const sourceStart = Number.isInteger(attached?.questionEnd) ? attached.questionEnd + 2 : 0;
+  const original = attached && attached.text.slice(sourceStart) === passage;
+  const source = original ? current.quote : current.turns.length;
   current.turns.push({
     role: 'user',
-    text: question + '\n\n' + passage,
-    questionEnd: question.length,
+    text: original ? question : question + '\n\n' + passage,
+    ...(original ? { quote: source } : { questionEnd: question.length }),
     at: Date.now(),
   });
   delete current.quote;
   delete current.quoteFocus;
   current.draft = '';
-  answer = { role: 'assistant', tool: 'reader', text: '', reading: { source }, at: Date.now() };
+  answer = { role: 'assistant', tool: 'reader', text: '', reading: { source, ...(original ? { sourceStart } : {}) }, at: Date.now() };
   current.turns.push(answer);
   $('readingDialog').close();
   flags(true);
@@ -865,4 +871,6 @@ $('theme').onclick = () => {
 };
 window.addEventListener('popstate', () => changeView(location.hash.slice(1) || 'chat', true));
 changeView(location.hash.slice(1) || 'chat', true);
+flags(false);
+$('draft').disabled = false;
 paint();

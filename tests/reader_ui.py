@@ -86,6 +86,25 @@ def verify(browser, url, output, expect_answer):
     page.screenshot(path=output / "reader-mobile.png")
     page.keyboard.press("Escape")
     expect(page.locator("#readingDialog")).not_to_be_visible()
+    page.locator("#find").click()
+    page.locator("#query").fill("Kartta")
+    page.get_by_role("button", name="Attach turn 1 to next message").click()
+    page.locator("#readerOpen").click()
+    expect(page.locator("#sourceText")).to_have_value(passage)
+    second = "Toplantı ne zaman başlıyor?"
+    page.locator("#sourceQuestion").fill(second)
+    page.locator("#readSource").click()
+    expect(page.locator("#status")).to_have_text(
+        "Metin bu cihazda okundu.", timeout=180000
+    )
+    page.reload()
+    expect(page.locator(".message.user").last.locator(".body")).to_have_text(second)
+    expect(
+        page.locator(".message.user").last.get_by_text("Attached turn 1")
+    ).to_be_visible()
+    details = page.locator(".message.assistant").last.locator(".sourcepassage")
+    details.locator("summary").click()
+    assert details.locator("p").inner_text() == passage
     assert not errors, errors
     page.close()
     return dict(accepted=accepted, answer=answer)
