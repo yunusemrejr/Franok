@@ -1,14 +1,14 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#263b32"><meta name="description" content="Chat locally in English or Turkish with Franok, a small open language model trained from scratch.">
-<link rel="icon" href="./cup.svg"><link rel="stylesheet" href="./style.css"><title>Franok — Local chat</title></head>
+<link rel="icon" href="./media/franok.png"><link rel="stylesheet" href="./style.css"><title>Franok — Local chat</title></head>
 <body><div class="layout">
-<aside id="sidebar"><header class="brand"><img src="./cup.svg" alt="" width="42" height="42"><div><strong>Franok</strong><span>Local language model</span></div></header>
+<aside id="sidebar"><header class="brand"><img src="./media/franok.png" alt="" width="42" height="42"><div><strong>Franok</strong><span>Local language model</span></div></header>
 <button id="new" class="new"><b aria-hidden="true">＋</b> New chat</button>
 <h2 class="navlabel">Saved sessions</h2><nav id="sessions" aria-label="Saved sessions"></nav>
 <footer><button id="architecture" class="navlink"><span aria-hidden="true">⌘</span> Architecture</button><a href="https://github.com/yunusemrejr/Franok">Source code ↗</a></footer></aside>
 <main><header class="toolbar"><button id="menu" aria-label="Toggle sessions" aria-expanded="false">☰</button><span id="viewname">Chat</span><div class="tools"><button id="find" title="Find earlier messages">Find in session</button><select id="lang" aria-label="Response language"><option value="en">English</option><option value="tr">Türkçe</option></select></div></header>
-<section id="chat"><div id="stream" tabindex="0" aria-label="Conversation"><div id="welcome"><img src="./cup.svg" width="112" height="112" alt="Franok, a smiling coffee cup"><h1>Chat with Franok</h1><p>An experimental English–Turkish model that runs on your device.</p></div><div id="messages"></div></div>
+<section id="chat"><div id="stream" tabindex="0" aria-label="Conversation"><div id="welcome"><img src="./media/franok.png" width="112" height="112" alt="Franok, a smiling coffee cup"><h1>Chat with Franok</h1><p>An experimental English–Turkish model that runs on your device.</p></div><div id="messages"></div></div>
 <div id="bottom"><div id="quotechip" hidden><span></span><button type="button" aria-label="Remove attached turn">×</button></div><form id="composer"><textarea id="draft" maxlength="12000" aria-label="Message" rows="2" placeholder="Write a message…"></textarea><div class="composebar"><small>Franok · 314M</small><button id="send" type="submit">Send ↑</button></div></form>
 <div class="statusline"><span id="status" role="status">Early checkpoint · Answers can be inaccurate · First download 196 MB</span><button id="stop" hidden>Stop</button></div></div></section>
 <section id="about" hidden><p class="eyebrow">Inside Franok</p><h1>How a token chooses its bank</h1><p>Each layer has eight feed-forward banks. The last token of the previous group rotates the assignment for the next eight tokens. Move the controls to trace one token through a layer.</p>
