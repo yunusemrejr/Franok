@@ -82,6 +82,42 @@ def verify(url):
             a.evaluate("JSON.parse(localStorage.getItem('franok.sessions.v1')).length")
             == 0
         )
+        a.locator("#new").click()
+        a.locator("#lang").select_option("en")
+        a.locator("#draft").fill("hi")
+        a.locator("#send").click()
+        expect(a.locator("#send")).to_be_enabled(timeout=240000)
+        first = a.locator(".message.assistant").last
+        if a.evaluate(
+            "fetch(new URL('./release.json', document.baseURI)).then(r=>r.json()).then(r=>r.systemConditioned)"
+        ):
+            assert "Generated locally" in a.locator("#status").inner_text()
+            assert first.locator(".body").inner_text().startswith("Hello!")
+            assert "Franok" in first.locator("header").inner_text()
+        else:
+            expect(first.locator(".body")).to_have_text(
+                "Hi! What would you like to talk about?"
+            )
+        for prompt, expected in [
+            ("wdym?", "I was just saying hello. Is there something on your mind?"),
+            (
+                "that makes no sense",
+                "Let’s start again. What question would you like me to answer?",
+            ),
+        ]:
+            a.locator("#draft").fill(prompt)
+            a.locator("#send").click()
+            expect(a.locator(".message.assistant .body p").last).to_have_text(expected)
+            assert (
+                "Conversation helper"
+                in a.locator(".message.assistant header").last.inner_text()
+            )
+        a.locator("#controls").click()
+        a.locator("#casual").uncheck()
+        a.get_by_role("button", name="Save controls").click()
+        a.reload()
+        a.locator("#controls").click()
+        expect(a.locator("#casual")).not_to_be_checked()
         assert not errors, errors
         browser.close()
     print(

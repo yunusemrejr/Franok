@@ -55,3 +55,26 @@ assert.deepEqual(quoted.sources, [6]);
 assert.equal(quoted.text, 'Mesaj 7 · ' + archive[6].text);
 assert.equal(recallMessage('recall something', archive, 'en'), null);
 assert.match(recallMessage('/recall missing', archive, 'en').text, /No matching words/);
+
+import { conversationAction } from '../web/conversation.mjs';
+assert.match(conversationAction('Hi!', [], 'en').text, /talk about/);
+assert.match(conversationAction('selam!', [], 'tr').text, /Merhaba/);
+assert.equal(conversationAction('Hello, why is the sky blue?', [], 'en'), null);
+const greeting = [
+  { role: 'user', text: 'Hi there' },
+  { role: 'assistant', text: 'Hi!', tool: 'social' },
+];
+assert.match(conversationAction('wdym?', greeting, 'en').text, /saying hello/);
+const factual = [
+  { role: 'user', text: 'Why do rainbows form?' },
+  { role: 'assistant', text: 'Unclear answer.' },
+];
+assert.equal(conversationAction('I don’t understand.', factual, 'en').source, 0);
+assert.equal(
+  conversationAction(
+    'Ne demek istedin?',
+    [...factual, { role: 'user', text: 'I don’t understand.', revisit: 0 }],
+    'tr',
+  ).source,
+  0,
+);

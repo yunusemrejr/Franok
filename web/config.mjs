@@ -11,6 +11,7 @@ export function settings(raw = {}, windowSize = 1024) {
     topP: clamp(raw.topP, 0.15, 1, 0.89),
     maxNew: Math.round(clamp(raw.maxNew, 8, Math.min(256, Math.floor(windowSize / 2)), 80)),
     calculator: raw.calculator !== false,
+    conversationHelp: raw.conversationHelp !== false,
     recall: raw.recall !== false,
     enterSends: raw.enterSends !== false,
   };

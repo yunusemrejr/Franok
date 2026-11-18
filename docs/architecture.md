@@ -20,7 +20,7 @@ flowchart TD
 
 Suppose the previous group ends in token ID **17**. Follow slot **3** in layer **2**, counting from zero. Shift 17 right by two bits to get 4. Add the layer number to get rotation 6. Slot 3 then visits bank **(3 + 6) mod 8 = 1**. Its neighbor in slot 4 visits bank 2. Each of the other slots follows the same rotation. Attention still reads earlier positions on every layer. The banks change which feed-forward weights update each position.
 
-[Watch the two-minute film](../web/media/franok-from-scratch.mp4) · [Move the routing controls](https://franok.yunusemrevurgun.com/#about) · [Training stages and equations](training.md)
+[Watch the two-minute film on YouTube](https://youtu.be/XtNThi_pBjM) · [Download the film](../web/media/franok-from-scratch.mp4) · [Move the routing controls](https://franok.yunusemrevurgun.com/#about) · [Training stages and equations](training.md)
 
 ## Routing
 

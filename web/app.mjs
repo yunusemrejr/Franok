@@ -1,5 +1,6 @@
 import { unsupportedOutput, languageNotice } from './language.mjs';
 import { calculate } from './calculator.mjs';
+import { conversationAction } from './conversation.mjs';
 import { diagram } from './diagram.mjs';
 import { retrieve, recallMessage } from './session.mjs';
 import { defaults, settings } from './config.mjs';
@@ -190,6 +191,7 @@ const authorLabels = {
   calculator: ['Calculator', 'Hesap makinesi'],
   language: ['Language setting', 'Dil ayarı'],
   recall: ['Session search', 'Konuşma araması'],
+  social: ['Conversation helper', 'Sohbet yardımı'],
   user: ['You', 'Siz'],
   assistant: ['Franok', 'Franok'],
 };
@@ -250,6 +252,14 @@ function message(t, index) {
     a.onclick = () => highlight(t.quote);
     item.append(a);
   }
+  if (Number.isInteger(t.revisit) && current.turns[t.revisit]) {
+    const link = document.createElement('button');
+    link.className = 'source';
+    link.textContent =
+      (current.lang === 'tr' ? 'Yeniden yanıtlanan mesaj ' : 'Revisited question · turn ') + (t.revisit + 1);
+    link.onclick = () => highlight(t.revisit);
+    item.append(link);
+  }
   if (t.tool === 'recall') {
     for (const source of t.sources || []) {
       const link = document.createElement('button');
@@ -268,6 +278,7 @@ function message(t, index) {
     description.textContent =
       (t.usage.systemTokens || 0) +
       ' system tokens. ' +
+      (t.canonicalGreeting ? 'Standalone greeting normalized to “' + t.canonicalGreeting + '”. ' : '') +
       (t.usage.truncated ? 'The current message was shortened. ' : '') +
       (t.usage.used?.length ? 'Earlier turns included:' : 'No earlier turns recorded.');
     details.append(summary, description);
@@ -400,25 +411,41 @@ $('composer').onsubmit = (e) => {
   e.preventDefault();
   const text = $('draft').value.trim();
   if (!text || busy) return;
+  const config = settings(current.options, cfgWindow);
+  const social =
+    config.conversationHelp && !config.system.trim() && !Number.isInteger(current.quote)
+      ? conversationAction(text, current.turns, current.lang)
+      : null;
+  const canonicalGreeting = release.systemConditioned && social?.canonical;
   const recall = recallMessage(text, current.turns, current.lang);
   current.turns.push({
     role: 'user',
     text,
     at: Date.now(),
     ...(Number.isInteger(current.quote) ? { quote: current.quote } : {}),
+    ...(Number.isInteger(social?.source) ? { revisit: social.source } : {}),
   });
   delete current.quote;
   current.draft = '';
-  if (recall) {
-    current.turns.push({ role: 'assistant', tool: 'recall', ...recall, at: Date.now() });
+  if (recall || (social?.text && !canonicalGreeting)) {
+    current.turns.push({
+      role: 'assistant',
+      tool: recall ? 'recall' : 'social',
+      ...(recall || social),
+      at: Date.now(),
+    });
     save();
     paint();
-    $('status').textContent =
-      current.lang === 'tr' ? 'Cihazdaki konuşmada arandı.' : 'Searched this conversation on your device.';
+    $('status').textContent = recall
+      ? current.lang === 'tr'
+        ? 'Cihazdaki konuşmada arandı.'
+        : 'Searched this conversation on your device.'
+      : current.lang === 'tr'
+        ? 'Yerel sohbet yardımı.'
+        : 'Local conversation helper.';
     return;
   }
-  const config = settings(current.options, cfgWindow),
-    result = config.calculator ? calculate(text, current.lang) : null;
+  const result = config.calculator ? calculate(text, current.lang) : null;
   if (result || unsupportedOutput(text)) {
     const tool = result ? 'calculator' : 'language',
       reply = result?.text || languageNotice[current.lang];
@@ -434,8 +461,23 @@ $('composer').onsubmit = (e) => {
         : 'Workspace language setting.';
     return;
   }
-  const context = current.turns.map((t) => ({ ...t }));
-  answer = { role: 'assistant', text: '', at: Date.now() };
+  const context = canonicalGreeting
+    ? [{ role: 'user', text: canonicalGreeting }]
+    : Number.isInteger(social?.source)
+      ? [
+          ...current.turns.slice(0, social.source),
+          {
+            ...current.turns[social.source],
+            text: current.turns[social.source].text + '\n' + social.instruction,
+          },
+        ]
+      : [...current.turns];
+  answer = {
+    role: 'assistant',
+    text: '',
+    at: Date.now(),
+    ...(canonicalGreeting ? { canonicalGreeting } : {}),
+  };
   current.turns.push(answer);
   save();
   paint();
@@ -447,7 +489,7 @@ $('composer').onsubmit = (e) => {
     lang: current.lang,
     turns: context,
     pins: current.pins || [],
-    options: settings(current.options, cfgWindow),
+    options: canonicalGreeting ? { ...config, temperature: 0, maxNew: Math.min(24, config.maxNew) } : config,
   });
 };
 $('draft').oninput = () => {
@@ -563,6 +605,7 @@ function fillPrefs(o) {
   $('tokens').value = o.maxNew;
   systemHint();
   $('calc').checked = o.calculator;
+  $('casual').checked = o.conversationHelp;
   $('recall').checked = o.recall;
   $('enter').checked = o.enterSends;
 }
@@ -583,6 +626,7 @@ $('prefsform').onsubmit = (e) => {
       topP: $('topp').value,
       maxNew: $('tokens').value,
       calculator: $('calc').checked,
+      conversationHelp: $('casual').checked,
       recall: $('recall').checked,
       enterSends: $('enter').checked,
     },
