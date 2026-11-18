@@ -66,6 +66,24 @@ onmessage = async ({ data }) => {
   try {
     await load();
     if (data.type === 'load') return;
+    if (data.type === 'predict') {
+      const { ids, target } = data;
+      const reused = model.reusePrefix(ids, ids.length - 1);
+      let logits;
+      for (let i = reused; i < ids.length; i++) logits = model.step(ids[i], i === ids.length - 1);
+      const byScore = Array.from(logits.keys()).sort((i, j) => logits[j] - logits[i]);
+      const peak = logits[byScore[0]];
+      let total = 0;
+      for (const value of logits) total += Math.exp(value - peak);
+      const logZ = peak + Math.log(total);
+      const probability = (id) => Math.exp(logits[id] - logZ);
+      tell('predicted', {
+        options: byScore.slice(0, 5).map((id) => ({ id, probability: probability(id) })),
+        targetProbability: probability(target),
+        loss: logZ - logits[target],
+      });
+      return;
+    }
     if (data.type === 'read') {
       const spec = release.reader;
       if (!spec || spec.baseSha256 !== release.formats.fp16.sha256)

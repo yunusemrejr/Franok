@@ -52,10 +52,11 @@ const examples = {
 };
 let traceLoading,
   traceIds,
+  resetPrediction,
   selected = -1;
 const decodePiece = new TextDecoder('utf-8', { fatal: true });
 function pieceLabel(tokenizer, id) {
-  const control = { 1: 'Start', 2: 'End', 5: 'EN', 6: 'TR' }[id];
+  const control = { 0: 'Pad', 1: 'Start', 2: 'End', 3: 'User', 4: 'Assistant', 5: 'EN', 6: 'TR' }[id];
   if (control) return control;
   try {
     return decodePiece.decode(tokenizer.pieces[id]).replaceAll(' ', '▁');
@@ -65,6 +66,7 @@ function pieceLabel(tokenizer, id) {
 }
 function selectPiece(i) {
   selected = i;
+  resetPrediction?.(i);
   const group = Math.floor(i / 8);
   $('slot').value = i % 8;
   $('anchor').value = group ? traceIds[group * 8 - 1] : 0;
@@ -81,13 +83,50 @@ function selectPiece(i) {
     (group ? 'anchor ID ' + $('anchor').value : 'first group, anchor 0');
   diagram();
 }
-async function initTrace() {
+async function initTrace(predict, format, size) {
   const [{ Tokenizer }, response] = await Promise.all([import('./tokenizer.mjs'), fetch('./tokenizer.json')]);
   if (!response.ok) throw Error('Tokenizer unavailable');
   const tokenizer = new Tokenizer(await response.json());
   const lang = $('traceLanguage'),
     field = $('traceText'),
     pieces = $('tracePieces');
+  const note = $('predictionNote'), odds = $('pieceOdds'), button = $('predictPiece');
+  let selectionVersion = 0, measured = false;
+  const pct = new Intl.NumberFormat(undefined, { style: 'percent', maximumSignificantDigits: 3 });
+  resetPrediction = (i) => {
+    selectionVersion++;
+    odds.replaceChildren();
+    button.hidden = i < 0 || i + 1 >= traceIds.length;
+    note.textContent = button.hidden
+      ? (i < 0 ? 'Select a piece of text to measure its prediction.' : 'End marks the end of this example.')
+      : (measured ? 'Uses the prefix through the selected piece.' :
+        'Uses the local ' + format.toUpperCase() + ' model · ' + Math.round(size / 1e6) + ' MB on first use.');
+  };
+  button.onclick = () => {
+    const current = selectionVersion, target = traceIds[selected + 1];
+    note.textContent = 'Preparing the local model…';
+    predict(traceIds.slice(0, selected + 1), target, (message) => {
+      if (current !== selectionVersion) return;
+      if (message.kind === 'download') note.textContent = 'Downloading weights · ' + message.pct + '%';
+      if (message.kind === 'ready') note.textContent = 'Computing token probabilities…';
+      if (message.kind === 'error') note.textContent = message.message;
+      if (message.kind !== 'predicted') return;
+      measured = true;
+      odds.replaceChildren(...message.options.map(({ id, probability }) => {
+        const row = document.createElement('li'), token = document.createElement('code');
+        const bar = document.createElement('meter'), amount = document.createElement('span');
+        token.textContent = pieceLabel(tokenizer, id);
+        bar.min = 0; bar.max = 1; bar.value = probability;
+        bar.setAttribute('aria-hidden', 'true');
+        amount.textContent = pct.format(probability);
+        row.append(token, bar, amount);
+        return row;
+      }));
+      note.textContent = 'Your next piece is “' + pieceLabel(tokenizer, target) + '”. Franok gave it ' +
+        pct.format(message.targetProbability) + ' probability. Its prediction loss, −ln(p), is ' +
+        message.loss.toFixed(3) + ' nats.';
+    });
+  };
   function render() {
     traceIds = [1, lang.value === 'tr' ? 6 : 5, ...tokenizer.encode(field.value), 2];
     const buttons = traceIds.map((id, i) => {
@@ -118,14 +157,16 @@ async function initTrace() {
   for (const id of ['slot', 'anchor'])
     $(id).addEventListener('input', () => {
       if (selected >= 0) pieces.children[selected]?.setAttribute('aria-pressed', 'false');
+      resetPrediction(-1);
       $('traceInfo').textContent = 'Manual routing example';
     });
   field.value = examples[lang.value];
   render();
   $('tokenExplorer').hidden = false;
+  $('tracePrediction').hidden = false;
 }
-export function openTrace() {
-  traceLoading ??= initTrace().catch(() => {
+export function openTrace(predict, format, size) {
+  traceLoading ??= initTrace(predict, format, size).catch(() => {
     traceLoading = undefined;
   });
 }

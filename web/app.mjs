@@ -33,6 +33,7 @@ const sessionList = await loadSessions();
 let current = sessionList.find((s) => s.id === activeId()) || sessionList[0] || make();
 let view = 'chat',
   worker,
+  prediction,
   answer = null,
   busy = false,
   ready = false;
@@ -181,7 +182,7 @@ function changeView(name, replace = false) {
   menu(false);
   if (view === 'about') {
     diagram();
-    openTrace();
+    openTrace(predictPiece, format, size);
   }
   else if (!$('explainer').paused) $('explainer').pause();
   if (location.hash !== '#' + view)
@@ -381,30 +382,44 @@ function flags(on) {
   $('lang').disabled = on;
   $('controls').disabled = on;
   $('readerOpen').disabled = on;
+  $('predictPiece').disabled = on;
   $('actions').disabled = on;
 }
 function stop() {
+  const wasPrediction = Boolean(prediction);
+  if (prediction) prediction({ kind: 'error', message: 'Prediction stopped.' });
+  prediction = null;
   if (answer && !answer.text && current.turns.at(-1) === answer) current.turns.pop();
   worker?.terminate();
   worker = null;
   ready = false;
   flags(false);
   answer = null;
-  save();
+  if (!wasPrediction) save();
   paint();
-  $('status').textContent = 'Generation stopped.';
+  $('status').textContent = wasPrediction ? 'Prediction stopped.' : 'Generation stopped.';
+}
+function predictPiece(ids, target, update) {
+  if (busy) return;
+  startWorker();
+  prediction = update;
+  flags(true);
+  worker.postMessage({ type: 'predict', ids, target });
 }
 function startWorker() {
   if (worker) return;
   const activeWorker = (worker = new Worker('./worker.mjs', { type: 'module' }));
   function fail(msg) {
+    const wasPrediction = Boolean(prediction);
+    if (prediction) prediction({ kind: 'error', message: msg });
+    prediction = null;
     if (answer && !answer.text) current.turns.pop();
     answer = null;
     worker?.terminate();
     worker = null;
     ready = false;
     flags(false);
-    save();
+    if (!wasPrediction) save();
     paint();
     $('status').textContent = msg;
   }
@@ -418,6 +433,15 @@ function startWorker() {
     if (d.kind === 'ready') {
       ready = true;
       $('status').textContent = 'Weights verified.';
+    }
+    if (prediction && ['download', 'ready', 'predicted'].includes(d.kind)) {
+      prediction(d);
+      if (d.kind === 'predicted') {
+        prediction = null;
+        flags(false);
+        $('status').textContent = 'Weights ready.';
+      }
+      return;
     }
     if (d.kind === 'prefill')
       $('status').textContent =

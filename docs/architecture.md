@@ -22,6 +22,8 @@ Suppose the previous group ends in token ID **17**. Follow slot **3** in layer *
 
 [Watch the two-minute film on YouTube](https://youtu.be/XtNThi_pBjM) · [Download the film](../web/media/franok-from-scratch.mp4) · [Move the routing controls](https://franok.yunusemrevurgun.com/#about) · [Training stages and equations](training.md)
 
+In the interactive diagram, select a token and choose **Predict the next piece**. The app sends the prefix through the local decoder, shows the five most likely pieces and reports the probability Franok assigned to the actual next piece in your example. It uses the raw softmax over all 8,192 vocabulary entries. For example, assigning probability 0.25 to the observed piece gives a next-token loss of $-\ln(0.25)\approx 1.386$ nats. Each prediction uses the installed Q4 or Q8 weights, and editing the sentence changes the measured distribution. Chat additionally uses role markers, a system prompt and sampling controls.
+
 ## Routing
 
 Number layers and positions from zero. For position $t$, let $g=\lfloor t/8\rfloor$ and $s=t\bmod 8$. Define $a_g=0$ for the first group and $a_g=x_{8g-1}$ for later groups, where $x$ is the input token ID. Layer $l$ chooses

@@ -187,6 +187,11 @@
               /></label>
             </div>
             <p id="route" aria-live="polite"></p>
+            <div class="trace-prediction" id="tracePrediction" hidden>
+              <button type="button" class="secondary" id="predictPiece">Predict the next piece</button>
+              <p id="predictionNote" role="status"></p>
+              <ol id="pieceOdds" aria-label="Most likely next token pieces"></ol>
+            </div>
           </div>
           <details open>
             <summary>Why eight banks?</summary>
@@ -203,6 +208,16 @@
               gated feed-forward bank transforms the result. After twelve layers, the model assigns a
               probability to each of 8,192 possible next pieces.
             </p>
+          </details>
+          <details>
+            <summary>How did it learn to answer?</summary>
+            <ol class="training-stages">
+              <li><b>Read both languages.</b> The decoder started with random weights. At each position it tried to predict the next piece of open English or Turkish text. Giving the observed piece a higher probability reduced its training loss.</li>
+              <li><b>Practice conversation.</b> Supervised tuning trained all layers on assistant replies. Earlier turns and system instructions were visible while the model learned which words should follow.</li>
+              <li><b>Compare replies.</b> Two low-rank adapters tuned dialogue and the choice between a supported answer and an alternative. These small updates can be inspected separately.</li>
+              <li><b>Learn from its own attempts.</b> Franok sampled six answers to a prompt. Reinforcement learning compared their rewards within the group and adjusted another adapter.</li>
+            </ol>
+            <p><a href="https://github.com/yunusemrejr/Franok/blob/main/docs/training.md">Training equations, data and Colab steps ↗</a></p>
           </details>
           <details>
             <summary>What does the app remember?</summary>
