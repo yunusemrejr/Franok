@@ -20,7 +20,8 @@ class Decoder:
             raise ValueError("Prompt length outside the model window")
         device = self.model.embed.weight.device
         inputs = torch.as_tensor(ids, device=device, dtype=torch.long).reshape(1, -1)
-        logits = self.model(inputs, cache=self.layers)
+        states = self.model.hidden(inputs, cache=self.layers)
+        logits = F.linear(states[0, -1], self.model.embed.weight)
         self.last = int(ids[-1])
         group = (self.position - 1) // self.model.c.banks
         self.anchor = int(ids[group * self.model.c.banks - 1]) if group else 0
@@ -29,7 +30,7 @@ class Decoder:
         self.layers = [
             (k[:, :, : self.position], v[:, :, : self.position]) for k, v in self.layers
         ]
-        return logits[0, -1]
+        return logits
 
     @torch.inference_mode()
     def step(self, token):

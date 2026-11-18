@@ -121,11 +121,18 @@ async function weights(format) {
     dest = path.join(dir, manifest.sha256 + '.' + format);
   await fsp.mkdir(dir, { recursive: true });
   const localFiles = [dest];
-  if (!app.isPackaged)
-    localFiles.push(
-      path.join(root, 'work', 'v2', 'export', 'model.' + format),
-      path.join(root, 'work', 'export', 'model.' + format),
-    );
+  if (!app.isPackaged) {
+    const work = path.join(root, 'work');
+    const runs = await fsp.readdir(work, { withFileTypes: true }).catch(() => []);
+    for (const entry of runs) {
+      if (!entry.isDirectory() || !/^v[0-9]+$/.test(entry.name)) continue;
+      const exported = path.join(work, entry.name, 'export');
+      const index = await fsp.readFile(path.join(exported, path.basename(meta.manifest)), 'utf8')
+        .then(JSON.parse).catch(() => null);
+      if (index?.sha256 === manifest.sha256) localFiles.push(path.join(exported, 'model.' + format));
+    }
+    localFiles.push(path.join(work, 'export', 'model.' + format));
+  }
   for (const local of localFiles) {
     const st = await fsp.stat(local).catch(() => null);
     if (!st) continue;

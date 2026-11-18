@@ -10,7 +10,7 @@ git push namecheap main
 
 Install `deploy/post-receive` as the executable post-receive hook of the dedicated bare repository. The Namecheap virtual host serves the subdomain's own document root. Its proxied Cloudflare A record points to the Namecheap origin. The hook extracts just the web assets, checks the model manifests, gives each bundle its own revision URL, then atomically replaces the homepage. Browser sessions share the hostname across revisions. The host keeps previous releases and its existing cPanel files.
 
-Run `deploy/publish.sh` to push a reviewed clean main branch and verify the live revision. To undo a release, revert the release changes on main and publish that commit. The production model URL in `web/release.json` must be pinned to a Hugging Face commit. The client checks the SHA-256 in `web/model.json`. The desktop defaults to Q8 and checks the SHA-256 from `web/model-q8.json`. A source installation also checks `work/v2/export/model.q8` before downloading.
+Run `deploy/publish.sh` to push a reviewed clean main branch and verify the live revision. To undo a release, revert the release changes on main and publish that commit. The production model URL in `web/release.json` must be pinned to a Hugging Face commit. The client checks the SHA-256 in `web/model.json`. The desktop defaults to Q8 and checks the SHA-256 from `web/model-q8.json`. A source installation checks local release export manifests under `work/v*/export/` and verifies matching weight bytes before downloading. A packaged installation keeps the verified Q8 file in its user data directory.
 
 ## Ubuntu
 

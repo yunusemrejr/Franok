@@ -52,3 +52,7 @@ Each query must retrieve the correct source passage from distinct candidates. To
 | XQuAD Turkish → English | 64 | 27/64 | 43/64 |
 
 In a separate 1,000-turn collection, 24 short notes were mixed with 976 held-out conversational distractors. Word search found the intended note first for 4/24 same-language paraphrases and 0/24 translated paraphrases. Meaning search found it first for 8/24 in each group. The small note collection guided development. It is more difficult than the passage tests, and users can inspect the source before attaching it. [All groups and training log](meaning-search.json) · [Fixed notes](../../../tests/recall_cases.json) · [Evaluation code](../../../experiments/recall/evaluate.mjs)
+
+### CPU decoding speed
+
+On one Ryzen 5 7530U, both models ran in PyTorch float32 with three CPU threads and their own tokenizers. Both processed the same UTF-8 continuation at batch size one. After a warm-up, the median of five timed runs put Franok v0.2 at 45–57 tokens/s and SmolLM2-360M-Instruct at 7–10 tokens/s across two prompt lengths per language. Measured in output bytes per second, Franok was 3.5–4.0 times faster on the English text and 10.5–13.6 times faster on the Turkish text. The Turkish continuations require different token counts with the two vocabularies. These figures describe warm, teacher-forced decoding on this CPU. [Benchmark and exact texts](../../../tools/decoder_speed.py) · [Timings and revisions](cpu-speed.json)
