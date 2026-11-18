@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {retrieve,promptTokens} from '../web/session.mjs';
+const turns=Array.from({length:1000},(_,i)=>({role:i%2?'assistant':'user',text:'Regular entry '+i}));
+turns[7].text='Kahve kutusunun kodu: ZÜMRÜT-719.';
+const hits=retrieve(turns,'ZÜMRÜT-719');
+assert.equal(hits[0].index,7);
+const tok={encode:text=>Array.from(new TextEncoder().encode(text))};
+turns.push({role:'user',text:'What was the code?',quote:7});
+const prompt=promptTokens(tok,turns,'en',184);
+assert(prompt.length<=184);
+const bytes=Array.from(tok.encode('ZÜMRÜT-719'));
+assert(prompt.some((_,i)=>bytes.every((b,j)=>prompt[i+j]===b)));
+console.log('Retrieved and attached turn 8 after 1000 saved turns.');

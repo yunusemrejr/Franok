@@ -1,0 +1,12 @@
+{
+  "name": "franok",
+  "productName": "Franok",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local English and Turkish language model",
+  "author": "Yunus Emre Vurgun",
+  "license": "MIT",
+  "main": "desktop/main.cjs",
+  "scripts": {"start": "electron .", "install:ubuntu": "bash desktop/install.sh", "build:wasm": "bash runtime/build.sh"},
+  "devDependencies": {"electron": "45.3.4"}
+}

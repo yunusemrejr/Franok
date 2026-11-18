@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+root="$HOME/franok.yunusemrevurgun.com"
+mkdir -p "$root/r"
+while read -r old rev ref; do
+  [[ "$ref" == refs/heads/main ]] || continue
+  [[ "$rev" == "$(git rev-parse refs/heads/main)" ]] || continue
+  stage=$(mktemp -d "$root/r/.incoming-XXXXXXXX")
+  trap 'rm -rf -- "$stage"' EXIT
+  git archive "$rev" web | tar -x -C "$stage" --strip-components=1
+  for file in index.html franok.wasm model.json tokenizer.json release.json; do test -s "$stage/$file"; done
+  chmod 755 "$stage"
+  if [[ ! -d "$root/r/$rev" ]]; then mv "$stage" "$root/r/$rev"; else rmdir "$stage" 2>/dev/null || true; fi
+  # Serialize switching the entry point when pushes arrive close together.
+  (
+    flock -x 9
+    [[ "$rev" == "$(git rev-parse refs/heads/main)" ]] || exit 0
+    tmp=$(mktemp "$root/.index-XXXXXX")
+    sed "s#<head>#<head><base href=\"/r/$rev/\">#" "$root/r/$rev/index.html" > "$tmp"
+    chmod 644 "$tmp"
+    git show "$rev:deploy/htaccess" > "$root/.htaccess.next"
+    mv "$root/.htaccess.next" "$root/.htaccess"
+    mv "$tmp" "$root/index.html"
+    printf '%s\n' "$rev" > "$root/revision.txt"
+  ) 9>"$HOME/repositories/franok-deploy.lock"
+  echo "Published Franok $rev"
+done

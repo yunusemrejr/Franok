@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+<title id="title">Franok, a smiling little coffee cup</title>
+<rect x="4" y="4" width="152" height="152" rx="39" fill="#ebd9b8"/>
+<path d="M21 110q58-28 118 0-3 20-58 20-56 0-60-20Z" fill="#d5ac75"/>
+<ellipse cx="79" cy="110" rx="55" ry="13" fill="#fbf0d9" stroke="#513a31" stroke-width="3"/>
+<path d="M108 66c28-13 35 25 1 28l-1-8c19-3 19-18 2-12Z" fill="#f9edd5" stroke="#513a31" stroke-width="4" stroke-linejoin="round"/>
+<path d="M37 60q1 40 18 48 17 12 39 2 16-7 21-50Z" fill="#ffefd2" stroke="#513a31" stroke-width="4"/>
+<path d="M41 66q2 30 15 39" fill="none" stroke="#edcba2" stroke-width="5" stroke-linecap="round"/>
+<ellipse cx="76" cy="60" rx="39" ry="12" fill="#f7d9aa" stroke="#513a31" stroke-width="4"/>
+<ellipse cx="76" cy="62" rx="32" ry="7" fill="#724a39"/>
+<path d="M57 61q10-5 22-2m4 1 6 1" fill="none" stroke="#dba477" stroke-width="2.5" stroke-linecap="round"/>
+<g stroke="#513a31" fill="none" stroke-linecap="round" stroke-width="3.8"><path d="M56 83q4-6 8 0m23 0q4-6 8 0m-25 4q5 8 12 0"/></g>
+<g fill="#dc987f"><ellipse cx="54" cy="89" rx="5" ry="2.5"/><ellipse cx="97" cy="89" rx="5" ry="2.5"/></g>
+<g fill="none" stroke="#8c715a" stroke-width="3.3" stroke-linecap="round"><path d="M64 43c-8-9 8-10 2-19m12 18c8-9-6-12 1-23m12 24c-4-6 3-8 3-12"/></g></svg>
