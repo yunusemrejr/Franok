@@ -46,7 +46,8 @@ const initialStatus = 'First model download · ' + Math.round(size / 1e6) + ' MB
 $('status').textContent = initialStatus;
 $('platform-name').textContent = platform;
 $('platform-detail').textContent = format.toUpperCase() + ' · WebAssembly SIMD';
-$('precision').textContent = format.toUpperCase() + ' / WASM';
+const modelVersion = release.version || '0.1.0';
+$('precision').textContent = 'v' + modelVersion + ' · ' + format.toUpperCase() + ' / WASM';
 $('memory-copy').textContent =
   'The neural model reads up to ' +
   cfgWindow.toLocaleString() +
@@ -117,9 +118,11 @@ function save() {
   return saveSession(target)
     .then(() => {
       if (target === current) setActive(target.id);
+      return true;
     })
     .catch(() => {
       $('status').textContent = 'Storage is full or unavailable. Export the transcript to keep a copy.';
+      return false;
     });
 }
 function history() {
@@ -278,6 +281,7 @@ function message(t, index) {
     description.textContent =
       (t.usage.systemTokens || 0) +
       ' system tokens. ' +
+      (t.usage.model ? t.usage.model + '. ' : '') +
       (t.canonicalGreeting ? 'Standalone greeting normalized to “' + t.canonicalGreeting + '”. ' : '') +
       (t.usage.truncated ? 'The current message was shortened. ' : '') +
       (t.usage.used?.length ? 'Earlier turns included:' : 'No earlier turns recorded.');
@@ -382,6 +386,8 @@ function startWorker() {
     if (d.kind === 'done' && answer) {
       answer.text = d.text;
       answer.usage = {
+        model: 'Franok v' + modelVersion + ' ' + format.toUpperCase(),
+        revision: release.revision || null,
         tokens: d.tokens,
         seconds: d.seconds,
         prompt: d.prompt,
@@ -616,7 +622,7 @@ $('controls').onclick = () => {
 $('temp').oninput = () => ($('tempout').value = Number($('temp').value).toFixed(2));
 $('topp').oninput = () => ($('pout').value = Number($('topp').value).toFixed(2));
 $('resetprefs').onclick = () => fillPrefs(settings({}, cfgWindow));
-$('prefsform').onsubmit = (e) => {
+$('prefsform').onsubmit = async (e) => {
   e.preventDefault();
   const sys = $('sysprompt').value.trim();
   current.options = settings(
@@ -632,9 +638,10 @@ $('prefsform').onsubmit = (e) => {
     },
     cfgWindow,
   );
-  save();
-  $('prefs').close();
-  $('status').textContent = 'Session controls saved.';
+  if (await save()) {
+    $('prefs').close();
+    $('status').textContent = 'Session controls saved.';
+  }
 };
 $('actions').onclick = () => {
   $('rename').value = title(current);

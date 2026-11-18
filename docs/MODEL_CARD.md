@@ -8,38 +8,70 @@ tags:
 - from-scratch
 - custom-architecture
 - webassembly
+- lora
+- reinforcement-learning
 datasets:
 - wikimedia/wikipedia
 - OpenAssistant/oasst1
 - databricks/databricks-dolly-15k
 - merve/turkish_instructions
 - GoktugD/turkish-extractive-qa-1.5m
+- HuggingFaceTB/cosmopedia
+- HuggingFaceTB/smol-smoltalk
+- malhajar/OpenOrca-tr
+- CohereForAI/aya_dataset
+- rajpurkar/squad
+- openai/gsm8k
+- HuggingFaceH4/ultrachat_200k
+- MarulAI/Marul-SFT-TR
+- HuggingFaceTB/everyday-conversations-llama3.1-2k
+- SoAp9035/everyday-conversations-tur
+- serhatkagans/turkish-chat-sft-v3
+- yunusemrejr/Franok-Session-Tasks
 ---
 
 # Franok
 
-Franok is an experimental English–Turkish language model by Yunus Emre Vurgun. The 314,061,312 parameters were initialized randomly. Every layer dispatches each token to one of eight independent SwiGLU banks using a causal anchor from the preceding group. About 49.82M parameters participate per token including the tied output head. It has a 256-token neural window.
+Franok is an experimental English–Turkish language model by Yunus Emre Vurgun. Its **314,061,312** parameters began at random initialization. Franok's own byte-level tokenizer was fitted to the original training split. Twelve causal decoder layers each route a token to one of eight SwiGLU banks using an anchor from the preceding eight-token group. **49,820,160 parameters** participate per token, including the tied vocabulary head. The extended release trains on sequences up to **1,024 tokens**.
 
-[Chat locally in the browser](https://franok.yunusemrevurgun.com/) · [Public source](https://github.com/yunusemrejr/Franok) · [Colab notebook](https://colab.research.google.com/github/yunusemrejr/Franok/blob/main/training/Franok.ipynb)
+[Browser chat](https://franok.yunusemrevurgun.com/) · [Ubuntu installer](https://franok.yunusemrevurgun.com/downloads/franok_0.2.0_amd64.deb) · [Architecture film](https://youtu.be/XtNThi_pBjM) · [Source on GitHub](https://github.com/yunusemrejr/Franok) · [Colab notebook](https://colab.research.google.com/github/yunusemrejr/Franok/blob/main/training/Franok.ipynb)
 
-## Weights and inference
+## Files
 
-| File | Purpose |
+| Files | Use |
 |---|---|
-| `model.safetensors` | FP16 tensors for the Franok PyTorch reference |
-| `config.json`, `tokenizer.json` | Architecture dimensions and from-scratch 8,192-token byte BPE |
-| `model.q4`, `model.json` | Four-bit SIMD decoder weights, byte offsets, dimensions and SHA-256 |
+| `model.safetensors`, `config.json`, `tokenizer.json` | Native FP16 checkpoint and bilingual vocabulary |
+| `model.q4`, `model.json` | Browser-default Q4 weights with a per-group scale search, offsets, shapes and SHA-256 |
+| `model.q8`, `model-q8.json` | Desktop-default Q8 weights and manifest |
+| `fp32/` | Unrounded final FP32 adapter merge, configuration and reconstruction check |
+| `adapters/base/` | Native model immediately before the first low-rank adaptation |
+| `adapters/dialogue/`, `adapters/evidence/`, `adapters/rl/` | Rank-32 dialogue tuning, rank-16 contrastive/supervised tuning and rank-16 reinforcement tuning, in merge order |
+| `training-record/` | Step counts, training loss, internal validation and rollout receipts |
+| `source/` | Architecture, math, notebook, trainers, kernels, frontend, video and evaluation sources |
 
-Use the included implementation for this custom architecture. Download the three PyTorch files into a directory, install the requirements from the source repository and run `python -m franok.chat DIRECTORY --lang en`. Use `--lang tr` for Turkish. The browser and Electron app share the same incremental WASM decoder. In both interfaces, users can recover a saved turn and attach it to a new prompt. Attached context and persistent sessions are application features.
+The architecture uses its own runtime. To use PyTorch, download the root configuration, tokenizer and FP16 checkpoint, install the dependencies from the source repository and run `python -m franok.chat DIRECTORY --lang en`. Use `--lang tr` for Turkish and `--system` for a session instruction. For the FP32 variant, put the same tokenizer beside its model and configuration. The Ubuntu application caches the verified weights for offline generation. Both apps support saved history, attached turns, labeled local arithmetic and a switchable conversation helper. For a standalone greeting, the app normalizes its spelling to “Hello!” or “Merhaba!” and decodes the neural model at temperature zero. It labels helper-written clarifications and can retry a substantive question without a prior confusing reply. Direct model evaluations bypass these features.
 
-## Training and capabilities
+## How it was trained
 
-A single NVIDIA L4 on Google Colab ran 3,200 initial training steps, 4,800 continuation steps and 1,200 assistant-supervision steps. Each step had 24 sequences of length 256. Across all phases 53,859,151 next-token targets contributed to loss. The prepared data contains English and Turkish Wikipedia, instructions and question-answer material. A hash split reserves validation groups before tokenizer fitting. See the pinned [data sources](https://github.com/yunusemrejr/Franok/blob/main/docs/data.md) and [math](https://github.com/yunusemrejr/Franok/blob/main/docs/architecture.md).
+One Colab L4 trained the first release in three phases from scratch for 53,859,151 next-token targets. A second L4 allocation continued this project's own [original checkpoint](https://huggingface.co/yunusemrejr/Franok/tree/7633d06180ebbc836af02c590f96f8ac28a4829a) on open English and Turkish corpora, expanded the context, then performed full supervised tuning. The dialogue adapter trained on assistant replies. The evidence adapter combined assistant supervision with a matching-answer versus distractor loss. The final adapter learned from six sampled completions per prompt using a group-relative policy gradient and a symbolic reward.
 
-Validation assistant-token negative log likelihood fell from 4.183 at the end of the initial phase to 3.546 after refinement. This is a short training run. Generated answers can be repetitive, factually wrong, off-topic or mixed-language. A language selector conditions the model; fluency and factual accuracy vary. It is unsuitable for high-stakes advice.
+The original parameters and code are MIT licensed. The linked datasets retain their original licenses. Turkish conversational training includes [Marul-SFT-TR by Ahmet Karakuş (Marul AI)](https://huggingface.co/datasets/MarulAI/Marul-SFT-TR). Corpus selection, synthetic sources, attribution, splits and exact pinned revisions are documented in the [data guide](https://github.com/yunusemrejr/Franok/blob/main/docs/data.md). [Training objectives](https://github.com/yunusemrejr/Franok/blob/main/docs/training.md) and [architecture equations](https://github.com/yunusemrejr/Franok/blob/main/docs/architecture.md) are public.
 
-MIT covers Franok's original code and weights. Source corpora have their own licenses. The comparison model, where reported, is used only for evaluation.
+## Evaluation
 
-## Comparative evaluation
+<!-- measured -->
+Extended pretraining and supervised stages consumed 183,459,702 target tokens. Reinforcement learning sampled 11,880 replies and made 1,060 optimizer updates.
 
-On 48 matched Belebele reading questions in each language, Franok scored 13/48 in English and 10/48 in Turkish. SmolLM2-360M-Instruct scored 19/48 and 15/48 under the same protocol. In 32 short two-choice probes the totals were 17/32 and 20/32 respectively. The peer model led on both tests. Methods, item scores and unedited outputs are in the [evaluation report](https://github.com/yunusemrejr/Franok/tree/main/docs/evaluation).
+| Fixed test | Franok EN | Franok TR | SmolLM2-360M-Instruct EN | SmolLM2-360M-Instruct TR |
+|---|---:|---:|---:|---:|
+| Paired Belebele reading | 12/48 | 11/48 | 19/48 | 15/48 |
+| Short two-choice tasks | 10/16 | 8/16 | 11/16 | 9/16 |
+
+The native FP32 model passed 2/6 English and 0/6 Turkish checks in direct multi-turn generation. Its answers frequently lose the topic. The broader conversational and reading results fall below the comparison model on these tests.
+
+Q4 chose the same answer as FP32 on 122/128 paired questions. Across 2,048 bilingual next-token predictions its top token matched FP32 on 83.2%, and mean negative log likelihood changed by +0.05113.
+
+Q8 chose the same answer as FP32 on 128/128 paired questions. Across 2,048 bilingual next-token predictions its top token matched FP32 on 98.4%, and mean negative log likelihood changed by +0.00036.
+<!-- end measured -->
+
+The direct transcripts include incorrect and off-topic replies. Both interfaces condition on English or Turkish and let users customize the system prompt. The neural model can miss instructions, repeat itself or mix languages. A saved session can be longer than the neural context, and attaching a turn supplies its text without guaranteeing a correct answer. Scores and raw outputs are available in the [extended evaluation report](https://github.com/yunusemrejr/Franok/tree/main/docs/evaluation/v2).

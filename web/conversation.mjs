@@ -67,26 +67,36 @@ export function conversationAction(text, history, lang) {
   if (lastUser >= 0) {
     const original = history[lastUser];
     const previous = normalized(original.text);
-    const source = Number.isInteger(original.revisit) ? original.revisit : lastUser;
-    if (
-      ((!greetings.has(previous) && !repairs.has(previous)) || Number.isInteger(original.revisit)) &&
-      history[source]?.role === 'user' &&
-      !history[source].text.startsWith('/')
-    ) {
+    if (Number.isInteger(original.revisit)) {
+      return {
+        text: lang === 'tr'
+          ? 'Soruna açık bir yanıt veremedim. Hangi kısmı birlikte ele alalım?'
+          : 'I haven’t given you a clear answer. Which part of your question should we focus on?',
+      };
+    }
+    if (!greetings.has(previous) && !repairs.has(previous) && !original.text.startsWith('/')) {
       // Re-answer the user's actual question. Exclude the answer they already found confusing.
       return {
-        source,
+        source: lastUser,
         instruction: lang === 'tr' ? 'Kısa ve sade bir cevap ver.' : 'Give a short answer in plain language.',
       };
     }
   }
-  if (lastUser >= 0 && greetings.has(normalized(history[lastUser].text)))
+  if (lastUser >= 0 && greetings.has(normalized(history[lastUser].text))) {
+    const reply = history[lastUser + 1];
+    if (!reply?.canonicalGreeting && reply?.tool !== 'social')
+      return {
+        text: lang === 'tr'
+          ? 'Selam vermiştin. Oradan başlayalım. Ne hakkında konuşmak istersin?'
+          : 'You said hello. Let’s start there. What would you like to talk about?',
+      };
     return {
       text:
         lang === 'tr'
           ? 'Sadece selamlaşıyordum. Aklında bir soru var mı?'
           : 'I was just saying hello. Is there something on your mind?',
     };
+  }
   return {
     text:
       lang === 'tr'

@@ -97,7 +97,7 @@
           <div class="writing">
             <div id="welcome">
               <h1><img src="./media/franok.png" alt="" width="56" height="56" />Chat with Franok</h1>
-              <p>Write in English or Turkish. Your messages stay on this device.</p>
+              <p>An experimental English–Turkish model. Your messages stay on this device.</p>
             </div>
             <div id="bottom">
               <div id="quotechip" hidden>
@@ -197,6 +197,15 @@
           <details>
             <summary>What does the app remember?</summary>
             <p id="memory-copy"></p>
+          </details>
+          <details>
+            <summary>How well does Franok hold a conversation?</summary>
+            <p>
+              In twelve English and Turkish multi-turn checks, the browser model passed four and the
+              desktop model passed three. Both can lose the topic on a follow-up. The optional conversation
+              helper can clarify a greeting or ask the model to retry a confusing answer.
+              <a href="https://github.com/yunusemrejr/Franok/tree/main/docs/evaluation/v2">Read the test conversations ↗</a>
+            </p>
           </details>
           <div class="doclinks">
             <a href="https://github.com/yunusemrejr/Franok/blob/main/docs/architecture.md"

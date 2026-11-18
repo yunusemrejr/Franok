@@ -1,0 +1,683 @@
+{
+  "format": "franok-q8-v1",
+  "scale_method": "peak",
+  "config": {
+    "vocab": 8192,
+    "width": 512,
+    "layers": 12,
+    "heads": 8,
+    "kv_heads": 2,
+    "hidden": 2048,
+    "banks": 8,
+    "window": 1024
+  },
+  "tensors": {
+    "blocks.0.down": {
+      "offset": 0,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.0.out.weight": {
+      "offset": 9437184,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.0.post.weight": {
+      "offset": 9732096,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.0.pre.weight": {
+      "offset": 9734144,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.0.qkv.weight": {
+      "offset": 9736192,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.0.up": {
+      "offset": 10178560,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.1.down": {
+      "offset": 29052928,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.1.out.weight": {
+      "offset": 38490112,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.1.post.weight": {
+      "offset": 38785024,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.1.pre.weight": {
+      "offset": 38787072,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.1.qkv.weight": {
+      "offset": 38789120,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.1.up": {
+      "offset": 39231488,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.10.down": {
+      "offset": 58105856,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.10.out.weight": {
+      "offset": 67543040,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.10.post.weight": {
+      "offset": 67837952,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.10.pre.weight": {
+      "offset": 67840000,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.10.qkv.weight": {
+      "offset": 67842048,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.10.up": {
+      "offset": 68284416,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.11.down": {
+      "offset": 87158784,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.11.out.weight": {
+      "offset": 96595968,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.11.post.weight": {
+      "offset": 96890880,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.11.pre.weight": {
+      "offset": 96892928,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.11.qkv.weight": {
+      "offset": 96894976,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.11.up": {
+      "offset": 97337344,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.2.down": {
+      "offset": 116211712,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.2.out.weight": {
+      "offset": 125648896,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.2.post.weight": {
+      "offset": 125943808,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.2.pre.weight": {
+      "offset": 125945856,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.2.qkv.weight": {
+      "offset": 125947904,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.2.up": {
+      "offset": 126390272,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.3.down": {
+      "offset": 145264640,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.3.out.weight": {
+      "offset": 154701824,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.3.post.weight": {
+      "offset": 154996736,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.3.pre.weight": {
+      "offset": 154998784,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.3.qkv.weight": {
+      "offset": 155000832,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.3.up": {
+      "offset": 155443200,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.4.down": {
+      "offset": 174317568,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.4.out.weight": {
+      "offset": 183754752,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.4.post.weight": {
+      "offset": 184049664,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.4.pre.weight": {
+      "offset": 184051712,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.4.qkv.weight": {
+      "offset": 184053760,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.4.up": {
+      "offset": 184496128,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.5.down": {
+      "offset": 203370496,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.5.out.weight": {
+      "offset": 212807680,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.5.post.weight": {
+      "offset": 213102592,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.5.pre.weight": {
+      "offset": 213104640,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.5.qkv.weight": {
+      "offset": 213106688,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.5.up": {
+      "offset": 213549056,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.6.down": {
+      "offset": 232423424,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.6.out.weight": {
+      "offset": 241860608,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.6.post.weight": {
+      "offset": 242155520,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.6.pre.weight": {
+      "offset": 242157568,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.6.qkv.weight": {
+      "offset": 242159616,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.6.up": {
+      "offset": 242601984,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.7.down": {
+      "offset": 261476352,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.7.out.weight": {
+      "offset": 270913536,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.7.post.weight": {
+      "offset": 271208448,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.7.pre.weight": {
+      "offset": 271210496,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.7.qkv.weight": {
+      "offset": 271212544,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.7.up": {
+      "offset": 271654912,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.8.down": {
+      "offset": 290529280,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.8.out.weight": {
+      "offset": 299966464,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.8.post.weight": {
+      "offset": 300261376,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.8.pre.weight": {
+      "offset": 300263424,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.8.qkv.weight": {
+      "offset": 300265472,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.8.up": {
+      "offset": 300707840,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.9.down": {
+      "offset": 319582208,
+      "bytes": 9437184,
+      "shape": [
+        8,
+        512,
+        2048
+      ],
+      "type": "q8"
+    },
+    "blocks.9.out.weight": {
+      "offset": 329019392,
+      "bytes": 294912,
+      "shape": [
+        512,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.9.post.weight": {
+      "offset": 329314304,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.9.pre.weight": {
+      "offset": 329316352,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    },
+    "blocks.9.qkv.weight": {
+      "offset": 329318400,
+      "bytes": 442368,
+      "shape": [
+        768,
+        512
+      ],
+      "type": "q8"
+    },
+    "blocks.9.up": {
+      "offset": 329760768,
+      "bytes": 18874368,
+      "shape": [
+        8,
+        4096,
+        512
+      ],
+      "type": "q8"
+    },
+    "embed.weight": {
+      "offset": 348635136,
+      "bytes": 4718592,
+      "shape": [
+        8192,
+        512
+      ],
+      "type": "q8"
+    },
+    "norm.weight": {
+      "offset": 353353728,
+      "bytes": 2048,
+      "shape": [
+        512
+      ],
+      "type": "f32"
+    }
+  },
+  "bytes": 353355776,
+  "sha256": "fe5f24b98b333e23112ccbe885516f9557ab6bb0182540cce2ef82ed80362af7"
+}

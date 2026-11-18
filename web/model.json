@@ -1,5 +1,6 @@
 {
   "format": "franok-q4-v1",
+  "scale_method": "least-squares",
   "config": {
     "vocab": 8192,
     "width": 512,
@@ -8,7 +9,7 @@
     "kv_heads": 2,
     "hidden": 2048,
     "banks": 8,
-    "window": 256
+    "window": 1024
   },
   "tensors": {
     "blocks.0.down": {
@@ -678,5 +679,5 @@
     }
   },
   "bytes": 196331520,
-  "sha256": "cbd7161f6862a19e29ddb3158becc513f3afa9f64080d327b00a97831fb2fe11"
+  "sha256": "b87dd88be8872fad5a7623b0f9c76721043dfdad182f9303750da888911ec83e"
 }

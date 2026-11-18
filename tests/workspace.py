@@ -101,7 +101,7 @@ def verify(url):
         for prompt, expected in [
             ("wdym?", "I was just saying hello. Is there something on your mind?"),
             (
-                "that makes no sense",
+                "you make no sense.",
                 "Let’s start again. What question would you like me to answer?",
             ),
         ]:
@@ -115,6 +115,7 @@ def verify(url):
         a.locator("#controls").click()
         a.locator("#casual").uncheck()
         a.get_by_role("button", name="Save controls").click()
+        expect(a.locator("#prefs")).not_to_be_visible()
         a.reload()
         a.locator("#controls").click()
         expect(a.locator("#casual")).not_to_be_checked()

@@ -70,11 +70,15 @@ const factual = [
   { role: 'assistant', text: 'Unclear answer.' },
 ];
 assert.equal(conversationAction('I don’t understand.', factual, 'en').source, 0);
-assert.equal(
+assert.match(
   conversationAction(
     'Ne demek istedin?',
     [...factual, { role: 'user', text: 'I don’t understand.', revisit: 0 }],
     'tr',
-  ).source,
-  0,
+  ).text,
+  /açık bir yanıt/,
 );
+assert.match(conversationAction('wdym', [
+  { role: 'user', text: 'hi' },
+  { role: 'assistant', text: 'An unrelated answer from an earlier version.' },
+], 'en').text, /You said hello/);

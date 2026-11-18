@@ -2,8 +2,11 @@
 set -euo pipefail
 root=$(cd "$(dirname "$0")/.." && pwd)
 data="${XDG_DATA_HOME:-$HOME/.local/share}"
-mkdir -p "$data/applications" "$data/icons/hicolor/scalable/apps" "$HOME/.local/bin"
-install -m644 "$root/web/cup.svg" "$data/icons/hicolor/scalable/apps/franok.svg"
+mkdir -p "$data/applications" "$data/icons/hicolor/256x256/apps" "$HOME/.local/bin"
+install -m644 "$root/desktop/franok.png" "$data/icons/hicolor/256x256/apps/franok.png"
+old="$data/icons/hicolor/scalable/apps/franok.svg"
+if [[ -f "$old" ]] && cmp -s "$old" "$root/web/cup.svg"; then rm -- "$old"; fi
+if command -v gtk-update-icon-cache >/dev/null; then gtk-update-icon-cache -f -t "$data/icons/hicolor" >/dev/null; fi
 ln -sfn "$root/desktop/launch.sh" "$HOME/.local/bin/franok"
 cat > "$data/applications/franok.desktop" <<EOF
 [Desktop Entry]

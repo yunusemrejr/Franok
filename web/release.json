@@ -1,20 +1,37 @@
 {
-  "version": "0.1.1",
-  "revision": "7633d06180ebbc836af02c590f96f8ac28a4829a",
-  "window": 256,
+  "version": "0.2.0",
+  "window": 1024,
   "default": "q4",
-  "systemConditioned": false,
+  "systemConditioned": true,
+  "revision": "db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b",
   "formats": {
     "q4": {
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7633d06180ebbc836af02c590f96f8ac28a4829a/model.q4",
       "manifest": "./model.json",
       "bytes": 196331520,
-      "sha256": "cbd7161f6862a19e29ddb3158becc513f3afa9f64080d327b00a97831fb2fe11"
+      "sha256": "b87dd88be8872fad5a7623b0f9c76721043dfdad182f9303750da888911ec83e",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b/model.q4"
+    },
+    "q8": {
+      "manifest": "./model-q8.json",
+      "bytes": 353355776,
+      "sha256": "fe5f24b98b333e23112ccbe885516f9557ab6bb0182540cce2ef82ed80362af7",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b/model.q8"
     },
     "fp16": {
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7633d06180ebbc836af02c590f96f8ac28a4829a/model.safetensors",
-      "bytes": 628129304
+      "bytes": 628129304,
+      "sha256": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b/model.safetensors"
+    },
+    "fp32": {
+      "bytes": 1256251968,
+      "sha256": "8c2a68e2e709a7e14baecbaa3b918f19541ed9059f0c1a9e47fc3080293c4a02",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b/fp32/model.safetensors"
     }
+  },
+  "installer": {
+    "file": "franok_0.2.0_amd64.deb",
+    "version": "0.2.0",
+    "url": "https://franok.yunusemrevurgun.com/downloads/franok_0.2.0_amd64.deb"
   },
   "video": {
     "url": "./media/franok-from-scratch.mp4",
