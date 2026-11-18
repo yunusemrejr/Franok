@@ -1,0 +1,2371 @@
+{
+  "format": "q4",
+  "weight_sha256": "b87dd88be8872fad5a7623b0f9c76721043dfdad182f9303750da888911ec83e",
+  "window": 1024,
+  "conversations": [
+    {
+      "id": "en-introduce",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Hi there! What should I call you?"
+        },
+        {
+          "role": "assistant",
+          "text": "Certainly, here are some ideas to do with you:\n\n1. Identify the key features and messages: You can use a variety of tools and tools to create a clear and concise manner.\n\n2. Add a consistent dictionary: You can also"
+        },
+        {
+          "role": "user",
+          "text": "Can I speak Turkish with you as well?"
+        },
+        {
+          "role": "assistant",
+          "text": "Yes, I can speak Turkish with you.\n\nI'm not happy tomatoes for a specific dictionary or text. You can also find themselves in the original sentence or more formal language.\n\n3. Ingredients: Ingr"
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 64,
+          "prompt_tokens": 46,
+          "decode_ms": 1415,
+          "criterion": [
+            "franok"
+          ],
+          "passed": false
+        },
+        {
+          "tokens": 64,
+          "prompt_tokens": 125,
+          "decode_ms": 1569,
+          "criterion": [
+            "turkish",
+            "yes"
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "tr-introduce",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Selam, senin ismin nedir?"
+        },
+        {
+          "role": "assistant",
+          "text": "Selam, bir şeyden bahsediyorsan, seninle birlikte düşünelim."
+        },
+        {
+          "role": "user",
+          "text": "Seninle İngilizce de sohbet edebilir miyim?"
+        },
+        {
+          "role": "assistant",
+          "text": "Evet, İngilizce'de bir sohbet asistanıyım."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 20,
+          "prompt_tokens": 40,
+          "decode_ms": 362,
+          "criterion": [
+            "franok"
+          ],
+          "passed": false
+        },
+        {
+          "tokens": 12,
+          "prompt_tokens": 74,
+          "decode_ms": 209,
+          "criterion": [
+            "ingilizce",
+            "evet",
+            "elbette",
+            "tabii"
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "en-correction",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Our band's rehearsal is at 18:20. Please remember that for this chat."
+        },
+        {
+          "role": "assistant",
+          "text": "I'm happy to help you with that. Can you please tell me the best of the band's name, and I am not specifically the best of this chat."
+        },
+        {
+          "role": "user",
+          "text": "Plans changed. It's now at 19:35."
+        },
+        {
+          "role": "assistant",
+          "text": "Thanks for the update. The best of the chat."
+        },
+        {
+          "role": "user",
+          "text": "What is the updated rehearsal time? Give only the time."
+        },
+        {
+          "role": "assistant",
+          "text": "The updated rehearsal time is at 19:35."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 39,
+          "prompt_tokens": 61,
+          "decode_ms": 946,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 14,
+          "prompt_tokens": 118,
+          "decode_ms": 317,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 15,
+          "prompt_tokens": 153,
+          "decode_ms": 432,
+          "criterion": [
+            "19:35"
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "tr-correction",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Koro provasını saat 13.10 olarak not al lütfen."
+        },
+        {
+          "role": "assistant",
+          "text": "Tamam, güncel kalkış saati 13.10'da saat 14.10'u çıkarabilirim."
+        },
+        {
+          "role": "user",
+          "text": "Bir değişiklik oldu. Yeni saat 15.25."
+        },
+        {
+          "role": "assistant",
+          "text": "Merhaba, birlikte saat 13.25'te saat 14.10'u çıkarabilirim."
+        },
+        {
+          "role": "user",
+          "text": "Son söylediğim prova saati kaçtı? Yalnızca saati yaz."
+        },
+        {
+          "role": "assistant",
+          "text": "Evet, saat 13.10'u 5-10'a kadar."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 25,
+          "prompt_tokens": 45,
+          "decode_ms": 519,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 19,
+          "prompt_tokens": 83,
+          "decode_ms": 388,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 16,
+          "prompt_tokens": 124,
+          "decode_ms": 315,
+          "criterion": [
+            "15.25",
+            "15:25"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "en-followup",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "My bicycle has a flat tire. What should I check first?"
+        },
+        {
+          "role": "assistant",
+          "text": "Start by bicycle, and remove the tire of the air, such as a flat, melt, or push-ups. This will help you create a flat tire for your bicycle."
+        },
+        {
+          "role": "user",
+          "text": "I found a small hole in the inner tube. What could I use to fix it?"
+        },
+        {
+          "role": "assistant",
+          "text": "You can use a simple orientation system like a flat tire for a flat shape, such as a rich, dry or a flat, or a screen. These can help you create a more robust and relaxable atmosphere."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 49,
+          "prompt_tokens": 53,
+          "decode_ms": 1083,
+          "criterion": [
+            "tire",
+            "tyre",
+            "tube",
+            "puncture",
+            "valve",
+            "wheel",
+            "air"
+          ],
+          "passed": true
+        },
+        {
+          "tokens": 59,
+          "prompt_tokens": 127,
+          "decode_ms": 1454,
+          "criterion": [
+            "patch",
+            "repair kit",
+            "new tube",
+            "replace"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "tr-followup",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Bisikletimin lastiği inmiş. Önce neyi kontrol etmeliyim?"
+        },
+        {
+          "role": "assistant",
+          "text": "Bisikletin lastiği, normalde en azından kabul edilen ve en azından en azından ikinci en yüksek olanıdır.\n\nBisikletlerin lastiği, lastiğin en azından tamamı ikinci en yüksekte olanıdır. Bu, lastiğin başına daha fazla kalınlıkta olması ve lastiğin en yüksek"
+        },
+        {
+          "role": "user",
+          "text": "İç lastikte küçük bir delik buldum. Onu neyle kapatabilirim?"
+        },
+        {
+          "role": "assistant",
+          "text": "İç lastikte küçük bir delikle açabilirsin. Bu şekilde lastiklerin tamamı da en az 4-4 kez daha az kalır."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 64,
+          "prompt_tokens": 49,
+          "decode_ms": 1437,
+          "criterion": [
+            "lastik",
+            "delik",
+            "sibop",
+            "supap",
+            "hava"
+          ],
+          "passed": false
+        },
+        {
+          "tokens": 33,
+          "prompt_tokens": 137,
+          "decode_ms": 828,
+          "criterion": [
+            "yama",
+            "tamir kit",
+            "değiştir"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "en-format",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Which word names an animal: spoon or rabbit? Reply with the animal only."
+        },
+        {
+          "role": "assistant",
+          "text": "The word \"schoon\" is a type of nest that describes the family's name, meaning, and location. It is a dish that can be used to describe the animal in the family, such as a fish or a rabbit, to the animal."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 59,
+          "prompt_tokens": 43,
+          "decode_ms": 1222,
+          "criterion": [
+            "rabbit"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "tr-format",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Hangisi bir meyve: tabak mı, armut mu? Sadece meyvenin adını yaz."
+        },
+        {
+          "role": "assistant",
+          "text": "Hangisi, bir meyve, bir çay kaşığı armut, bir çay bardağı ve bir çay kaşığı kek kullanın."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 24,
+          "prompt_tokens": 39,
+          "decode_ms": 504,
+          "criterion": [
+            "armut"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "en-open",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "What makes a cup of coffee taste bitter?"
+        },
+        {
+          "role": "assistant",
+          "text": "A cup of coffee taste is to set a coffee taste, a simple blend of fruit, vegetables, and vegetables. It's a good idea to make a cup of coffee."
+        },
+        {
+          "role": "user",
+          "text": "How would you change the brewing process to make it less bitter?"
+        },
+        {
+          "role": "assistant",
+          "text": "To change the brewing process, you can use the following methods:\n\n1. Identify the types of fruit: the slices are very popular and have a bold slice. This helps to make the flavors more enjoyable and helpful.\n\n2. U"
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 43,
+          "prompt_tokens": 47,
+          "decode_ms": 945,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 64,
+          "prompt_tokens": 109,
+          "decode_ms": 1458,
+          "criterion": null,
+          "passed": null
+        }
+      ]
+    },
+    {
+      "id": "tr-open",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Kitap okumaya yeniden başlamak istiyorum ama kolayca sıkılıyorum. Ne önerirsin?"
+        },
+        {
+          "role": "assistant",
+          "text": "Sayın [Yılın Adı],\n\nGülüşmek üzere sana yardımcı olabilirim. Sana yazdıktan sonra başlayalım.\n\nSayın [Önce Adı]"
+        },
+        {
+          "role": "user",
+          "text": "Kısa öyküleri seviyorum. Bu akşam için basit bir plan yapabilir misin?"
+        },
+        {
+          "role": "assistant",
+          "text": "Tabii ki, size bir şiir ya da tuvalette yardımcı olabilirim. Bu akşam için birlikte taslağı çok seviyorum."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 42,
+          "prompt_tokens": 51,
+          "decode_ms": 822,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 30,
+          "prompt_tokens": 116,
+          "decode_ms": 884,
+          "criterion": null,
+          "passed": null
+        }
+      ]
+    }
+  ],
+  "choices": {
+    "summary": {
+      "reading-en": {
+        "correct": 13,
+        "count": 48
+      },
+      "reading-tr": {
+        "correct": 12,
+        "count": 48
+      },
+      "short-en": {
+        "correct": 9,
+        "count": 16
+      },
+      "short-tr": {
+        "correct": 9,
+        "count": 16
+      }
+    },
+    "items": [
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:Biology/Kingdoms/Animals",
+          1
+        ],
+        "gold": 1,
+        "pred": 2,
+        "scores": [
+          -4.00706,
+          -3.55566,
+          -2.46751,
+          -3.90067
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+          1
+        ],
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -0.98697,
+          -0.69027,
+          -1.18509,
+          -1.11561
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Akayev_flees_Kyrgyzstan_as_protesters_seize_control_of_Bishkek",
+          2
+        ],
+        "gold": 0,
+        "pred": 3,
+        "scores": [
+          -1.01515,
+          -0.82323,
+          -1.4997,
+          -0.36805
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:Europe/Vatican_City",
+          2
+        ],
+        "gold": 2,
+        "pred": 2,
+        "scores": [
+          -1.25671,
+          -0.98701,
+          -0.87592,
+          -0.96531
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/US_Navy_ship_damages_Tubbataha_Reef_National_Park",
+          1
+        ],
+        "gold": 2,
+        "pred": 0,
+        "scores": [
+          -0.54945,
+          -0.79093,
+          -1.73403,
+          -0.95952
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/September_11_attacks_remembered_in_US",
+          1
+        ],
+        "gold": 0,
+        "pred": 3,
+        "scores": [
+          -1.73591,
+          -1.87178,
+          -0.90046,
+          -0.61575
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Birdwatching",
+          2
+        ],
+        "gold": 2,
+        "pred": 3,
+        "scores": [
+          -1.18513,
+          -0.83763,
+          -1.28634,
+          -0.81345
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+          2
+        ],
+        "gold": 1,
+        "pred": 1,
+        "scores": [
+          -0.6271,
+          -0.21098,
+          -0.68958,
+          -0.99793
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Computer",
+          2
+        ],
+        "gold": 0,
+        "pred": 2,
+        "scores": [
+          -3.88876,
+          -2.78759,
+          -1.47737,
+          -3.66026
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/United_States_warns_of_suicide_attacks_in_Kenya_and_Ethiopia",
+          1
+        ],
+        "gold": 2,
+        "pred": 2,
+        "scores": [
+          -1.31423,
+          -0.797,
+          -0.2865,
+          -1.53997
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/Fencing",
+          1
+        ],
+        "gold": 3,
+        "pred": 3,
+        "scores": [
+          -1.24433,
+          -0.6576,
+          -1.08229,
+          -0.46456
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/High_School_Biology/Nature_of_Science",
+          2
+        ],
+        "gold": 0,
+        "pred": 2,
+        "scores": [
+          -0.87269,
+          -0.80499,
+          -0.68713,
+          -1.06361
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:South_America/The_Amazon",
+          2
+        ],
+        "gold": 2,
+        "pred": 0,
+        "scores": [
+          -0.70783,
+          -0.94855,
+          -0.88691,
+          -1.14015
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Japan%27s_Top_100_Cherry_Blossom_Spots",
+          1
+        ],
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -0.47531,
+          -1.16202,
+          -0.61128,
+          -0.53041
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Sealing_ships_trapped_in_ice_off_coast_of_Newfoundland",
+          1
+        ],
+        "gold": 3,
+        "pred": 0,
+        "scores": [
+          -0.47644,
+          -1.0298,
+          -0.79596,
+          -1.47452
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Michael_Schumacher_calls_off_Formula_1_comeback_due_to_injury",
+          1
+        ],
+        "gold": 1,
+        "pred": 2,
+        "scores": [
+          -1.25664,
+          -0.90645,
+          -0.77986,
+          -0.82354
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Amsterdam/Canal_District",
+          2
+        ],
+        "gold": 0,
+        "pred": 2,
+        "scores": [
+          -1.05265,
+          -1.44064,
+          -0.8924,
+          -1.52691
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/FBI_recruits_for_%22War_on_Porn%22",
+          2
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -1.14462,
+          -0.81433,
+          -1.12938,
+          -1.32835
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Botanic_Gardens",
+          1
+        ],
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -1.69277,
+          -2.36999,
+          -1.71786,
+          -1.70324
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Japanese_Olympic_judoka_Hitoshi_Saito_dies_aged_54",
+          1
+        ],
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -1.10561,
+          -1.20856,
+          -1.12346,
+          -2.94859
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Militants_bomb_Gaziantep,_Turkey_police_headquarters",
+          2
+        ],
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -0.71985,
+          -0.5602,
+          -1.83223,
+          -1.37634
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Philae_space_probe_lands_on_comet",
+          1
+        ],
+        "gold": 3,
+        "pred": 0,
+        "scores": [
+          -0.59715,
+          -1.16673,
+          -0.84826,
+          -1.14633
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Taiwanese_consumer_laptop_market_faces_change_following_ASUStek_winning_sustainability_award",
+          1
+        ],
+        "gold": 2,
+        "pred": 2,
+        "scores": [
+          -1.68399,
+          -2.72242,
+          -0.73044,
+          -2.88984
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/The_Organ_Systems/nervous",
+          1
+        ],
+        "gold": 0,
+        "pred": 2,
+        "scores": [
+          -1.66629,
+          -1.15601,
+          -0.56636,
+          -1.27015
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Canyoning",
+          2
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -1.18934,
+          -0.76912,
+          -1.17611,
+          -1.38952
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/New_fossils_from_10_million_year_old_ape_found_in_Ethiopia",
+          2
+        ],
+        "gold": 1,
+        "pred": 1,
+        "scores": [
+          -0.66876,
+          -0.66215,
+          -0.73778,
+          -0.91897
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+          1
+        ],
+        "gold": 1,
+        "pred": 0,
+        "scores": [
+          -0.72242,
+          -0.79545,
+          -1.37294,
+          -0.95568
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Caucasus",
+          1
+        ],
+        "gold": 3,
+        "pred": 0,
+        "scores": [
+          -0.42091,
+          -0.83155,
+          -1.04204,
+          -1.09725
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Hostels",
+          1
+        ],
+        "gold": 2,
+        "pred": 0,
+        "scores": [
+          -1.3354,
+          -2.09289,
+          -1.63139,
+          -1.67391
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Romanian_artists_auction_off_their_works_for_tsunami_victims",
+          1
+        ],
+        "gold": 1,
+        "pred": 2,
+        "scores": [
+          -0.93437,
+          -0.80531,
+          -0.72979,
+          -1.38532
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/History_of_Technology/Cultural_Determinism",
+          1
+        ],
+        "gold": 1,
+        "pred": 1,
+        "scores": [
+          -2.71495,
+          -1.14525,
+          -1.89421,
+          -1.73437
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Fighter_jet_crashes_during_Children%27s_Day_airshow_in_Thailand",
+          2
+        ],
+        "gold": 0,
+        "pred": 2,
+        "scores": [
+          -0.69466,
+          -1.62805,
+          -0.4594,
+          -0.83746
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Parts_of_New_Orleans_flood_again",
+          1
+        ],
+        "gold": 2,
+        "pred": 1,
+        "scores": [
+          -1.65755,
+          -0.76096,
+          -1.04379,
+          -0.95584
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/UK_government_outlines_plans_for_rail_transport",
+          1
+        ],
+        "gold": 3,
+        "pred": 3,
+        "scores": [
+          -1.10623,
+          -1.64341,
+          -1.12895,
+          -0.85683
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+          1
+        ],
+        "gold": 2,
+        "pred": 2,
+        "scores": [
+          -4.13228,
+          -1.25722,
+          -1.08664,
+          -2.76512
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+          2
+        ],
+        "gold": 1,
+        "pred": 1,
+        "scores": [
+          -0.96965,
+          -0.33855,
+          -1.18823,
+          -1.05225
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Mitt_Romney_wins_2012_Florida_primary",
+          2
+        ],
+        "gold": 1,
+        "pred": 3,
+        "scores": [
+          -0.68957,
+          -0.6483,
+          -0.66057,
+          -0.61989
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Returning_home",
+          2
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -0.79257,
+          -0.61316,
+          -0.82568,
+          -1.24309
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Typhoon_prompts_massive_evacuations_in_China",
+          1
+        ],
+        "gold": 2,
+        "pred": 3,
+        "scores": [
+          -1.44979,
+          -1.46847,
+          -1.32655,
+          -1.31851
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Waterways",
+          1
+        ],
+        "gold": 2,
+        "pred": 1,
+        "scores": [
+          -1.25507,
+          -0.99092,
+          -1.7474,
+          -1.34618
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/2010_FIBA_World_Championship_starts",
+          2
+        ],
+        "gold": 3,
+        "pred": 2,
+        "scores": [
+          -2.01778,
+          -1.40119,
+          -1.12899,
+          -1.58849
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Naked_News_to_create_international_language_editions",
+          2
+        ],
+        "gold": 2,
+        "pred": 3,
+        "scores": [
+          -2.67318,
+          -0.93751,
+          -2.27662,
+          -0.90288
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Auxiliary_languages",
+          1
+        ],
+        "gold": 3,
+        "pred": 0,
+        "scores": [
+          -0.95866,
+          -1.75523,
+          -1.15248,
+          -1.28471
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/No_bomb_threat,_hijacking_of_plane_in_China%27s_Xinjiang_region_according_to_Afghan_officials",
+          2
+        ],
+        "gold": 3,
+        "pred": 2,
+        "scores": [
+          -0.72088,
+          -0.56693,
+          -0.18726,
+          -0.25396
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Flush_Toilet",
+          2
+        ],
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -1.00231,
+          -0.98539,
+          -2.91951,
+          -1.78319
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Genetics/Introduction",
+          1
+        ],
+        "gold": 3,
+        "pred": 2,
+        "scores": [
+          -0.92347,
+          -0.67571,
+          -0.573,
+          -1.83986
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikinews.org/wiki/Microsoft_and_Yahoo_team_up_to_make_IM_clients_compatible",
+          2
+        ],
+        "gold": 2,
+        "pred": 0,
+        "scores": [
+          -0.64097,
+          -0.74099,
+          -0.78167,
+          -1.34535
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "en",
+        "key": [
+          "https://en.wikibooks.org/wiki/First_Aid/Poisoning",
+          1
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -2.88857,
+          -1.16755,
+          -1.98858,
+          -2.11981
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:Biology/Kingdoms/Animals",
+          1
+        ],
+        "gold": 1,
+        "pred": 1,
+        "scores": [
+          -5.20658,
+          -1.29416,
+          -2.94222,
+          -2.86172
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+          1
+        ],
+        "gold": 0,
+        "pred": 3,
+        "scores": [
+          -1.40738,
+          -1.26329,
+          -1.33492,
+          -0.72325
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Akayev_flees_Kyrgyzstan_as_protesters_seize_control_of_Bishkek",
+          2
+        ],
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -0.80418,
+          -0.56571,
+          -0.91074,
+          -1.25072
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:Europe/Vatican_City",
+          2
+        ],
+        "gold": 2,
+        "pred": 2,
+        "scores": [
+          -2.52464,
+          -1.41137,
+          -1.06772,
+          -1.27601
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/US_Navy_ship_damages_Tubbataha_Reef_National_Park",
+          1
+        ],
+        "gold": 2,
+        "pred": 3,
+        "scores": [
+          -1.41539,
+          -1.00418,
+          -1.52719,
+          -0.87169
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/September_11_attacks_remembered_in_US",
+          1
+        ],
+        "gold": 0,
+        "pred": 3,
+        "scores": [
+          -1.01341,
+          -1.24274,
+          -1.01434,
+          -0.92128
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Birdwatching",
+          2
+        ],
+        "gold": 2,
+        "pred": 1,
+        "scores": [
+          -1.39261,
+          -0.65235,
+          -0.87047,
+          -1.15698
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+          2
+        ],
+        "gold": 1,
+        "pred": 0,
+        "scores": [
+          -0.79362,
+          -1.05423,
+          -1.27342,
+          -1.13411
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Computer",
+          2
+        ],
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -3.16307,
+          -1.63501,
+          -3.25106,
+          -2.63356
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/United_States_warns_of_suicide_attacks_in_Kenya_and_Ethiopia",
+          1
+        ],
+        "gold": 2,
+        "pred": 0,
+        "scores": [
+          -0.91874,
+          -1.04493,
+          -1.03684,
+          -1.05193
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/Fencing",
+          1
+        ],
+        "gold": 3,
+        "pred": 0,
+        "scores": [
+          -0.72282,
+          -0.89475,
+          -1.59672,
+          -0.89848
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/High_School_Biology/Nature_of_Science",
+          2
+        ],
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -0.75,
+          -1.44479,
+          -1.44464,
+          -1.7459
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:South_America/The_Amazon",
+          2
+        ],
+        "gold": 2,
+        "pred": 1,
+        "scores": [
+          -1.25674,
+          -0.84958,
+          -1.48041,
+          -1.05603
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Japan%27s_Top_100_Cherry_Blossom_Spots",
+          1
+        ],
+        "gold": 0,
+        "pred": 3,
+        "scores": [
+          -1.39085,
+          -1.1104,
+          -1.82868,
+          -0.3735
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Sealing_ships_trapped_in_ice_off_coast_of_Newfoundland",
+          1
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -1.04471,
+          -0.73149,
+          -0.97498,
+          -3.00843
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Michael_Schumacher_calls_off_Formula_1_comeback_due_to_injury",
+          1
+        ],
+        "gold": 1,
+        "pred": 3,
+        "scores": [
+          -0.80269,
+          -0.86779,
+          -0.92646,
+          -0.54136
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Amsterdam/Canal_District",
+          2
+        ],
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -1.09022,
+          -1.51724,
+          -1.36131,
+          -1.10326
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/FBI_recruits_for_%22War_on_Porn%22",
+          2
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -1.14203,
+          -0.782,
+          -1.18891,
+          -0.97081
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Botanic_Gardens",
+          1
+        ],
+        "gold": 0,
+        "pred": 3,
+        "scores": [
+          -1.645,
+          -1.67667,
+          -1.87122,
+          -1.10706
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Japanese_Olympic_judoka_Hitoshi_Saito_dies_aged_54",
+          1
+        ],
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -1.16597,
+          -0.66357,
+          -0.81302,
+          -2.0931
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Militants_bomb_Gaziantep,_Turkey_police_headquarters",
+          2
+        ],
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -2.06025,
+          -1.08942,
+          -1.58134,
+          -1.27266
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Philae_space_probe_lands_on_comet",
+          1
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -1.07407,
+          -0.6753,
+          -1.13069,
+          -0.82466
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Taiwanese_consumer_laptop_market_faces_change_following_ASUStek_winning_sustainability_award",
+          1
+        ],
+        "gold": 2,
+        "pred": 2,
+        "scores": [
+          -1.79548,
+          -2.77345,
+          -1.20108,
+          -2.56545
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/The_Organ_Systems/nervous",
+          1
+        ],
+        "gold": 0,
+        "pred": 3,
+        "scores": [
+          -0.99955,
+          -1.01791,
+          -2.20571,
+          -0.94071
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Canyoning",
+          2
+        ],
+        "gold": 3,
+        "pred": 3,
+        "scores": [
+          -1.35015,
+          -1.43204,
+          -1.05751,
+          -0.85907
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/New_fossils_from_10_million_year_old_ape_found_in_Ethiopia",
+          2
+        ],
+        "gold": 1,
+        "pred": 3,
+        "scores": [
+          -1.6891,
+          -2.90119,
+          -1.38236,
+          -1.01049
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+          1
+        ],
+        "gold": 1,
+        "pred": 0,
+        "scores": [
+          -1.07278,
+          -1.50375,
+          -1.36471,
+          -1.55356
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Caucasus",
+          1
+        ],
+        "gold": 3,
+        "pred": 2,
+        "scores": [
+          -2.28302,
+          -1.46433,
+          -0.84296,
+          -1.03691
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Hostels",
+          1
+        ],
+        "gold": 2,
+        "pred": 2,
+        "scores": [
+          -1.17501,
+          -1.26848,
+          -0.84536,
+          -1.27347
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Romanian_artists_auction_off_their_works_for_tsunami_victims",
+          1
+        ],
+        "gold": 1,
+        "pred": 2,
+        "scores": [
+          -0.94815,
+          -1.66123,
+          -0.59494,
+          -1.01998
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/History_of_Technology/Cultural_Determinism",
+          1
+        ],
+        "gold": 1,
+        "pred": 3,
+        "scores": [
+          -2.21169,
+          -1.47254,
+          -1.51842,
+          -1.40833
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Fighter_jet_crashes_during_Children%27s_Day_airshow_in_Thailand",
+          2
+        ],
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -1.01242,
+          -1.50849,
+          -1.88691,
+          -1.63683
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Parts_of_New_Orleans_flood_again",
+          1
+        ],
+        "gold": 2,
+        "pred": 2,
+        "scores": [
+          -1.88843,
+          -1.78157,
+          -0.80967,
+          -1.35976
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/UK_government_outlines_plans_for_rail_transport",
+          1
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -1.08746,
+          -0.76893,
+          -1.42067,
+          -0.83502
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+          1
+        ],
+        "gold": 2,
+        "pred": 0,
+        "scores": [
+          -3.04499,
+          -3.9938,
+          -4.03654,
+          -3.48363
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+          2
+        ],
+        "gold": 1,
+        "pred": 3,
+        "scores": [
+          -0.74361,
+          -0.7734,
+          -1.1654,
+          -0.73515
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Mitt_Romney_wins_2012_Florida_primary",
+          2
+        ],
+        "gold": 1,
+        "pred": 2,
+        "scores": [
+          -2.14901,
+          -2.02896,
+          -1.36441,
+          -2.20399
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Returning_home",
+          2
+        ],
+        "gold": 3,
+        "pred": 2,
+        "scores": [
+          -1.26383,
+          -1.2296,
+          -0.88959,
+          -0.99783
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Typhoon_prompts_massive_evacuations_in_China",
+          1
+        ],
+        "gold": 2,
+        "pred": 1,
+        "scores": [
+          -1.30825,
+          -0.94681,
+          -1.0369,
+          -1.11475
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Waterways",
+          1
+        ],
+        "gold": 2,
+        "pred": 1,
+        "scores": [
+          -1.54466,
+          -1.06523,
+          -1.65874,
+          -1.40351
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/2010_FIBA_World_Championship_starts",
+          2
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -0.75958,
+          -0.74364,
+          -1.63657,
+          -1.66736
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Naked_News_to_create_international_language_editions",
+          2
+        ],
+        "gold": 2,
+        "pred": 1,
+        "scores": [
+          -1.08738,
+          -0.80876,
+          -1.82163,
+          -0.81972
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikivoyage.org/wiki/Auxiliary_languages",
+          1
+        ],
+        "gold": 3,
+        "pred": 3,
+        "scores": [
+          -1.9732,
+          -1.68688,
+          -1.27545,
+          -0.82281
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/No_bomb_threat,_hijacking_of_plane_in_China%27s_Xinjiang_region_according_to_Afghan_officials",
+          2
+        ],
+        "gold": 3,
+        "pred": 3,
+        "scores": [
+          -1.03119,
+          -1.3744,
+          -1.03729,
+          -0.86692
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Flush_Toilet",
+          2
+        ],
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -0.70619,
+          -0.80681,
+          -2.95581,
+          -2.37489
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Genetics/Introduction",
+          1
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -1.8152,
+          -1.14107,
+          -2.22267,
+          -1.48668
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikinews.org/wiki/Microsoft_and_Yahoo_team_up_to_make_IM_clients_compatible",
+          2
+        ],
+        "gold": 2,
+        "pred": 1,
+        "scores": [
+          -1.24218,
+          -0.65429,
+          -0.91507,
+          -1.31639
+        ]
+      },
+      {
+        "suite": "reading",
+        "lang": "tr",
+        "key": [
+          "https://en.wikibooks.org/wiki/First_Aid/Poisoning",
+          1
+        ],
+        "gold": 3,
+        "pred": 1,
+        "scores": [
+          -1.62691,
+          -1.20537,
+          -1.75321,
+          -1.74988
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 0,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -2.85268,
+          -4.44263
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 1,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -7.36966,
+          -4.64093
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 2,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -6.03778,
+          -5.98022
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 3,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -6.10544,
+          -4.84767
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 4,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -3.57823,
+          -2.44755
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 5,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -3.42952,
+          -4.69443
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 6,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -5.24177,
+          -5.45372
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 7,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -3.12656,
+          -6.87047
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 8,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -3.72075,
+          -0.17612
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 9,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -4.50412,
+          -5.78296
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 10,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -3.21565,
+          -2.37629
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 11,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -5.23259,
+          -5.83342
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 12,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -0.71886,
+          -1.80961
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 13,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -2.09437,
+          -4.1504
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 14,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -0.61864,
+          -5.35157
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "en",
+        "key": 15,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -5.29889,
+          -4.73468
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 16,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -2.73989,
+          -2.59662
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 17,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -3.52686,
+          -6.07619
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 18,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -2.7431,
+          -9.72891
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 19,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -5.51887,
+          -3.25719
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 20,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -7.04584,
+          -4.78744
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 21,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -1.19258,
+          -2.78003
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 22,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -5.69723,
+          -6.0537
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 23,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -11.13767,
+          -4.4977
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 24,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -5.36492,
+          -2.08693
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 25,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -4.73974,
+          -6.15033
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 26,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -2.49861,
+          -2.62694
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 27,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -6.69545,
+          -5.40935
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 28,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -3.02906,
+          -3.03849
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 29,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -2.13402,
+          -6.5768
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 30,
+        "gold": 0,
+        "pred": 0,
+        "scores": [
+          -3.80949,
+          -9.52529
+        ]
+      },
+      {
+        "suite": "short",
+        "lang": "tr",
+        "key": 31,
+        "gold": 0,
+        "pred": 1,
+        "scores": [
+          -4.1509,
+          -3.49509
+        ]
+      }
+    ]
+  },
+  "numeric": {
+    "en-text": {
+      "tokens": 512,
+      "native_nll": 3.309703567506742,
+      "wasm_nll": 3.3722310502760804,
+      "agreement": 0.83984375,
+      "cosine": 0.9912043067932538
+    },
+    "en-chat": {
+      "tokens": 512,
+      "native_nll": 3.6021848284327462,
+      "wasm_nll": 3.653134853185445,
+      "agreement": 0.841796875,
+      "cosine": 0.9933810270495763
+    },
+    "tr-text": {
+      "tokens": 512,
+      "native_nll": 3.9427235759739574,
+      "wasm_nll": 3.9868679785349284,
+      "agreement": 0.837890625,
+      "cosine": 0.9909958216933441
+    },
+    "tr-chat": {
+      "tokens": 512,
+      "native_nll": 3.7062871539664526,
+      "wasm_nll": 3.753196004839769,
+      "agreement": 0.806640625,
+      "cosine": 0.9880970100556826
+    }
+  }
+}

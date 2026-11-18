@@ -1,0 +1,6 @@
+{
+  "method": "FP16 pre-reinforcement parent plus FP32 reinforcement adapter update before final rounding",
+  "sha256": "8c2a68e2e709a7e14baecbaa3b918f19541ed9059f0c1a9e47fc3080293c4a02",
+  "fp16_different_elements": 0,
+  "fp16_max_absolute_difference": 0.0
+}

@@ -1,0 +1,12 @@
+[
+ {"case":"en-introduce","lang":"en","turns":["Hi there! What should I call you?","Can I speak Turkish with you as well?"],"expect":[["franok"],["turkish","yes"]]},
+ {"case":"tr-introduce","lang":"tr","turns":["Selam, senin ismin nedir?","Seninle İngilizce de sohbet edebilir miyim?"],"expect":[["franok"],["ingilizce","evet","elbette","tabii"]]},
+ {"case":"en-correction","lang":"en","turns":["Our band's rehearsal is at 18:20. Please remember that for this chat.","Plans changed. It's now at 19:35.","What is the updated rehearsal time? Give only the time."],"expect":[null,null,["19:35"]]},
+ {"case":"tr-correction","lang":"tr","turns":["Koro provasını saat 13.10 olarak not al lütfen.","Bir değişiklik oldu. Yeni saat 15.25.","Son söylediğim prova saati kaçtı? Yalnızca saati yaz."],"expect":[null,null,["15.25","15:25"]]},
+ {"case":"en-followup","lang":"en","turns":["My bicycle has a flat tire. What should I check first?","I found a small hole in the inner tube. What could I use to fix it?"],"expect":[["tire","tyre","tube","puncture","valve","wheel","air"],["patch","repair kit","new tube","replace"]]},
+ {"case":"tr-followup","lang":"tr","turns":["Bisikletimin lastiği inmiş. Önce neyi kontrol etmeliyim?","İç lastikte küçük bir delik buldum. Onu neyle kapatabilirim?"],"expect":[["lastik","delik","sibop","supap","hava"],["yama","tamir kit","değiştir"]]},
+ {"case":"en-format","lang":"en","system":"Answer using only the requested word. Leave out explanations.","turns":["Which word names an animal: spoon or rabbit? Reply with the animal only."],"exact":true,"expect":[["rabbit"]]},
+ {"case":"tr-format","lang":"tr","system":"Yalnızca istenen kelimeyi yaz. Açıklama ekleme.","turns":["Hangisi bir meyve: tabak mı, armut mu? Sadece meyvenin adını yaz."],"exact":true,"expect":[["armut"]]},
+ {"case":"en-open","lang":"en","turns":["What makes a cup of coffee taste bitter?","How would you change the brewing process to make it less bitter?"],"expect":[null,null]},
+ {"case":"tr-open","lang":"tr","turns":["Kitap okumaya yeniden başlamak istiyorum ama kolayca sıkılıyorum. Ne önerirsin?","Kısa öyküleri seviyorum. Bu akşam için basit bir plan yapabilir misin?"],"expect":[null,null]}
+]

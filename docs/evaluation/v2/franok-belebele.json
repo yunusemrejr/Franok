@@ -1,0 +1,1258 @@
+{
+  "dataset_revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+  "per_language": 48,
+  "summary": {
+    "en": 12,
+    "tr": 11
+  },
+  "items": [
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Kingdoms/Animals",
+      "question": 1,
+      "pred": 3,
+      "gold": 2,
+      "scores": [
+        -3.320588,
+        -3.57796,
+        -2.332782,
+        -3.819492
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:Biology/Kingdoms/Animals",
+      "question": 1,
+      "pred": 2,
+      "gold": 2,
+      "scores": [
+        -4.969085,
+        -1.220915,
+        -2.677436,
+        -2.833348
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+      "question": 1,
+      "pred": 2,
+      "gold": 1,
+      "scores": [
+        -1.066649,
+        -0.681559,
+        -1.292012,
+        -1.04322
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+      "question": 1,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -1.358604,
+        -1.294122,
+        -1.31199,
+        -0.686477
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Akayev_flees_Kyrgyzstan_as_protesters_seize_control_of_Bishkek",
+      "question": 2,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -1.077449,
+        -0.737507,
+        -1.477334,
+        -0.300251
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Akayev_flees_Kyrgyzstan_as_protesters_seize_control_of_Bishkek",
+      "question": 2,
+      "pred": 2,
+      "gold": 1,
+      "scores": [
+        -0.791343,
+        -0.565505,
+        -0.957131,
+        -1.297738
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Vatican_City",
+      "question": 2,
+      "pred": 3,
+      "gold": 3,
+      "scores": [
+        -1.130966,
+        -0.988717,
+        -0.845838,
+        -0.964951
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:Europe/Vatican_City",
+      "question": 2,
+      "pred": 3,
+      "gold": 3,
+      "scores": [
+        -2.364467,
+        -1.230922,
+        -0.992561,
+        -1.318441
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/US_Navy_ship_damages_Tubbataha_Reef_National_Park",
+      "question": 1,
+      "pred": 1,
+      "gold": 3,
+      "scores": [
+        -0.592652,
+        -0.816745,
+        -1.926841,
+        -0.890898
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/US_Navy_ship_damages_Tubbataha_Reef_National_Park",
+      "question": 1,
+      "pred": 4,
+      "gold": 3,
+      "scores": [
+        -1.46616,
+        -1.082147,
+        -1.662525,
+        -0.787847
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/September_11_attacks_remembered_in_US",
+      "question": 1,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -1.72808,
+        -1.728011,
+        -0.888505,
+        -0.580109
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/September_11_attacks_remembered_in_US",
+      "question": 1,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -0.941871,
+        -1.198415,
+        -1.018023,
+        -0.904194
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Birdwatching",
+      "question": 2,
+      "pred": 2,
+      "gold": 3,
+      "scores": [
+        -1.17135,
+        -0.842585,
+        -1.295451,
+        -0.867462
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Birdwatching",
+      "question": 2,
+      "pred": 2,
+      "gold": 3,
+      "scores": [
+        -1.402624,
+        -0.704195,
+        -0.844435,
+        -1.179804
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+      "question": 2,
+      "pred": 2,
+      "gold": 2,
+      "scores": [
+        -0.543956,
+        -0.18165,
+        -0.65665,
+        -1.002031
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+      "question": 2,
+      "pred": 1,
+      "gold": 2,
+      "scores": [
+        -0.782195,
+        -0.969944,
+        -1.267209,
+        -1.102776
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Computer",
+      "question": 2,
+      "pred": 3,
+      "gold": 1,
+      "scores": [
+        -3.824463,
+        -2.818844,
+        -1.489249,
+        -3.80404
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Computer",
+      "question": 2,
+      "pred": 2,
+      "gold": 1,
+      "scores": [
+        -3.032053,
+        -1.883773,
+        -3.106507,
+        -2.740944
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/United_States_warns_of_suicide_attacks_in_Kenya_and_Ethiopia",
+      "question": 1,
+      "pred": 3,
+      "gold": 3,
+      "scores": [
+        -1.298229,
+        -0.802709,
+        -0.299839,
+        -1.585997
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/United_States_warns_of_suicide_attacks_in_Kenya_and_Ethiopia",
+      "question": 1,
+      "pred": 1,
+      "gold": 3,
+      "scores": [
+        -0.898908,
+        -1.009628,
+        -1.094842,
+        -1.067887
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/Fencing",
+      "question": 1,
+      "pred": 4,
+      "gold": 4,
+      "scores": [
+        -1.243334,
+        -0.666936,
+        -1.142648,
+        -0.479139
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/Fencing",
+      "question": 1,
+      "pred": 1,
+      "gold": 4,
+      "scores": [
+        -0.73553,
+        -0.886865,
+        -1.61405,
+        -0.880535
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/High_School_Biology/Nature_of_Science",
+      "question": 2,
+      "pred": 3,
+      "gold": 1,
+      "scores": [
+        -0.895343,
+        -0.839431,
+        -0.664121,
+        -1.04413
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/High_School_Biology/Nature_of_Science",
+      "question": 2,
+      "pred": 1,
+      "gold": 1,
+      "scores": [
+        -0.768908,
+        -1.421911,
+        -1.463687,
+        -1.818272
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:South_America/The_Amazon",
+      "question": 2,
+      "pred": 1,
+      "gold": 3,
+      "scores": [
+        -0.748723,
+        -0.993414,
+        -0.872736,
+        -1.115334
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:South_America/The_Amazon",
+      "question": 2,
+      "pred": 2,
+      "gold": 3,
+      "scores": [
+        -1.306278,
+        -0.916584,
+        -1.524047,
+        -1.065727
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Japan%27s_Top_100_Cherry_Blossom_Spots",
+      "question": 1,
+      "pred": 1,
+      "gold": 1,
+      "scores": [
+        -0.487817,
+        -1.121426,
+        -0.567299,
+        -0.502149
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Japan%27s_Top_100_Cherry_Blossom_Spots",
+      "question": 1,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -1.324751,
+        -1.101174,
+        -1.772929,
+        -0.422241
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Sealing_ships_trapped_in_ice_off_coast_of_Newfoundland",
+      "question": 1,
+      "pred": 1,
+      "gold": 4,
+      "scores": [
+        -0.402551,
+        -1.064603,
+        -0.81952,
+        -1.459467
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Sealing_ships_trapped_in_ice_off_coast_of_Newfoundland",
+      "question": 1,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -1.040766,
+        -0.669057,
+        -0.915481,
+        -3.16574
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Michael_Schumacher_calls_off_Formula_1_comeback_due_to_injury",
+      "question": 1,
+      "pred": 3,
+      "gold": 2,
+      "scores": [
+        -1.281625,
+        -0.950601,
+        -0.746292,
+        -0.8199
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Michael_Schumacher_calls_off_Formula_1_comeback_due_to_injury",
+      "question": 1,
+      "pred": 4,
+      "gold": 2,
+      "scores": [
+        -0.745951,
+        -0.869775,
+        -0.862663,
+        -0.570102
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Amsterdam/Canal_District",
+      "question": 2,
+      "pred": 3,
+      "gold": 1,
+      "scores": [
+        -1.022659,
+        -1.403621,
+        -0.891036,
+        -1.591523
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Amsterdam/Canal_District",
+      "question": 2,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -1.078334,
+        -1.448279,
+        -1.298868,
+        -1.040925
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/FBI_recruits_for_%22War_on_Porn%22",
+      "question": 2,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -1.133521,
+        -0.814385,
+        -1.146319,
+        -1.321675
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/FBI_recruits_for_%22War_on_Porn%22",
+      "question": 2,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -1.128481,
+        -0.840443,
+        -1.117098,
+        -0.971392
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Botanic_Gardens",
+      "question": 1,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -1.673085,
+        -2.407794,
+        -1.695949,
+        -1.633827
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Botanic_Gardens",
+      "question": 1,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -1.492415,
+        -1.600787,
+        -1.709591,
+        -1.043212
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Japanese_Olympic_judoka_Hitoshi_Saito_dies_aged_54",
+      "question": 1,
+      "pred": 1,
+      "gold": 1,
+      "scores": [
+        -1.107722,
+        -1.119173,
+        -1.127612,
+        -2.710834
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Japanese_Olympic_judoka_Hitoshi_Saito_dies_aged_54",
+      "question": 1,
+      "pred": 2,
+      "gold": 1,
+      "scores": [
+        -1.111298,
+        -0.635568,
+        -0.798628,
+        -2.153878
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Militants_bomb_Gaziantep,_Turkey_police_headquarters",
+      "question": 2,
+      "pred": 2,
+      "gold": 1,
+      "scores": [
+        -0.753623,
+        -0.484979,
+        -1.892072,
+        -1.410123
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Militants_bomb_Gaziantep,_Turkey_police_headquarters",
+      "question": 2,
+      "pred": 2,
+      "gold": 1,
+      "scores": [
+        -1.98453,
+        -1.075511,
+        -1.576908,
+        -1.269389
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Philae_space_probe_lands_on_comet",
+      "question": 1,
+      "pred": 1,
+      "gold": 4,
+      "scores": [
+        -0.609407,
+        -1.201359,
+        -0.865456,
+        -1.152398
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Philae_space_probe_lands_on_comet",
+      "question": 1,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -1.099971,
+        -0.613733,
+        -1.057204,
+        -0.856411
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Taiwanese_consumer_laptop_market_faces_change_following_ASUStek_winning_sustainability_award",
+      "question": 1,
+      "pred": 3,
+      "gold": 3,
+      "scores": [
+        -1.557645,
+        -2.761237,
+        -0.744298,
+        -2.992112
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Taiwanese_consumer_laptop_market_faces_change_following_ASUStek_winning_sustainability_award",
+      "question": 1,
+      "pred": 3,
+      "gold": 3,
+      "scores": [
+        -1.743052,
+        -2.703797,
+        -1.342397,
+        -2.639058
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/The_Organ_Systems/nervous",
+      "question": 1,
+      "pred": 3,
+      "gold": 1,
+      "scores": [
+        -1.786357,
+        -1.334882,
+        -0.660601,
+        -1.352615
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/The_Organ_Systems/nervous",
+      "question": 1,
+      "pred": 4,
+      "gold": 1,
+      "scores": [
+        -0.993904,
+        -0.984817,
+        -2.321382,
+        -0.896262
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Canyoning",
+      "question": 2,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -1.196153,
+        -0.817341,
+        -1.317072,
+        -1.407706
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Canyoning",
+      "question": 2,
+      "pred": 4,
+      "gold": 4,
+      "scores": [
+        -1.361531,
+        -1.322149,
+        -1.018265,
+        -0.858832
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/New_fossils_from_10_million_year_old_ape_found_in_Ethiopia",
+      "question": 2,
+      "pred": 2,
+      "gold": 2,
+      "scores": [
+        -0.679182,
+        -0.631447,
+        -0.709089,
+        -0.936508
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/New_fossils_from_10_million_year_old_ape_found_in_Ethiopia",
+      "question": 2,
+      "pred": 4,
+      "gold": 2,
+      "scores": [
+        -1.709206,
+        -2.927742,
+        -1.481887,
+        -0.99955
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+      "question": 1,
+      "pred": 1,
+      "gold": 2,
+      "scores": [
+        -0.758451,
+        -0.812614,
+        -1.39246,
+        -0.968105
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Space_station_crew_perform_successful_spacewalk",
+      "question": 1,
+      "pred": 1,
+      "gold": 2,
+      "scores": [
+        -1.033325,
+        -1.439601,
+        -1.289234,
+        -1.526041
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Caucasus",
+      "question": 1,
+      "pred": 1,
+      "gold": 4,
+      "scores": [
+        -0.411372,
+        -0.825048,
+        -1.066431,
+        -1.095919
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Caucasus",
+      "question": 1,
+      "pred": 3,
+      "gold": 4,
+      "scores": [
+        -2.214877,
+        -1.507108,
+        -0.756946,
+        -1.090215
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Hostels",
+      "question": 1,
+      "pred": 1,
+      "gold": 3,
+      "scores": [
+        -1.212322,
+        -2.168205,
+        -1.703552,
+        -1.613669
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Hostels",
+      "question": 1,
+      "pred": 3,
+      "gold": 3,
+      "scores": [
+        -1.103352,
+        -1.254557,
+        -0.830299,
+        -1.209015
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Romanian_artists_auction_off_their_works_for_tsunami_victims",
+      "question": 1,
+      "pred": 3,
+      "gold": 2,
+      "scores": [
+        -0.969397,
+        -0.757487,
+        -0.715671,
+        -1.491292
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Romanian_artists_auction_off_their_works_for_tsunami_victims",
+      "question": 1,
+      "pred": 3,
+      "gold": 2,
+      "scores": [
+        -0.909454,
+        -1.804521,
+        -0.604887,
+        -1.017256
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/History_of_Technology/Cultural_Determinism",
+      "question": 1,
+      "pred": 2,
+      "gold": 2,
+      "scores": [
+        -2.673687,
+        -1.112157,
+        -1.866498,
+        -1.771277
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/History_of_Technology/Cultural_Determinism",
+      "question": 1,
+      "pred": 4,
+      "gold": 2,
+      "scores": [
+        -2.22587,
+        -1.516527,
+        -1.546905,
+        -1.343356
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Fighter_jet_crashes_during_Children%27s_Day_airshow_in_Thailand",
+      "question": 2,
+      "pred": 3,
+      "gold": 1,
+      "scores": [
+        -0.626375,
+        -1.548548,
+        -0.412952,
+        -0.758361
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Fighter_jet_crashes_during_Children%27s_Day_airshow_in_Thailand",
+      "question": 2,
+      "pred": 1,
+      "gold": 1,
+      "scores": [
+        -0.985726,
+        -1.563742,
+        -1.965899,
+        -1.64875
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Parts_of_New_Orleans_flood_again",
+      "question": 1,
+      "pred": 2,
+      "gold": 3,
+      "scores": [
+        -1.647274,
+        -0.653426,
+        -1.201555,
+        -0.83396
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Parts_of_New_Orleans_flood_again",
+      "question": 1,
+      "pred": 3,
+      "gold": 3,
+      "scores": [
+        -1.806229,
+        -1.742602,
+        -0.813702,
+        -1.217284
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/UK_government_outlines_plans_for_rail_transport",
+      "question": 1,
+      "pred": 4,
+      "gold": 4,
+      "scores": [
+        -1.043494,
+        -1.607932,
+        -1.085776,
+        -0.874626
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/UK_government_outlines_plans_for_rail_transport",
+      "question": 1,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -1.032601,
+        -0.795702,
+        -1.377158,
+        -0.843385
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+      "question": 1,
+      "pred": 3,
+      "gold": 3,
+      "scores": [
+        -4.059466,
+        -1.319165,
+        -0.995846,
+        -2.851675
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Businessman_and_founder_of_The_Weather_Channel_Frank_Batten_dies_at_82",
+      "question": 1,
+      "pred": 1,
+      "gold": 3,
+      "scores": [
+        -3.035684,
+        -4.009307,
+        -4.282578,
+        -3.595525
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+      "question": 2,
+      "pred": 2,
+      "gold": 2,
+      "scores": [
+        -0.968131,
+        -0.332566,
+        -1.18494,
+        -1.084472
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Australian_Big_Brother_cleared_of_breaching_content_laws",
+      "question": 2,
+      "pred": 4,
+      "gold": 2,
+      "scores": [
+        -0.728892,
+        -0.759299,
+        -1.194897,
+        -0.72215
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Mitt_Romney_wins_2012_Florida_primary",
+      "question": 2,
+      "pred": 4,
+      "gold": 2,
+      "scores": [
+        -0.723681,
+        -0.612675,
+        -0.629905,
+        -0.581885
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Mitt_Romney_wins_2012_Florida_primary",
+      "question": 2,
+      "pred": 3,
+      "gold": 2,
+      "scores": [
+        -2.067034,
+        -1.860331,
+        -1.30777,
+        -2.107286
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Returning_home",
+      "question": 2,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -0.754968,
+        -0.610031,
+        -0.812177,
+        -1.247275
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Returning_home",
+      "question": 2,
+      "pred": 3,
+      "gold": 4,
+      "scores": [
+        -1.197834,
+        -1.160616,
+        -0.802862,
+        -0.958929
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Typhoon_prompts_massive_evacuations_in_China",
+      "question": 1,
+      "pred": 4,
+      "gold": 3,
+      "scores": [
+        -1.410467,
+        -1.443119,
+        -1.388493,
+        -1.355962
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Typhoon_prompts_massive_evacuations_in_China",
+      "question": 1,
+      "pred": 2,
+      "gold": 3,
+      "scores": [
+        -1.181635,
+        -0.871938,
+        -0.984382,
+        -1.047252
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Waterways",
+      "question": 1,
+      "pred": 2,
+      "gold": 3,
+      "scores": [
+        -1.246759,
+        -1.064312,
+        -1.74975,
+        -1.390124
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Waterways",
+      "question": 1,
+      "pred": 2,
+      "gold": 3,
+      "scores": [
+        -1.574602,
+        -1.122253,
+        -1.634853,
+        -1.363784
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/2010_FIBA_World_Championship_starts",
+      "question": 2,
+      "pred": 3,
+      "gold": 4,
+      "scores": [
+        -2.21927,
+        -1.324264,
+        -1.030306,
+        -1.715491
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/2010_FIBA_World_Championship_starts",
+      "question": 2,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -0.78021,
+        -0.767475,
+        -1.631295,
+        -1.610641
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Naked_News_to_create_international_language_editions",
+      "question": 2,
+      "pred": 4,
+      "gold": 3,
+      "scores": [
+        -2.701961,
+        -0.981911,
+        -2.205779,
+        -0.940112
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Naked_News_to_create_international_language_editions",
+      "question": 2,
+      "pred": 4,
+      "gold": 3,
+      "scores": [
+        -1.094849,
+        -0.868965,
+        -1.762635,
+        -0.823524
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikivoyage.org/wiki/Auxiliary_languages",
+      "question": 1,
+      "pred": 1,
+      "gold": 4,
+      "scores": [
+        -0.927511,
+        -1.686765,
+        -1.157882,
+        -1.274767
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikivoyage.org/wiki/Auxiliary_languages",
+      "question": 1,
+      "pred": 4,
+      "gold": 4,
+      "scores": [
+        -1.856728,
+        -1.712733,
+        -1.168393,
+        -0.908682
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/No_bomb_threat,_hijacking_of_plane_in_China%27s_Xinjiang_region_according_to_Afghan_officials",
+      "question": 2,
+      "pred": 3,
+      "gold": 4,
+      "scores": [
+        -0.658783,
+        -0.548903,
+        -0.186088,
+        -0.230167
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/No_bomb_threat,_hijacking_of_plane_in_China%27s_Xinjiang_region_according_to_Afghan_officials",
+      "question": 2,
+      "pred": 4,
+      "gold": 4,
+      "scores": [
+        -1.11596,
+        -1.397412,
+        -1.072862,
+        -0.889572
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Flush_Toilet",
+      "question": 2,
+      "pred": 2,
+      "gold": 1,
+      "scores": [
+        -0.97415,
+        -0.802612,
+        -2.80386,
+        -1.518256
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Flush_Toilet",
+      "question": 2,
+      "pred": 1,
+      "gold": 1,
+      "scores": [
+        -0.728391,
+        -0.800431,
+        -3.056119,
+        -2.554997
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Genetics/Introduction",
+      "question": 1,
+      "pred": 3,
+      "gold": 4,
+      "scores": [
+        -0.934941,
+        -0.662427,
+        -0.500337,
+        -1.600703
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/Introduction_to_Paleoanthropology/Genetics/Introduction",
+      "question": 1,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -2.094587,
+        -1.186669,
+        -2.09276,
+        -1.462023
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikinews.org/wiki/Microsoft_and_Yahoo_team_up_to_make_IM_clients_compatible",
+      "question": 2,
+      "pred": 1,
+      "gold": 3,
+      "scores": [
+        -0.630145,
+        -0.751569,
+        -0.777914,
+        -1.378633
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikinews.org/wiki/Microsoft_and_Yahoo_team_up_to_make_IM_clients_compatible",
+      "question": 2,
+      "pred": 2,
+      "gold": 3,
+      "scores": [
+        -1.294989,
+        -0.648847,
+        -0.904615,
+        -1.273897
+      ]
+    },
+    {
+      "language": "en",
+      "link": "https://en.wikibooks.org/wiki/First_Aid/Poisoning",
+      "question": 1,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -2.882218,
+        -1.216313,
+        -1.93404,
+        -2.11633
+      ]
+    },
+    {
+      "language": "tr",
+      "link": "https://en.wikibooks.org/wiki/First_Aid/Poisoning",
+      "question": 1,
+      "pred": 2,
+      "gold": 4,
+      "scores": [
+        -1.663859,
+        -1.234007,
+        -1.709793,
+        -1.85775
+      ]
+    }
+  ]
+}

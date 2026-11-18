@@ -1,0 +1,47 @@
+{
+  "phases": {
+    "lm": {
+      "steps": 12254,
+      "positions": 150577152,
+      "targets": 150577152,
+      "elapsed_seconds": 3761.92,
+      "validation": {
+        "lm": 2.942142057418823,
+        "dialogue": 2.5425227165222166
+      }
+    },
+    "sft": {
+      "steps": 3358,
+      "positions": 41263104,
+      "targets": 20390032,
+      "elapsed_seconds": 1034.81,
+      "validation": {
+        "lm": 2.9972276210784914,
+        "dialogue": 2.77048864364624
+      }
+    },
+    "dialogue": {
+      "steps": 1957,
+      "positions": 24047616,
+      "targets": 10061806,
+      "elapsed_seconds": 563.55,
+      "validation": {
+        "lm": 3.0146225452423097,
+        "dialogue": 2.749233531951904
+      }
+    },
+    "evidence": {
+      "steps": 1237,
+      "positions": 15200256,
+      "targets": 2430712,
+      "elapsed_seconds": 351.96,
+      "validation": {
+        "lm": 3.0177736282348633,
+        "dialogue": 2.753098201751709
+      }
+    }
+  },
+  "positions": 231088128,
+  "targets": 183459702,
+  "parent": "7633d06180ebbc836af02c590f96f8ac28a4829a"
+}

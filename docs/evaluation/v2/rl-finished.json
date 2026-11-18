@@ -1,0 +1,29 @@
+{
+  "rollouts": 11880,
+  "optimizer_updates": 1060,
+  "tokens": 101762,
+  "reward_sum": 8162.021062552929,
+  "initial": {
+    "reward": 0.6033796303284665,
+    "exact": 13,
+    "total": 24,
+    "dialogue_nll": 2.7520965933799744
+  },
+  "candidates": {
+    "0.35": {
+      "reward": 0.7224999999937912,
+      "exact": 16,
+      "total": 24,
+      "dialogue_nll": 2.7569884657859802
+    },
+    "1.0": {
+      "reward": 0.7263541663996875,
+      "exact": 16,
+      "total": 24,
+      "dialogue_nll": 2.776869773864746
+    }
+  },
+  "scale": 0.35,
+  "sha256": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+  "elapsed": 623.5991969108582
+}

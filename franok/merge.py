@@ -16,6 +16,11 @@ def main():
         help="HF checkout containing adapters/base and the three named adapter directories",
     )
     p.add_argument("output", type=Path)
+    p.add_argument(
+        "--compare",
+        type=Path,
+        help="Compare the rebuilt parameter values to a released FP16 checkpoint",
+    )
     args = p.parse_args()
     folder = args.directory / "adapters"
     base = folder / "base"
@@ -33,6 +38,23 @@ def main():
         {k: v.half().contiguous() for k, v in net.state_dict().items()},
         str(args.output),
     )
+    if args.compare:
+        actual = load_file(str(args.compare))
+        differences, largest, total = 0, 0.0, 0
+        for name, tensor in net.state_dict().items():
+            difference = (tensor.half().float() - actual[name].float()).abs()
+            differences += torch.count_nonzero(difference).item()
+            largest = max(largest, difference.max().item())
+            total += difference.numel()
+        print(
+            json.dumps(
+                {
+                    "parameters": total,
+                    "different_after_fp16_rounding": differences,
+                    "max_absolute_difference": largest,
+                }
+            )
+        )
 
 
 if __name__ == "__main__":

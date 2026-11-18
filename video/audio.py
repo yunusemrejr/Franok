@@ -66,7 +66,7 @@ def main():
             sections.append({"scene": i, "start": start / rate, "end": frames / rate})
     (OUT / "timing.json").write_text(json.dumps(sections, indent=2))
     for k, lines in caption.items():
-        (OUT / f"franok-{k}.vtt").write_text("\n".join(lines) + "\n")
+        (OUT / f"franok-{k}.vtt").write_text("\n".join(lines).rstrip() + "\n")
     print("Voice duration", frames / rate, flush=True)
 
 

@@ -1,0 +1,32 @@
+{
+  "positions": 231088128,
+  "targets": 183459702,
+  "rl_updates": 1060,
+  "rl_rollouts": 11880,
+  "reading": {
+    "en": 12,
+    "tr": 11
+  },
+  "short": {
+    "en": 10,
+    "tr": 8
+  },
+  "quantization": {
+    "q4": {
+      "native_nll": 3.6402247814699744,
+      "wasm_nll": 3.691357471709056,
+      "agreement": 0.83154296875,
+      "cosine": 0.9909195413979642,
+      "same_reading_choices": 92,
+      "same_short_choices": 30
+    },
+    "q8": {
+      "native_nll": 3.6402247814699744,
+      "wasm_nll": 3.6405800480161563,
+      "agreement": 0.98388671875,
+      "cosine": 0.999924057086473,
+      "same_reading_choices": 96,
+      "same_short_choices": 32
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "device": "NVIDIA L4",
+  "start_utc": "2026-11-18T09:28:39Z",
+  "termination_confirmed_utc": "2026-11-18T11:23:51Z",
+  "elapsed_seconds": 6912,
+  "limit_seconds": 7200
+}
