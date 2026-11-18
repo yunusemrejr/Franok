@@ -1,67 +1,105 @@
-import {createEngine} from './engine.mjs';
-import {Tokenizer} from './tokenizer.mjs';
-import {promptTokens} from './session.mjs';
-let model, tok;
-const tell=(kind,more={})=>postMessage({kind,...more});
-async function read(url,what) {
-  const r=await fetch(url);if(!r.ok)throw Error(what+' returned HTTP '+r.status);return r;
+import { createEngine } from './engine.mjs';
+import { Tokenizer } from './tokenizer.mjs';
+import { buildPrompt } from './session.mjs';
+import { settings } from './config.mjs';
+import { sampleToken } from './sampling.mjs';
+let model, tok, release;
+const tell = (kind, values = {}) => postMessage({ kind, ...values });
+async function read(url, label) {
+  const r = await fetch(url);
+  if (!r.ok) throw Error(label + ' returned HTTP ' + r.status + '.');
+  return r;
 }
 async function load() {
-  if(model)return;
-  const release=await (await read('./release.json','Release manifest')).json();
-  const [manifest,spec,wasm]=await Promise.all([
-    read('./model.json','Model manifest').then(r=>r.json()),read('./tokenizer.json','Tokenizer').then(r=>r.json()),read('./franok.wasm','Runtime').then(r=>r.arrayBuffer())]);
-  const url=new URL(release.weights,location.href).href;
-  const cache=typeof caches==='undefined'?null:await caches.open('franok-weights-v1').catch(()=>null);
+  if (model) return;
+  release = await (await read('./release.json', 'Release manifest')).json();
+  const format = release.default || 'q4';
+  const asset = release.formats?.[format] || { url: release.weights, manifest: './model.json' };
+  const [manifest, spec, wasm] = await Promise.all([
+    read(asset.manifest, 'Model manifest').then((r) => r.json()),
+    read('./tokenizer.json', 'Tokenizer').then((r) => r.json()),
+    read('./franok.wasm', 'Runtime').then((r) => r.arrayBuffer()),
+  ]);
+  const url = new URL(asset.url, location.href).href;
+  const cache =
+    release.native || typeof caches === 'undefined'
+      ? null
+      : await caches.open('franok-weights-v1').catch(() => null);
+  const stored = await cache?.match(url);
   let bytes;
-  const cached=await cache?.match(url);
-  if(cached)bytes=await cached.arrayBuffer();
-  if(!bytes){
-    const response=await read(url,'Model download'), reader=response.body.getReader();
-    bytes=new ArrayBuffer(manifest.bytes);const buf=new Uint8Array(bytes);let at=0,last=-1;
-    while(true){
-      const {done,value}=await reader.read();if(done)break;
-      if(at+value.length>buf.length)throw Error('Unexpected model length.');
-      buf.set(value,at);at+=value.length;
-      const pct=Math.floor(100*at/buf.length);if(pct!==last){tell('download',{pct});last=pct;}
+  if (stored) bytes = await stored.arrayBuffer();
+  if (!bytes) {
+    const response = await read(url, 'Model download'),
+      reader = response.body.getReader();
+    bytes = new ArrayBuffer(manifest.bytes);
+    const buf = new Uint8Array(bytes);
+    let at = 0,
+      last = -1;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (at + value.length > buf.length) throw Error('Unexpected model length.');
+      buf.set(value, at);
+      at += value.length;
+      const pct = Math.floor((100 * at) / buf.length);
+      if (pct !== last) {
+        tell('download', { pct });
+        last = pct;
+      }
     }
-    if(at!==buf.length)throw Error('Incomplete model download.');
+    if (at !== buf.length) throw Error('Incomplete model download. Please retry.');
   }
-  const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),x=>x.toString(16).padStart(2,'0')).join('');
-  if(hash!==manifest.sha256){await cache?.delete(url);throw Error('Weight checksum mismatch. Please retry.');}
-  if(!cached&&cache)await cache.put(url,new Response(bytes)).catch(()=>{});
-  model=await createEngine(wasm,manifest,bytes); tok=new Tokenizer(spec);tell('ready');
-}
-function nextToken(logits,ids){
-  const past=new Set(ids.slice(-24));
-  const top=[];
-  for(let i=2;i<logits.length;i++){
-    if(i<7&&i!==2)continue;
-    let v=logits[i]-(past.has(i)?.75:0);
-    if(top.length===8&&v<=top[7][1])continue;
-    top.push([i,v]);top.sort((a,b)=>b[1]-a[1]);if(top.length>8)top.pop();
+  const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)), (x) =>
+    x.toString(16).padStart(2, '0'),
+  ).join('');
+  if (hash !== manifest.sha256) {
+    await cache?.delete(url);
+    throw Error('Weight checksum mismatch. Please retry.');
   }
-  const weights=top.map(x=>Math.exp((x[1]-top[0][1])/.63));
-  let n=Math.random()*weights.reduce((a,b)=>a+b,0);
-  for(let i=0;i<weights.length;i++)if((n-=weights[i])<=0)return top[i][0];
-  return top[0][0];
+  if (!stored && cache) await cache.put(url, new Response(bytes)).catch(() => {});
+  model = await createEngine(wasm, manifest, bytes);
+  tok = new Tokenizer(spec);
+  tell('ready');
 }
-onmessage=async evt=>{
-  try{
+onmessage = async ({ data }) => {
+  try {
     await load();
-    if(evt.data.type==='load')return;
+    if (data.type === 'load') return;
     model.reset();
-    const ids=promptTokens(tok,evt.data.turns,evt.data.lang,model.c.window-72);
+    const options = settings(data.options, model.c.window),
+      limit = options.maxNew;
+    const prompt = buildPrompt(
+      tok,
+      data.turns,
+      data.lang,
+      model.c.window - limit,
+      options,
+      release.systemConditioned !== false,
+      data.pins || [],
+    );
+    tell('prefill', { count: prompt.ids.length, truncated: prompt.truncated });
     let logits;
-    tell('prefill');
-    for(const id of ids)logits=model.step(id);
-    const generated=[];const start=performance.now();
-    for(let i=0;i<72;i++){
-      const token=nextToken(logits,generated);if(token===2)break;
+    for (let i = 0; i < prompt.ids.length; i++)
+      logits = model.step(prompt.ids[i], i === prompt.ids.length - 1);
+    const generated = [],
+      start = performance.now();
+    for (let i = 0; i < limit; i++) {
+      const token = sampleToken(logits, generated, options);
+      if (token === 2) break;
       generated.push(token);
-      tell('part',{text:tok.decode(generated).replace(/\uFFFD$/,'')});
-      if(i+1<72)logits=model.step(token);
+      tell('part', { text: tok.decode(generated).replace(/\uFFFD$/, '') });
+      if (i + 1 < limit) logits = model.step(token);
     }
-    tell('done',{text:tok.decode(generated).trim(),tokens:generated.length,seconds:(performance.now()-start)/1000});
-  } catch(e){tell('error',{message:e.message||String(e)});}
+    tell('done', {
+      text: tok.decode(generated).trim(),
+      tokens: generated.length,
+      seconds: (performance.now() - start) / 1000,
+      prompt: prompt.ids.length,
+      used: prompt.used,
+      systemTokens: prompt.systemTokens,
+      truncated: prompt.truncated,
+    });
+  } catch (e) {
+    tell('error', { message: e.message || String(e) });
+  }
 };

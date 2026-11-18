@@ -1,21 +1,308 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#263b32"><meta name="description" content="Chat locally in English or Turkish with Franok, a small open language model trained from scratch.">
-<link rel="icon" href="./media/franok.png"><link rel="stylesheet" href="./style.css"><title>Franok — Local chat</title></head>
-<body><div class="layout">
-<aside id="sidebar"><header class="brand"><img src="./media/franok.png" alt="" width="42" height="42"><div><strong>Franok</strong><span>Local language model</span></div></header>
-<button id="new" class="new"><b aria-hidden="true">＋</b> New chat</button>
-<h2 class="navlabel">Saved sessions</h2><nav id="sessions" aria-label="Saved sessions"></nav>
-<footer><button id="architecture" class="navlink"><span aria-hidden="true">⌘</span> Architecture</button><a href="https://github.com/yunusemrejr/Franok">Source code ↗</a></footer></aside>
-<main><header class="toolbar"><button id="menu" aria-label="Toggle sessions" aria-expanded="false">☰</button><span id="viewname">Chat</span><div class="tools"><button id="find" title="Find earlier messages">Find in session</button><select id="lang" aria-label="Response language"><option value="en">English</option><option value="tr">Türkçe</option></select></div></header>
-<section id="chat"><div id="stream" tabindex="0" aria-label="Conversation"><div id="welcome"><img src="./media/franok.png" width="112" height="112" alt="Franok, a smiling coffee cup"><h1>Chat with Franok</h1><p>An experimental English–Turkish model that runs on your device.</p></div><div id="messages"></div></div>
-<div id="bottom"><div id="quotechip" hidden><span></span><button type="button" aria-label="Remove attached turn">×</button></div><form id="composer"><textarea id="draft" maxlength="12000" aria-label="Message" rows="2" placeholder="Write a message…"></textarea><div class="composebar"><small>Franok · 314M</small><button id="send" type="submit">Send ↑</button></div></form>
-<div class="statusline"><span id="status" role="status">Early checkpoint · Answers can be inaccurate · First download 196 MB</span><button id="stop" hidden>Stop</button></div></div></section>
-<section id="about" hidden><p class="eyebrow">Inside Franok</p><h1>How a token chooses its bank</h1><p>Each layer has eight feed-forward banks. The last token of the previous group rotates the assignment for the next eight tokens. Move the controls to trace one token through a layer.</p>
-<div class="figure"><svg id="dial" viewBox="0 0 420 235" role="img" aria-label="Eight-bank rotary selector"></svg>
-<div class="controls"><label>Token slot <output id="slotout">0</output><input id="slot" type="range" min="0" max="7" value="0"></label><label>Anchor ID <output id="anchorout">0</output><input id="anchor" type="range" min="0" max="63" value="0"></label><label>Layer <output id="layerout">0</output><input id="layer" type="range" min="0" max="11" value="0"></label></div><p id="route" aria-live="polite"></p></div>
-<h2>What happens at each layer</h2><ol><li>Eight query heads read earlier tokens through two shared key/value heads.</li><li>The selected bank applies a gated feed-forward transformation. The other seven banks wait.</li><li>A residual connection carries the result to the next layer. The output uses the same weights as the token embedding.</li></ol>
-<p>Franok was trained on 256-token windows. The chat app saves older messages and can retrieve matching turns for the prompt. “Find in session” searches the full saved conversation.</p>
-<p><a href="https://github.com/yunusemrejr/Franok/blob/main/docs/architecture.md">Read the mathematics ↗</a> · <a href="https://huggingface.co/yunusemrejr/Franok">Model weights ↗</a></p><button id="back">Back to chat</button></section></main>
-<dialog id="search"><form method="dialog"><button aria-label="Close search">×</button></form><h2>Find in session</h2><label for="query">Search all saved turns in this session</label><input id="query" type="search" placeholder="Word or phrase"><div id="matches"></div></dialog>
-</div><script type="module" src="./app.mjs"></script></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#f4f2ec" />
+    <meta
+      name="description"
+      content="An open English–Turkish language model for private, on-device conversations. Use Franok in the browser or download the Ubuntu desktop app."
+    />
+    <link rel="icon" href="./media/franok.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Franok — Workspace</title>
+  </head>
+  <body>
+    <a class="skip" href="#workspace">Skip to workspace</a>
+    <header class="mast">
+      <a class="brand" href="#chat" aria-label="Franok workspace"
+        ><img src="./media/franok.png" alt="" width="38" height="38" /><strong>Franok</strong></a
+      >
+      <nav class="tabs" aria-label="Main">
+        <button data-view="chat" aria-current="page">Workspace</button
+        ><button data-view="about" id="architecture">Architecture</button
+        ><button data-view="downloads">Downloads</button>
+      </nav>
+      <div class="mastend">
+        <a class="github" href="https://github.com/yunusemrejr/Franok"
+          >GitHub <span aria-hidden="true">↗</span></a
+        ><button class="icon" id="theme" aria-label="Switch color theme" title="Switch color theme">
+          <svg><use href="#sun" /></svg>
+        </button>
+      </div>
+    </header>
+    <svg class="symbols" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></symbol>
+      <symbol id="searchicon" viewBox="0 0 24 24">
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="m16 16 5 5" />
+      </symbol>
+      <symbol id="tune" viewBox="0 0 24 24">
+        <path d="M3 6h7m4 0h7M3 17h2m5 0h11" />
+        <circle cx="12" cy="6" r="2.5" />
+        <circle cx="7.5" cy="17" r="2.5" />
+      </symbol>
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M12 20V4m-7 7 7-7 7 7" /></symbol>
+      <symbol id="menuicon" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M9 4v16" />
+      </symbol>
+      <symbol id="sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M20 4l-2 2M6 18l-2 2" />
+      </symbol>
+      <symbol id="down" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4" /></symbol>
+      <symbol id="chip" viewBox="0 0 24 24">
+        <rect x="5" y="5" width="14" height="14" rx="2" />
+        <path d="M8 2v3m4-3v3m4-3v3M8 19v3m4-3v3m4-3v3M2 8h3m-3 4h3m-3 4h3m14-8h3m-3 4h3m-3 4h3" />
+      </symbol>
+    </svg>
+    <div class="shell">
+      <button id="shade" aria-label="Close session drawer" hidden></button>
+      <aside id="sidebar" aria-label="Conversation library">
+        <div class="sidehead">
+          <h2>Sessions</h2>
+          <button id="closemenu" class="icon" aria-label="Close sessions">×</button>
+        </div>
+        <button id="new" class="new">
+          <svg><use href="#plus" /></svg>New conversation
+        </button>
+        <label class="filter"
+          ><svg><use href="#searchicon" /></svg
+          ><input id="filter" type="search" placeholder="Filter sessions" aria-label="Filter sessions"
+        /></label>
+        <nav id="sessions" aria-label="Saved sessions"></nav>
+        <div class="sidefoot">
+          <svg><use href="#chip" /></svg>
+          <div>
+            <b id="platform-name">Browser runtime</b><span id="platform-detail">WebAssembly SIMD</span>
+          </div>
+        </div>
+      </aside>
+      <main id="workspace" tabindex="-1">
+        <div class="toolbar">
+          <button id="menu" class="icon" aria-label="Open sessions" aria-expanded="false">
+            <svg><use href="#menuicon" /></svg></button
+          ><span id="viewname">New conversation</span>
+          <div class="tools">
+            <button id="find" class="icon" title="Find in session" aria-label="Find in session">
+              <svg><use href="#searchicon" /></svg></button
+            ><button id="actions" class="icon" title="Session actions" aria-label="Session actions">
+              •••
+            </button>
+          </div>
+        </div>
+        <section id="chat" aria-label="Conversation" class="empty">
+          <div id="stream" tabindex="0" aria-label="Messages"><div id="messages"></div></div>
+          <div class="writing">
+            <div id="welcome">
+              <h1><img src="./media/franok.png" alt="" width="56" height="56" />Chat with Franok</h1>
+              <p>Write in English or Turkish. Your messages stay on this device.</p>
+            </div>
+            <div id="bottom">
+              <div id="quotechip" hidden>
+                <span></span><button type="button" aria-label="Remove attached turn">×</button>
+              </div>
+              <form id="composer">
+                <textarea
+                  id="draft"
+                  rows="3"
+                  maxlength="16000"
+                  aria-label="Message"
+                  placeholder="Message Franok…"
+                ></textarea>
+                <div class="composebar">
+                  <div class="composecontrols">
+                    <select id="lang" aria-label="Response language">
+                      <option value="en">English</option>
+                      <option value="tr">Türkçe</option></select
+                    ><button id="controls" type="button" class="quiet">
+                      <svg><use href="#tune" /></svg>Controls
+                    </button>
+                  </div>
+                  <button id="send" type="submit" class="primary">
+                    Send <svg><use href="#arrow" /></svg></button
+                  ><button id="stop" type="button" class="primary" hidden>Stop ■</button>
+                </div>
+              </form>
+              <div class="statusline">
+                <span id="status" role="status">Model loads on first send.</span
+                ><span class="mono" id="precision">Q4 / WASM</span>
+              </div>
+            </div>
+            <div id="emptylinks">
+              <a href="#about" data-view="about"
+                ><b>How Franok works</b><span>Follow a token through the model ↗</span></a
+              ><a href="#downloads" data-view="downloads"
+                ><b>Ubuntu desktop</b><span>Installer and model files ↗</span></a
+              >
+            </div>
+          </div>
+        </section>
+        <section id="about" class="document" hidden>
+          <div class="dochead">
+            <p class="kicker">Model architecture</p>
+            <h1>Inside Franok</h1>
+            <p>
+              A token goes through twelve layers. In each layer, it reads the words before it and uses one of
+              eight feed-forward banks to update its representation.
+            </p>
+          </div>
+          <div class="film" id="film" hidden>
+            <video id="explainer" controls preload="none" playsinline></video>
+            <div><b>Franok, from scratch</b><a id="youtube" href="#" hidden>Watch on YouTube ↗</a></div>
+          </div>
+          <h2>Trace one token</h2>
+          <p>
+            Move the controls. The previous group’s final token shifts which bank processes each of the next
+            eight slots.
+          </p>
+          <div class="figure">
+            <svg
+              id="dial"
+              viewBox="0 0 660 220"
+              role="img"
+              aria-label="Live diagram of eight token slots routed to eight feed-forward banks"
+            ></svg>
+            <div class="controls">
+              <label
+                >Token slot <output id="slotout">0</output
+                ><input id="slot" type="range" min="0" max="7" value="0" /></label
+              ><label
+                >Previous token ID <output id="anchorout">0</output
+                ><input id="anchor" type="range" min="0" max="63" value="0" /></label
+              ><label
+                >Layer <output id="layerout">0</output
+                ><input id="layer" type="range" min="0" max="11" value="0"
+              /></label>
+            </div>
+            <p id="route" aria-live="polite"></p>
+          </div>
+          <details open>
+            <summary>Why eight banks?</summary>
+            <p>
+              Franok has 314 million learned parameters. About 50 million participate in one token’s
+              prediction. The rotation sends one slot to each bank in every full group. This gives the model
+              more stored weights than it has to read for a single token.
+            </p>
+          </details>
+          <details>
+            <summary>Where does the next word come from?</summary>
+            <p>
+              The tokenizer splits text into pieces. Attention weighs earlier pieces by their relevance. A
+              gated feed-forward bank transforms the result. After twelve layers, the model assigns a
+              probability to each of 8,192 possible next pieces.
+            </p>
+          </details>
+          <details>
+            <summary>What does the app remember?</summary>
+            <p id="memory-copy"></p>
+          </details>
+          <div class="doclinks">
+            <a href="https://github.com/yunusemrejr/Franok/blob/main/docs/architecture.md"
+              >Equations and implementation ↗</a
+            ><a href="https://huggingface.co/yunusemrejr/Franok">Training and evaluation ↗</a>
+          </div>
+        </section>
+        <section id="downloads" class="document" hidden>
+          <div class="dochead">
+            <h1>Franok for Ubuntu</h1>
+            <p>
+              Install a standalone desktop workspace with dock integration, saved sessions, and on-device
+              inference.
+            </p>
+          </div>
+          <div class="downloadmain">
+            <div class="appicon"><img src="./media/franok.png" alt="Franok's smiling coffee cup" /></div>
+            <div>
+              <h2>Linux desktop</h2>
+              <p id="packageinfo">Ubuntu · 64-bit x86</p>
+            </div>
+            <a id="downloaddeb" class="primary" href="https://github.com/yunusemrejr/Franok/releases"
+              ><svg><use href="#down" /></svg>Download .deb</a
+            >
+          </div>
+          <p id="installhelp"></p>
+          <details>
+            <summary>Verify the installer</summary>
+            <code id="debsha"></code>
+          </details>
+          <h2>Model files</h2>
+          <p>
+            The downloads share the same training lineage. The first download happens before local inference.
+          </p>
+          <div id="weightfiles" class="filelist"></div>
+          <div class="doclinks">
+            <a href="https://github.com/yunusemrejr/Franok">Source on GitHub ↗</a
+            ><a href="https://huggingface.co/yunusemrejr/Franok">Files on Hugging Face ↗</a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <dialog id="search">
+      <div class="dialogtitle">
+        <h2>Find in session</h2>
+        <button data-close class="icon" aria-label="Close search">×</button>
+      </div>
+      <label for="query">Search the full conversation</label
+      ><input id="query" type="search" placeholder="Word or phrase" />
+      <p>
+        Type <code>/recall</code> or <code>/hatırla</code> followed by a word in chat to quote your earlier
+        messages.
+      </p>
+      <div id="matches"></div>
+    </dialog>
+    <dialog id="prefs">
+      <form id="prefsform">
+        <div class="dialogtitle">
+          <h2>Session controls</h2>
+          <button type="button" data-close class="icon" aria-label="Close controls">×</button>
+        </div>
+        <label for="sysprompt">System prompt</label
+        ><textarea id="sysprompt" maxlength="1800" rows="4"></textarea>
+        <p class="hint" id="systemhint"></p>
+        <div class="knobs">
+          <label
+            >Temperature <output id="tempout"></output
+            ><input id="temp" type="range" min="0" max="1.5" step=".05" /></label
+          ><label
+            >Top P <output id="pout"></output
+            ><input id="topp" type="range" min=".15" max="1" step=".01" /></label
+          ><label>Maximum output tokens<input id="tokens" type="number" min="8" max="256" required /></label>
+        </div>
+        <label class="check"
+          ><input id="calc" type="checkbox" />Use the local calculator for arithmetic expressions</label
+        ><label class="check"><input id="recall" type="checkbox" />Retrieve related earlier turns</label
+        ><label class="check"><input id="enter" type="checkbox" />Send with Enter</label>
+        <div class="dialogfoot">
+          <button type="button" class="quiet" id="resetprefs">Restore defaults</button
+          ><button class="primary" type="submit">Save controls</button>
+        </div>
+      </form>
+    </dialog>
+    <dialog id="manage">
+      <div class="dialogtitle">
+        <h2>Session actions</h2>
+        <button data-close class="icon" aria-label="Close session actions">×</button>
+      </div>
+      <form id="renameform">
+        <label for="rename">Session name</label
+        ><input id="rename" type="text" maxlength="90" required /><button class="secondary" type="submit">
+          Rename
+        </button>
+      </form>
+      <hr />
+      <button class="quiet" id="exportchat">Export transcript</button
+      ><button class="danger" id="deletechat">Delete session…</button>
+    </dialog>
+    <dialog id="confirmdelete">
+      <h2>Delete this session?</h2>
+      <p>The transcript and its settings will be removed from this device.</p>
+      <div class="dialogfoot">
+        <button data-close class="secondary">Cancel</button
+        ><button id="reallydelete" class="danger">Delete session</button>
+      </div>
+    </dialog>
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>

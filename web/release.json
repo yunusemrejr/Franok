@@ -1,3 +1,27 @@
 {
-  "weights": "https://huggingface.co/yunusemrejr/Franok/resolve/7633d06180ebbc836af02c590f96f8ac28a4829a/model.q4"
+  "version": "0.1.1",
+  "revision": "7633d06180ebbc836af02c590f96f8ac28a4829a",
+  "window": 256,
+  "default": "q4",
+  "systemConditioned": false,
+  "formats": {
+    "q4": {
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7633d06180ebbc836af02c590f96f8ac28a4829a/model.q4",
+      "manifest": "./model.json",
+      "bytes": 196331520,
+      "sha256": "cbd7161f6862a19e29ddb3158becc513f3afa9f64080d327b00a97831fb2fe11"
+    },
+    "fp16": {
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7633d06180ebbc836af02c590f96f8ac28a4829a/model.safetensors",
+      "bytes": 628129304
+    }
+  },
+  "video": {
+    "url": "./media/franok-from-scratch.mp4",
+    "poster": "./media/franok-poster.jpg",
+    "captions": {
+      "en": "./media/franok-en.vtt",
+      "tr": "./media/franok-tr.vtt"
+    }
+  }
 }

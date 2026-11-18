@@ -28,7 +28,7 @@ static inline v128_t dot16(v128_t a,v128_t b) {
 }
 
 /* Quantize activations per group; a GEMV reads only the selected bank. */
-void gemv(const u8 *w,const float *x,float *y,int rows,int cols,i8 *activ,float *scales) {
+static inline __attribute__((always_inline)) void matvec(const u8 *w,const float *x,float *y,int rows,int cols,i8 *activ,float *scales, int bits) {
     for(int j=0;j<cols;j+=32) {
         float peak=1e-12f;
         for(int k=0;k<32;k++) peak=maximum(peak,__builtin_fabsf(x[j+k]));
@@ -39,15 +39,27 @@ void gemv(const u8 *w,const float *x,float *y,int rows,int cols,i8 *activ,float 
     const v128_t mask=wasm_i8x16_splat(15), zero=wasm_i8x16_splat(8);
     for(int i=0;i<rows;i++) {
         v128_t acc=wasm_f32x4_splat(0);
-        for(int j=0;j<cols;j+=32,w+=20) {
+        for(int j=0;j<cols;j+=32,w+=(bits==4?20:36)) {
             v128_t p=wasm_v128_load(w+4);
-            v128_t lo=wasm_i8x16_sub(wasm_v128_and(p,mask),zero);
-            v128_t hi=wasm_i8x16_sub(wasm_u8x16_shr(p,4),zero);
+            v128_t lo=bits==4?wasm_i8x16_sub(wasm_v128_and(p,mask),zero):p;
+            v128_t hi=bits==4?wasm_i8x16_sub(wasm_u8x16_shr(p,4),zero):wasm_v128_load(w+20);
             v128_t d=wasm_i32x4_add(dot16(lo,wasm_v128_load(activ+j)),dot16(hi,wasm_v128_load(activ+j+16)));
             v128_t s=wasm_f32x4_splat(scale_at(w)*scales[j/32]);
             acc=wasm_f32x4_add(acc,wasm_f32x4_mul(s,wasm_f32x4_convert_i32x4(d)));
         }
         y[i]=wasm_f32x4_extract_lane(acc,0)+wasm_f32x4_extract_lane(acc,1)+wasm_f32x4_extract_lane(acc,2)+wasm_f32x4_extract_lane(acc,3);
+    }
+}
+void gemv(const u8 *w,const float *x,float *y,int rows,int cols,i8 *activ,float *scales) {
+    matvec(w,x,y,rows,cols,activ,scales,4);
+}
+void gemv8(const u8 *w,const float *x,float *y,int rows,int cols,i8 *activ,float *scales) {
+    matvec(w,x,y,rows,cols,activ,scales,8);
+}
+void unpack8(const u8 *w,float *out,int n) {
+    for(int j=0;j<n;j+=32,w+=36){
+        float s=scale_at(w);
+        for(int k=0;k<32;k++)out[j+k]=s*(float)((const i8*)(w+4))[k];
     }
 }
 void rms(const float *x,const float *g,float *out,int n) {
