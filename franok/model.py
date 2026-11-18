@@ -48,7 +48,7 @@ class Block(nn.Module):
         self.up = nn.Parameter(torch.empty(c.banks, 2 * c.hidden, c.width))
         self.down = nn.Parameter(torch.empty(c.banks, c.width, c.hidden))
 
-    def forward(self, x, routes, cos, sin):
+    def project_qkv(self, x, cos, sin):
         c = self.c
         b, t, d = x.shape
         hd = d // c.heads
@@ -62,18 +62,29 @@ class Block(nn.Module):
             return a.reshape(b, t, -1, hd).transpose(1, 2)
 
         q, k, v = rope(heads(q), cos, sin), rope(heads(k), cos, sin), heads(v)
-        repeat = c.heads // c.kv_heads
+        return q, k, v
+
+    def attend(self, x, q, k, v, causal):
+        repeat = self.c.heads // self.c.kv_heads
         attended = F.scaled_dot_product_attention(
             q,
             k.repeat_interleave(repeat, 1),
             v.repeat_interleave(repeat, 1),
-            is_causal=True,
+            is_causal=causal,
         )
-        attention = attended.transpose(1, 2).reshape(b, t, d)
+        attention = attended.transpose(1, 2).reshape_as(x)
         projected = self.out(attention)
         if hasattr(self, "lora_out"):
             projected = projected + self.lora_out(attention)
-        x = x + projected
+        return x + projected
+
+    def forward(self, x, routes, cos, sin, cache=None):
+        c = self.c
+        b, t, d = x.shape
+        q, k, v = self.project_qkv(x, cos, sin)
+        if cache is not None:
+            cache.append((k, v))
+        x = self.attend(x, q, k, v, causal=True)
         ordered, restore = routes
         # Each bank owns exactly b*t/banks rows, including in the backward pass.
         h = self.post(x).reshape(b, -1, c.banks, d)
@@ -119,7 +130,7 @@ class Franok(nn.Module):
         self.register_buffer("cos", theta.cos(), persistent=False)
         self.register_buffer("sin", theta.sin(), persistent=False)
 
-    def forward(self, ids):
+    def forward(self, ids, cache=None):
         if ids.ndim != 2 or not 0 < ids.shape[1] <= self.c.window:
             raise ValueError("expected a nonempty batch of in-window token sequences")
         length = ids.shape[1]
@@ -130,5 +141,5 @@ class Franok(nn.Module):
             self.sin[: ids.shape[1]].to(x.dtype),
         )
         for layer, block in enumerate(self.blocks):
-            x = block(x, routing(ids, layer, self.c.banks), cos, sin)
+            x = block(x, routing(ids, layer, self.c.banks), cos, sin, cache)
         return F.linear(self.norm(x[:, :length]), self.embed.weight)

@@ -57,6 +57,12 @@ The extended release trains up to 1,024 positions. The first release trained to 
 
 Type `/recall train` or `/hatırla tren` in the workspace to quote your earlier messages containing that word. The application returns excerpts with links to their original turns. This search runs on the device and can reach a turn outside the last 1,024 model tokens. When you attach a turn to a new question, the neural model still has to interpret it.
 
+## What happens after you press Send
+
+On the first pass, Franok reads the prompt and saves two small vectors per key/value head at each position in each layer. A key helps a later token find relevant earlier words. A value carries information from the word it belongs to. When Franok writes its next token, it reuses those saved vectors, adds the new token's vectors, and evaluates the one bank assigned to that token. It repeats until it produces the stop token or reaches the reply limit.
+
+The browser, Ubuntu app and Python chat command all reuse these attention values while writing a reply. The Python reference checks the cached result against a full causal pass at every generated position, including both sides of a routing-group boundary. [PyTorch decoder](../franok/incremental.py) · [Parity check](../tests/incremental.py)
+
 ## Browser implementation
 
 The worker streams one checked weight file, verifies SHA-256, and reuses a cached copy where available. In the original peak-scale Q4 exporter, each group of 32 weights has a float32 scale $s=\max(|w|)/7$ and sixteen bytes of packed integer weights. Entries $j$ and $j+16$ share a byte. Each group therefore uses 20 bytes. The WebAssembly SIMD kernel quantizes input activations to signed eight-bit values per group, forms integer dot products and accumulates the rescaled products in float32. Norm scales and KV caches stay in float32. The released Q4 exporter tries several scale seeds and alternates code assignment with a least-squares scale fit, keeping the lowest squared reconstruction error for each group. Q8 stores 32 signed bytes and a float32 scale per group. Its integer limit is 127. At 1,024 tokens the twelve-layer key/value cache occupies 12 MiB. First-generation latency includes prompt processing. Device throughput varies.

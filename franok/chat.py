@@ -7,6 +7,7 @@ import torch
 from safetensors.torch import load_file
 from tokenizers import Tokenizer, decoders
 from .model import Config, Franok
+from .incremental import Decoder
 
 
 @torch.inference_mode()
@@ -37,6 +38,7 @@ def main():
     m = Franok(cfg).eval().to(device)
     m.load_state_dict(load_file(str(args.directory / "model.safetensors")))
     limit = max(1, min(cfg.window // 2, args.max_new))
+    decoder = Decoder(m)
     history = []
     prefix = [1, 5 if args.lang == "en" else 6]
     if cfg.window >= 1024:
@@ -61,8 +63,8 @@ def main():
         room = cfg.window - limit - len(prompt) - len(prefix)
         context = [*prefix, *(history[-room:] if room > 0 else []), *prompt]
         output = []
-        for _ in range(limit):
-            logits = m(torch.tensor([context + output], device=device))[0, -1]
+        logits = decoder.prefill(context)
+        for index in range(limit):
             logits[:2] = -torch.inf
             logits[3:7] = -torch.inf
             if output:
@@ -81,6 +83,8 @@ def main():
             if token == 2:
                 break
             output.append(token)
+            if index + 1 < limit:
+                logits = decoder.step(token)
         print("Franok ›", tok.decode(output).strip())
         history = (history + prompt + output + [2])[-cfg.window :]
 

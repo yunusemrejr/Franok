@@ -7,6 +7,7 @@ import torch
 from tokenizers import Tokenizer, decoders
 from safetensors.torch import load_file
 from franok.model import Config, Franok
+from franok.incremental import Decoder
 from training.extended.dialogue import DEFAULT
 from .reading import BASE
 
@@ -21,6 +22,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--run", type=Path)
     p.add_argument("--peer", action="store_true")
+    p.add_argument("--cases", type=Path, default=Path("tests/conversations.json"))
     p.add_argument("--out", type=Path, required=True)
     args = p.parse_args()
     if args.peer:
@@ -47,6 +49,7 @@ def main():
         def step(ids, prev):
             o = model(torch.tensor([ids]), past_key_values=prev, use_cache=True)
             return o.logits[0, -1].float().numpy().copy(), o.past_key_values
+
     else:
         cfg = Config(**json.loads((args.run / "config.json").read_text()))
         model = Franok(cfg).eval()
@@ -77,11 +80,15 @@ def main():
             return tk.decode(x)
 
         def step(ids, prev):
-            full = (prev or []) + ids
-            return model(torch.tensor([full]))[0, -1].float().numpy().copy(), full
+            if prev is None:
+                prev = Decoder(model)
+                next_logits = prev.prefill(ids)
+            else:
+                next_logits = prev.step(ids[0])
+            return next_logits.float().numpy().copy(), prev
 
     out = []
-    for sc in json.loads(Path("tests/conversations.json").read_text()):
+    for sc in json.loads(args.cases.read_text()):
         turns = []
         checks = []
         seed = 17941
@@ -130,9 +137,11 @@ def main():
                 None
                 if criteria is None
                 else any(
-                    normal(answer) == normal(c)
-                    if sc.get("exact")
-                    else normal(c) in normal(answer)
+                    (
+                        normal(answer) == normal(c)
+                        if sc.get("exact")
+                        else normal(c) in normal(answer)
+                    )
                     for c in criteria
                 )
             )
