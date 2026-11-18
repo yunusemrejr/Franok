@@ -1,0 +1,331 @@
+{
+  "data/en/receipt.json": {
+    "source": [
+      "HuggingFaceFW/fineweb-edu",
+      "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "sample/10BT/000_00000.parquet"
+    ],
+    "docs": {
+      "train": 137275,
+      "val": 665
+    },
+    "tokens": {
+      "train": 180115706,
+      "val": 846499
+    },
+    "target": 180000000,
+    "shards": {
+      "train": 180,
+      "val": 88
+    }
+  },
+  "data/en/stories.json": {
+    "source": [
+      "roneneldan/TinyStories",
+      "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+      "data/train-00000-of-00004-2d5a1467fff1081b.parquet"
+    ],
+    "skipped_unique_documents": 0,
+    "docs": {
+      "train": 109755,
+      "val": 527
+    },
+    "tokens": {
+      "train": 32006057,
+      "val": 155899
+    },
+    "target": 32000000,
+    "shards": {
+      "train": 32,
+      "val": 19
+    }
+  },
+  "data/en/web-more.json": {
+    "source": [
+      "HuggingFaceFW/fineweb-edu",
+      "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "sample/10BT/000_00000.parquet"
+    ],
+    "skipped_unique_documents": 137940,
+    "docs": {
+      "train": 138763,
+      "val": 678
+    },
+    "tokens": {
+      "train": 180130094,
+      "val": 902612
+    },
+    "target": 180000000,
+    "shards": {
+      "train": 180,
+      "val": 94
+    }
+  },
+  "data/tr/receipt.json": {
+    "source": [
+      "HuggingFaceFW/fineweb-2",
+      "af9c13333eb981300149d5ca60a8e9d659b276b9",
+      "data/tur_Latn/train/000_00000.parquet"
+    ],
+    "docs": {
+      "train": 219969,
+      "val": 1087
+    },
+    "tokens": {
+      "train": 180093171,
+      "val": 880556
+    },
+    "target": 180000000,
+    "shards": {
+      "train": 180,
+      "val": 97
+    }
+  },
+  "data/tr/stories.json": {
+    "source": [
+      "esat-krky/TinyStories_Turkish",
+      "f039de0f75a000ccc62a6eff43e30eb5d8576c34",
+      "train/data-00000-of-00001.arrow"
+    ],
+    "skipped_unique_documents": 0,
+    "docs": {
+      "train": 141315,
+      "val": 685
+    },
+    "tokens": {
+      "train": 32014488,
+      "val": 156316
+    },
+    "target": 32000000,
+    "shards": {
+      "train": 33,
+      "val": 19
+    }
+  },
+  "data/tr/web-more.json": {
+    "source": [
+      "HuggingFaceFW/fineweb-2",
+      "af9c13333eb981300149d5ca60a8e9d659b276b9",
+      "data/tur_Latn/train/000_00000.parquet"
+    ],
+    "skipped_unique_documents": 221056,
+    "docs": {
+      "train": 201798,
+      "val": 1082
+    },
+    "tokens": {
+      "train": 180103180,
+      "val": 986593
+    },
+    "target": 180000000,
+    "shards": {
+      "train": 180,
+      "val": 107
+    }
+  },
+  "followups/receipt.json": {
+    "train-en-english-dialogue": {
+      "source_rows": 34038,
+      "paired_rows": 3492
+    },
+    "train-en-short-dialogue": {
+      "source_rows": 36237,
+      "paired_rows": 928
+    },
+    "train-en-everyday-en": {
+      "source_rows": 6268,
+      "paired_rows": 4016
+    },
+    "train-en-short-replies": {
+      "source_rows": 30834,
+      "paired_rows": 11392
+    },
+    "train-tr-turkish-dialogue": {
+      "source_rows": 43352,
+      "paired_rows": 12346
+    },
+    "train-tr-native-chat": {
+      "source_rows": 1174,
+      "paired_rows": 32
+    },
+    "train-tr-everyday-tr": {
+      "source_rows": 7544,
+      "paired_rows": 6167
+    },
+    "train-tr-short-replies": {
+      "source_rows": 39746,
+      "paired_rows": 17965
+    },
+    "train-tr-turkish-tasks": {
+      "source_rows": 20050,
+      "paired_rows": 2713
+    },
+    "val-en-english-dialogue": {
+      "source_rows": 211,
+      "paired_rows": 20
+    },
+    "val-en-short-dialogue": {
+      "source_rows": 229,
+      "paired_rows": 3
+    },
+    "val-en-everyday-en": {
+      "source_rows": 105,
+      "paired_rows": 63
+    },
+    "val-en-short-replies": {
+      "source_rows": 219,
+      "paired_rows": 81
+    },
+    "val-tr-turkish-dialogue": {
+      "source_rows": 273,
+      "paired_rows": 82
+    },
+    "val-tr-native-chat": {
+      "source_rows": 11,
+      "paired_rows": 0
+    },
+    "val-tr-everyday-tr": {
+      "source_rows": 108,
+      "paired_rows": 87
+    },
+    "val-tr-short-replies": {
+      "source_rows": 248,
+      "paired_rows": 96
+    },
+    "val-tr-turkish-tasks": {
+      "source_rows": 506,
+      "paired_rows": 55
+    }
+  },
+  "instructions/receipt.json": {
+    "sources": {
+      "oasst": [
+        "OpenAssistant/oasst2",
+        "179dd21fc55192153d94adb0e0ce8f69e222bf75",
+        "2023-11-05_oasst2_all.messages.jsonl.gz"
+      ],
+      "squad": {
+        "en": [
+          "https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json",
+          "68dcfbb971bd3e96d5b46c7177b16c1a4e7d4bdef19fb204502738552dede002"
+        ],
+        "tr": [
+          "https://tulap.cmpe.bogazici.edu.tr/server/api/core/bitstreams/b261bb3c-6348-4b15-9ce4-7987419db1c9/content",
+          "94670715bb17cc570fea34e8d730d4fdb0569100d7927e3edf78d1beb854f5d2"
+        ]
+      }
+    },
+    "rows": {
+      "train-en-human": 13658,
+      "val-en-human": 381,
+      "train-tr-human": 9,
+      "train-en-passages": 88745,
+      "val-en-passages": 2396,
+      "train-tr-passages": 64046,
+      "val-tr-passages": 1563
+    },
+    "tokens": {
+      "train-en-human": 6635747,
+      "val-en-human": 178301,
+      "train-tr-human": 1453,
+      "train-en-passages": 24875821,
+      "val-en-passages": 671409,
+      "train-tr-passages": 16192976,
+      "val-tr-passages": 407075
+    },
+    "rankable": {
+      "train-en-human": 11573,
+      "val-en-human": 330,
+      "train-tr-human": 9,
+      "train-en-passages": 88218,
+      "val-en-passages": 2392,
+      "train-tr-passages": 61603,
+      "val-tr-passages": 1520
+    }
+  },
+  "short-replies/receipt.json": {
+    "sources": {
+      "en": [
+        "HuggingFaceH4/ultrachat_200k",
+        "8049631c405ae6576f93f445c6b8166f76f5505a",
+        "data/train_sft-00001-of-00003-0a1804bcb6ae68c6.parquet"
+      ],
+      "tr": [
+        "MarulAI/Marul-SFT-TR",
+        "6751921b6b50fdad26906e2e3c6a671a8f6b5f5e",
+        "marul_sft_tr.jsonl"
+      ]
+    },
+    "rows": {
+      "train-en-short-replies": 30834,
+      "val-en-short-replies": 219,
+      "train-tr-short-replies": 39746,
+      "val-tr-short-replies": 248
+    },
+    "tokens": {
+      "train-en-short-replies": 15151650,
+      "val-en-short-replies": 97662,
+      "train-tr-short-replies": 17376041,
+      "val-tr-short-replies": 105405
+    },
+    "rankable": {}
+  },
+  "spans/receipt.json": {
+    "en": {
+      "train-answer": 83601,
+      "train-null": 6403,
+      "val-answer": 2249,
+      "val-null": 176
+    },
+    "tr": {
+      "train-answer": 50832,
+      "train-null": 6377,
+      "val-answer": 1159,
+      "val-null": 202
+    }
+  },
+  "tasks/receipt.json": {
+    "sources": {
+      "commonsense": [
+        "tau/commonsense_qa",
+        "94630fe30dad47192a8546eb75f094926d47e155",
+        "data/train-00000-of-00001.parquet"
+      ],
+      "turkish_chat": [
+        "cisimcik/turkish-chat-max-25k",
+        "7cf29049fd24970df3a32fb19a49eedd937128b9"
+      ],
+      "tasks": [
+        "casual_conversation",
+        "creative_writing",
+        "extractive_qa",
+        "grammatical_error_correction",
+        "information_extraction",
+        "instruction_following",
+        "math_and_logic",
+        "multiple_choice_qa",
+        "natural_language_inference",
+        "open_qa",
+        "planning",
+        "summarization",
+        "text_classification"
+      ]
+    },
+    "rows": {
+      "train-en-commonsense": 9480,
+      "val-en-commonsense": 261,
+      "train-tr-turkish-tasks": 20050,
+      "val-tr-turkish-tasks": 506
+    },
+    "tokens": {
+      "train-en-commonsense": 711700,
+      "val-en-commonsense": 19067,
+      "train-tr-turkish-tasks": 6611818,
+      "val-tr-turkish-tasks": 170109
+    },
+    "rankable": {
+      "train-en-commonsense": 9480,
+      "val-en-commonsense": 261
+    }
+  }
+}

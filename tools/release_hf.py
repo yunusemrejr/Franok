@@ -49,6 +49,15 @@ def publish_weights(args):
             "post.jsonl",
             "post-finished.json",
         ]
+        continued = run.parent / "lm"
+        heldout = run.parent / "evaluation/continued-text.json"
+        if checksum(continued / "model.safetensors") != json.loads(heldout.read_text())["sha256"]:
+            raise ValueError("Pretraining and held-out text receipts refer to different weights")
+        mapping["pretrained/model.safetensors"] = continued / "model.safetensors"
+        mapping["pretrained/config.json"] = continued / "config.json"
+        mapping["pretrained/tokenizer.json"] = export / "tokenizer.json"
+        mapping["pretrained/validation.json"] = heldout
+        mapping[f"training-record/{version}/data-preparation.json"] = run.parent / "preparation.json"
     else:
         logs += ["progress.json", "finished.json", "metrics.jsonl"]
     for f in logs:
@@ -60,6 +69,8 @@ def publish_weights(args):
     products = run / "adapters/rl/updates.safetensors"
     if products.is_file():
         mapping["adapters/rl/updates.safetensors"] = products
+        mapping["adapters/pre-rl/model.safetensors"] = run / "pre-rl.safetensors"
+        mapping["adapters/pre-rl/config.json"] = run / "config.json"
     reader = None
     if args.reader:
         folder = run / "reader"

@@ -1,6 +1,6 @@
 """Run the same conversation script on an unquantized Franok checkpoint or its peer."""
 
-import argparse, json, re, unicodedata, math
+import argparse, hashlib, json, re, unicodedata
 from pathlib import Path
 import numpy as np
 import torch
@@ -53,7 +53,13 @@ def main():
     else:
         cfg = Config(**json.loads((args.run / "config.json").read_text()))
         model = Franok(cfg).eval()
-        model.load_state_dict(load_file(str(args.run / "model.safetensors")))
+        weights = args.run / "model.safetensors"
+        tensors = load_file(str(weights))
+        storage = sorted({str(t.dtype).removeprefix("torch.") for t in tensors.values()})
+        model.load_state_dict(tensors)
+        del tensors
+        with weights.open("rb") as f:
+            digest = hashlib.file_digest(f, "sha256").hexdigest()
         tk = Tokenizer.from_file("work/data/tokenizer.json")
         tk.decoder = decoders.ByteLevel()
         stop = 2
@@ -93,6 +99,7 @@ def main():
         checks = []
         seed = 17941
         lang = sc["lang"]
+        temp = sc.get("temperature", 0.58)
         for j, q in enumerate(sc["turns"]):
             turns.append(dict(role="user", content=q))
             guide = DEFAULT[lang]
@@ -103,7 +110,7 @@ def main():
             ids = prefix(turns, lang, sc.get("system", guide))
             cache = None
             generated = []
-            for _ in range(64):
+            for _ in range(sc.get("maxNew", 64)):
                 logits, cache = step(ids, cache)
                 logits[list(invalid)] = -np.inf
                 if generated:
@@ -112,18 +119,19 @@ def main():
                     for k in range(3, len(generated)):
                         if generated[k - 3 : k] == generated[-3:]:
                             logits[generated[k]] = -np.inf
-                best = np.argpartition(-logits, 48)[:48]
-                best = best[np.argsort(-logits[best])]
-                prob = np.exp((logits[best] - logits[best[0]]) / 0.58, dtype="float64")
-                total = prob.sum()
-                n = 1 + np.searchsorted(prob.cumsum(), 0.89 * total)
-                prob = prob[:n]
-                seed = (1664525 * seed + 1013904223) & 0xFFFFFFFF
-                token = int(
-                    best[
-                        np.searchsorted(prob.cumsum(), (seed / 4294967296) * prob.sum())
-                    ]
-                )
+                if temp == 0:
+                    token = int(np.argmax(logits))
+                else:
+                    best = np.argpartition(-logits, 48)[:48]
+                    best = best[np.argsort(-logits[best])]
+                    prob = np.exp((logits[best] - logits[best[0]]) / temp, dtype="float64")
+                    total = prob.sum()
+                    n = 1 + np.searchsorted(prob.cumsum(), 0.89 * total)
+                    prob = prob[:n]
+                    seed = (1664525 * seed + 1013904223) & 0xFFFFFFFF
+                    token = int(
+                        best[np.searchsorted(prob.cumsum(), (seed / 4294967296) * prob.sum())]
+                    )
                 if token == stop:
                     break
                 generated.append(token)
@@ -138,7 +146,7 @@ def main():
                 if criteria is None
                 else any(
                     (
-                        normal(answer) == normal(c)
+                        answer == c if sc.get("verbatim") else normal(answer) == normal(c)
                         if sc.get("exact")
                         else normal(c) in normal(answer)
                     )
@@ -153,7 +161,8 @@ def main():
     args.out.write_text(
         json.dumps(
             dict(
-                model="SmolLM2-360M-Instruct" if args.peer else "Franok FP16 weights",
+                model="SmolLM2-360M-Instruct" if args.peer else "Franok",
+                **({"revision": BASE} if args.peer else {"weights_sha256": digest, "storage": storage}),
                 conversations=out,
             ),
             ensure_ascii=False,

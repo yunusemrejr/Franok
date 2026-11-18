@@ -14,10 +14,11 @@ import json
 
 
 @torch.inference_mode()
-def collect(model, batches, block_covariance=False):
+def collect(model, batches, block_covariance=False, paired_groups=False):
     totals = {}
     contexts = {}
     grams = {}
+    width_per_block = 64 if paired_groups else 32
 
     def add(name, x, mask):
         # First dimension is the bank (one for a shared projection).
@@ -28,7 +29,7 @@ def collect(model, batches, block_covariance=False):
             bank, positions, width = x.shape
             values = (
                 (x.float() * weight)
-                .reshape(bank, positions, width // 32, 32)
+                .reshape(bank, positions, width // width_per_block, width_per_block)
                 .transpose(1, 2)
             )
             products = values.transpose(-1, -2) @ values
@@ -117,7 +118,12 @@ def collect(model, batches, block_covariance=False):
             mean = covariance.diagonal(dim1=-2, dim2=-1).mean(dim=(1, 2))
             covariance = 0.75 * covariance / mean[:, None, None, None].clamp_min(1e-10)
             covariance.diagonal(dim1=-2, dim2=-1).add_(0.25)
-            result[name + ".cov32"] = covariance.cpu().numpy().astype("float32")
+            measured = covariance.cpu().numpy().astype("float32")
+            if paired_groups:
+                result[name + ".cov64"] = measured
+                measured = np.stack((measured[:, :, :32, :32], measured[:, :, 32:, 32:]), axis=2)
+                measured = measured.reshape(len(measured), -1, 32, 32)
+            result[name + ".cov32"] = measured
     return result
 
 
@@ -132,6 +138,7 @@ def main():
         action="store_true",
         help="Also measure within-group channel products",
     )
+    p.add_argument("--paired-groups", action="store_true", help="Measure adjacent pairs of 32-channel groups.")
     a = p.parse_args()
     torch.set_num_threads(a.threads)
     cfg = Config(**json.loads((a.run / "config.json").read_text()))
@@ -144,7 +151,7 @@ def main():
         for j in range(a.batches):
             yield data.batch(rng, (64, 128, 256, 512)[j % 4], 1024)
 
-    values = collect(model, batches(), a.block_covariance)
+    values = collect(model, batches(), a.block_covariance or a.paired_groups, a.paired_groups)
     a.out.parent.mkdir(exist_ok=True, parents=True)
     np.savez(a.out, **values)
     print(len(values), "measured matrices", flush=True)

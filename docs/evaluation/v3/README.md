@@ -25,14 +25,14 @@ In the previous Turkish extractive training shard, all 99,502 training records a
 
 ## Measurements before the final instruction stages
 
-| Fixed sample | v0.2 parent | After 116,674,560 new natural-text targets |
-|---|---:|---:|
-| English educational web, first segment | 3.722 | 3.394 |
-| English educational web, second segment | 3.740 | 3.399 |
-| English stories | 2.969 | 2.205 |
-| Turkish web, first segment | 4.383 | 3.721 |
-| Turkish web, second segment | 4.215 | 3.620 |
-| Turkish stories | 3.533 | 2.342 |
+| Fixed sample | v0.2 parent | After 116,674,560 new targets | After 383,385,600 new targets |
+|---|---:|---:|---:|
+| English educational web, first segment | 3.722 | 3.394 | 3.186 |
+| English educational web, second segment | 3.740 | 3.399 | 3.173 |
+| English stories | 2.969 | 2.205 | 1.939 |
+| Turkish web, first segment | 4.383 | 3.721 | 3.456 |
+| Turkish web, second segment | 4.215 | 3.620 | 3.356 |
+| Turkish stories | 3.533 | 2.342 | 2.020 |
 
 Each number is mean next-token loss in nats on 64 windows of 256 target tokens. These windows come from held-out shards outside the small shard used to select the pretraining checkpoint. Both models saw the same token IDs. Lower is better. The evaluation records the input seed and weight digest. [Text evaluator](../../../tools/text_validation.py)
 

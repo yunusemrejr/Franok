@@ -50,7 +50,7 @@ function rng(seed) {
 if (mode === 'all' || mode === 'dialogues') {
   const conversations = [];
   for (const sc of json(dialogueFile)) {
-    const opts = settings({ system: sc.system || '', maxNew: 64 }, spec.config.window),
+    const opts = settings({ system: sc.system || '', maxNew: sc.maxNew ?? 64, temperature: sc.temperature }, spec.config.window),
       turns = [],
       checks = [];
     const random = rng(17941);
@@ -80,7 +80,7 @@ if (mode === 'all' || mode === 'dialogues') {
       const passed =
         match === null
           ? null
-          : match.some((x) => (sc.exact ? norm === clampStr(x) : norm.includes(clampStr(x))));
+          : match.some((x) => sc.verbatim ? answer === x : (sc.exact ? norm === clampStr(x) : norm.includes(clampStr(x))));
       checks.push({
         tokens: gen.length,
         prompt_tokens: prompt.ids.length,
