@@ -1,0 +1,482 @@
+[
+  {
+    "lang": "en",
+    "budget": 128,
+    "prompt_tokens": 113,
+    "intervening_turns": 4,
+    "label": "K17",
+    "word": "cedar",
+    "pred": "cedar",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 128,
+    "prompt_tokens": 117,
+    "intervening_turns": 4,
+    "label": "J42",
+    "word": "maple",
+    "pred": "maple",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 128,
+    "prompt_tokens": 117,
+    "intervening_turns": 4,
+    "label": "B31",
+    "word": "willow",
+    "pred": "willow",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 128,
+    "prompt_tokens": 113,
+    "intervening_turns": 4,
+    "label": "T54",
+    "word": "birch",
+    "pred": "birch",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 128,
+    "prompt_tokens": 113,
+    "intervening_turns": 4,
+    "label": "N28",
+    "word": "cedar",
+    "pred": "cedar",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 128,
+    "prompt_tokens": 117,
+    "intervening_turns": 4,
+    "label": "M60",
+    "word": "maple",
+    "pred": "maple",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 128,
+    "prompt_tokens": 117,
+    "intervening_turns": 4,
+    "label": "R58",
+    "word": "willow",
+    "pred": "willow",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 128,
+    "prompt_tokens": 113,
+    "intervening_turns": 4,
+    "label": "V74",
+    "word": "birch",
+    "pred": "birch",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 384,
+    "prompt_tokens": 413,
+    "intervening_turns": 28,
+    "label": "K17",
+    "word": "cedar",
+    "pred": "cedar",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 384,
+    "prompt_tokens": 417,
+    "intervening_turns": 28,
+    "label": "J42",
+    "word": "maple",
+    "pred": "maple",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 384,
+    "prompt_tokens": 417,
+    "intervening_turns": 28,
+    "label": "B31",
+    "word": "willow",
+    "pred": "willow",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 384,
+    "prompt_tokens": 413,
+    "intervening_turns": 28,
+    "label": "T54",
+    "word": "birch",
+    "pred": "birch",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 384,
+    "prompt_tokens": 413,
+    "intervening_turns": 28,
+    "label": "N28",
+    "word": "cedar",
+    "pred": "cedar",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 384,
+    "prompt_tokens": 417,
+    "intervening_turns": 28,
+    "label": "M60",
+    "word": "maple",
+    "pred": "maple",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 384,
+    "prompt_tokens": 417,
+    "intervening_turns": 28,
+    "label": "R58",
+    "word": "willow",
+    "pred": "willow",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 384,
+    "prompt_tokens": 413,
+    "intervening_turns": 28,
+    "label": "V74",
+    "word": "birch",
+    "pred": "birch",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 960,
+    "prompt_tokens": 1088,
+    "intervening_turns": 82,
+    "label": "K17",
+    "word": "cedar",
+    "pred": "cedar",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 960,
+    "prompt_tokens": 1090,
+    "intervening_turns": 82,
+    "label": "J42",
+    "word": "maple",
+    "pred": "birch",
+    "correct": false
+  },
+  {
+    "lang": "en",
+    "budget": 960,
+    "prompt_tokens": 1092,
+    "intervening_turns": 82,
+    "label": "B31",
+    "word": "willow",
+    "pred": "willow",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 960,
+    "prompt_tokens": 1090,
+    "intervening_turns": 82,
+    "label": "T54",
+    "word": "birch",
+    "pred": "birch",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 960,
+    "prompt_tokens": 1088,
+    "intervening_turns": 82,
+    "label": "N28",
+    "word": "cedar",
+    "pred": "cedar",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 960,
+    "prompt_tokens": 1090,
+    "intervening_turns": 82,
+    "label": "M60",
+    "word": "maple",
+    "pred": "birch",
+    "correct": false
+  },
+  {
+    "lang": "en",
+    "budget": 960,
+    "prompt_tokens": 1092,
+    "intervening_turns": 82,
+    "label": "R58",
+    "word": "willow",
+    "pred": "willow",
+    "correct": true
+  },
+  {
+    "lang": "en",
+    "budget": 960,
+    "prompt_tokens": 1090,
+    "intervening_turns": 82,
+    "label": "V74",
+    "word": "birch",
+    "pred": "birch",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 128,
+    "prompt_tokens": 180,
+    "intervening_turns": 4,
+    "label": "K17",
+    "word": "sedir",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 128,
+    "prompt_tokens": 177,
+    "intervening_turns": 4,
+    "label": "J42",
+    "word": "kavak",
+    "pred": "kavak",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 128,
+    "prompt_tokens": 174,
+    "intervening_turns": 4,
+    "label": "B31",
+    "word": "söğüt",
+    "pred": "söğüt",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 128,
+    "prompt_tokens": 176,
+    "intervening_turns": 4,
+    "label": "T54",
+    "word": "çam",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 128,
+    "prompt_tokens": 180,
+    "intervening_turns": 4,
+    "label": "N28",
+    "word": "sedir",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 128,
+    "prompt_tokens": 177,
+    "intervening_turns": 4,
+    "label": "M60",
+    "word": "kavak",
+    "pred": "kavak",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 128,
+    "prompt_tokens": 174,
+    "intervening_turns": 4,
+    "label": "R58",
+    "word": "söğüt",
+    "pred": "söğüt",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 128,
+    "prompt_tokens": 176,
+    "intervening_turns": 4,
+    "label": "V74",
+    "word": "çam",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 384,
+    "prompt_tokens": 657,
+    "intervening_turns": 28,
+    "label": "K17",
+    "word": "sedir",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 384,
+    "prompt_tokens": 654,
+    "intervening_turns": 28,
+    "label": "J42",
+    "word": "kavak",
+    "pred": "kavak",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 384,
+    "prompt_tokens": 651,
+    "intervening_turns": 28,
+    "label": "B31",
+    "word": "söğüt",
+    "pred": "söğüt",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 384,
+    "prompt_tokens": 653,
+    "intervening_turns": 28,
+    "label": "T54",
+    "word": "çam",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 384,
+    "prompt_tokens": 657,
+    "intervening_turns": 28,
+    "label": "N28",
+    "word": "sedir",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 384,
+    "prompt_tokens": 654,
+    "intervening_turns": 28,
+    "label": "M60",
+    "word": "kavak",
+    "pred": "kavak",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 384,
+    "prompt_tokens": 651,
+    "intervening_turns": 28,
+    "label": "R58",
+    "word": "söğüt",
+    "pred": "söğüt",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 384,
+    "prompt_tokens": 653,
+    "intervening_turns": 28,
+    "label": "V74",
+    "word": "çam",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 960,
+    "prompt_tokens": 1770,
+    "intervening_turns": 84,
+    "label": "K17",
+    "word": "sedir",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 960,
+    "prompt_tokens": 1767,
+    "intervening_turns": 84,
+    "label": "J42",
+    "word": "kavak",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 960,
+    "prompt_tokens": 1764,
+    "intervening_turns": 84,
+    "label": "B31",
+    "word": "söğüt",
+    "pred": "söğüt",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 960,
+    "prompt_tokens": 1766,
+    "intervening_turns": 84,
+    "label": "T54",
+    "word": "çam",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 960,
+    "prompt_tokens": 1770,
+    "intervening_turns": 84,
+    "label": "N28",
+    "word": "sedir",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 960,
+    "prompt_tokens": 1767,
+    "intervening_turns": 84,
+    "label": "M60",
+    "word": "kavak",
+    "pred": "söğüt",
+    "correct": false
+  },
+  {
+    "lang": "tr",
+    "budget": 960,
+    "prompt_tokens": 1764,
+    "intervening_turns": 84,
+    "label": "R58",
+    "word": "söğüt",
+    "pred": "söğüt",
+    "correct": true
+  },
+  {
+    "lang": "tr",
+    "budget": 960,
+    "prompt_tokens": 1766,
+    "intervening_turns": 84,
+    "label": "V74",
+    "word": "çam",
+    "pred": "söğüt",
+    "correct": false
+  }
+]

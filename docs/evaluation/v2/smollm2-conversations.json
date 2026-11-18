@@ -1,0 +1,391 @@
+{
+  "model": "SmolLM2-360M-Instruct",
+  "conversations": [
+    {
+      "id": "en-introduce",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hi there! What should I call you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm SmolLM, a chatbot designed to provide information and answer questions in English."
+        },
+        {
+          "role": "user",
+          "content": "Can I speak Turkish with you as well?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm SmolLM, a chatbot designed to provide information and answer questions in English. I'm not equipped to speak Turkish."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "smollm",
+            "smol lm"
+          ],
+          "passed": true,
+          "tokens": 19
+        },
+        {
+          "criterion": [
+            "turkish",
+            "yes"
+          ],
+          "passed": true,
+          "tokens": 27
+        }
+      ]
+    },
+    {
+      "id": "tr-introduce",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Selam, senin ismin nedir?"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam, senin ismi."
+        },
+        {
+          "role": "user",
+          "content": "Seninle İngilizce de sohbet edebilir miyim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam, senin değerlerini sohbet etmek için bir çeviriye kabul etmeye çalışıyor."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "smollm",
+            "smol lm"
+          ],
+          "passed": false,
+          "tokens": 8
+        },
+        {
+          "criterion": [
+            "ingilizce",
+            "evet",
+            "elbette",
+            "tabii"
+          ],
+          "passed": false,
+          "tokens": 40
+        }
+      ]
+    },
+    {
+      "id": "en-correction",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Our band's rehearsal is at 18:20. Please remember that for this chat."
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for the misunderstanding, but as SmolLM, I don't have the ability to respond to messages. I'm here to provide information and answer questions in English. Could you please provide me with the chat message or the time you're expecting?"
+        },
+        {
+          "role": "user",
+          "content": "Plans changed. It's now at 19:35."
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for any confusion, but as SmolLM, I don't have the ability to respond to messages. I'm here to provide information and answer questions in English. Could you please provide me with the chat message or the time you're expecting?"
+        },
+        {
+          "role": "user",
+          "content": "What is the updated rehearsal time? Give only the time."
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry for the confusion, but as SmolLM, I don't have the ability to respond to messages. I'm here to provide information and answer questions in English. Could you please provide me with the chat message or the time you're expecting?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 52
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 52
+        },
+        {
+          "criterion": [
+            "19:35"
+          ],
+          "passed": false,
+          "tokens": 52
+        }
+      ]
+    },
+    {
+      "id": "tr-correction",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Koro provasını saat 13.10 olarak not al lütfen."
+        },
+        {
+          "role": "assistant",
+          "content": "Kor provasını saat 13.10 olarak not al lütfen."
+        },
+        {
+          "role": "user",
+          "content": "Bir değişiklik oldu. Yeni saat 15.25."
+        },
+        {
+          "role": "assistant",
+          "content": "Bir değişiklik oldu. Yeni saat 15.25."
+        },
+        {
+          "role": "user",
+          "content": "Son söylediğim prova saati kaçtı? Yalnızca saati yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Son söylediğim prova saati kaçtı. Yalnızca saati yaz."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 22
+        },
+        {
+          "criterion": [
+            "15.25",
+            "15:25"
+          ],
+          "passed": false,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "en-followup",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My bicycle has a flat tire. What should I check first?"
+        },
+        {
+          "role": "assistant",
+          "content": "First, check the tire pressure. If it's low, inflate it to the recommended pressure."
+        },
+        {
+          "role": "user",
+          "content": "I found a small hole in the inner tube. What could I use to fix it?"
+        },
+        {
+          "role": "assistant",
+          "content": "Use a patch kit to repair the inner tube."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "tire",
+            "tyre",
+            "tube",
+            "puncture",
+            "valve",
+            "wheel",
+            "air"
+          ],
+          "passed": true,
+          "tokens": 20
+        },
+        {
+          "criterion": [
+            "patch",
+            "repair kit",
+            "new tube",
+            "replace"
+          ],
+          "passed": true,
+          "tokens": 10
+        }
+      ]
+    },
+    {
+      "id": "tr-followup",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bisikletimin lastiği inmiş. Önce neyi kontrol etmeliyim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bisikletimin lastiği inmiş. Önce neyi kontrol etmeliyim."
+        },
+        {
+          "role": "user",
+          "content": "İç lastikte küçük bir delik buldum. Onu neyle kapatabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "İç lastiği inmiş. Önce neyi kontrol etmeliyim."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "lastik",
+            "delik",
+            "sibop",
+            "supap",
+            "hava"
+          ],
+          "passed": false,
+          "tokens": 27
+        },
+        {
+          "criterion": [
+            "yama",
+            "tamir kit",
+            "değiştir"
+          ],
+          "passed": false,
+          "tokens": 24
+        }
+      ]
+    },
+    {
+      "id": "en-format",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which word names an animal: spoon or rabbit? Reply with the animal only."
+        },
+        {
+          "role": "assistant",
+          "content": "Rabbit"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "rabbit"
+          ],
+          "passed": true,
+          "tokens": 2
+        }
+      ]
+    },
+    {
+      "id": "tr-format",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hangisi bir meyve: tabak mı, armut mu? Sadece meyvenin adını yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Hangisi bir meyve: tabak mı, armut mu? Sadece meyvenin adını yaz."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "armut"
+          ],
+          "passed": false,
+          "tokens": 31
+        }
+      ]
+    },
+    {
+      "id": "en-open",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "What makes a cup of coffee taste bitter?"
+        },
+        {
+          "role": "assistant",
+          "content": "A cup of coffee can taste bitter due to the presence of acidity, bitterness, and a lack of balance."
+        },
+        {
+          "role": "user",
+          "content": "How would you change the brewing process to make it less bitter?"
+        },
+        {
+          "role": "assistant",
+          "content": "To make a cup of coffee less bitter, you could use a different brewing method such as cold brew or using a more acidic liquid like water."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 22
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 29
+        }
+      ]
+    },
+    {
+      "id": "tr-open",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Kitap okumaya yeniden başlamak istiyorum ama kolayca sıkılıyorum. Ne önerirsin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kaynak: \"Kitap okumaya başlamak istiyorum, ama kolayca sıkılıyorum. Ne önerirsin?\"\n\nSonuç: \"Kaynacı olarak sonrasında, sık k"
+        },
+        {
+          "role": "user",
+          "content": "Kısa öyküleri seviyorum. Bu akşam için basit bir plan yapabilir misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kısa öykülerin planlarını kullanarak, sonra bu akşam için bir plan yapabilir. Bu plan:\n\nBu plan: Bir kurallarının önemli bir öğretim ver"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    }
+  ]
+}

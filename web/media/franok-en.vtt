@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00:00.180 --> 00:00:03.503
+How do you fit a bilingual language model inside a browser?
+
+00:00:03.663 --> 00:00:09.389
+Franok starts with random weights, then learns to predict one more piece of English or Turkish text.
+
+00:00:10.049 --> 00:00:16.034
+Take the Turkish sentence on screen. The tokenizer splits it into five pieces and looks up a number for each one.
+
+00:00:16.194 --> 00:00:22.527
+English passes through the same vocabulary. Each number selects a vector with five hundred and twelve coordinates.
+
+00:00:23.187 --> 00:00:28.857
+First, attention combines information from the current and earlier positions. Future pieces stay hidden.
+
+00:00:29.017 --> 00:00:36.116
+Next, each position visits one feed-forward bank. It adds the result back to its vector, and the next layer repeats the process.
+
+00:00:36.776 --> 00:00:42.900
+Franok routes eight positions at a time. The previous group's last token sets a rotation for the next group.
+
+00:00:43.060 --> 00:00:51.230
+With anchor seventeen at layer two, the rotation is six. Starting at slot three, count six places around the ring. You land at bank one.
+
+00:00:51.390 --> 00:00:59.452
+Each bank gets one position in a full group. About fifty million of the model's three hundred and fourteen million parameters participate per token.
+
+00:01:00.112 --> 00:01:07.792
+At the output, softmax turns scores into probabilities. Pretraining rewards probability assigned to the actual next piece.
+
+00:01:07.952 --> 00:01:16.151
+For example, moving the correct piece from one chance in ten to one in two brings its loss down from two point three to zero point six nine.
+
+00:01:16.311 --> 00:01:22.014
+The optimizer updates the random starting weights using open English and Turkish text on a Colab GPU.
+
+00:01:22.674 --> 00:01:30.714
+Dialogue tuning supplies a system instruction and a conversation. The model learns from the assistant's replies while the prompt provides context.
+
+00:01:30.874 --> 00:01:36.089
+Small low-rank updates tune dialogue and rank a matching answer against a distractor.
+
+00:01:36.249 --> 00:01:46.158
+In the reinforcement stage, Franok samples six replies to a task. Replies earn a score against its known answer, and the update favors above-average replies.
+
+00:01:46.818 --> 00:01:53.731
+Quantization groups thirty-two weights under one scale. Four-bit weights go to the browser, and eight-bit weights go to Ubuntu.
+
+00:01:53.891 --> 00:02:02.639
+Both apps run the model locally with WebAssembly. Open the architecture view to move the routing controls yourself, or follow the source and test results on GitHub.

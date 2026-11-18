@@ -1,5 +1,7 @@
 # Initial Colab checkpoint
 
+This page records the original 256-token checkpoint. The [extended release evaluation](v2/README.md) covers the 1,024-token version and its training stages.
+
 The first release consumed 56,524,800 token positions, including masked positions. Training used 53,859,151 next-token targets. The GPU was an NVIDIA L4. The first 3,200 steps took about 11 minutes and the remaining 6,000 steps took about 18 minutes. Dataset preparation, saving and transfers add wall time.
 
 | Evaluation | Franok EN | Comparison EN | Franok TR | Comparison TR |

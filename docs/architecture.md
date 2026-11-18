@@ -1,6 +1,26 @@
-# Franok
+# How Franok predicts the next token
 
 Franok is a decoder-only language model for English and Turkish. Its anchor-rotation rule assigns work to eight independent SwiGLU networks at each of twelve layers. It uses a byte-level bilingual vocabulary fitted from scratch, grouped-query attention, rotary position embeddings, RMS normalization and tied input/output embeddings.
+
+A sentence first becomes a list of token IDs. For each new token, attention reads the earlier context. A routing rule chooses which bank of learned weights processes the result. After twelve layers, Franok scores the possible next tokens and the decoder picks one.
+
+```mermaid
+flowchart TD
+  T["English or Turkish text"] --> V["8,192-piece vocabulary"]
+  V --> E["512 features per token"]
+  E --> A["Causal attention reads the current prefix"]
+  A --> R["Anchor and position choose one of eight banks"]
+  R --> B["Selected SwiGLU bank updates the token"]
+  B -->|Next layer, through layer 12| A
+  B -->|After layer 12| P["Final norm and 8,192 next-token scores"]
+  P --> S["Sample one token and append it"]
+```
+
+## Trace one token
+
+Suppose the previous group ends in token ID **17**. Follow slot **3** in layer **2**, counting from zero. Shift 17 right by two bits to get 4. Add the layer number to get rotation 6. Slot 3 then visits bank **(3 + 6) mod 8 = 1**. Its neighbor in slot 4 visits bank 2. Each of the other slots follows the same rotation. Attention still reads earlier positions on every layer. The banks change which feed-forward weights update each position.
+
+[Watch the two-minute film](../web/media/franok-from-scratch.mp4) · [Move the routing controls](https://franok.yunusemrevurgun.com/#about) · [Training stages and equations](training.md)
 
 ## Routing
 
@@ -31,10 +51,14 @@ Each bank expands 512 features into 2,048. All projections omit bias. The final 
 | **Total** | **314,061,312** |
 | **Parameters on one token's path, including the vocabulary head** | **49,820,160** |
 
-The trained context is 256 positions. The application keeps complete saved sessions, retrieves earlier messages by term overlap weighted by inverse document frequency, and bounds their contribution to each prompt. Search returns the original saved turn and lets the user attach it to a new message. An attachment gets prompt budget first and its local citation survives a restart. The source turn stays available in full even when only its first tokens fit the neural window. This application feature can retrieve text older than the neural window. Approximate keyword retrieval can miss paraphrases.
+The extended release trains up to 1,024 positions. The first release trained to 256. The application keeps complete saved sessions, retrieves earlier messages by term overlap weighted by inverse document frequency, and bounds their contribution to each prompt. Search returns the original saved turn and lets the user attach it to a new message. An attachment gets prompt budget first and its local citation survives a restart. The source turn stays available in full even when only its first tokens fit the neural window. This application feature can retrieve text older than the neural window. Approximate keyword retrieval can miss paraphrases.
+
+### Finding an exact quote in a long chat
+
+Type `/recall train` or `/hatırla tren` in the workspace to quote your earlier messages containing that word. The application returns excerpts with links to their original turns. This search runs on the device and can reach a turn outside the last 1,024 model tokens. When you attach a turn to a new question, the neural model still has to interpret it.
 
 ## Browser implementation
 
-The worker streams one checked weight file, verifies SHA-256, and reuses a cached copy where available. Each group of 32 weights has a float32 scale $s=\max(|w|)/7$ and sixteen bytes of packed integer weights. Entries $j$ and $j+16$ share a byte. Each group therefore uses 20 bytes. The WebAssembly SIMD kernel quantizes input activations to signed eight-bit values per group, forms integer dot products and accumulates the rescaled products in float32. Norm scales and KV caches stay in float32. At 256 tokens the twelve-layer KV cache occupies 3 MiB. First-generation latency includes prompt processing. Device throughput varies.
+The worker streams one checked weight file, verifies SHA-256, and reuses a cached copy where available. In the original peak-scale Q4 exporter, each group of 32 weights has a float32 scale $s=\max(|w|)/7$ and sixteen bytes of packed integer weights. Entries $j$ and $j+16$ share a byte. Each group therefore uses 20 bytes. The WebAssembly SIMD kernel quantizes input activations to signed eight-bit values per group, forms integer dot products and accumulates the rescaled products in float32. Norm scales and KV caches stay in float32. The released Q4 exporter tries several scale seeds and alternates code assignment with a least-squares scale fit, keeping the lowest squared reconstruction error for each group. Q8 stores 32 signed bytes and a float32 scale per group. Its integer limit is 127. At 1,024 tokens the twelve-layer key/value cache occupies 12 MiB. First-generation latency includes prompt processing. Device throughput varies.
 
 The reference parity check compares every position of a small deterministic PyTorch example with the incremental WASM decoder, including anchor changes and partial groups. The bilingual tokenizer round-trip test includes Turkish characters, punctuation, literal role-marker text, combining marks and emoji.

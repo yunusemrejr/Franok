@@ -1,0 +1,319 @@
+{
+  "scores": {
+    "en": 10,
+    "tr": 9
+  },
+  "out_of_per_language": 16,
+  "rows": [
+    {
+      "lang": "en",
+      "q": "What is the capital of France?",
+      "correct": "Paris",
+      "foil": "Madrid",
+      "score_correct": -2.62541,
+      "score_foil": -4.20414,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "At sea level, water freezes at how many degrees Celsius?",
+      "correct": "Zero",
+      "foil": "Thirty",
+      "score_correct": -5.3204,
+      "score_foil": -4.83561,
+      "win": false
+    },
+    {
+      "lang": "en",
+      "q": "Which word is the opposite of cold?",
+      "correct": "Hot",
+      "foil": "Slow",
+      "score_correct": -5.77763,
+      "score_foil": -5.92084,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "A basket has three apples. Add two. How many apples are there?",
+      "correct": "Five",
+      "foil": "Four",
+      "score_correct": -4.60325,
+      "score_foil": -3.7772,
+      "win": false
+    },
+    {
+      "lang": "en",
+      "q": "What language is 'teşekkür ederim'?",
+      "correct": "Turkish",
+      "foil": "English",
+      "score_correct": -3.59544,
+      "score_foil": -1.94816,
+      "win": false
+    },
+    {
+      "lang": "en",
+      "q": "Which planet orbits closer to the Sun, Earth or Mars?",
+      "correct": "Earth",
+      "foil": "Mars",
+      "score_correct": -3.54553,
+      "score_foil": -4.26499,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "Translate the Turkish word 'kedi' into English.",
+      "correct": "Cat",
+      "foil": "Dog",
+      "score_correct": -5.32996,
+      "score_foil": -5.62714,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "A note reads: The ticket is violet. What color is the ticket?",
+      "correct": "Violet",
+      "foil": "Yellow",
+      "score_correct": -2.8292,
+      "score_foil": -6.64147,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "Mina is older than Ali. Ali is older than Tom. Who is youngest?",
+      "correct": "Tom",
+      "foil": "Mina",
+      "score_correct": -3.67618,
+      "score_foil": -0.21413,
+      "win": false
+    },
+    {
+      "lang": "en",
+      "q": "How many sides does a triangle have?",
+      "correct": "Three",
+      "foil": "Seven",
+      "score_correct": -4.7751,
+      "score_foil": -5.9451,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "If a shop is closed on Sunday, can I shop there on Sunday?",
+      "correct": "No",
+      "foil": "Yes",
+      "score_correct": -3.29219,
+      "score_foil": -2.08756,
+      "win": false
+    },
+    {
+      "lang": "en",
+      "q": "Complete the sentence: Yesterday I went to the",
+      "correct": "store.",
+      "foil": "go.",
+      "score_correct": -5.29734,
+      "score_foil": -6.26738,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "Does ice melt when warmed above its melting point?",
+      "correct": "Yes",
+      "foil": "No",
+      "score_correct": -0.80383,
+      "score_foil": -1.92627,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "Name the gas plants take in during photosynthesis.",
+      "correct": "Carbon dioxide",
+      "foil": "Helium",
+      "score_correct": -1.88523,
+      "score_foil": -4.0876,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "Read this label: the meeting starts at 14:30. When does it start?",
+      "correct": "14:30",
+      "foil": "18:10",
+      "score_correct": -0.61399,
+      "score_foil": -4.26469,
+      "win": true
+    },
+    {
+      "lang": "en",
+      "q": "Which is heavier, one kilogram of steel or one kilogram of cotton?",
+      "correct": "They weigh the same.",
+      "foil": "Steel weighs more.",
+      "score_correct": -4.84237,
+      "score_foil": -4.52878,
+      "win": false
+    },
+    {
+      "lang": "tr",
+      "q": "Türkiye'nin başkenti neresidir?",
+      "correct": "Ankara",
+      "foil": "İzmir",
+      "score_correct": -2.17936,
+      "score_foil": -2.29477,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "Su deniz seviyesinde kaç santigrat derecede kaynar?",
+      "correct": "Yüz",
+      "foil": "Elli",
+      "score_correct": -2.89448,
+      "score_foil": -6.31515,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "Gece kelimesinin karşıtı nedir?",
+      "correct": "Gündüz",
+      "foil": "Akşam",
+      "score_correct": -2.98393,
+      "score_foil": -9.54811,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "Bir kutuda iki kalem var. Üç kalem daha eklersek kaç kalem olur?",
+      "correct": "Beş",
+      "foil": "Dört",
+      "score_correct": -5.68203,
+      "score_foil": -3.52685,
+      "win": false
+    },
+    {
+      "lang": "tr",
+      "q": "'Good morning' hangi dilde yazılmıştır?",
+      "correct": "İngilizce",
+      "foil": "Türkçe",
+      "score_correct": -6.17228,
+      "score_foil": -4.15242,
+      "win": false
+    },
+    {
+      "lang": "tr",
+      "q": "Dünya mı yoksa Ay mı daha büyüktür?",
+      "correct": "Dünya",
+      "foil": "Ay",
+      "score_correct": -2.19727,
+      "score_foil": -2.30314,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "İngilizce 'dog' kelimesini Türkçeye çevir.",
+      "correct": "Köpek",
+      "foil": "Kedi",
+      "score_correct": -5.24907,
+      "score_foil": -5.81538,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "Notta şöyle yazıyor: Anahtar yeşil çekmecede. Çekmece ne renk?",
+      "correct": "Yeşil",
+      "foil": "Sarı",
+      "score_correct": -11.88511,
+      "score_foil": -4.4221,
+      "win": false
+    },
+    {
+      "lang": "tr",
+      "q": "Ece Can'dan uzun. Can Ali'den uzun. En kısa kimdir?",
+      "correct": "Ali",
+      "foil": "Ece",
+      "score_correct": -3.91088,
+      "score_foil": -3.73384,
+      "win": false
+    },
+    {
+      "lang": "tr",
+      "q": "Bir karenin kaç kenarı vardır?",
+      "correct": "Dört",
+      "foil": "Altı",
+      "score_correct": -4.60235,
+      "score_foil": -5.98538,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "Kapı kilitli ve anahtar yok. Kapıyı anahtarla açabilir miyim?",
+      "correct": "Hayır",
+      "foil": "Evet",
+      "score_correct": -2.05826,
+      "score_foil": -2.71451,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "Cümleyi tamamla: Dün arkadaşlarımla parka",
+      "correct": "gittim.",
+      "foil": "gideceğim.",
+      "score_correct": -6.00357,
+      "score_foil": -4.87302,
+      "win": false
+    },
+    {
+      "lang": "tr",
+      "q": "Güneş bir yıldız mıdır?",
+      "correct": "Evet",
+      "foil": "Hayır",
+      "score_correct": -2.64451,
+      "score_foil": -2.1113,
+      "win": false
+    },
+    {
+      "lang": "tr",
+      "q": "İnsanlar solunum için havadaki hangi gaza ihtiyaç duyar?",
+      "correct": "Oksijen",
+      "foil": "Helyum",
+      "score_correct": -2.06017,
+      "score_foil": -6.16864,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "Bilette saat 16.45 yazıyor. Kalkış saati nedir?",
+      "correct": "16.45",
+      "foil": "11.30",
+      "score_correct": -2.85925,
+      "score_foil": -8.24805,
+      "win": true
+    },
+    {
+      "lang": "tr",
+      "q": "Bir kilo demir mi yoksa bir kilo pamuk mu daha ağırdır?",
+      "correct": "Ağırlıkları eşittir.",
+      "foil": "Demir daha ağırdır.",
+      "score_correct": -3.84354,
+      "score_foil": -3.27362,
+      "win": false
+    }
+  ],
+  "generations": [
+    {
+      "lang": "en",
+      "prompt": "Hello! Tell me something about coffee.",
+      "output": "Hello! How can I help you today?"
+    },
+    {
+      "lang": "tr",
+      "prompt": "Merhaba! Bana kahveden bahseder misin?",
+      "output": "Merhaba! Bugün size yardımcı olabilirim. İşte bir soru:\n\n1. **Küçük bir köpek**: Bir köpek, bir köpek ya"
+    },
+    {
+      "lang": "en",
+      "prompt": "Name the capital of France.",
+      "output": "The capital of France is Paris."
+    },
+    {
+      "lang": "tr",
+      "prompt": "Bir haftada kaç gün vardır?",
+      "output": "Bir haftada bir haftada bir haftada en az 3 hafta, haftada en az 3 hafta, haftada en az 3 hafta en az 3 hafta,"
+    }
+  ]
+}

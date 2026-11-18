@@ -1,0 +1,15 @@
+Marul-SFT-TR
+Copyright 2026 Ahmet Karakuş (Marul AI)
+
+This dataset was created by Ahmet Karakuş (Marul AI) and is licensed under the
+Apache License, Version 2.0 (see the LICENSE file).
+
+Source: https://huggingface.co/datasets/MarulAI/Marul-SFT-TR
+
+If you redistribute this dataset, a part of it, or a modified version of it,
+you must keep this NOTICE file together with the LICENSE file, as described in
+Section 4(d) of the Apache License, Version 2.0.
+
+If you train or fine-tune a model with this dataset, please credit
+"Marul-SFT-TR by Ahmet Karakuş (Marul AI)" with a link to the source above in
+the model card, paper or documentation of that model.

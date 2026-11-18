@@ -13,3 +13,26 @@ The release contains original code, tokenizer and trained parameters under MIT. 
 Exact duplicate records are removed. A deterministic hash assigns approximately 1% of groups to validation. Groups use article IDs, conversation tree IDs, instruction text or extractive source passages, depending on the dataset. English and Turkish have equal sampling probability. Historical documents, quotations, proper names and code can include additional languages. The language selector conditions generation and users can receive mixed-language or inaccurate text.
 
 The tokenizer uses only training partitions and starts with all 256 byte values. The architecture starts from random weights. No teacher or pretrained tokenizer is called by the training pipeline. The separately downloaded comparison model is used only by the evaluation script.
+
+## Extended training
+
+The second run adds the sources below. Its preparation scripts pin every input file and revision. The model mixes English and Turkish within training batches. Published upstream texts and translations include multiple authors and may contain mistakes. The original-data generators and processing code are MIT licensed. Upstream works retain their listed licenses.
+
+| Source | Use | Upstream license |
+|---|---|---|
+| [Wikimedia Wikipedia](https://huggingface.co/datasets/wikimedia/wikipedia) | New English and Turkish shards, lead-sentence prompts | CC BY-SA 3.0 / GFDL as listed on the snapshot |
+| [Cosmopedia](https://huggingface.co/datasets/HuggingFaceTB/cosmopedia) | OpenStax-inspired synthetic text and stories | Apache 2.0 |
+| [Smol-SmolTalk](https://huggingface.co/datasets/HuggingFaceTB/smol-smoltalk) | English instructions and multi-turn dialogues | Apache 2.0 |
+| [OpenOrca Turkish](https://huggingface.co/datasets/malhajar/OpenOrca-tr) | Parallel English and Turkish instructions, translation | MIT as listed on the dataset card |
+| [Aya](https://huggingface.co/datasets/CohereForAI/aya_dataset) | English and Turkish human-authored instructions | Apache 2.0 |
+| [SQuAD](https://huggingface.co/datasets/rajpurkar/squad) and [Turkish extractive QA](https://huggingface.co/datasets/GoktugD/turkish-extractive-qa-1.5m) | Passage-grounded short answers | CC BY-SA 4.0 and CC0 1.0 respectively |
+| [GSM8K](https://huggingface.co/datasets/openai/gsm8k) | English training arithmetic | MIT |
+| [UltraChat 200k](https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k) | English multi-turn supervised data | MIT |
+| [Marul-SFT-TR by Ahmet Karakuş (Marul AI)](https://huggingface.co/datasets/MarulAI/Marul-SFT-TR) | Native Turkish multi-turn dialogues, assistant text only | Apache 2.0. [NOTICE](licenses/marul-NOTICE.txt) and [license](licenses/marul-LICENSE.txt) |
+| [Everyday Conversations](https://huggingface.co/datasets/HuggingFaceTB/everyday-conversations-llama3.1-2k) and [everyday-conversations-tur](https://huggingface.co/datasets/SoAp9035/everyday-conversations-tur) | Short, ordinary English and Turkish follow-ups | Apache 2.0 |
+| [Turkish Chat SFT v3](https://huggingface.co/datasets/serhatkagans/turkish-chat-sft-v3) | Filtered Turkish conversational, general knowledge, writing and culture examples | Apache 2.0 |
+| [Franok Session Tasks](https://huggingface.co/datasets/yunusemrejr/Franok-Session-Tasks) | Original bilingual reasoning tasks, symbolic rewards, plus separate practice dialogues about names, corrections and changed plans | MIT |
+
+The general text loader groups derivatives of one article or parallel example into the same internal split. Multi-turn preparation holds out groups before expanding turns, filters reasoning and tool traces from selected dialogues, and includes ordinary body text for system instructions. Deduplication operates within the processing source. Cross-source overlap and overlap with internet benchmarks have not been exhaustively audited. The arithmetic/recall task validation split has its own generator seed. The conversation benchmark is a separate set of manually specified prompts and criteria. Downloaded dataset shards and user chat histories are excluded from the public source tree.
+
+The pinned record loaders are [general text and instructions](../training/extended/prepare.py), [multi-turn dialogue](../training/extended/dialogue.py), and [everyday conversation](../training/extended/conversation_data.py).

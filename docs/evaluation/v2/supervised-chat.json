@@ -1,0 +1,389 @@
+{
+  "model": "Franok FP16 weights",
+  "conversations": [
+    {
+      "id": "en-introduce",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hi there! What should I call you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I don't have access to the information. However, you can try using a Python function that implements this approach. Here's an example:\n\n```python\ndef get_file(file_name, float):\n    if float < 0"
+        },
+        {
+          "role": "user",
+          "content": "Can I speak Turkish with you as well?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, here is a code that you can speak Turkish with you. Here's an example:\n\n```python\nimport float\n\ndef get_file(file_name, float):\n    return float.pilot(f"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "turkish",
+            "yes"
+          ],
+          "passed": true,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-introduce",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Selam, senin ismin nedir?"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam, seninle ilgili bir şey mi? Seninle anlatılan bir cümle şu: \"Selam\"dan önce yazılmış.\n\nCümlenin anlamını doğru bir şekilde aktarırsanız, cümlenin anlamını ve anlamını doğru sırayla doğru eğer cümle şu anlama gelir: \"S"
+        },
+        {
+          "role": "user",
+          "content": "Seninle İngilizce de sohbet edebilir miyim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Seninle İngilizce'de sohbet edebilirsin, ama bu cümlenin anlamını doğru bir şekilde aktarırsanız, bu kelimelerin anlamını doğru yazabilirim. Örneğin, \"Selam\"dan sonra yazılmış gibi bir dilbilimci olur."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "ingilizce",
+            "evet",
+            "elbette",
+            "tabii"
+          ],
+          "passed": true,
+          "tokens": 52
+        }
+      ]
+    },
+    {
+      "id": "en-correction",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Our band's rehearsal is at 18:20. Please remember that for this chat."
+        },
+        {
+          "role": "assistant",
+          "content": "I'm just a bit concerned about the rehearsal of the band's rehearsals. It's a great idea to remember that the band'll be able to create a new group of members, and I'll keep up with them in the future."
+        },
+        {
+          "role": "user",
+          "content": "Plans changed. It's now at 19:35."
+        },
+        {
+          "role": "assistant",
+          "content": "The band's official website, \"Repeat\" is not at 19:35."
+        },
+        {
+          "role": "user",
+          "content": "What is the updated rehearsal time? Give only the time."
+        },
+        {
+          "role": "assistant",
+          "content": "The updated rehearsal time is significant because it's not a stronger point for the band's current, or something else."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 61
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 20
+        },
+        {
+          "criterion": [
+            "19:35"
+          ],
+          "passed": false,
+          "tokens": 31
+        }
+      ]
+    },
+    {
+      "id": "tr-correction",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Koro provasını saat 13.10 olarak not al lütfen."
+        },
+        {
+          "role": "assistant",
+          "content": "Tamam, güncel kalkış saati 13.10'da not al."
+        },
+        {
+          "role": "user",
+          "content": "Bir değişiklik oldu. Yeni saat 15.25."
+        },
+        {
+          "role": "assistant",
+          "content": "Tamam, güncel kalkış saati 13.10'dur."
+        },
+        {
+          "role": "user",
+          "content": "Son söylediğim prova saati kaçtı? Yalnızca saati yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Tamam, güncel kalkış saati 13.10'dur."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 16
+        },
+        {
+          "criterion": [
+            "15.25",
+            "15:25"
+          ],
+          "passed": false,
+          "tokens": 16
+        }
+      ]
+    },
+    {
+      "id": "en-followup",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My bicycle has a flat tire. What should I check first?"
+        },
+        {
+          "role": "assistant",
+          "content": "You can check the flat tire for a flat tires or pair of water. You can check if you're welcome."
+        },
+        {
+          "role": "user",
+          "content": "I found a small hole in the inner tube. What could I use to fix it?"
+        },
+        {
+          "role": "assistant",
+          "content": "You can use a flat tire or a flat shape to create a flattle. Here's a simple example:\n\n1. Remove the tire for a flat flat and spinning it. This will help you avoid any flatness or disapp"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "tire",
+            "tyre",
+            "tube",
+            "puncture",
+            "valve",
+            "wheel",
+            "air"
+          ],
+          "passed": true,
+          "tokens": 32
+        },
+        {
+          "criterion": [
+            "patch",
+            "repair kit",
+            "new tube",
+            "replace"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-followup",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bisikletimin lastiği inmiş. Önce neyi kontrol etmeliyim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bisikletin lastiği, dünyanın en iyi yollarından biridir. Bisikletin ilk önce en büyük şehri ve en büyük şehri, dünyanın en büyük şehri olan Bisikletin hangi yerinde olacak?"
+        },
+        {
+          "role": "user",
+          "content": "İç lastikte küçük bir delik buldum. Onu neyle kapatabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bisikletin ilk önce en büyük delik buldum. İlk iki seçenek de daha uzun süre bekletmek."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "lastik",
+            "delik",
+            "sibop",
+            "supap",
+            "hava"
+          ],
+          "passed": false,
+          "tokens": 39
+        },
+        {
+          "criterion": [
+            "yama",
+            "tamir kit",
+            "değiştir"
+          ],
+          "passed": false,
+          "tokens": 24
+        }
+      ]
+    },
+    {
+      "id": "en-format",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which word names an animal: spoon or rabbit? Reply with the animal only."
+        },
+        {
+          "role": "assistant",
+          "content": "The word \"poor\" is a type of tree that serves the spoon and rabbit."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "rabbit"
+          ],
+          "passed": false,
+          "tokens": 24
+        }
+      ]
+    },
+    {
+      "id": "tr-format",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hangisi bir meyve: tabak mı, armut mu? Sadece meyvenin adını yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Hangisi bir meyve, bitkinin yapraklarını karıştıran, saksıya bakan ve \"hayvan\" anlamına gelir.\n\nHangisi, bitkinin adı verilen meyvenin bir türüdür. Hangisi, meyvenin köklerini tanımlayan, aslında \"kötü\" anlamına gelen \""
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "armut"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-open",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "What makes a cup of coffee taste bitter?"
+        },
+        {
+          "role": "assistant",
+          "content": "A cup of coffee taste is to set a coffee-friendly coffee shop, and it's essential to consider the most of the coffee. It's a good idea to check the coffee for a few minutes before you can set a coffee or picnic."
+        },
+        {
+          "role": "user",
+          "content": "How would you change the brewing process to make it less bitter?"
+        },
+        {
+          "role": "assistant",
+          "content": "To make a smart brewing process, it's essential to consider the impact of a coffee-friendly coffee shop. By using a picnic or dietary coffee shop, it'll be helpful to choose the most common and more detailed cooking"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 61
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-open",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Kitap okumaya yeniden başlamak istiyorum ama kolayca sıkılıyorum. Ne önerirsin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! Hiçbir şey değil, size bu tür bir fikir. Duygularınızı düşünmek için şu ana kadar net bir şekilde yazabilirsiniz:\n\n1. **Kitap okumaya hazırlık:** Kitap okumaya çalışınca çok basit ve özür dilemelis"
+        },
+        {
+          "role": "user",
+          "content": "Kısa öyküleri seviyorum. Bu akşam için basit bir plan yapabilir misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tabii! Çok güzel bir plan, ama bu akşam için çok kısa bir yürüyüş."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 19
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,389 @@
+{
+  "model": "Franok FP16 weights",
+  "conversations": [
+    {
+      "id": "en-introduce",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hi there! What should I call you?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hi there! I've been trying to call it. I've got a few of the best coming books. I'm here to have you, and I've had a few ideas to get started. I'd like to discuss my own news about the world."
+        },
+        {
+          "role": "user",
+          "content": "Can I speak Turkish with you as well?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'd be happy to speak Turkish and I've been doing the greatest. I've got a few years, and I'm excited to share some thoughts that have come to me. I'd be able to tell them, and I can't"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "turkish",
+            "yes"
+          ],
+          "passed": true,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-introduce",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Selam, senin ismin nedir?"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam, senin içine doğru bir şekilde aktarılır. Seçenekler:\n- Evet\n- HAYIR\n- söylemek mümkün değil\n- HEYIR.\n- HİYELE.\n- söyleyeyim, o zaman önce düşün"
+        },
+        {
+          "role": "user",
+          "content": "Seninle İngilizce de sohbet edebilir miyim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sen elimizde."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "ingilizce",
+            "evet",
+            "elbette",
+            "tabii"
+          ],
+          "passed": false,
+          "tokens": 6
+        }
+      ]
+    },
+    {
+      "id": "en-correction",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Our band's rehearsal is at 18:20. Please remember that for this chat."
+        },
+        {
+          "role": "assistant",
+          "content": "The band's rehearsal is at 18:20. Please remember that the band's final album was a semi-final, and it is a nickel. This is a great way to connect with the band' feelings and create a sense of theme."
+        },
+        {
+          "role": "user",
+          "content": "Plans changed. It's now at 19:35."
+        },
+        {
+          "role": "assistant",
+          "content": "The band's final album was a fixed-bound band that was a pair of drummers. The band's rehearsal is at 10:35. The band is a rock, ring, and a semi-finished band. The band was a st"
+        },
+        {
+          "role": "user",
+          "content": "What is the updated rehearsal time? Give only the time."
+        },
+        {
+          "role": "assistant",
+          "content": "The updated rehearsal time, with the updated effects of the band's rehearsals. The group's rebuilt in the early 20th century, the band'losses and a semi-final, and the band'll have been p"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "19:35"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-correction",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Koro provasını saat 13.10 olarak not al lütfen."
+        },
+        {
+          "role": "assistant",
+          "content": "Koro projesini saat 13.10 olarak tamamlayacaktır."
+        },
+        {
+          "role": "user",
+          "content": "Bir değişiklik oldu. Yeni saat 15.25."
+        },
+        {
+          "role": "assistant",
+          "content": "Bu, bir değişiklik yapmanın en iyi yolu olan kişilerin herhangi bir açıklama olmadığı anlamına gelir. Bu, bir değişiklik yapmak ve onların belirli bir açıklama yapması için bir durumdur. Eğer bu durumda, bir değişiklik olmazsa veya sonuçta tekrarlanan sayıları tekrarlayabilir."
+        },
+        {
+          "role": "user",
+          "content": "Son söylediğim prova saati kaçtı? Yalnızca saati yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Eğer bir süre sonra, hedefin her adımı ne olabilir sorusunun cevabının verilmesidir. Bu nedenle, bir plan yapmanın en iyi yolu olan kişilerin herhangi bir açıklama yapmamasıdır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 14
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 62
+        },
+        {
+          "criterion": [
+            "15.25",
+            "15:25"
+          ],
+          "passed": false,
+          "tokens": 45
+        }
+      ]
+    },
+    {
+      "id": "en-followup",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My bicycle has a flat tire. What should I check first?"
+        },
+        {
+          "role": "assistant",
+          "content": "My bicycle has a flat tire. The flat tires are a few weeks, and it's time to get the tire. It's a good way to get ready for the flat tile. I've got the tire, and it’s not"
+        },
+        {
+          "role": "user",
+          "content": "I found a small hole in the inner tube. What could I use to fix it?"
+        },
+        {
+          "role": "assistant",
+          "content": "I was always a good fit for the flat tire, but I've got the tire. I was going to be a puzzle, and I couldn’t help but feel a good. We're going to be able to get the tire, and it's the"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "tire",
+            "tyre",
+            "tube",
+            "puncture",
+            "valve",
+            "wheel",
+            "air"
+          ],
+          "passed": true,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "patch",
+            "repair kit",
+            "new tube",
+            "replace"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-followup",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bisikletimin lastiği inmiş. Önce neyi kontrol etmeliyim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bisikletin ikinci adımı 3-4, 5-4, 6-4, 7-4'lük bir alana (5-4, 8-4'lik bir alana) göre belirleyecektir. Bu, iki tarafın birbirinden uzaklaştırılmış olduğu ve 1-4'ü daha yüksek"
+        },
+        {
+          "role": "user",
+          "content": "İç lastikte küçük bir delik buldum. Onu neyle kapatabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "İç lastikte büyük bir delik buldum. Bu delik açılmış en iyi bilinen olay, deliklerin ise 1-2'lik bir alana sahip olduğu ve bu da delikler için iyi bir çözümdür. Dişleri, delikler ve saçma ile birlikte, d"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "lastik",
+            "delik",
+            "sibop",
+            "supap",
+            "hava"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "yama",
+            "tamir kit",
+            "değiştir"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-format",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which word names an animal: spoon or rabbit? Reply with the animal only."
+        },
+        {
+          "role": "assistant",
+          "content": "The word \"three\" is a word that describes the name of a person who is in the family. The word is \"they\"."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "rabbit"
+          ],
+          "passed": false,
+          "tokens": 30
+        }
+      ]
+    },
+    {
+      "id": "tr-format",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hangisi bir meyve: tabak mı, armut mu? Sadece meyvenin adını yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Hangisi bir meyve, çok küçük bir balık türüdür. Yağsız veya açık bir çeşidi vardır. Yağlı bir balık türüdür ve çeşitli bitkiler için popülerdir."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "armut"
+          ],
+          "passed": false,
+          "tokens": 37
+        }
+      ]
+    },
+    {
+      "id": "en-open",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "What makes a cup of coffee taste bitter?"
+        },
+        {
+          "role": "assistant",
+          "content": "The most common one of the best combinations of cups is a group of coffee shop, which can be used in a variety of ways. The most common one, such as the \"Power Power\" or the \"PPP\". In many words, the most common one is the \"P"
+        },
+        {
+          "role": "user",
+          "content": "How would you change the brewing process to make it less bitter?"
+        },
+        {
+          "role": "assistant",
+          "content": "The more common one is the \"Power Power\" (PPP). It's also a way to create a smaller pile, and it's essential to use the most common one. Here are some common factors that are:\n\n1. **Cross-cross p"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-open",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Kitap okumaya yeniden başlamak istiyorum ama kolayca sıkılıyorum. Ne önerirsin?"
+        },
+        {
+          "role": "assistant",
+          "content": "\"Sen Franok'sun. Yetişkinlerim. Bu yüzden çok iyi. Bu yüzden ben de benim için değil. Ben de benimle birlikte. Yani bu konuşmayı seviyorum. Yani benimle ilgili değil. Hiçbir zaman çok güzel. Bu yüzden bu kadar iyi"
+        },
+        {
+          "role": "user",
+          "content": "Kısa öyküleri seviyorum. Bu akşam için basit bir plan yapabilir misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kısa öykülerin doğru olup olmadığını gördük. Bu, iyi bir arkadaşınıza dayanarak, aynı zamanda hikayenin en iyi kitabı olduğunu ve kitap okumaya devam edin. Bu akşam için olumlu bir duyguyu aktarmak istiyorsanız, bu akşam için çok iyi bir arkadaşıma ihtiyacınız olacak"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    }
+  ]
+}
