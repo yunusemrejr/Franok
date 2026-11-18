@@ -66,6 +66,8 @@ def cases(suite, ids):
                 yield dict(
                     lang=lang,
                     key=key,
+                    passage=row["context"],
+                    question=row["question"],
                     prompt=row["context"]
                     + "\n\n"
                     + row["question"]

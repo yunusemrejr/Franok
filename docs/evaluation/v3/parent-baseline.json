@@ -1,0 +1,29 @@
+{
+  "belebele": {
+    "en": {
+      "count": 120,
+      "correct": 0.225
+    },
+    "tr": {
+      "count": 120,
+      "correct": 0.26666666666666666
+    }
+  },
+  "xquad": {
+    "en": {
+      "count": 64,
+      "exact": 0.0,
+      "f1": 0.045732026880124704
+    },
+    "tr": {
+      "count": 64,
+      "exact": 0.0,
+      "f1": 0.034892017704517705
+    }
+  },
+  "conversation": {
+    "passed": 0,
+    "total": 32,
+    "reviewer": "Single model-assisted rubric review of anonymous paired outputs; the reviewer received the original prompts and saw both replies."
+  }
+}

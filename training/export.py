@@ -9,25 +9,30 @@ import numpy as np
 from safetensors import safe_open
 
 
-def quantize_grouped(group, bits, optimize):
+def quantize_grouped(group, bits, optimize, importance=None):
     """Minimize squared weight error over several scale candidates per group of 32."""
+    metric = 1.0 if importance is None else importance
     limit = 2 ** (bits - 1) - 1
     initial = np.maximum(np.max(np.abs(group), axis=1, keepdims=True) / limit, 1e-12)
     scale = initial
     ints = np.rint(group / scale).clip(-limit, limit)
     if bits == 4 and optimize:
-        best = np.sum((group - scale * ints) ** 2, axis=1, keepdims=True)
+        best = np.sum(metric * (group - scale * ints) ** 2, axis=1, keepdims=True)
         for fraction in (1.0, 0.88, 0.76):
             step = initial * fraction
             for _ in range(2):
                 candidate = np.rint(group / step).clip(-limit, limit)
                 # Least-squares scale for a fixed set of codes. Zero groups retain a finite scale.
                 step = np.maximum(
-                    np.sum(candidate * group, axis=1, keepdims=True)
-                    / np.maximum(1, np.sum(candidate**2, axis=1, keepdims=True)),
+                    np.sum(metric * candidate * group, axis=1, keepdims=True)
+                    / np.maximum(
+                        1, np.sum(metric * candidate**2, axis=1, keepdims=True)
+                    ),
                     1e-12,
                 )
-                error = np.sum((group - step * candidate) ** 2, axis=1, keepdims=True)
+                error = np.sum(
+                    metric * (group - step * candidate) ** 2, axis=1, keepdims=True
+                )
                 take = error < best
                 scale = np.where(take, step, scale)
                 ints = np.where(take, candidate, ints)
@@ -35,9 +40,11 @@ def quantize_grouped(group, bits, optimize):
     return scale.astype("<f4"), ints.astype("int8")
 
 
-def export(run, out, tokenizer, bits=4, optimize=True):
+def export(run, out, tokenizer, bits=4, optimize=True, calibration=None):
     if bits not in (4, 8):
         raise ValueError("Supported weight widths are 4 and 8")
+    if calibration is not None and (bits != 4 or not optimize):
+        raise ValueError("Activation weighting requires a least-squares Q4 export")
     out.mkdir(parents=True, exist_ok=True)
     weights = out / f"model.q{bits}"
     catalog = {}
@@ -55,9 +62,27 @@ def export(run, out, tokenizer, bits=4, optimize=True):
                 if a.shape[-1] % 32:
                     raise ValueError(f"Unaligned {key}")
                 blocks = a.reshape(-1, 32)
+                groups_per_row = a.shape[-1] // 32
+                metric = None if calibration is None else calibration[key]
+                if metric is not None:
+                    banks = a.shape[0] if a.ndim == 3 else 1
+                    if (
+                        metric.shape != (banks, a.shape[-1])
+                        or not np.isfinite(metric).all()
+                        or np.min(metric) <= 0
+                    ):
+                        raise ValueError("Invalid channel importance for " + key)
+                    metric = metric.reshape(banks, groups_per_row, 32)
                 for first in range(0, len(blocks), 32768):
                     group = blocks[first : first + 32768].astype("float32")
-                    scale, q = quantize_grouped(group, bits, optimize)
+                    weights_for_groups = None
+                    if metric is not None:
+                        indices = np.arange(first, first + len(group))
+                        bank = indices // (a.shape[-2] * groups_per_row)
+                        weights_for_groups = metric[bank, indices % groups_per_row]
+                    scale, q = quantize_grouped(
+                        group, bits, optimize, weights_for_groups
+                    )
                     if bits == 4:
                         biased = (q + 8).astype("uint8")
                         payload = biased[:, :16] | (biased[:, 16:] << 4)
@@ -88,7 +113,11 @@ def export(run, out, tokenizer, bits=4, optimize=True):
         json.dumps(
             dict(
                 format=f"franok-q{bits}-v1",
-                scale_method="least-squares" if bits == 4 and optimize else "peak",
+                scale_method=(
+                    "activation-weighted-least-squares"
+                    if calibration is not None
+                    else ("least-squares" if bits == 4 and optimize else "peak")
+                ),
                 config=cfg,
                 tensors=catalog,
                 bytes=weights.stat().st_size,
@@ -112,5 +141,21 @@ if __name__ == "__main__":
         default="least-squares",
         help="Q4 per-block scale search; peak reproduces v0.1",
     )
+    p.add_argument(
+        "--calibration",
+        type=Path,
+        help="Per-channel importance measured by training.calibration",
+    )
     args = p.parse_args()
-    export(args.run, args.out, args.tokenizer, args.bits, args.scale == "least-squares")
+    calibration = None
+    if args.calibration:
+        with np.load(args.calibration) as archive:
+            calibration = {k: archive[k] for k in archive.files}
+    export(
+        args.run,
+        args.out,
+        args.tokenizer,
+        args.bits,
+        args.scale == "least-squares",
+        calibration,
+    )

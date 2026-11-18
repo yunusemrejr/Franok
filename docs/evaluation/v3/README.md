@@ -22,3 +22,18 @@ python -m tools.compare_chat --cases tests/transfer_conversations.json --run wor
 ## Why the data changed
 
 In the previous Turkish extractive training shard, all 99,502 training records and all 498 validation records contained a transaction-like identifier. The target itself was that identifier in 19,910 training examples. The new recipe uses natural passages from SQuAD-TR, answerable and unanswerable questions, multiple task types and multi-turn dialogues. FineWeb text and short stories provide varied English and Turkish next-token training. The third run retains the project's own tokenizer and the full lineage back to random initialization.
+
+## Measurements before the final instruction stages
+
+| Fixed sample | v0.2 parent | After 116,674,560 new natural-text targets |
+|---|---:|---:|
+| English educational web, first segment | 3.722 | 3.394 |
+| English educational web, second segment | 3.740 | 3.399 |
+| English stories | 2.969 | 2.205 |
+| Turkish web, first segment | 4.383 | 3.721 |
+| Turkish web, second segment | 4.215 | 3.620 |
+| Turkish stories | 3.533 | 2.342 |
+
+Each number is mean next-token loss in nats on 64 windows of 256 target tokens. These windows come from held-out shards outside the small shard used to select the pretraining checkpoint. Both models saw the same token IDs. Lower is better. The evaluation records the input seed and weight digest. [Text evaluator](../../../tools/text_validation.py)
+
+The v0.2 parent answered 59 of 240 Belebele questions correctly. SmolLM2-360M-Instruct answered 70. On the separate 128-question XQuAD generation test, Franok had zero exact answers. SmolLM2 had twelve in English and zero in Turkish. On the 32 qualitative conversation criteria, Franok passed zero and SmolLM2 passed eight. A single model-assisted review graded the anonymized replies against the published rubrics. These small samples describe the named tests.

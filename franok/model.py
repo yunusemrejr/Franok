@@ -130,7 +130,8 @@ class Franok(nn.Module):
         self.register_buffer("cos", theta.cos(), persistent=False)
         self.register_buffer("sin", theta.sin(), persistent=False)
 
-    def forward(self, ids, cache=None):
+    def hidden(self, ids, cache=None):
+        """Return one normalized causal decoder state per unpadded input token."""
         if ids.ndim != 2 or not 0 < ids.shape[1] <= self.c.window:
             raise ValueError("expected a nonempty batch of in-window token sequences")
         length = ids.shape[1]
@@ -142,4 +143,7 @@ class Franok(nn.Module):
         )
         for layer, block in enumerate(self.blocks):
             x = block(x, routing(ids, layer, self.c.banks), cos, sin, cache)
-        return F.linear(self.norm(x[:, :length]), self.embed.weight)
+        return self.norm(x[:, :length])
+
+    def forward(self, ids, cache=None):
+        return F.linear(self.hidden(ids, cache), self.embed.weight)

@@ -75,17 +75,24 @@ def load_adapter(model, dest):
 
 
 @torch.no_grad()
-def merge(model):
-    for block in model.blocks:
+def merge(model, updates=None):
+    """Merge in FP32 and optionally retain each shared bank update for exact restoration."""
+    for index, block in enumerate(model.blocks):
         for name in ("qkv", "out", "up", "down"):
             lora = getattr(block, "lora_" + name)
             base = getattr(block, name)
             weight = base.weight if isinstance(base, nn.Linear) else base
-            # CPU float32 fixes merge order and rounding on every deployment target.
+            # Multiply each pair once in CPU FP32, then broadcast the update over its banks.
             delta = (
                 lora.b.weight.detach().float().cpu()
                 @ lora.a.weight.detach().float().cpu()
             )
-            weight.add_((delta * lora.scale).to(weight.device))
+            update = delta * lora.scale
+            if updates is not None:
+                key = f"blocks.{index}.{name}" + (
+                    ".weight" if isinstance(base, nn.Linear) else ""
+                )
+                updates[key] = update.contiguous()
+            weight.add_(update.to(weight.device))
             delattr(block, "lora_" + name)
     return model

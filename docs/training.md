@@ -53,3 +53,33 @@ python -m training.extended.pipeline --lm-minutes 63 --post-minutes 34 --rl-minu
 The same entry point accepts `--scratch-run work/run --tokenizer work/data/tokenizer.json` after the initial from-scratch commands. Keep separate clean checkouts for different tokenizer runs. Stage budgets are wall-clock limits. Hardware speed, data loading and scheduling affect the step counts. Initialize and train on a BF16-capable CUDA GPU. Native inference and the WASM exporter also run on CPU.
 
 The final checkpoint, the pre-adapter base, tokenizer, adapters and raw training receipts are on the [model hub](https://huggingface.co/yunusemrejr/Franok/tree/main). Copy the `adapters/` directory with its subdirectories into a working folder. Reassemble the final FP16 weights with `python -m franok.merge FOLDER merged.safetensors`. The [evaluation report](evaluation/v2/README.md) records the released run and direct conversation tests.
+
+## Third Colab run
+
+The third run begins with Franok's [v0.2 weights and original tokenizer](https://huggingface.co/yunusemrejr/Franok/tree/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b). The main decoder keeps its 12 layers, eight banks and 1,024-position window. The new [training sources](data.md#third-run-sources) include educational and general web pages, short stories, passage questions and dialogues with ranked replies.
+
+**Pretraining.** Each batch contains the same number of English and Turkish positions. A random window is sampled uniformly over valid start offsets in the prepared language shards. The run starts at 256 positions, then mixes 512- and 1,024-position sequences. The peak learning rate is 0.00023 with a 120-step warm-up. Periodic checkpoint comparisons measure both languages on fixed held-out windows.
+
+**Instruction tuning.** A row contains one complete dialogue prefix and its answer. Padding fills the rest of the row. The loss starts at the assistant marker and includes the final stop token. A long response and a brief response contribute through two averages. Half the supervised loss is the mean over all answer tokens. Half is the mean of the separate loss for each reply. This gives short answers a say in the update. Occasional raw-text batches help preserve next-token prediction.
+
+**Learning relevance.** Preference batches compare two responses to exactly the same prompt. Some alternatives are ranked OpenAssistant replies. Others are answers to different questions about the same passage, or an earlier reply from the same dialogue. If $L_+$ and $L_-$ are the mean answer-token losses for the preferred and rejected replies, the loss is
+
+$$L_+ - 0.4\log\sigma\big(2(L_--L_+)-0.25\big).$$
+
+A rank-32 dialogue LoRA and a rank-16 evidence LoRA follow full-weight tuning. Held-out instruction loss and pairwise ranking select the scale of each adapter before merging. The from-scratch decoder's tensors keep the same shapes as the original release.
+
+**Following system instructions.** Some minibatches reuse a real passage question and two candidate answers. The system asks for a letter, the answer text, or the whole labeled option. Both the option order and the wording vary. The rejected response either chooses the wrong answer or gives the right answer in the wrong format. The application passes the user's session-level system prompt into the same role position. [Choice sampler](../training/third/controls.py)
+
+**Learning to quote a passage.** A separate 96-feature readout learns from answer offsets and impossible questions in the English and Turkish SQuAD training articles. Every fifth supervised step trains the readout on detached decoder states with its own optimizer. After the reinforcement merge, the readout adapts to the frozen final checkpoint. Development questions tune a single cutoff for the difference between the best span and the no-answer score. The cutoff must still return an answer on at least 70% of the answerable development examples in each language. A separate XQuAD test measures whether the resulting quotations are correct on other articles. [Reader objective](../training/third/reader.py) · [Independent test](../tools/span_transfer.py)
+
+**Reinforcement.** A fresh rank-16 adapter samples groups of six ordinary completions. Prompts include short reasoning questions, passage extraction and answer choices in both languages. Rewards come from the generated text. Equal-reward groups skip the optimizer update. The group-relative objective uses a KL coefficient of 0.075. Every fourth successful update adds a small supervised dialogue term. Validation includes the pre-reinforcement policy as a scale candidate.
+
+The recipe can continue the pinned parent or the weights from the previous cells of the Colab notebook. Wall-clock budgets include data preparation. Different hardware and network speeds produce different counts.
+
+```sh
+python -m training.third.pipeline --minutes 240
+# Or continue your own completed v0.2 run with its own tokenizer.
+python -m training.third.pipeline --parent work/extended/final/model.safetensors --tokenizer work/data/tokenizer.json --minutes 240
+```
+
+The [evaluation protocol and sample identifiers](evaluation/v3/README.md) were published while pretraining was still running.

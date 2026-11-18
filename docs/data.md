@@ -36,3 +36,20 @@ The second run adds the sources below. Its preparation scripts pin every input f
 The general text loader groups derivatives of one article or parallel example into the same internal split. Multi-turn preparation holds out groups before expanding turns, filters reasoning and tool traces from selected dialogues, and includes ordinary body text for system instructions. Deduplication operates within the processing source. Cross-source overlap and overlap with internet benchmarks have not been exhaustively audited. The arithmetic/recall task validation split has its own generator seed. The conversation benchmark is a separate set of manually specified prompts and criteria. Downloaded dataset shards and user chat histories are excluded from the public source tree.
 
 The pinned record loaders are [general text and instructions](../training/extended/prepare.py), [multi-turn dialogue](../training/extended/dialogue.py), and [everyday conversation](../training/extended/conversation_data.py).
+
+## Third-run sources
+
+The third run continues the project's v0.2 weights. Equal numbers of English and Turkish prediction positions appear in every natural-text batch. The preparation code groups web pages by URL for validation and removes exact duplicate documents as it reads each source. The second web segment resumes after the last accepted document in the first segment. A source's own training split supplies the supervised examples. FineWeb and stories remain separate corpora in the receipts.
+
+| Publisher and corpus | Use | Upstream license |
+|---|---|---|
+| [Hugging Face FineWeb-Edu](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu) and [FineWeb2](https://huggingface.co/datasets/HuggingFaceFW/fineweb-2) | English educational web text and Turkish web text filtered to language confidence of at least 0.75 | ODC-By 1.0 |
+| [TinyStories by Eldan and Li](https://huggingface.co/datasets/roneneldan/TinyStories) and [Turkish TinyStories by esat-krky](https://huggingface.co/datasets/esat-krky/TinyStories_Turkish) | Short synthetic narratives in each language | CDLA-Sharing 1.0 |
+| [SQuAD 2.0](https://rajpurkar.github.io/SQuAD-explorer/) and [SQuAD-TR by Budur and colleagues](https://tulap.cmpe.bogazici.edu.tr/entities/dataset/5b23d251-715c-49fa-82fd-8acb87ea43b6) | Short passage answers, unanswerable questions and alternatives from the same paragraph. SQuAD-TR uses machine translations. | CC BY-SA 4.0 |
+| [OpenAssistant OASST2](https://huggingface.co/datasets/OpenAssistant/oasst2) | English reviewed human conversation trees, including ranked alternative responses. The Turkish subset surviving the complete-tree filter was too small for the sampler. | Apache 2.0 |
+| [CommonsenseQA](https://huggingface.co/datasets/tau/commonsense_qa) | English questions, correct concepts and labeled alternatives | MIT as listed by the dataset publisher |
+| [cisimcik Turkish Chat Max 25K](https://huggingface.co/datasets/cisimcik/turkish-chat-max-25k) | Turkish-only synthetic conversations across 13 task categories. Only the final assistant text enters the targets. | Apache 2.0 |
+
+The supervised sampler also uses the earlier open dialogue and instruction collections listed above. For suitable follow-ups it contrasts the current reply with an earlier reply to a different question in the same conversation. The two replies come from the same language and conversation. High-overlap questions, near-duplicate answers and large answer-length disparities are excluded. These derived examples can still have ambiguous alternatives. [Source preparation](../training/third/instructions.py) · [Follow-up selection](../training/third/followups.py)
+
+Another 30,834 English and 39,746 Turkish training turns contain concise replies of at most 100 words. The English sample comes from the second UltraChat training shard. The Turkish sample uses Marul records starting at source row 60,000. Both use the same first-question split rule as the earlier dialogue importer and keep up to three complete user/assistant exchanges. [Short-reply selection](../training/third/short_dialogue.py)
