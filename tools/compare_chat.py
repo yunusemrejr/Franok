@@ -45,6 +45,7 @@ def main():
                 [{"role": "system", "content": system}, *turns],
                 tokenize=True,
                 add_generation_prompt=True,
+                return_dict=False,
             )
 
         def decode(x):
