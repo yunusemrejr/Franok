@@ -1,0 +1,157 @@
+{"utc": 1795014024.5810242, "stage": "sft", "initial": {"en": {"instruction_loss": 3.2144943714141845, "preferred": 0.2916666666666667, "pairs": 48}, "tr": {"instruction_loss": 3.8642136573791506, "preferred": 0.2708333333333333, "pairs": 48}}}
+{"utc": 1795014025.0673413, "stage": "sft", "step": 1, "loss": 3.6948156356811523, "positions": 12288, "targets": 3841, "lr": 2.666666666666667e-06}
+{"utc": 1795014054.9132178, "stage": "sft", "step": 100, "loss": 3.2373640537261963, "positions": 1183872, "targets": 309162, "lr": 0.00015995217060937292}
+{"utc": 1795014084.6670797, "stage": "sft", "step": 200, "loss": 1.4479036331176758, "positions": 2368032, "targets": 617614, "lr": 0.0001598093645010425}
+{"utc": 1795014114.2580252, "stage": "sft", "step": 300, "loss": 3.233823299407959, "positions": 3557376, "targets": 930014, "lr": 0.00015957512796932756}
+{"utc": 1795014143.6038778, "stage": "sft", "step": 400, "loss": 2.33196759223938, "positions": 4738176, "targets": 1233621, "lr": 0.00015925046074296025}
+{"utc": 1795014173.0760555, "stage": "sft", "step": 500, "loss": 2.7809057235717773, "positions": 5915904, "targets": 1534962, "lr": 0.00015883333348287788}
+{"utc": 1795014202.673021, "stage": "sft", "step": 600, "loss": 1.3612221479415894, "positions": 7103712, "targets": 1840880, "lr": 0.00015832172673057722}
+{"utc": 1795014232.2024271, "stage": "sft", "step": 700, "loss": 3.1298093795776367, "positions": 8292096, "targets": 2147085, "lr": 0.00015772220866063467}
+{"utc": 1795014246.9769983, "stage": "sft", "reader_step": 150, "reader_examples": 4704, "reader_loss": 4.836973667144775}
+{"utc": 1795014261.5985947, "stage": "sft", "step": 800, "loss": 2.5661778450012207, "positions": 9469440, "targets": 2449691, "lr": 0.00015703553296531842}
+{"utc": 1795014291.237233, "stage": "sft", "step": 900, "loss": 2.4193544387817383, "positions": 10660128, "targets": 2764845, "lr": 0.00015625384447953315}
+{"utc": 1795014320.7190938, "stage": "sft", "step": 1000, "loss": 1.6502208709716797, "positions": 11842080, "targets": 3065775, "lr": 0.00015538589488512685}
+{"utc": 1795014325.758371, "stage": "sft", "step": 1014, "validation": {"en": {"instruction_loss": 2.383918118476868, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.8759393215179445, "preferred": 0.3333333333333333, "pairs": 48}}}
+{"utc": 1795014352.4945645, "stage": "sft", "step": 1100, "loss": 2.138235569000244, "positions": 13027296, "targets": 3377791, "lr": 0.00015436017719159113}
+{"utc": 1795014382.1046996, "stage": "sft", "step": 1200, "loss": 3.688262462615967, "positions": 14213952, "targets": 3682897, "lr": 0.00015331322132137974}
+{"utc": 1795014411.452366, "stage": "sft", "step": 1300, "loss": 1.7602548599243164, "positions": 15386592, "targets": 3981144, "lr": 0.00015219119617737803}
+{"utc": 1795014440.7264307, "stage": "sft", "step": 1400, "loss": 1.303008794784546, "positions": 16557504, "targets": 4293012, "lr": 0.0001509890005959495}
+{"utc": 1795014470.2514489, "stage": "sft", "reader_step": 300, "reader_examples": 9432, "reader_loss": 4.202232360839844}
+{"utc": 1795014470.2518077, "stage": "sft", "step": 1500, "loss": 2.7296247482299805, "positions": 17738976, "targets": 4592716, "lr": 0.00014970383542704465}
+{"utc": 1795014499.9017923, "stage": "sft", "step": 1600, "loss": 1.8767503499984741, "positions": 18929280, "targets": 4900771, "lr": 0.00014833069437934557}
+{"utc": 1795014529.3130882, "stage": "sft", "step": 1700, "loss": 2.4408986568450928, "positions": 20105856, "targets": 5196840, "lr": 0.00014689222719061336}
+{"utc": 1795014558.6871545, "stage": "sft", "step": 1800, "loss": 0.9243730306625366, "positions": 21284160, "targets": 5502795, "lr": 0.00014537825191682701}
+{"utc": 1795014588.27646, "stage": "sft", "step": 1900, "loss": 2.8828539848327637, "positions": 22470240, "targets": 5809980, "lr": 0.0001437884021740302}
+{"utc": 1795014617.954081, "stage": "sft", "step": 2000, "loss": 1.98469877243042, "positions": 23661600, "targets": 6125947, "lr": 0.0001421188788219504}
+{"utc": 1795014628.1009293, "stage": "sft", "step": 2031, "validation": {"en": {"instruction_loss": 2.3265075206756594, "preferred": 0.3333333333333333, "pairs": 48}, "tr": {"instruction_loss": 2.827646279335022, "preferred": 0.2916666666666667, "pairs": 48}}}
+{"utc": 1795014650.1996844, "stage": "sft", "step": 2100, "loss": 3.0641934871673584, "positions": 24855552, "targets": 6440934, "lr": 0.0001402280614463904}
+{"utc": 1795014679.627488, "stage": "sft", "step": 2200, "loss": 1.5716750621795654, "positions": 26033760, "targets": 6739984, "lr": 0.00013843074942385998}
+{"utc": 1795014694.4733334, "stage": "sft", "reader_step": 450, "reader_examples": 14184, "reader_loss": 4.401427268981934}
+{"utc": 1795014709.059616, "stage": "sft", "step": 2300, "loss": 1.1267309188842773, "positions": 27212256, "targets": 7042148, "lr": 0.0001365790909942178}
+{"utc": 1795014738.7394483, "stage": "sft", "step": 2400, "loss": 3.4186367988586426, "positions": 28405440, "targets": 7358295, "lr": 0.00013464883582829423}
+{"utc": 1795014768.1891448, "stage": "sft", "step": 2500, "loss": 1.7364473342895508, "positions": 29585376, "targets": 7670129, "lr": 0.0001326743059733443}
+{"utc": 1795014797.4893572, "stage": "sft", "step": 2600, "loss": 1.6056358814239502, "positions": 30759936, "targets": 7971183, "lr": 0.00013065085440201518}
+{"utc": 1795014826.8986223, "stage": "sft", "step": 2700, "loss": 2.3884787559509277, "positions": 31935648, "targets": 8282073, "lr": 0.0001285775825144075}
+{"utc": 1795014856.5579798, "stage": "sft", "step": 2800, "loss": 2.277167558670044, "positions": 33127008, "targets": 8596179, "lr": 0.00012643947821616456}
+{"utc": 1795014886.190484, "stage": "sft", "step": 2900, "loss": 0.7746740579605103, "positions": 34318272, "targets": 8907782, "lr": 0.00012425383101432816}
+{"utc": 1795014915.6844604, "stage": "sft", "reader_step": 600, "reader_examples": 18896, "reader_loss": 4.768451690673828}
+{"utc": 1795014915.6848063, "stage": "sft", "step": 3000, "loss": 1.0845448970794678, "positions": 35501952, "targets": 9208793, "lr": 0.00012202953076742173}
+{"utc": 1795014930.740112, "stage": "sft", "step": 3048, "validation": {"en": {"instruction_loss": 2.3161257028579714, "preferred": 0.3333333333333333, "pairs": 48}, "tr": {"instruction_loss": 2.7575701117515563, "preferred": 0.3125, "pairs": 48}}}
+{"utc": 1795014947.9693015, "stage": "sft", "step": 3100, "loss": 0.8433817625045776, "positions": 36692832, "targets": 9523377, "lr": 0.00011956411702671259}
+{"utc": 1795014977.5799525, "stage": "sft", "step": 3200, "loss": 1.8922288417816162, "positions": 37879488, "targets": 9834359, "lr": 0.00011725920708189322}
+{"utc": 1795015007.0430927, "stage": "sft", "step": 3300, "loss": 0.8101493716239929, "positions": 39060576, "targets": 10137779, "lr": 0.00011493334601172073}
+{"utc": 1795015036.4993193, "stage": "sft", "step": 3400, "loss": 0.7739852070808411, "positions": 40241760, "targets": 10445517, "lr": 0.00011257203497383426}
+{"utc": 1795015066.020895, "stage": "sft", "step": 3500, "loss": 2.6467537879943848, "positions": 41422848, "targets": 10750226, "lr": 0.00011019249702427805}
+{"utc": 1795015095.6037781, "stage": "sft", "step": 3600, "loss": 3.597865581512451, "positions": 42607872, "targets": 11066590, "lr": 0.00010778211334068626}
+{"utc": 1795015125.2101963, "stage": "sft", "step": 3700, "loss": 2.2031638622283936, "positions": 43795776, "targets": 11383519, "lr": 0.00010534742522594658}
+{"utc": 1795015139.9693692, "stage": "sft", "reader_step": 750, "reader_examples": 23608, "reader_loss": 7.1590776443481445}
+{"utc": 1795015154.686113, "stage": "sft", "step": 3800, "loss": 0.5174685716629028, "positions": 44974752, "targets": 11685983, "lr": 0.00010290335199366031}
+{"utc": 1795015184.1706758, "stage": "sft", "step": 3900, "loss": 0.6651493906974792, "positions": 46157856, "targets": 12002462, "lr": 0.00010045654509741933}
+{"utc": 1795015213.7436976, "stage": "sft", "step": 4000, "loss": 2.6001410484313965, "positions": 47345088, "targets": 12313574, "lr": 9.798668637388471e-05}
+{"utc": 1795015233.522, "stage": "sft", "step": 4064, "validation": {"en": {"instruction_loss": 2.281425356864929, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.753446173667908, "preferred": 0.3541666666666667, "pairs": 48}}}
+{"utc": 1795015245.9751782, "stage": "sft", "step": 4100, "loss": 2.97544264793396, "positions": 48531360, "targets": 12618159, "lr": 9.529258333028166e-05}
+{"utc": 1795015275.4554255, "stage": "sft", "step": 4200, "loss": 0.7337542772293091, "positions": 49711200, "targets": 12917084, "lr": 9.282522346944302e-05}
+{"utc": 1795015305.0325017, "stage": "sft", "step": 4300, "loss": 2.7608654499053955, "positions": 50894304, "targets": 13221120, "lr": 9.035659731914323e-05}
+{"utc": 1795015334.6226707, "stage": "sft", "step": 4400, "loss": 2.641449451446533, "positions": 52082784, "targets": 13532749, "lr": 8.788794185881156e-05}
+{"utc": 1795015364.406603, "stage": "sft", "reader_step": 900, "reader_examples": 28048, "reader_loss": 4.770301818847656}
+{"utc": 1795015364.406938, "stage": "sft", "step": 4500, "loss": 0.7008334994316101, "positions": 53282208, "targets": 13851105, "lr": 8.541604107265156e-05}
+{"utc": 1795015393.8073752, "stage": "sft", "step": 4600, "loss": 0.7222497463226318, "positions": 54455040, "targets": 14159694, "lr": 8.29814765757254e-05}
+{"utc": 1795015423.3972216, "stage": "sft", "step": 4700, "loss": 1.7775771617889404, "positions": 55640256, "targets": 14463453, "lr": 8.055717936110864e-05}
+{"utc": 1795015453.0371363, "stage": "sft", "step": 4800, "loss": 3.542901039123535, "positions": 56829312, "targets": 14794852, "lr": 7.814479818442467e-05}
+{"utc": 1795015482.6498384, "stage": "sft", "step": 4900, "loss": 0.6692183613777161, "positions": 58015968, "targets": 15103299, "lr": 7.575638651244389e-05}
+{"utc": 1795015512.1223829, "stage": "sft", "step": 5000, "loss": 0.7604748010635376, "positions": 59197056, "targets": 15413917, "lr": 7.339747523633747e-05}
+{"utc": 1795015536.4129763, "stage": "sft", "step": 5079, "validation": {"en": {"instruction_loss": 2.270136058330536, "preferred": 0.3333333333333333, "pairs": 48}, "tr": {"instruction_loss": 2.712343728542328, "preferred": 0.3958333333333333, "pairs": 48}}}
+{"utc": 1795015544.3679135, "stage": "sft", "step": 5100, "loss": 2.1461164951324463, "positions": 60386400, "targets": 15726700, "lr": 7.086703143652273e-05}
+{"utc": 1795015573.9241655, "stage": "sft", "step": 5200, "loss": 2.3041577339172363, "positions": 61570080, "targets": 16038589, "lr": 6.85769363203852e-05}
+{"utc": 1795015588.6106186, "stage": "sft", "reader_step": 1050, "reader_examples": 32560, "reader_loss": 4.100529670715332}
+{"utc": 1795015603.3557625, "stage": "sft", "step": 5300, "loss": 2.0952391624450684, "positions": 62745792, "targets": 16342682, "lr": 6.633272233609449e-05}
+{"utc": 1795015632.944662, "stage": "sft", "step": 5400, "loss": 0.32515621185302734, "positions": 63932064, "targets": 16659654, "lr": 6.410942563491117e-05}
+{"utc": 1795015662.523189, "stage": "sft", "step": 5500, "loss": 0.7512242794036865, "positions": 65116704, "targets": 16974077, "lr": 6.194286642059691e-05}
+{"utc": 1795015692.1428592, "stage": "sft", "step": 5600, "loss": 1.053495168685913, "positions": 66303936, "targets": 17293830, "lr": 5.9813276608628605e-05}
+{"utc": 1795015721.744688, "stage": "sft", "step": 5700, "loss": 2.086648941040039, "positions": 67492416, "targets": 17606043, "lr": 5.77340728708432e-05}
+{"utc": 1795015751.2895043, "stage": "sft", "step": 5800, "loss": 1.045499563217163, "positions": 68675712, "targets": 17908043, "lr": 5.570773735412829e-05}
+{"utc": 1795015780.9974356, "stage": "sft", "step": 5900, "loss": 0.5619580745697021, "positions": 69872160, "targets": 18214232, "lr": 5.3731662495469803e-05}
+{"utc": 1795015810.5730634, "stage": "sft", "reader_step": 1200, "reader_examples": 37328, "reader_loss": 4.006420135498047}
+{"utc": 1795015810.573386, "stage": "sft", "step": 6000, "loss": 3.5500640869140625, "positions": 71057568, "targets": 18530185, "lr": 5.182090335592451e-05}
+{"utc": 1795015839.2223077, "stage": "sft", "step": 6094, "validation": {"en": {"instruction_loss": 2.263526678085327, "preferred": 0.375, "pairs": 48}, "tr": {"instruction_loss": 2.694238066673279, "preferred": 0.375, "pairs": 48}}}
+{"utc": 1795015842.8448923, "stage": "sft", "step": 6100, "loss": 2.7430202960968018, "positions": 72243936, "targets": 18836603, "lr": 4.980243834152527e-05}
+{"utc": 1795015872.228454, "stage": "sft", "step": 6200, "loss": 0.3464687466621399, "positions": 73419744, "targets": 19141372, "lr": 4.8026574566253717e-05}
+{"utc": 1795015901.9028752, "stage": "sft", "step": 6300, "loss": 0.5866023898124695, "positions": 74611008, "targets": 19454222, "lr": 4.630935476606353e-05}
+{"utc": 1795015931.5197756, "stage": "sft", "step": 6400, "loss": 1.5876325368881226, "positions": 75801408, "targets": 19768650, "lr": 4.465871017037764e-05}
+{"utc": 1795015961.090968, "stage": "sft", "step": 6500, "loss": 3.4849114418029785, "positions": 76986048, "targets": 20084616, "lr": 4.308156820970828e-05}
+{"utc": 1795015990.591233, "stage": "sft", "step": 6600, "loss": 0.6578632593154907, "positions": 78169344, "targets": 20395380, "lr": 4.1577380195841164e-05}
+{"utc": 1795016020.0287168, "stage": "sft", "step": 6700, "loss": 2.488241195678711, "positions": 79347168, "targets": 20710251, "lr": 4.015784383386607e-05}
+{"utc": 1795016034.7374554, "stage": "sft", "reader_step": 1350, "reader_examples": 41768, "reader_loss": 3.8639512062072754}
+{"utc": 1795016049.5041878, "stage": "sft", "step": 6800, "loss": 1.6856037378311157, "positions": 80528256, "targets": 21016835, "lr": 3.880982679269634e-05}
+{"utc": 1795016079.1008344, "stage": "sft", "step": 6900, "loss": 1.761466383934021, "positions": 81716544, "targets": 21325709, "lr": 3.753523983624781e-05}
+{"utc": 1795016108.602246, "stage": "sft", "step": 7000, "loss": 0.5124911069869995, "positions": 82899456, "targets": 21627749, "lr": 3.634265905981365e-05}
+{"utc": 1795016138.0261412, "stage": "sft", "step": 7100, "loss": 2.455681085586548, "positions": 84075744, "targets": 21935007, "lr": 3.5238919927553056e-05}
+{"utc": 1795016141.961427, "stage": "sft", "step": 7110, "validation": {"en": {"instruction_loss": 2.263408100605011, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.7187976479530334, "preferred": 0.3541666666666667, "pairs": 48}}}
+{"utc": 1795016168.5506926, "stage": "sft", "step": 7200, "loss": 3.458130359649658, "positions": 85263360, "targets": 22246396, "lr": 3.418222304721602e-05}
+{"utc": 1795016198.2045248, "stage": "sft", "step": 7300, "loss": 1.596447467803955, "positions": 86453088, "targets": 22559611, "lr": 3.324082934193297e-05}
+{"utc": 1795016227.8027172, "stage": "sft", "step": 7400, "loss": 0.7096157670021057, "positions": 87638880, "targets": 22874435, "lr": 3.2387034450437254e-05}
+{"utc": 1795016257.3783338, "stage": "sft", "reader_step": 1500, "reader_examples": 46112, "reader_loss": 3.981088638305664}
+{"utc": 1795016257.378716, "stage": "sft", "step": 7500, "loss": 1.9048212766647339, "positions": 88825824, "targets": 23179158, "lr": 3.1626218712462385e-05}
+{"utc": 1795016286.965816, "stage": "sft", "step": 7600, "loss": 1.8655776977539062, "positions": 90013152, "targets": 23487791, "lr": 3.095235858535498e-05}
+{"utc": 1795016316.5042646, "stage": "sft", "step": 7700, "loss": 0.7804230451583862, "positions": 91197696, "targets": 23784557, "lr": 3.036981296729128e-05}
+{"utc": 1795016346.020283, "stage": "sft", "step": 7800, "loss": 0.5246989130973816, "positions": 92382048, "targets": 24095707, "lr": 2.9876829406932915e-05}
+{"utc": 1795016375.6449764, "stage": "sft", "step": 7900, "loss": 2.0341105461120605, "positions": 93570912, "targets": 24409163, "lr": 2.9476943477775676e-05}
+{"utc": 1795016405.3803663, "stage": "sft", "step": 8000, "loss": 2.3284573554992676, "positions": 94768224, "targets": 24720314, "lr": 2.9167191719235387e-05}
+{"utc": 1795016434.9855087, "stage": "sft", "step": 8100, "loss": 0.5726999640464783, "positions": 95956032, "targets": 25026681, "lr": 2.8952076664770757e-05}
+{"utc": 1795016443.0145779, "stage": "sft", "step": 8124, "validation": {"en": {"instruction_loss": 2.249019968509674, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.69051992893219, "preferred": 0.3333333333333333, "pairs": 48}}}
+{"utc": 1795016466.1520996, "stage": "sft", "finished": {"steps": 8190, "positions": 97026240, "targets": 25312438, "sampled_records": {"natural": 18698, "aya": 14984, "short-replies": 47059, "passages": 49990, "english-dialogue": 15756, "turkish-tasks": 32410, "everyday-en": 13035, "parallel": 11720, "human": 33529, "short-dialogue": 19364, "native-chat": 8435, "everyday-tr": 19629, "commonsense": 10793, "facts-tr": 6113, "turkish-dialogue": 27543, "logic": 16404, "practice": 7065, "facts-en": 4997, "math": 4906, "system-choice": 6144, "raw-text": 4080}, "initial": {"en": {"instruction_loss": 3.2144943714141845, "preferred": 0.2916666666666667, "pairs": 48}, "tr": {"instruction_loss": 3.8642136573791506, "preferred": 0.2708333333333333, "pairs": 48}}, "validation": {"en": {"instruction_loss": 2.249019968509674, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.69051992893219, "preferred": 0.3333333333333333, "pairs": 48}}, "candidates": {}, "scale": null, "elapsed_seconds": 2441.5648999214172}}
+{"utc": 1795016467.4016101, "stage": "dialogue", "initial": {"en": {"instruction_loss": 2.2489573836326597, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.6900547981262206, "preferred": 0.3333333333333333, "pairs": 48}}}
+{"utc": 1795016467.6751463, "stage": "dialogue", "step": 1, "loss": 1.5687172412872314, "positions": 12288, "targets": 3033, "lr": 1.5e-05}
+{"utc": 1795016484.3825347, "stage": "dialogue", "reader_step": 1650, "reader_examples": 50616, "reader_loss": 4.902552604675293}
+{"utc": 1795016495.7387276, "stage": "dialogue", "step": 100, "loss": 0.7675223350524902, "positions": 1192704, "targets": 293521, "lr": 0.0004187888120821012}
+{"utc": 1795016523.8657937, "stage": "dialogue", "step": 200, "loss": 0.4985055923461914, "positions": 2375136, "targets": 580988, "lr": 0.00041513709853939425}
+{"utc": 1795016552.049931, "stage": "dialogue", "step": 300, "loss": 0.43659764528274536, "positions": 3563808, "targets": 857031, "lr": 0.0004091112184613959}
+{"utc": 1795016580.0722442, "stage": "dialogue", "step": 400, "loss": 2.2722551822662354, "positions": 4747008, "targets": 1129911, "lr": 0.0004008226024537381}
+{"utc": 1795016608.374382, "stage": "dialogue", "step": 500, "loss": 2.0458717346191406, "positions": 5939328, "targets": 1416801, "lr": 0.0003902613000541981}
+{"utc": 1795016636.3119965, "stage": "dialogue", "step": 600, "loss": 0.5646902918815613, "positions": 7115520, "targets": 1701654, "lr": 0.0003777855538659813}
+{"utc": 1795016664.3161128, "stage": "dialogue", "step": 700, "loss": 2.613168716430664, "positions": 8293824, "targets": 1980829, "lr": 0.00036351246335582314}
+{"utc": 1795016692.6558967, "stage": "dialogue", "step": 800, "loss": 2.441471815109253, "positions": 9487680, "targets": 2269255, "lr": 0.0003474034640681133}
+{"utc": 1795016695.3542206, "stage": "dialogue", "reader_step": 1800, "reader_examples": 55136, "reader_loss": 3.820711612701416}
+{"utc": 1795016720.8360548, "stage": "dialogue", "step": 900, "loss": 1.856561541557312, "positions": 10676352, "targets": 2550098, "lr": 0.0003299424461671621}
+{"utc": 1795016748.8727865, "stage": "dialogue", "step": 1000, "loss": 0.9295397996902466, "positions": 11857632, "targets": 2833342, "lr": 0.0003113558301042105}
+{"utc": 1795016777.078037, "stage": "dialogue", "step": 1100, "loss": 2.297879695892334, "positions": 13048416, "targets": 3125303, "lr": 0.00029184983733996636}
+{"utc": 1795016805.4068348, "stage": "dialogue", "step": 1200, "loss": 2.176706552505493, "positions": 14243328, "targets": 3420856, "lr": 0.0002715705856057555}
+{"utc": 1795016833.6500258, "stage": "dialogue", "step": 1300, "loss": 1.6659417152404785, "positions": 15433344, "targets": 3712437, "lr": 0.0002510064423325555}
+{"utc": 1795016861.7382338, "stage": "dialogue", "step": 1400, "loss": 0.8485050201416016, "positions": 16616736, "targets": 3990795, "lr": 0.0002304985957916721}
+{"utc": 1795016889.5533237, "stage": "dialogue", "step": 1500, "loss": 2.290231227874756, "positions": 17789088, "targets": 4270025, "lr": 0.00021048356673199193}
+{"utc": 1795016906.5173247, "stage": "dialogue", "reader_step": 1950, "reader_examples": 59720, "reader_loss": 3.757297992706299}
+{"utc": 1795016917.8046124, "stage": "dialogue", "step": 1600, "loss": 2.4392223358154297, "positions": 18976608, "targets": 4551543, "lr": 0.00019064014686822768}
+{"utc": 1795016945.8727891, "stage": "dialogue", "step": 1700, "loss": 1.6152684688568115, "positions": 20165952, "targets": 4836157, "lr": 0.00017174921431013275}
+{"utc": 1795016974.1349673, "stage": "dialogue", "step": 1800, "loss": 0.5295403003692627, "positions": 21356448, "targets": 5117419, "lr": 0.00015378179573537519}
+{"utc": 1795017002.301188, "stage": "dialogue", "step": 1900, "loss": 1.501403570175171, "positions": 22542336, "targets": 5397814, "lr": 0.00013730168457664035}
+{"utc": 1795017030.7515402, "stage": "dialogue", "step": 2000, "loss": 0.5054164528846741, "positions": 23740128, "targets": 5693439, "lr": 0.00012220626058649498}
+{"utc": 1795017058.9703183, "stage": "dialogue", "step": 2100, "loss": 1.8430507183074951, "positions": 24931488, "targets": 5972314, "lr": 0.00010903510661266747}
+{"utc": 1795017087.1013873, "stage": "dialogue", "step": 2200, "loss": 0.6406623125076294, "positions": 26117376, "targets": 6249315, "lr": 9.786056766230379e-05}
+{"utc": 1795017115.2961438, "stage": "dialogue", "step": 2300, "loss": 1.9660961627960205, "positions": 27305952, "targets": 6537108, "lr": 8.883919870422797e-05}
+{"utc": 1795017118.1562452, "stage": "dialogue", "reader_step": 2100, "reader_examples": 63936, "reader_loss": 4.511378765106201}
+{"utc": 1795017143.4006095, "stage": "dialogue", "step": 2400, "loss": 2.2939043045043945, "positions": 28490880, "targets": 6816692, "lr": 8.20820485134567e-05}
+{"utc": 1795017171.5735595, "stage": "dialogue", "step": 2500, "loss": 2.333946704864502, "positions": 29676864, "targets": 7097048, "lr": 7.768835015323375e-05}
+{"utc": 1795017191.5280676, "stage": "dialogue", "finished": {"steps": 2545, "positions": 30207840, "targets": 7228724, "sampled_records": {"short-dialogue": 7306, "turkish-dialogue": 9763, "logic": 6160, "turkish-tasks": 12211, "human": 13542, "passages": 17831, "aya": 5690, "short-replies": 18026, "english-dialogue": 5473, "everyday-tr": 8700, "facts-en": 2025, "natural": 6672, "native-chat": 2604, "facts-tr": 2598, "everyday-en": 4597, "commonsense": 5464, "math": 1499, "practice": 2909, "parallel": 4456, "system-choice": 1908}, "initial": {"en": {"instruction_loss": 2.2489573836326597, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.6900547981262206, "preferred": 0.3333333333333333, "pairs": 48}}, "validation": {"en": {"instruction_loss": 2.2476996421813964, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.6886016964912414, "preferred": 0.3333333333333333, "pairs": 48}}, "candidates": {"0": {"en": {"instruction_loss": 2.2489573836326597, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.6900548219680784, "preferred": 0.3333333333333333, "pairs": 48}}, "0.35": {"en": {"instruction_loss": 2.2476996421813964, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.6886016964912414, "preferred": 0.3333333333333333, "pairs": 48}}, "0.7": {"en": {"instruction_loss": 2.249845004081726, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.693761467933655, "preferred": 0.3541666666666667, "pairs": 48}}, "1.0": {"en": {"instruction_loss": 2.25602525472641, "preferred": 0.375, "pairs": 48}, "tr": {"instruction_loss": 2.7009399771690368, "preferred": 0.3541666666666667, "pairs": 48}}}, "scale": 0.35, "elapsed_seconds": 724.1201846599579}}
+{"utc": 1795017192.7755792, "stage": "evidence", "initial": {"en": {"instruction_loss": 2.24682674407959, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.689334177970886, "preferred": 0.3333333333333333, "pairs": 48}}}
+{"utc": 1795017193.025349, "stage": "evidence", "step": 1, "loss": 2.719066619873047, "positions": 11232, "targets": 2087, "lr": 7.5e-06}
+{"utc": 1795017220.343692, "stage": "evidence", "step": 100, "loss": 2.0193514823913574, "positions": 1157664, "targets": 192609, "lr": 0.00020871479775078178}
+{"utc": 1795017247.706321, "stage": "evidence", "step": 200, "loss": 0.4711676239967346, "positions": 2305152, "targets": 382281, "lr": 0.00020487682389067698}
+{"utc": 1795017275.530977, "stage": "evidence", "step": 300, "loss": 1.4983961582183838, "positions": 3474048, "targets": 579972, "lr": 0.00019850370806083926}
+{"utc": 1795017302.9776952, "stage": "evidence", "step": 400, "loss": 2.1455721855163574, "positions": 4624800, "targets": 769455, "lr": 0.0001899213756849525}
+{"utc": 1795017330.5913177, "stage": "evidence", "step": 500, "loss": 0.8659474849700928, "positions": 5784192, "targets": 962695, "lr": 0.00017926022713399983}
+{"utc": 1795017334.6841702, "stage": "evidence", "reader_step": 2250, "reader_examples": 68864, "reader_loss": 4.230596542358398}
+{"utc": 1795017358.1106253, "stage": "evidence", "step": 600, "loss": 2.904061794281006, "positions": 6941568, "targets": 1153872, "lr": 0.00016698404916668267}
+{"utc": 1795017385.6246846, "stage": "evidence", "step": 700, "loss": 1.8839253187179565, "positions": 8096064, "targets": 1357826, "lr": 0.00015337526058502508}
+{"utc": 1795017413.043844, "stage": "evidence", "step": 800, "loss": 1.089735746383667, "positions": 9247296, "targets": 1549994, "lr": 0.0001388960247265243}
+{"utc": 1795017440.6390948, "stage": "evidence", "step": 900, "loss": 2.5043442249298096, "positions": 10409568, "targets": 1739019, "lr": 0.00012395749738951828}
+{"utc": 1795017468.0827754, "stage": "evidence", "step": 1000, "loss": 2.562488079071045, "positions": 11562144, "targets": 1941834, "lr": 0.00010904508562675212}
+{"utc": 1795017495.648007, "stage": "evidence", "step": 1100, "loss": 0.5179060101509094, "positions": 12720096, "targets": 2139254, "lr": 9.447382912458647e-05}
+{"utc": 1795017523.5045867, "stage": "evidence", "step": 1200, "loss": 1.7171528339385986, "positions": 13891296, "targets": 2336575, "lr": 8.074261042976288e-05}
+{"utc": 1795017541.5203247, "stage": "evidence", "reader_step": 2400, "reader_examples": 73120, "reader_loss": 3.864243507385254}
+{"utc": 1795017551.0806582, "stage": "evidence", "step": 1300, "loss": 1.9187238216400146, "positions": 15048768, "targets": 2533816, "lr": 6.843770048057355e-05}
+{"utc": 1795017578.4175029, "stage": "evidence", "step": 1400, "loss": 0.6146367788314819, "positions": 16197120, "targets": 2724841, "lr": 5.78778336512629e-05}
+{"utc": 1795017606.004863, "stage": "evidence", "step": 1500, "loss": 1.5216379165649414, "positions": 17357856, "targets": 2919192, "lr": 4.928593034587903e-05}
+{"utc": 1795017633.3024664, "stage": "evidence", "step": 1600, "loss": 0.21187648177146912, "positions": 18507744, "targets": 3110862, "lr": 4.2998709499818316e-05}
+{"utc": 1795017660.3553293, "stage": "evidence", "step": 1700, "loss": 0.5519929528236389, "positions": 19646016, "targets": 3294686, "lr": 3.914876001946612e-05}
+{"utc": 1795017672.837537, "dialogue_reward_validation": {"en": {"whole": {"wins": 80, "pairs": 124, "accuracy": 0.6451612903225806}, "opening": {"wins": 77, "pairs": 124, "accuracy": 0.6209677419354839}, "by_length": {"shorter": {"wins": 14, "pairs": 43, "accuracy": 0.32558139534883723}, "longer": {"wins": 60, "pairs": 75, "accuracy": 0.8}, "similar": {"wins": 27, "pairs": 40, "accuracy": 0.675}}}, "tr": {"whole": {"wins": 196, "pairs": 235, "accuracy": 0.8340425531914893}, "opening": {"wins": 172, "pairs": 235, "accuracy": 0.7319148936170212}, "by_length": {"shorter": {"wins": 27, "pairs": 38, "accuracy": 0.7105263157894737}, "longer": {"wins": 162, "pairs": 189, "accuracy": 0.8571428571428571}, "similar": {"wins": 76, "pairs": 89, "accuracy": 0.8539325842696629}}}}}
+{"utc": 1795017672.84111, "stage": "evidence", "finished": {"steps": 1714, "positions": 19805280, "targets": 3322925, "sampled_records": {"english-dialogue": 1830, "turkish-tasks": 3050, "natural": 885, "turkish-dialogue": 3422, "passages": 9091, "native-chat": 489, "short-replies": 4692, "human": 3858, "short-dialogue": 1700, "everyday-tr": 1638, "commonsense": 882, "facts-tr": 203, "math": 275, "everyday-en": 1593, "logic": 695, "aya": 633, "system-choice": 1716, "parallel": 507, "facts-en": 174, "practice": 209}, "initial": {"en": {"instruction_loss": 2.24682674407959, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.689334177970886, "preferred": 0.3333333333333333, "pairs": 48}}, "validation": {"en": {"instruction_loss": 2.2594625473022463, "preferred": 0.3958333333333333, "pairs": 48}, "tr": {"instruction_loss": 2.6981823325157164, "preferred": 0.4375, "pairs": 48}}, "candidates": {"0": {"en": {"instruction_loss": 2.246826720237732, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.689334177970886, "preferred": 0.3333333333333333, "pairs": 48}}, "0.35": {"en": {"instruction_loss": 2.2520137429237366, "preferred": 0.3541666666666667, "pairs": 48}, "tr": {"instruction_loss": 2.69194655418396, "preferred": 0.375, "pairs": 48}}, "0.7": {"en": {"instruction_loss": 2.2594625473022463, "preferred": 0.3958333333333333, "pairs": 48}, "tr": {"instruction_loss": 2.6981823325157164, "preferred": 0.4375, "pairs": 48}}, "1.0": {"en": {"instruction_loss": 2.2688720345497133, "preferred": 0.4583333333333333, "pairs": 48}, "tr": {"instruction_loss": 2.705838418006897, "preferred": 0.4375, "pairs": 48}}}, "scale": 0.7, "elapsed_seconds": 478.6767957210541}}

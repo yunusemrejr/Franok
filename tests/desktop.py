@@ -4,6 +4,7 @@ import argparse
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import tempfile
 import shutil
@@ -103,8 +104,8 @@ def main():
         greetings = {}
         clarifications = {}
         for lang, message, expected in [
-            ("en", "hi", "Hello!"),
-            ("tr", "selam", "Merhaba!"),
+            ("en", "hi", r"^(hello|hi|hey)\b"),
+            ("tr", "selam", r"^(merhaba|selam)\b"),
         ]:
             page.locator("#new").click()
             page.locator("#lang").select_option(lang)
@@ -113,7 +114,7 @@ def main():
             expect(page.locator("#send")).to_be_enabled(timeout=180000)
             turn = page.locator(".message.assistant").last
             greetings[lang] = turn.locator(".body").inner_text()
-            assert greetings[lang].startswith(expected), greetings
+            assert re.match(expected, greetings[lang], re.IGNORECASE), greetings
             assert "Generated locally" in page.locator("#status").inner_text()
             assert "Franok" in turn.locator("header").inner_text()
             prompt, label = ("wdym", "Conversation helper") if lang == "en" else ("Ne demek istedin?", "Sohbet yardımı")

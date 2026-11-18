@@ -1,0 +1,562 @@
+{
+  "model": "LFM2-350M",
+  "revision": "f37d3f5c8c5484bc01dad379a595cf4c68c4e70e",
+  "conversations": [
+    {
+      "id": "en-snack",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I have bread, a tomato and some cheese. What's a quick lunch I can make without a cooker?"
+        },
+        {
+          "role": "assistant",
+          "content": "A quick and easy lunch you can make without a cooker is a Classic Mediterranean Salad. You'll need:\n\n1. Bread\n2. Tomato (any variety)\n3. Cheese (like feta, goat cheese, or a mix)\n4. Olive oil\n5. Lemon juice"
+        },
+        {
+          "role": "user",
+          "content": "I just noticed the cheese is gone. How could I change that lunch?"
+        },
+        {
+          "role": "assistant",
+          "content": "If your cheese is gone, you can easily replace it with some of the following:\n\n1. Mozzarella or Parmesan: These cheeses melt well and add a rich flavor to your salad. You can also try shredded mozzarella for a lighter option.\n\n2. Garlic Bread"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-snack",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Evde ekmek, domates ve peynir var. Ocak kullanmadan öğle yemeğine ne hazırlayabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Evde ekmek, domates ve peynir yerine çekici bir şekilde hazırlayabilirim. Bu durumda, şunlardan bu nedenle:\n\n1. **Domates:** Kullanıcıların domates"
+        },
+        {
+          "role": "user",
+          "content": "Peynir bitmiş. Az önce önerdiğin yemeği nasıl değiştiririm?"
+        },
+        {
+          "role": "assistant",
+          "content": "Peynir bitmiş şekilde, bu durumda çok karmaşık ve özel bir şekleti olarak değiştirir. İlk olası, peynir yerine çekici bir şehirde ("
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-label",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Is “Please bring the folder” a request or a fact? Answer with one of those two words."
+        },
+        {
+          "role": "assistant",
+          "content": "It is a request."
+        },
+        {
+          "role": "user",
+          "content": "And “The folder is blue”? Same two choices."
+        },
+        {
+          "role": "assistant",
+          "content": "It is a fact. The folder is blue."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "request"
+          ],
+          "passed": false,
+          "tokens": 5
+        },
+        {
+          "criterion": [
+            "fact"
+          ],
+          "passed": false,
+          "tokens": 10
+        }
+      ]
+    },
+    {
+      "id": "tr-label",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "“Lütfen dosyayı getir” bir rica mı, bir tespit mi? Bu iki kelimeden biriyle cevap ver."
+        },
+        {
+          "role": "assistant",
+          "content": "\"Dosya getirmek istiyorsanız, bir tespit mi?\"\n\nBu örnekte, \"getir\" (getirmek) ve \"mi\" (tespit) kelimeleri çok etkili bir şekilde kullanı"
+        },
+        {
+          "role": "user",
+          "content": "Peki “Dosya mavi” hangisi? Aynı iki seçenek."
+        },
+        {
+          "role": "assistant",
+          "content": "\"Dosya mavi\" olarak çevirmek istiyorsanız, \"lütfen dosya getirmek isterim\" olarak kullanın. Bu şekilde bir konuda çevirme:\n\n\"Dosyalımın"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "rica"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "tespit"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-plant",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My potted plant is leaning toward the window. Why might it be doing that?"
+        },
+        {
+          "role": "assistant",
+          "content": "Your potted plant might be leaning toward the window due to several reasons:\n\n1. **Light Exposure:** Plants need light for photosynthesis. If the window is too bright or the plant isn't getting enough indirect or natural light, it might lean towards the light source to get more energy.\n\n2. **Watering"
+        },
+        {
+          "role": "user",
+          "content": "I won't move the pot to another room. Is there a simple way to help the other side get light?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, there are a few simple methods to help your plant get more light:\n\n1. **Add Artificial Light:** If the window is too dim, you could place a grow light near the plant. LED grow lights are energy-efficient and can mimic natural sunlight.\n\n2. **Reflective Panels:** You"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-plant",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Saksıdaki bitkim pencereye doğru eğiliyor. Sebebi ne olabilir?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu konu, \"Saksıdaki bitkim pencereye\" (sıkımında öncesinde) genellikle bu süreçten sonra kullanılır. İşte araçları:\n\n1. **"
+        },
+        {
+          "role": "user",
+          "content": "Saksıyı başka odaya taşımayacağım. Öbür tarafın da ışık alması için basitçe ne yapabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu sorun, bazı konudağını belirgin bir şekilde işaret edebilirsiniz:\n\n1. **Saksıyı Başka Odayu Kullanımı:** İlk olarak, sürekli ol"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-apples",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "A fruit salad for two people uses three apples. How many apples should I use for six people?"
+        },
+        {
+          "role": "assistant",
+          "content": "To find out how many apples are needed for six people, we first determine how many apples each person consumes:\n\n3 apples / 2 people = 1.5 apples per person\n\nNow, to find out the total number of apples needed for six persons:\n\n1.5 apple/person * 6"
+        },
+        {
+          "role": "user",
+          "content": "Actually, only four people are coming. How many apples now? Just the number."
+        },
+        {
+          "role": "assistant",
+          "content": "To calculate how many apples are needed for four people, we use the same ratio as before:\n\n3 apples / 2 people = x apples / 4 people\n\nCross-multiplying gives us:\n\n3 * 4 = 2 * x\n12 = 2x\n\nDividing both sides"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "6"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-apples",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "İki kişilik meyve salatasına üç elma koyuyorum. Altı kişi için kaç elma gerekir?"
+        },
+        {
+          "role": "assistant",
+          "content": "İki kişilik meyve salatasının üç elma koyuyorum, örneğin 1.6 - 2.0 cm² ölçüde birlikte ilginç özelliklerine bağlı olarak"
+        },
+        {
+          "role": "user",
+          "content": "Vazgeçtim, yalnız dört kişi gelecek. Şimdi kaç elma lazım? Sadece sayıyı yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Vazgeçtiği 2.5 - 3.5 cm² olarak alınması gereken kişinin yalnızca özel birlikte şu süreçten eserler:\n\n- 1.5 cm: 0"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "6"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-clarify",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Could you make this sound a little kinder? “You keep interrupting me.”"
+        },
+        {
+          "role": "assistant",
+          "content": "\"Sometimes I hear you interrupting me.\""
+        },
+        {
+          "role": "user",
+          "content": "Make your suggestion shorter so I could say it during a meeting."
+        },
+        {
+          "role": "assistant",
+          "content": "\"Interrupting me often.\""
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        }
+      ]
+    },
+    {
+      "id": "tr-clarify",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "“Sürekli sözümü kesiyorsun.” Bunu biraz daha nazik nasıl söylerim?"
+        },
+        {
+          "role": "assistant",
+          "content": "\"Sucreli sözümünün kesinlikle yer alır.\"\n\nBu konuda karşılaştırmak için biri olarak genellikle \"Sürekli sözmeye başladığınızı"
+        },
+        {
+          "role": "user",
+          "content": "Önerini kısaltır mısın? Toplantıda söyleyebileceğim bir cümle olsun."
+        },
+        {
+          "role": "assistant",
+          "content": "\"Çoklara kısmının kesinlikle yer alabilirsiniz.\"\n\nBu konu şeklinde bir şekilde kısaltım: \"Çokların kısmak istikrar etti"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-location",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "The museum ticket is in the blue envelope. The train pass is in the green one. Where should I look for the train pass?"
+        },
+        {
+          "role": "assistant",
+          "content": "The train pass should be located on the side of the ticket counter, where you'll see it prominently displayed. The blue envelope for the museum ticket is usually next to the ticket itself, while the green train pass is on the counter in front of the ticket. Look for a clear sign or label indicating where the train"
+        },
+        {
+          "role": "user",
+          "content": "I moved the train pass into the drawer, but left the ticket where it was. Where is the museum ticket?"
+        },
+        {
+          "role": "assistant",
+          "content": "The museum ticket should be found in the drawer near the ticket counter. It's usually next to the ticket and is marked with a small stamp or pin indicating its location."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "tr-location",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Müze bileti mavi zarfta. Tren kartı yeşil zarfta. Tren kartını nerede aramalıyım?"
+        },
+        {
+          "role": "assistant",
+          "content": "Müze bileti mavi zarfta, belirli bir ülke tarafından ve tren kartının aramalı olarak değişebilir. Tren kartı, zarfta belirtilen hareketlerinde kull"
+        },
+        {
+          "role": "user",
+          "content": "Tren kartını çekmeceye koydum ama bileti taşımadım. Müze bileti şimdi nerede?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tren kartını çekmeceğimiz bir ülke olarak değişebilir. Müze bileti şimdi nerede, belirli bir şey tarafından zarfta ve tren kartı nedeniyle"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-quiet",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I've just moved into a new neighbourhood. How could I meet people without going to a party?"
+        },
+        {
+          "role": "assistant",
+          "content": "1. **Local Meetup Groups:** Join local community groups or clubs that focus on hobbies or interests you share, like book clubs, hiking groups, or art classes. These groups often meet in person.\n\n2. **Social Media Groups:** Check out Facebook groups, Nextdoor, or local online forums related"
+        },
+        {
+          "role": "user",
+          "content": "I like reading and I'd prefer a small group. What specifically could I look for?"
+        },
+        {
+          "role": "assistant",
+          "content": "For a small group of like-minded readers, consider these options:\n1. **Local Book Clubs:** Find one that aligns with your reading preferences and schedule. They often meet in person or virtually.\n2. **Reading Apps with Discussion Forums:** Apps like Goodreads, Book Clubs Facebook, or Disc"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-quiet",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Yeni bir mahalleye taşındım. Partiye gitmeden insanlarla nasıl tanışabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yeni bir mahalleye taşından birlikte, insanların nasıl tanışıyorlar. İlk olarak, yeni bir mahallesi kullanarak insanlar genellikle içinde tanışlanması"
+        },
+        {
+          "role": "user",
+          "content": "Kitap okumayı seviyorum ve küçük bir grup tercih ederim. Özellikle ne arayayım?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kitapların birçok grup göre yapılandırması gerektiğini kullanarak insanların tanışlaması ve özellikle genel bir grup değerleri içermektedir. Öz"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-ambiguity",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Could you help me pick one?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sure, I'd be happy to help! However, since you've mentioned \"one,\" let's consider a few options:\n\n1. **AI Assistant**: If you're looking for a tool or service that can assist with a wide range of tasks, including answering questions, organizing information, and even generating creative"
+        },
+        {
+          "role": "user",
+          "content": "It's between a small backpack and a suitcase. I'll be walking all day and only carrying a jacket."
+        },
+        {
+          "role": "assistant",
+          "content": "Great! A small backpack is perfect for carrying essentials like a jacket. Here are a few options you might consider:\n\n1. **Ryder Backpack**: This lightweight and compact backpack is ideal for short to medium-distance walks. It has a good balance of space and weight, making it perfect for your"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-ambiguity",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Birini seçmeme yardım eder misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Birini seçiminde, öncelikle birlikte genellikle 30-45 dakika arasında kullanılır. İşte konu:\n\n**Misinin çevirisi:**\n\n* **Birini Se"
+        },
+        {
+          "role": "user",
+          "content": "Küçük bir sırt çantasıyla bavul arasında kaldım. Bütün gün yürüyeceğim ve sadece ceket taşıyacağım."
+        },
+        {
+          "role": "assistant",
+          "content": "Bir sırt çantasının birlikte, öncelikle kuvvetlerinde ve ceketdeğişiminde çeker. Bu durumda, birki daha fazla 5-10 dakika arasındaki kuvvet"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,431 @@
+{
+  "format": "q8",
+  "weight_sha256": "48b1566431e800e2b3af7d2194900cee3e33c3f1923d4954e29777f2efbeb30b",
+  "window": 1024,
+  "conversations": [
+    {
+      "id": "en-introduce",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Hi there! What should I call you?"
+        },
+        {
+          "role": "assistant",
+          "text": "Hello, birds."
+        },
+        {
+          "role": "user",
+          "text": "Can I speak Turkish with you as well?"
+        },
+        {
+          "role": "assistant",
+          "text": "Yes, Turkish Turkish's \"Get Out\" is the best way to speak English and help you with programming. I can help you with your request and I'll do my best to help you."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 6,
+          "prompt_tokens": 46,
+          "decode_ms": 181,
+          "criterion": [
+            "franok"
+          ],
+          "passed": false
+        },
+        {
+          "tokens": 49,
+          "prompt_tokens": 67,
+          "decode_ms": 1102,
+          "criterion": [
+            "turkish",
+            "yes"
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "tr-introduce",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Selam, senin ismin nedir?"
+        },
+        {
+          "role": "assistant",
+          "text": "Selam, hoş geldin! Sana bugün nasıl yardımcı olabilirim?"
+        },
+        {
+          "role": "user",
+          "text": "Seninle İngilizce de sohbet edebilir miyim?"
+        },
+        {
+          "role": "assistant",
+          "text": "Tabii, likelında ne var?daha az bir şey söylersen, orada bir kelime hep aynı anlamı taşır."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 16,
+          "prompt_tokens": 40,
+          "decode_ms": 293,
+          "criterion": [
+            "franok"
+          ],
+          "passed": false
+        },
+        {
+          "tokens": 31,
+          "prompt_tokens": 70,
+          "decode_ms": 982,
+          "criterion": [
+            "ingilizce",
+            "evet",
+            "elbette",
+            "tabii"
+          ],
+          "passed": true
+        }
+      ]
+    },
+    {
+      "id": "en-correction",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Our band's rehearsal is at 18:20. Please remember that for this chat."
+        },
+        {
+          "role": "assistant",
+          "text": "Of course, for the chat, I'm here to help you with your requirements. Please provide me with the chat so I can assist you better."
+        },
+        {
+          "role": "user",
+          "text": "Plans changed. It's now at 19:35."
+        },
+        {
+          "role": "assistant",
+          "text": "Yo, the chat is 19:35."
+        },
+        {
+          "role": "user",
+          "text": "What is the updated rehearsal time? Give only the time."
+        },
+        {
+          "role": "assistant",
+          "text": "The updated rehearsal time is: 18:20."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 38,
+          "prompt_tokens": 61,
+          "decode_ms": 977,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 11,
+          "prompt_tokens": 117,
+          "decode_ms": 297,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 15,
+          "prompt_tokens": 149,
+          "decode_ms": 406,
+          "criterion": [
+            "19:35"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "tr-correction",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Koro provasını saat 13.10 olarak not al lütfen."
+        },
+        {
+          "role": "assistant",
+          "text": "Merhaba, elbette yardımcı olurum. Bugünki metnin ve tarihinize göre güncellenmiş bir şey olduğu için bu saat 13.10.20 olarak listelenmiştir.\n\ninal adı verilen metnin sonuna gelince:\n\nKoronavutlukta saat 13.30'da"
+        },
+        {
+          "role": "user",
+          "text": "Bir değişiklik oldu. Yeni saat 15.25."
+        },
+        {
+          "role": "assistant",
+          "text": "Yeni saat 15.25'te. Sonra bir değişiklik olacak, bu yüzden güncel durumu öğrenebilirim."
+        },
+        {
+          "role": "user",
+          "text": "Son söylediğim prova saati kaçtı? Yalnızca saati yaz."
+        },
+        {
+          "role": "assistant",
+          "text": "Orajinal bilgiye ulaşabilirsin."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 64,
+          "prompt_tokens": 45,
+          "decode_ms": 1665,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 22,
+          "prompt_tokens": 122,
+          "decode_ms": 723,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 10,
+          "prompt_tokens": 166,
+          "decode_ms": 432,
+          "criterion": [
+            "15.25",
+            "15:25"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "en-followup",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "My bicycle has a flat tire. What should I check first?"
+        },
+        {
+          "role": "assistant",
+          "text": "You should wash your hands frequently, especially after using the bicycle. If you notice any changes, feel free to ask."
+        },
+        {
+          "role": "user",
+          "text": "I found a small hole in the inner tube. What could I use to fix it?"
+        },
+        {
+          "role": "assistant",
+          "text": "You can use a small hole in a tube or a map to find the perfect shape for fixing the inner tube. You can also use a push-only lens or a \"golden tire\" to fix the shape of the inner dish"
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 30,
+          "prompt_tokens": 53,
+          "decode_ms": 769,
+          "criterion": [
+            "tire",
+            "tyre",
+            "tube",
+            "puncture",
+            "valve",
+            "wheel",
+            "air"
+          ],
+          "passed": false
+        },
+        {
+          "tokens": 64,
+          "prompt_tokens": 108,
+          "decode_ms": 1866,
+          "criterion": [
+            "patch",
+            "repair kit",
+            "new tube",
+            "replace"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "tr-followup",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Bisikletimin lastiği inmiş. Önce neyi kontrol etmeliyim?"
+        },
+        {
+          "role": "assistant",
+          "text": "Bisikletin lastiği, genellikle 2 ila 3 hafta arasında değişir; bu süre sonra toplamda 3 saat artar. Bu sürenin sonunda birimleri, kuponları ve hatta bisikleti kontrol etmeni öneririm.\n\nAdım adım ilerleyelim. Önce lastiği temizley"
+        },
+        {
+          "role": "user",
+          "text": "İç lastikte küçük bir delik buldum. Onu neyle kapatabilirim?"
+        },
+        {
+          "role": "assistant",
+          "text": "Düzenli bir şekilde inşa etmek için, ellerinizi nemlendirmek için birkaç saat boyunca delikleri temizleyebilirsiniz. Delikleri de bu şekilde kapatabilirsiniz; nem seviyesini ve ağırlığı ölçerek kolaylıklar dilerim."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 64,
+          "prompt_tokens": 49,
+          "decode_ms": 1582,
+          "criterion": [
+            "lastik",
+            "delik",
+            "sibop",
+            "supap",
+            "hava"
+          ],
+          "passed": false
+        },
+        {
+          "tokens": 53,
+          "prompt_tokens": 137,
+          "decode_ms": 1914,
+          "criterion": [
+            "yama",
+            "tamir kit",
+            "değiştir"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "en-format",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Which word names an animal: spoon or rabbit? Reply with the animal only."
+        },
+        {
+          "role": "assistant",
+          "text": "Some popular word names include spoon or rabbit, red roam, and red roam. They usually have a tapestry and a nice flavor of the animal."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 41,
+          "prompt_tokens": 43,
+          "decode_ms": 1471,
+          "criterion": [
+            "rabbit"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "tr-format",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Hangisi bir meyve: tabak mı, armut mu? Sadece meyvenin adını yaz."
+        },
+        {
+          "role": "assistant",
+          "text": "Armut, armut, çikolata, havuç, biber, nişastası ve biraz karıştır."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 24,
+          "prompt_tokens": 39,
+          "decode_ms": 700,
+          "criterion": [
+            "armut"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "en-open",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "text": "What makes a cup of coffee taste bitter?"
+        },
+        {
+          "role": "assistant",
+          "text": "A cup of coffee is a method that uses a plastic bag to gauge the coffee. It is made from a mixture of cotton and plastic.\n\nIf you wanted to know about any type of coffee shopping, then the bag would be able to"
+        },
+        {
+          "role": "user",
+          "text": "How would you change the brewing process to make it less bitter?"
+        },
+        {
+          "role": "assistant",
+          "text": "The inference would be able to change the brewing process to make it more efficient and accessible. However, the brewings will likely be a good idea to use the ingredients and add one-third of the other items to make it less bitter."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 64,
+          "prompt_tokens": 47,
+          "decode_ms": 1657,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 59,
+          "prompt_tokens": 130,
+          "decode_ms": 1314,
+          "criterion": null,
+          "passed": null
+        }
+      ]
+    },
+    {
+      "id": "tr-open",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "text": "Kitap okumaya yeniden başlamak istiyorum ama kolayca sıkılıyorum. Ne önerirsin?"
+        },
+        {
+          "role": "assistant",
+          "text": "Merhaba Kitap okumak, sadece sohbet etmek değil, aynı zamanda daha basit bir konuda da yardımcı olabilirim.\n\nPlatformunuzu açın ve ilk olarak beğenınızı yazın. Hangi kısmı daha iyi tarif edersiniz?"
+        },
+        {
+          "role": "user",
+          "text": "Kısa öyküleri seviyorum. Bu akşam için basit bir plan yapabilir misin?"
+        },
+        {
+          "role": "assistant",
+          "text": "Tabii, \"Kitap Okuma\" sizin için uygun bir alternatif olabilir. Hangi konuda destek istediğinizi söylerseniz ona bir bakabiliriz."
+        }
+      ],
+      "checks": [
+        {
+          "tokens": 52,
+          "prompt_tokens": 51,
+          "decode_ms": 1217,
+          "criterion": null,
+          "passed": null
+        },
+        {
+          "tokens": 37,
+          "prompt_tokens": 125,
+          "decode_ms": 874,
+          "criterion": null,
+          "passed": null
+        }
+      ]
+    }
+  ]
+}

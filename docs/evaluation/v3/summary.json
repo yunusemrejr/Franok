@@ -1,0 +1,156 @@
+{
+  "parameters": 314061312,
+  "active_parameters": 49820160,
+  "sha256": "b7d97329fb1ea8250a1818c168217d9b163178640138c11069ca8209a4552530",
+  "allocation": {
+    "device": "NVIDIA L4",
+    "start_utc": "2026-11-18T12:20:28Z",
+    "termination_confirmed_utc": "2026-11-18T16:17:04Z",
+    "elapsed_seconds": 14196,
+    "limit_seconds": 14400
+  },
+  "pretraining_targets": 383385600,
+  "supervised_targets": 35864087,
+  "native": [
+    {
+      "model": "parent",
+      "belebele": 59,
+      "natural_dialogue": 0,
+      "xquad": 0,
+      "xquad_en": 0,
+      "xquad_tr": 0,
+      "bits_per_byte": {
+        "en": 1.5782801448545973,
+        "tr": 1.6584345732939507
+      }
+    },
+    {
+      "model": "peer",
+      "belebele": 70,
+      "natural_dialogue": 8,
+      "xquad": 12,
+      "xquad_en": 12,
+      "xquad_tr": 0,
+      "bits_per_byte": {
+        "en": 0.8276099225244049,
+        "tr": 1.9998167169867496
+      }
+    },
+    {
+      "model": "lfm2",
+      "belebele": 78,
+      "natural_dialogue": 6,
+      "xquad": 8,
+      "xquad_en": 8,
+      "xquad_tr": 0,
+      "bits_per_byte": {
+        "en": 0.9755532271066372,
+        "tr": 2.0604201823618205
+      }
+    },
+    {
+      "model": "final",
+      "belebele": 66,
+      "natural_dialogue": 0,
+      "xquad": 4,
+      "xquad_en": 1,
+      "xquad_tr": 3,
+      "bits_per_byte": {
+        "en": 1.4050007847585326,
+        "tr": 1.3604459621227627
+      }
+    }
+  ],
+  "reader": {
+    "en": {
+      "n": 64,
+      "exact": 12,
+      "f1": 0.2170138888888889,
+      "answered": 56
+    },
+    "tr": {
+      "n": 64,
+      "exact": 7,
+      "f1": 0.11979166666666666,
+      "answered": 40
+    }
+  },
+  "runtime": {
+    "q4": {
+      "sha256": "925c7323ed5bd82f3d741e16b0308c18016f2ac2204273d3841dce53be6b3aca",
+      "reading": 66,
+      "matching_choices": 227,
+      "free_exact": 3,
+      "reader_exact": 19,
+      "conversation_checks": 3,
+      "controls": {
+        "en": {
+          "questions": 24,
+          "letter": 11,
+          "words": 3,
+          "both": 1
+        },
+        "tr": {
+          "questions": 24,
+          "letter": 11,
+          "words": 1,
+          "both": 1
+        }
+      },
+      "top1": 0.8846726190476191,
+      "nll_difference": 0.04334458475477998,
+      "grouped_kl": 0.046054961095404946,
+      "tokens": 1344
+    },
+    "q8": {
+      "sha256": "48b1566431e800e2b3af7d2194900cee3e33c3f1923d4954e29777f2efbeb30b",
+      "reading": 67,
+      "matching_choices": 238,
+      "free_exact": 4,
+      "reader_exact": 19,
+      "conversation_checks": 2,
+      "controls": {
+        "en": {
+          "questions": 24,
+          "letter": 10,
+          "words": 3,
+          "both": 2
+        },
+        "tr": {
+          "questions": 24,
+          "letter": 11,
+          "words": 2,
+          "both": 2
+        }
+      },
+      "top1": 0.9888392857142857,
+      "nll_difference": 0.002817177181257513,
+      "grouped_kl": 0.0005178081920413429,
+      "tokens": 1344
+    }
+  },
+  "rl": {
+    "scale": 1.0,
+    "rollouts": 7338,
+    "optimizer_updates": 825,
+    "tokens": 83187,
+    "dialogue_reward_active": true
+  },
+  "native_long": {
+    "parent": {
+      "128": 6,
+      "384": 5,
+      "960": 6
+    },
+    "peer": {
+      "128": 12,
+      "384": 12,
+      "960": 8
+    },
+    "final": {
+      "128": 8,
+      "384": 4,
+      "960": 6
+    }
+  }
+}

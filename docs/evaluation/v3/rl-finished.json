@@ -1,0 +1,132 @@
+{
+  "seed": 43317,
+  "dialogue_reward_active": true,
+  "rollouts": 7338,
+  "optimizer_updates": 825,
+  "tokens": 83187,
+  "source_counts": {
+    "en-passages": 702,
+    "tr-dialogue": 960,
+    "en-passages-choice": 678,
+    "tr-passages-choice": 936,
+    "tr-passages": 834,
+    "en-commonsense": 720,
+    "en-dialogue": 744,
+    "en-logic": 828,
+    "tr-logic": 936
+  },
+  "initial": {
+    "mean_reward": 0.25300949197262523,
+    "by_language": {
+      "en": {
+        "mean": 0.25720579996705056,
+        "exact": 3,
+        "count": 20
+      },
+      "tr": {
+        "mean": 0.24881318397819996,
+        "exact": 2,
+        "count": 16
+      }
+    },
+    "supervision": {
+      "en": {
+        "instruction_loss": 2.2594830632209777,
+        "preferred": 0.3958333333333333,
+        "pairs": 48
+      },
+      "tr": {
+        "instruction_loss": 2.697562050819397,
+        "preferred": 0.4375,
+        "pairs": 48
+      }
+    }
+  },
+  "candidates": {
+    "0": {
+      "mean_reward": 0.25300949197262523,
+      "by_language": {
+        "en": {
+          "mean": 0.25720579996705056,
+          "exact": 3,
+          "count": 20
+        },
+        "tr": {
+          "mean": 0.24881318397819996,
+          "exact": 2,
+          "count": 16
+        }
+      },
+      "supervision": {
+        "en": {
+          "instruction_loss": 2.2594830632209777,
+          "preferred": 0.3958333333333333,
+          "pairs": 48
+        },
+        "tr": {
+          "instruction_loss": 2.697562050819397,
+          "preferred": 0.4375,
+          "pairs": 48
+        }
+      }
+    },
+    "0.35": {
+      "mean_reward": 0.3003250426147133,
+      "by_language": {
+        "en": {
+          "mean": 0.305302282422781,
+          "exact": 4,
+          "count": 20
+        },
+        "tr": {
+          "mean": 0.29534780280664563,
+          "exact": 3,
+          "count": 16
+        }
+      },
+      "supervision": {
+        "en": {
+          "instruction_loss": 2.264790952205658,
+          "preferred": 0.3541666666666667,
+          "pairs": 48
+        },
+        "tr": {
+          "instruction_loss": 2.701133131980896,
+          "preferred": 0.4375,
+          "pairs": 48
+        }
+      }
+    },
+    "1.0": {
+      "mean_reward": 0.36509311753325163,
+      "by_language": {
+        "en": {
+          "mean": 0.3262531034648418,
+          "exact": 4,
+          "count": 20
+        },
+        "tr": {
+          "mean": 0.40393313160166144,
+          "exact": 5,
+          "count": 16
+        }
+      },
+      "supervision": {
+        "en": {
+          "instruction_loss": 2.284466505050659,
+          "preferred": 0.3541666666666667,
+          "pairs": 48
+        },
+        "tr": {
+          "instruction_loss": 2.717614698410034,
+          "preferred": 0.4375,
+          "pairs": 48
+        }
+      }
+    }
+  },
+  "scale": 1.0,
+  "elapsed": 626.8883721828461,
+  "sha256": "534fea55e692aafd06c36bcabbcbf6ea97549f6f5a85f44d4352279c3d50f7c6",
+  "fp32_sha256": "b7d97329fb1ea8250a1818c168217d9b163178640138c11069ca8209a4552530"
+}

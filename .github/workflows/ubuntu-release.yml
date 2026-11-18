@@ -1,0 +1,55 @@
+name: Publish Ubuntu installer
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Verify tagged installer and publish release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="$GITHUB_REF_NAME"
+          [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          file="franok_${tag#v}_amd64.deb"
+          read_file() {
+            gh api "repos/$GITHUB_REPOSITORY/contents/$1?ref=$tag" --jq .content | base64 --decode
+          }
+          read_file web/installer.json > installer.json
+          read_file web/release.json > release.json
+          jq -e --arg f "$file" '.file == $f and (.bytes > 0) and (.sha256 | test("^[a-f0-9]{64}$"))' installer.json
+          jq -e --arg f "$file" --arg v "${tag#v}" '.version == $v and .installer.file == $f' release.json
+          if ! curl --fail --location --connect-timeout 12 --max-time 75 --output "$file" \
+            "https://franok.yunusemrevurgun.com/downloads/$file?mirror=origin"; then
+            curl --fail --location --retry 2 --max-time 120 --output "$file" \
+              "https://huggingface.co/yunusemrejr/Franok/resolve/main/desktop/$file"
+          fi
+          [[ "$(stat -c %s "$file")" == "$(jq -r .bytes installer.json)" ]]
+          printf '%s  %s\n' "$(jq -r .sha256 installer.json)" "$file" > SHA256SUMS
+          sha256sum --check SHA256SUMS
+          [[ "$(dpkg-deb -f "$file" Version)" == "${tag#v}" ]]
+          if ! gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            tag_id=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$tag" --jq '.object.sha')
+            gh api "repos/$GITHUB_REPOSITORY/git/tags/$tag_id" --jq .message > release-notes.md
+            gh release create "$tag" --repo "$GITHUB_REPOSITORY" --verify-tag --draft --title "Franok $tag" --notes-file release-notes.md
+          fi
+          for asset in "$file" SHA256SUMS; do
+            published=$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json assets | jq -r --arg a "$asset" '.assets[] | select(.name == $a) | .digest')
+            if [[ -z "$published" ]]; then
+              gh release upload "$tag" "$asset" --repo "$GITHUB_REPOSITORY"
+            elif [[ "$published" == null ]]; then
+              gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern "$asset" --dir verification
+              cmp -- "$asset" "verification/$asset"
+            else
+              [[ "$published" == "sha256:$(sha256sum "$asset" | cut -d' ' -f1)" ]]
+            fi
+          done
+          gh release edit "$tag" --repo "$GITHUB_REPOSITORY" --draft=false

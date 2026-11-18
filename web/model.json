@@ -1,6 +1,9 @@
 {
   "format": "franok-q4-v1",
-  "scale_method": "least-squares",
+  "scale_method": "activation-weighted-least-squares",
+  "full_range": true,
+  "block_covariance": true,
+  "paired_groups": true,
   "config": {
     "vocab": 8192,
     "width": 512,
@@ -679,5 +682,5 @@
     }
   },
   "bytes": 196331520,
-  "sha256": "b87dd88be8872fad5a7623b0f9c76721043dfdad182f9303750da888911ec83e"
+  "sha256": "925c7323ed5bd82f3d741e16b0308c18016f2ac2204273d3841dce53be6b3aca"
 }

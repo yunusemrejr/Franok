@@ -1,0 +1,36 @@
+{
+  "sha256": "b7d97329fb1ea8250a1818c168217d9b163178640138c11069ca8209a4552530",
+  "seed": 19551,
+  "groups": {
+    "en-web": {
+      "nll": 3.501188740134239,
+      "windows": 64,
+      "tokens": 16384
+    },
+    "en-web-more": {
+      "nll": 3.4963159449398518,
+      "windows": 64,
+      "tokens": 16384
+    },
+    "en-stories": {
+      "nll": 2.2991071213036776,
+      "windows": 64,
+      "tokens": 16384
+    },
+    "tr-web": {
+      "nll": 3.9100833982229233,
+      "windows": 64,
+      "tokens": 16384
+    },
+    "tr-web-more": {
+      "nll": 3.773307751864195,
+      "windows": 64,
+      "tokens": 16384
+    },
+    "tr-stories": {
+      "nll": 2.4394796304404736,
+      "windows": 64,
+      "tokens": 16384
+    }
+  }
+}

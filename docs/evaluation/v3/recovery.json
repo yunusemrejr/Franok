@@ -1,0 +1,14 @@
+{
+  "steps": 31200,
+  "targets": 383385600,
+  "nll": {
+    "en": 3.198036789894104,
+    "tr": 3.4180051684379578
+  },
+  "best": 3.308020979166031,
+  "parent": "db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b",
+  "unique_tokens_available": {
+    "en": 392251857,
+    "tr": 392210839
+  }
+}

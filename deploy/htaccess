@@ -3,11 +3,11 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
 # Permanent entry point for portfolio and external links, updated with each release.
-RewriteRule ^downloads/ubuntu/?$ /downloads/franok_0.2.0_amd64.deb [R=302,L]
+RewriteRule ^downloads/ubuntu/?$ /downloads/franok_0.3.0_amd64.deb [R=302,L]
 # The stable site URL uses GitHub's release CDN for large downloads.
 # The same checksum-verified file remains on the origin as a second source.
 RewriteCond %{QUERY_STRING} !(^|&)mirror=origin(&|$) [NC]
-RewriteRule ^downloads/franok_0\.2\.0_amd64\.deb$ https://github.com/yunusemrejr/Franok/releases/download/v0.2.0/franok_0.2.0_amd64.deb [R=302,L,QSD]
+RewriteRule ^downloads/franok_(0\.[23]\.0)_amd64\.deb$ https://github.com/yunusemrejr/Franok/releases/download/v$1/franok_$1_amd64.deb [R=302,L,QSD]
 </IfModule>
 AddType application/wasm .wasm
 AddType text/javascript .mjs

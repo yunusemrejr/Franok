@@ -1,0 +1,103 @@
+{
+  "steps": 1714,
+  "positions": 19805280,
+  "targets": 3322925,
+  "sampled_records": {
+    "english-dialogue": 1830,
+    "turkish-tasks": 3050,
+    "natural": 885,
+    "turkish-dialogue": 3422,
+    "passages": 9091,
+    "native-chat": 489,
+    "short-replies": 4692,
+    "human": 3858,
+    "short-dialogue": 1700,
+    "everyday-tr": 1638,
+    "commonsense": 882,
+    "facts-tr": 203,
+    "math": 275,
+    "everyday-en": 1593,
+    "logic": 695,
+    "aya": 633,
+    "system-choice": 1716,
+    "parallel": 507,
+    "facts-en": 174,
+    "practice": 209
+  },
+  "initial": {
+    "en": {
+      "instruction_loss": 2.24682674407959,
+      "preferred": 0.3541666666666667,
+      "pairs": 48
+    },
+    "tr": {
+      "instruction_loss": 2.689334177970886,
+      "preferred": 0.3333333333333333,
+      "pairs": 48
+    }
+  },
+  "validation": {
+    "en": {
+      "instruction_loss": 2.2594625473022463,
+      "preferred": 0.3958333333333333,
+      "pairs": 48
+    },
+    "tr": {
+      "instruction_loss": 2.6981823325157164,
+      "preferred": 0.4375,
+      "pairs": 48
+    }
+  },
+  "candidates": {
+    "0": {
+      "en": {
+        "instruction_loss": 2.246826720237732,
+        "preferred": 0.3541666666666667,
+        "pairs": 48
+      },
+      "tr": {
+        "instruction_loss": 2.689334177970886,
+        "preferred": 0.3333333333333333,
+        "pairs": 48
+      }
+    },
+    "0.35": {
+      "en": {
+        "instruction_loss": 2.2520137429237366,
+        "preferred": 0.3541666666666667,
+        "pairs": 48
+      },
+      "tr": {
+        "instruction_loss": 2.69194655418396,
+        "preferred": 0.375,
+        "pairs": 48
+      }
+    },
+    "0.7": {
+      "en": {
+        "instruction_loss": 2.2594625473022463,
+        "preferred": 0.3958333333333333,
+        "pairs": 48
+      },
+      "tr": {
+        "instruction_loss": 2.6981823325157164,
+        "preferred": 0.4375,
+        "pairs": 48
+      }
+    },
+    "1.0": {
+      "en": {
+        "instruction_loss": 2.2688720345497133,
+        "preferred": 0.4583333333333333,
+        "pairs": 48
+      },
+      "tr": {
+        "instruction_loss": 2.705838418006897,
+        "preferred": 0.4375,
+        "pairs": 48
+      }
+    }
+  },
+  "scale": 0.7,
+  "elapsed_seconds": 478.6767957210541
+}

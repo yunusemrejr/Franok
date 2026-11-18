@@ -1,37 +1,37 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "window": 1024,
   "default": "q4",
   "systemConditioned": true,
-  "revision": "db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b",
+  "revision": "7fa5a52b2e2467569ded106a1e39ef20f3c4c083",
   "formats": {
     "q4": {
       "manifest": "./model.json",
       "bytes": 196331520,
-      "sha256": "b87dd88be8872fad5a7623b0f9c76721043dfdad182f9303750da888911ec83e",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b/model.q4"
+      "sha256": "925c7323ed5bd82f3d741e16b0308c18016f2ac2204273d3841dce53be6b3aca",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7fa5a52b2e2467569ded106a1e39ef20f3c4c083/model.q4"
     },
     "q8": {
       "manifest": "./model-q8.json",
       "bytes": 353355776,
-      "sha256": "fe5f24b98b333e23112ccbe885516f9557ab6bb0182540cce2ef82ed80362af7",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b/model.q8"
+      "sha256": "48b1566431e800e2b3af7d2194900cee3e33c3f1923d4954e29777f2efbeb30b",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7fa5a52b2e2467569ded106a1e39ef20f3c4c083/model.q8"
     },
     "fp16": {
       "bytes": 628129304,
-      "sha256": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b/model.safetensors"
+      "sha256": "534fea55e692aafd06c36bcabbcbf6ea97549f6f5a85f44d4352279c3d50f7c6",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7fa5a52b2e2467569ded106a1e39ef20f3c4c083/model.safetensors"
     },
     "fp32": {
       "bytes": 1256251968,
-      "sha256": "8c2a68e2e709a7e14baecbaa3b918f19541ed9059f0c1a9e47fc3080293c4a02",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b/fp32/model.safetensors"
+      "sha256": "b7d97329fb1ea8250a1818c168217d9b163178640138c11069ca8209a4552530",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7fa5a52b2e2467569ded106a1e39ef20f3c4c083/fp32/model.safetensors"
     }
   },
   "installer": {
-    "file": "franok_0.2.0_amd64.deb",
-    "version": "0.2.0",
-    "url": "https://franok.yunusemrevurgun.com/downloads/franok_0.2.0_amd64.deb"
+    "file": "franok_0.3.0_amd64.deb",
+    "version": "0.3.0",
+    "url": "https://franok.yunusemrevurgun.com/downloads/franok_0.3.0_amd64.deb"
   },
   "video": {
     "url": "./media/franok-from-scratch.mp4",
@@ -44,10 +44,19 @@
   },
   "search": {
     "format": "franok-recall-i8-v1",
-    "vocab": 8192,
     "width": 96,
+    "vocab": 8192,
     "maxTokens": 160,
     "sha256": "bd13993aaeb81264b3dbbbb3e4914648bfc4d8f4911a32d64071340187e25d42",
     "url": "./recall.bin"
+  },
+  "reader": {
+    "url": "./reader.safetensors",
+    "baseSha256": "534fea55e692aafd06c36bcabbcbf6ea97549f6f5a85f44d4352279c3d50f7c6",
+    "sha256": "a45f947d0fa7655f747bed2fed1cc445140a28675f7bbc06a8f7f531087f895b",
+    "width": 512,
+    "hidden": 96,
+    "max_span": 48,
+    "threshold": -0.5
   }
 }

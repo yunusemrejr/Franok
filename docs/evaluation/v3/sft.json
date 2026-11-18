@@ -1,0 +1,55 @@
+{
+  "steps": 8190,
+  "positions": 97026240,
+  "targets": 25312438,
+  "sampled_records": {
+    "natural": 18698,
+    "aya": 14984,
+    "short-replies": 47059,
+    "passages": 49990,
+    "english-dialogue": 15756,
+    "turkish-tasks": 32410,
+    "everyday-en": 13035,
+    "parallel": 11720,
+    "human": 33529,
+    "short-dialogue": 19364,
+    "native-chat": 8435,
+    "everyday-tr": 19629,
+    "commonsense": 10793,
+    "facts-tr": 6113,
+    "turkish-dialogue": 27543,
+    "logic": 16404,
+    "practice": 7065,
+    "facts-en": 4997,
+    "math": 4906,
+    "system-choice": 6144,
+    "raw-text": 4080
+  },
+  "initial": {
+    "en": {
+      "instruction_loss": 3.2144943714141845,
+      "preferred": 0.2916666666666667,
+      "pairs": 48
+    },
+    "tr": {
+      "instruction_loss": 3.8642136573791506,
+      "preferred": 0.2708333333333333,
+      "pairs": 48
+    }
+  },
+  "validation": {
+    "en": {
+      "instruction_loss": 2.249019968509674,
+      "preferred": 0.3541666666666667,
+      "pairs": 48
+    },
+    "tr": {
+      "instruction_loss": 2.69051992893219,
+      "preferred": 0.3333333333333333,
+      "pairs": 48
+    }
+  },
+  "candidates": {},
+  "scale": null,
+  "elapsed_seconds": 2441.5648999214172
+}

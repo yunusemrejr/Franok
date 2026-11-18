@@ -1,0 +1,295 @@
+{
+  "reviewer": "Single model-assisted rubric review of anonymous paired outputs; the reviewer received the original prompts and saw both replies.",
+  "rows": [
+    {
+      "case": "en-snack",
+      "turn": 1,
+      "language": "en",
+      "passed": true,
+      "criterion": "Give a cold lunch using those ingredients.",
+      "review": "Only B supplies a cold sandwich.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-snack",
+      "turn": 2,
+      "language": "en",
+      "passed": false,
+      "criterion": "Adapt the first lunch to the missing cheese without requiring heat.",
+      "review": "B keeps the missing cheese, and A gives incoherent substitutions.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-snack",
+      "turn": 1,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Give a cold lunch using those ingredients.",
+      "review": "A recommends cooking and B echoes the prompt.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-snack",
+      "turn": 2,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Adapt the first lunch to the missing cheese without requiring heat.",
+      "review": "A calls for frying with cheese and B gives no workable alternative.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-label",
+      "turn": 1,
+      "language": "en",
+      "passed": false,
+      "criterion": "Answer request only.",
+      "review": "Neither gives the requested label alone and correctly.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-label",
+      "turn": 2,
+      "language": "en",
+      "passed": true,
+      "criterion": "Answer fact only.",
+      "review": "B supplies the single correct label.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-label",
+      "turn": 1,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Answer rica only.",
+      "review": "Neither supplies the label rica.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-label",
+      "turn": 2,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Answer tespit only.",
+      "review": "Neither supplies the label tespit.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-plant",
+      "turn": 1,
+      "language": "en",
+      "passed": true,
+      "criterion": "Connect its growth direction with the light from the window.",
+      "review": "B connects the direction of growth to incoming light. A drifts into food.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-plant",
+      "turn": 2,
+      "language": "en",
+      "passed": false,
+      "criterion": "Suggest rotating or turning the pot in place.",
+      "review": "Neither suggests turning the pot to light the other side.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-plant",
+      "turn": 1,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Connect its growth direction with the light from the window.",
+      "review": "Neither explains the direction of light.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-plant",
+      "turn": 2,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Suggest rotating or turning the pot in place.",
+      "review": "Neither recommends rotating the pot.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-apples",
+      "turn": 1,
+      "language": "en",
+      "passed": false,
+      "criterion": "Give nine apples, with or without a calculation.",
+      "review": "Neither arrives at nine apples.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-apples",
+      "turn": 2,
+      "language": "en",
+      "passed": false,
+      "criterion": "Give only 6.",
+      "review": "Neither gives six.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-apples",
+      "turn": 1,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Give nine apples, with or without a calculation.",
+      "review": "Neither gives nine.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-apples",
+      "turn": 2,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Give only 6.",
+      "review": "Neither gives six.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-clarify",
+      "turn": 1,
+      "language": "en",
+      "passed": false,
+      "criterion": "Offer an actual polite rephrasing about interruptions.",
+      "review": "A replaces interruption with misunderstanding, and B gives no rephrasing.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "en-clarify",
+      "turn": 2,
+      "language": "en",
+      "passed": false,
+      "criterion": "Give a short usable spoken sentence about wanting to finish.",
+      "review": "Neither sentence asks to finish speaking.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "tr-clarify",
+      "turn": 1,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Offer an actual polite rephrasing about interruptions.",
+      "review": "Neither gives a coherent polite rephrasing.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-clarify",
+      "turn": 2,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Give a short usable spoken sentence about wanting to finish.",
+      "review": "Neither gives a usable request to finish speaking.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-location",
+      "turn": 1,
+      "language": "en",
+      "passed": true,
+      "criterion": "Answer the green envelope.",
+      "review": "A correctly identifies the green envelope, despite inventing a ticket number.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "en-location",
+      "turn": 2,
+      "language": "en",
+      "passed": true,
+      "criterion": "Keep track of the unchanged museum ticket and answer the blue envelope.",
+      "review": "A keeps the museum ticket in the blue envelope.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "tr-location",
+      "turn": 1,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Answer the green envelope.",
+      "review": "A starts correctly but continues with incoherent instructions about meatballs. B echoes the prompt in broken Turkish.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-location",
+      "turn": 2,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Keep track of the unchanged museum ticket and answer the blue envelope.",
+      "review": "Neither locates the ticket in the blue envelope.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-quiet",
+      "turn": 1,
+      "language": "en",
+      "passed": true,
+      "criterion": "Offer a realistic way to meet people outside a party.",
+      "review": "A gives actionable clubs or street fairs.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "en-quiet",
+      "turn": 2,
+      "language": "en",
+      "passed": true,
+      "criterion": "Suggest a small reading, book or library group consistent with the new preference.",
+      "review": "A suggests a local book club and places to find one.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "tr-quiet",
+      "turn": 1,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Offer a realistic way to meet people outside a party.",
+      "review": "Neither gives a usable suggestion outside a party.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "tr-quiet",
+      "turn": 2,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Suggest a small reading, book or library group consistent with the new preference.",
+      "review": "Neither suggests a small reading group.",
+      "anonymous_letter": "B"
+    },
+    {
+      "case": "en-ambiguity",
+      "turn": 1,
+      "language": "en",
+      "passed": false,
+      "criterion": "Ask what options the person is choosing between.",
+      "review": "A asks for a topic and mentions internet access. Neither asks what options are involved.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "en-ambiguity",
+      "turn": 2,
+      "language": "en",
+      "passed": true,
+      "criterion": "Choose or clearly favor the backpack and connect it to the long walk or light load.",
+      "review": "A chooses a backpack for lighter items.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "tr-ambiguity",
+      "turn": 1,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Ask what options the person is choosing between.",
+      "review": "Neither asks which options are being considered.",
+      "anonymous_letter": "A"
+    },
+    {
+      "case": "tr-ambiguity",
+      "turn": 2,
+      "language": "tr",
+      "passed": false,
+      "criterion": "Choose or clearly favor the backpack and connect it to the long walk or light load.",
+      "review": "Neither chooses a bag or connects it to the walk.",
+      "anonymous_letter": "A"
+    }
+  ],
+  "passed": 8,
+  "total": 32
+}

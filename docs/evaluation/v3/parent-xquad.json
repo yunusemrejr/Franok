@@ -1,0 +1,1171 @@
+{
+  "suite": "xquad",
+  "dataset_revision": "51adfef1c1287aab1d2d91b5bead9bcfb9c68583",
+  "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+  "summary": {
+    "en": {
+      "count": 64,
+      "exact": 0.0,
+      "f1": 0.045732026880124704
+    },
+    "tr": {
+      "count": 64,
+      "exact": 0.0,
+      "f1": 0.034892017704517705
+    }
+  },
+  "items": [
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5730a4d02461fd1900a9cf2d",
+      "prompt_tokens": 228,
+      "answer": "The French spread along with their imperialism, the new empire took on roles of trade with France",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572881d34b864d1900164a5b",
+      "prompt_tokens": 245,
+      "answer": "The Office of Western Medicine was also practiced in China by the Nestorian Christians",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572669a9dd62a815002e8417",
+      "prompt_tokens": 249,
+      "answer": "The principle of faunal succession was based on the appearance of fossils in sedimentary",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5726385e271a42140099d799",
+      "prompt_tokens": 375,
+      "answer": "The packets are routine, and the packets are routine, and the p",
+      "exact": 0,
+      "f1": 0.125
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5727cc15ff5b5019007d9578",
+      "prompt_tokens": 243,
+      "answer": "The Harvard University of Harvard University of New York, Harvard University of New York, is located",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56e1b62ecd28a01900c67aa3",
+      "prompt_tokens": 302,
+      "answer": "The time required for the problem is to implement a function using a given amount of time and space, and the output",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57286fa83acd2414000df9e6",
+      "prompt_tokens": 310,
+      "answer": "The passage does not mention the person who was assassinated by the Confucian principles,",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57273e50dd62a815002e9a03",
+      "prompt_tokens": 271,
+      "answer": "The passage does not mention the size of design and construction companies.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572fc8a904bcaa1900d76d21",
+      "prompt_tokens": 217,
+      "answer": "The passage does not mention anything about the parliament or the other person who is not a member of the British Parliament",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572940973f37b319004781a7",
+      "prompt_tokens": 203,
+      "answer": "The passage does not mention any information about the date of 2035 has been not included in the final summary",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57273a465951b619008f8702",
+      "prompt_tokens": 177,
+      "answer": "The passage does not mention the passage in the passage. The passage does not mention any information about const",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5725cc38ec44d21400f3d5bb",
+      "prompt_tokens": 399,
+      "answer": "The principle treaties that form the European Union began with common rules for coal and steel, but the stat",
+      "exact": 0,
+      "f1": 0.6086956521739131
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5730b2ac2461fd1900a9cfb4",
+      "prompt_tokens": 346,
+      "answer": "Wesley's famous sermon",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56bf36b93aeaaa14008c9564",
+      "prompt_tokens": 201,
+      "answer": "The Broncos's Broncos's Broncos's Broncos'",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5727aec03acd2414000de991",
+      "prompt_tokens": 225,
+      "answer": "The university is organized into eleven separate academic units, including Harvard Yard in",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572fc6f204bcaa1900d76cf6",
+      "prompt_tokens": 228,
+      "answer": "The Scottish Parliament is to take evidence from the passage that answers the question.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572735a15951b619008f86c0",
+      "prompt_tokens": 428,
+      "answer": "These two-note theme tune was introduced alongside the package, based around the network'",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5725f39638643c19005acef9",
+      "prompt_tokens": 209,
+      "answer": "The article mentions that Johnson Space Center was used to help restore the original lunar",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5727d1c93acd2414000ded40",
+      "prompt_tokens": 199,
+      "answer": "Harvard College",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56beb4343aeaaa14008c925d",
+      "prompt_tokens": 399,
+      "answer": "Luke Kuechly",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56d726b60d65d214001983ed",
+      "prompt_tokens": 357,
+      "answer": "The Panthers player got a penalty, which gave the Broncos a new set of down",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5725f8f5ec44d21400f3d7b5",
+      "prompt_tokens": 303,
+      "answer": "The average household size was 3.07.4,429",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572914f46aef051400154a46",
+      "prompt_tokens": 178,
+      "answer": "The election was held on the country during the mid-2013 African trip, which was held on the country during",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56dfa0d84a1a83140091ebba",
+      "prompt_tokens": 236,
+      "answer": "Tesla's reputation in popular culture is the SI unit of magnetic flux",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57293e221d046914007791d5",
+      "prompt_tokens": 306,
+      "answer": "The WG I Summary for Policymakers report says that the executive summary",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572920d73f37b31900478056",
+      "prompt_tokens": 242,
+      "answer": "The context of the context of Kenya is:\n\n1. The article provides a detailed",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572a13841d0469140077973e",
+      "prompt_tokens": 222,
+      "answer": "The passage does not mention that the \"magical\" Kuznets curve hypothesis",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "571cb27fdd7acb1400e4c133",
+      "prompt_tokens": 339,
+      "answer": "Paleoclimatologists have a significant impact on the climate, including the amount of water molecul",
+      "exact": 0,
+      "f1": 0.16666666666666666
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572663a9f1498d1400e8ddf2",
+      "prompt_tokens": 286,
+      "answer": "The first scale of the Pleistocene (the latest epoch) is the first scale of",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56e181d9e3433e1400422fa3",
+      "prompt_tokens": 205,
+      "answer": "The corrected answer is \"The number of integers is a string over an alphabet.\"",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572828383acd2414000df5c3",
+      "prompt_tokens": 248,
+      "answer": "The final title of the passage is \"Doctor Who\".",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5726ea985951b619008f8263",
+      "prompt_tokens": 276,
+      "answer": "The passage does not provide any information about the passage or contact information provided.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56dfb5777aa994140058e021",
+      "prompt_tokens": 168,
+      "answer": "The shortest phrase from the passage is \"The shortest phrase from the passage\" which",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57268a8fdd62a815002e88d0",
+      "prompt_tokens": 321,
+      "answer": "The city center is located in the city center, and opened by Queen Elizabeth II in 1981.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5728e715ff5b5019007da917",
+      "prompt_tokens": 253,
+      "answer": "The Plowshares organization temporarily has a significant impact on the development of the new new new new new",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5726847f708984140094c8ae",
+      "prompt_tokens": 259,
+      "answer": "The first folk metal group is the first folk rock group.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5726e37ef1498d1400e8eedb",
+      "prompt_tokens": 231,
+      "answer": "The V&A received the Talbot Hughes collection containing 1,442 costumes and a",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572fdb17b2c2fd1400568521",
+      "prompt_tokens": 300,
+      "answer": "The term for judging the boundaries of sanity to which individuals wishing to sit on the",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57114e8d50c2381900b54a5e",
+      "prompt_tokens": 262,
+      "answer": "The approximate condenser temperature in a turbine is typically limited by the working fluid",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56e7796637bdd419002c4001",
+      "prompt_tokens": 290,
+      "answer": "The article discusses the requirements for substitute/temporary teachers and teachers",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56e1254ae3433e1400422c66",
+      "prompt_tokens": 97,
+      "answer": "The article states that the Machine to End War was a significant part of the history of the Mach",
+      "exact": 0,
+      "f1": 0.4444444444444444
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572671e55951b619008f72d7",
+      "prompt_tokens": 260,
+      "answer": "The Grainger Market was a popular market in the Grainger Market, a grade I and II",
+      "exact": 0,
+      "f1": 0.14285714285714285
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57264d9edd62a815002e80ff",
+      "prompt_tokens": 181,
+      "answer": "The American Automobile Association reported that in the last week of April 1974, Nixon was the first",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572ffee1947a6a140053cf16",
+      "prompt_tokens": 266,
+      "answer": "The passage of the passage is \"The Reconstruction of Religious Thought in England and",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5733f1784776f41900661576",
+      "prompt_tokens": 228,
+      "answer": "The British begin to build fort under William Trent's small company to withdraw.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572743fb708984140094db93",
+      "prompt_tokens": 201,
+      "answer": "The passage does not mention the passage in the passage that answers the question is \"The first place network",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56e1ee4de3433e1400423212",
+      "prompt_tokens": 247,
+      "answer": "The complexity classes RP, PP, PP, PP, PP, PP, B",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572750e8dd62a815002e9af0",
+      "prompt_tokens": 272,
+      "answer": "The project adhere to zoning and building code requirements are not specified.",
+      "exact": 0,
+      "f1": 0.625
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57268da7f1498d1400e8e3a0",
+      "prompt_tokens": 405,
+      "answer": "These are the most common setative species in the Burgess Shale and other Canadian rocks of similar",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "56beb86b3aeaaa14008c92bf",
+      "prompt_tokens": 159,
+      "answer": "John Elway was the first quarterback ever to lead two different teams to multiple Super Bowls, including the B",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57373d0cc3c5551400e51e86",
+      "prompt_tokens": 399,
+      "answer": "The concept of force an integral part of the concept of force as an integral part of the force is",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5726eb8bf1498d1400e8efe6",
+      "prompt_tokens": 305,
+      "answer": "The passage does not mention the passage in the passage.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57309ef18ab72b1400f9c604",
+      "prompt_tokens": 321,
+      "answer": "The article mentions that the Hobson argued that the government had a significant impact on Europe,",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57286951ff5b5019007da20f",
+      "prompt_tokens": 243,
+      "answer": "The article was about the Oracle Corporation in the United States Larry Ellison, and the",
+      "exact": 0,
+      "f1": 0.3076923076923077
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5728eef92ca10214002daab3",
+      "prompt_tokens": 283,
+      "answer": "The prosecution proposes a plea bargain to civil disobedients, as in",
+      "exact": 0,
+      "f1": 0.18181818181818182
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "571144d1a58dae1900cd6d71",
+      "prompt_tokens": 192,
+      "answer": "The heat is a nuclear reactor that is a nuclear reactor, and it is a nuc",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5725edfe38643c19005acea1",
+      "prompt_tokens": 230,
+      "answer": "The west side of Fresno is the center of Fresno's African-American community.",
+      "exact": 0,
+      "f1": 0.18181818181818182
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5729281baf94a219006aa121",
+      "prompt_tokens": 283,
+      "answer": "The passage does not provide information about the two-time women's Boston Marathon winner and two-",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5710eca0a58dae1900cd6b3a",
+      "prompt_tokens": 381,
+      "answer": "The Huguenot Memorial Bridge across the James River and Huguenot High School is",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572811434b864d1900164390",
+      "prompt_tokens": 334,
+      "answer": "The Doctor's newest traveling session was the main character of the show, as the story be",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "570d28bdb3d812140066d4a7",
+      "prompt_tokens": 229,
+      "answer": "The capital-right Liberal Party of Australia is strongest in Victoria's North Western and Eastern rural",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "57096b66200fba1400367fab",
+      "prompt_tokens": 268,
+      "answer": "BSkyB's sport portfolio include sports, basketball, and theatre.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "572757bef1498d1400e8f691",
+      "prompt_tokens": 252,
+      "answer": "The author of the church academies that arose in the wake of school desegregation is",
+      "exact": 0,
+      "f1": 0.14285714285714285
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "en",
+      "key": "5725d79e89a1e219009abf90",
+      "prompt_tokens": 274,
+      "answer": "The Block II CSM and LM in a dual mission was a battle-cooled",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5730a4d02461fd1900a9cf2d",
+      "prompt_tokens": 235,
+      "answer": "Batı Avrupa'da, özellikle de Avrupa'da, özellikle de Avrupa'da ve Kuzey Amerika'da ve Güney",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572881d34b864d1900164a5b",
+      "prompt_tokens": 252,
+      "answer": "Batı Tıbbı Ofisini kim kurmuştur?",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572669a9dd62a815002e8417",
+      "prompt_tokens": 242,
+      "answer": "Soruyu cevaplamak için verilen bilgilere göre doğru cevap olarak kabul edilebilir.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5726385e271a42140099d799",
+      "prompt_tokens": 326,
+      "answer": "Evet, paketin paketin paketine göre doğru olarak eklenmiyor.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5727cc15ff5b5019007d9578",
+      "prompt_tokens": 235,
+      "answer": "Harvard Business School ve Harvard Diş Hekimliği Okulu",
+      "exact": 0,
+      "f1": 0.15384615384615385
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56e1b62ecd28a01900c67aa3",
+      "prompt_tokens": 281,
+      "answer": "Evet, bu konuda yardımcı olan en kısa yol.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57286fa83acd2414000df9e6",
+      "prompt_tokens": 291,
+      "answer": "Kegen Han, Ayurbarvada'nın hükümdarlığı ve yenik düşüşü nedeniyle,",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57273e50dd62a815002e9a03",
+      "prompt_tokens": 251,
+      "answer": "Metin, ENR'in şirketlerin (İlk 40) ve aynı zamanda en büyük şirketlerin (öt",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572fc8a904bcaa1900d76d21",
+      "prompt_tokens": 230,
+      "answer": "Metinler arasında İskoç Parlamentosu’nun, İskoç Parlamentosu’na sunulan özel",
+      "exact": 0,
+      "f1": 0.2
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572940973f37b319004781a7",
+      "prompt_tokens": 187,
+      "answer": "Evet, IPCC'nin IPCC'nin IPCC'nin IPCC'nin I",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57273a465951b619008f8702",
+      "prompt_tokens": 176,
+      "answer": "Soruyu yanıtlamak için şu adımları izleyeceğim:\n\n1. **Denizli:",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5725cc38ec44d21400f3d5bb",
+      "prompt_tokens": 399,
+      "answer": "MÖ 2. yüzyılda Britanya'nın Avrupa Birliği'nin ilk yıllarında, özellikle de Birleşik Krallık'ta, İs",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5730b2ac2461fd1900a9cfb4",
+      "prompt_tokens": 344,
+      "answer": "Hükümetin, Metodist Kilisesi'nin \"'\" alkolden uzak durma kon",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56bf36b93aeaaa14008c9564",
+      "prompt_tokens": 187,
+      "answer": "Broncos, 23–16 arasındaki bölge turunda Pittsburgh Steelers'ı 20",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5727aec03acd2414000de991",
+      "prompt_tokens": 221,
+      "answer": "Küçük ABD'nin Cambridge'deki Charles Nehri'nin karşısındadır ve konutu, Boston'",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572fc6f204bcaa1900d76cf6",
+      "prompt_tokens": 233,
+      "answer": "Metinlerdeki polislerin ana rolü şahitlerden kaynaklanmaktadır.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572735a15951b619008f86c0",
+      "prompt_tokens": 407,
+      "answer": "BBC'nin resmi web sitesinde, ABC'nin resmi web sitesindeki sitesinden aynen yaz.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5725f39638643c19005acef9",
+      "prompt_tokens": 205,
+      "answer": "Orijinal kasetleri geri yüklemek için Johnson Space Center'daki ne tür kayıtlar kullan",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5727d1c93acd2414000ded40",
+      "prompt_tokens": 182,
+      "answer": "Harvard Üniversitesi'nde",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56beb4343aeaaa14008c925d",
+      "prompt_tokens": 424,
+      "answer": "Soruyu cevaplamak için öncelikle verilen bilgilere dayanarak, verilen bilgilere göre soruyu yanıtlamak için öncelik",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56d726b60d65d214001983ed",
+      "prompt_tokens": 348,
+      "answer": "Broncos'a yeni bir takım yenilgilerinden uzaklaştırdı ve her birinde ilk kez B",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5725f8f5ec44d21400f3d7b5",
+      "prompt_tokens": 273,
+      "answer": "Paragraf, 20.843'te (%22,4) evli çifttir.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572914f46aef051400154a46",
+      "prompt_tokens": 184,
+      "answer": "2007 seçiminin ardından seçimi, Kenyatta'nın başbakan yardımcısı William Ruto",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56dfa0d84a1a83140091ebba",
+      "prompt_tokens": 233,
+      "answer": "Evet, Tesla'nın Tesla'nın ünü, Tesla'nın ünü,",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57293e221d046914007791d5",
+      "prompt_tokens": 283,
+      "answer": "Politika Üreticileri için WG I Özeti raporu, insan faaliyetlerinin yarısından fazlas",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572920d73f37b31900478056",
+      "prompt_tokens": 245,
+      "answer": "Kenya'daki erkek çocukların %30'a yakını fuhuşa maruz kalmakta.",
+      "exact": 0,
+      "f1": 0.4
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572a13841d0469140077973e",
+      "prompt_tokens": 216,
+      "answer": "Soruyu cevaplamak için öncelikle Piketty'nin \"şiddetli ekonomik büyüme\"nin temel",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "571cb27fdd7acb1400e4c133",
+      "prompt_tokens": 281,
+      "answer": "Paleoklimatologlar, su moleküllerinin oluşumunda daha fazla oksijen-18'i",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572663a9f1498d1400e8ddf2",
+      "prompt_tokens": 260,
+      "answer": "Evet, ikinci zaman çizelgesi jeolojik zaman ölçeğini göstermektedir.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56e181d9e3433e1400422fa3",
+      "prompt_tokens": 179,
+      "answer": "Cümledeki her kelimenin tam anlamıyla aynı anlamı taşır.\n\nCümledeki her kelimenin tam anlamıyla aynı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572828383acd2414000df5c3",
+      "prompt_tokens": 225,
+      "answer": "Evet, Doktor Kim'i 70 yaşında ve Doktor Kim'i 70 yaşında yaşadı.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5726ea985951b619008f8263",
+      "prompt_tokens": 266,
+      "answer": "Soruyu cevaplamak için şu adımları izleyeceğim:\n\n1. **Soruyu yanıt",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56dfb5777aa994140058e021",
+      "prompt_tokens": 165,
+      "answer": "Tesla, Tesla'nın şirketinden ayrıldıktan sonra Tesla'nın şirketinden ayrıldı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57268a8fdd62a815002e88d0",
+      "prompt_tokens": 308,
+      "answer": "Metro sistemine göre, Newcastle'de, Newcastle şehir merkezi boyunca inşa edilen ve inşa edilen r",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5728e715ff5b5019007da917",
+      "prompt_tokens": 232,
+      "answer": "Soruyu yanıtlayan en kısa özet:\n\n1. **Soruyu yanıtlayan en kısa özet:",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5726847f708984140094c8ae",
+      "prompt_tokens": 251,
+      "answer": "Soruyu cevaplamak için şu adımları izleyeceğim:\n\n1. \"Sis\" (19",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5726e37ef1498d1400e8eedb",
+      "prompt_tokens": 230,
+      "answer": "Kostüm taslakları şunlardır:\n\n1. Kostüm taslakları\n2. Kostüm",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572fdb17b2c2fd1400568521",
+      "prompt_tokens": 286,
+      "answer": "Soruyu cevaplamak için şu adımları izledim:\n\n1. **Soruyu ve Par",
+      "exact": 0,
+      "f1": 0.1111111111111111
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57114e8d50c2381900b54a5e",
+      "prompt_tokens": 245,
+      "answer": "Soruyu cevaplamak için şu adımları izleyeceğim:\n\n1. **Yoğuşturucu",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56e7796637bdd419002c4001",
+      "prompt_tokens": 288,
+      "answer": "Soruyu cevaplamak için öncelikle bir okul öğretmenlerinin bir lisans derecesine sahip olması gerekir.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56e1254ae3433e1400422c66",
+      "prompt_tokens": 88,
+      "answer": "Savaşı Bitirecek Bir Makine'e benzeyen bir cihazın adı, 1937'de yayınlanan \"",
+      "exact": 0,
+      "f1": 0.42857142857142855
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572671e55951b619008f72d7",
+      "prompt_tokens": 262,
+      "answer": "Grainger Çarşısı",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57264d9edd62a815002e80ff",
+      "prompt_tokens": 179,
+      "answer": "Evet, Federal Enerji Ofisinin ilk Yöneticisi olarak William E. Simon'ı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572ffee1947a6a140053cf16",
+      "prompt_tokens": 266,
+      "answer": "Eski Türk Müslüman Birliği’nin Londra şubesinin bir üyesi oldu.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5733f1784776f41900661576",
+      "prompt_tokens": 245,
+      "answer": "Bölüm 1: Görevleri ve detayları hakkında bilgi\nKullanım: Would you like me",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572743fb708984140094db93",
+      "prompt_tokens": 183,
+      "answer": "Metinde bu on yıl ABC'nin izleyicilere yönelik bir dönüm noktası bulunmuyor.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56e1ee4de3433e1400423212",
+      "prompt_tokens": 222,
+      "answer": "P, PP, PP, PP, PP, PP, PP, PP, P",
+      "exact": 0,
+      "f1": 0.15384615384615385
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572750e8dd62a815002e9af0",
+      "prompt_tokens": 252,
+      "answer": "Soruyu cevaplamak için şu adımları izleyeceğim:\n\n1. Öncelikle verilen proj",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57268da7f1498d1400e8e3a0",
+      "prompt_tokens": 361,
+      "answer": "Evet bu konuda verilen bilgilere göre Fosillerin en büyük kategorilerinden biri \"Kambriyen",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "56beb86b3aeaaa14008c92bf",
+      "prompt_tokens": 173,
+      "answer": "John Elway, Super Bowl XXXIII'te galibiyete götüren ve Bron",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57373d0cc3c5551400e51e86",
+      "prompt_tokens": 347,
+      "answer": "Kısa bir sistem, havanın yerinde birikintisi olan Aristoteles'in görüşüne",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5726eb8bf1498d1400e8efe6",
+      "prompt_tokens": 286,
+      "answer": "Yaygın otoimmün hastalıklar, iltihaplı hastalıklar ve hastalığı nedeniyle meydana gelir",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57309ef18ab72b1400f9c604",
+      "prompt_tokens": 304,
+      "answer": "Hobson, Hobson'un dış ilişkileri hakkında daha fazla bilgi verilmedi.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57286951ff5b5019007da20f",
+      "prompt_tokens": 230,
+      "answer": "Soruyu cevaplamak için aşağıdaki adımları izledim:\n\n1. Soru: Kısa bir",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5728eef92ca10214002daab3",
+      "prompt_tokens": 252,
+      "answer": "Soruyu cevaplamak için şu adımları izleyeceğim:\n\n1. Öncelikle, \"",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "571144d1a58dae1900cd6d71",
+      "prompt_tokens": 169,
+      "answer": "Sorunlu su, bir elektrikli ısıtma elemanıdır.",
+      "exact": 0,
+      "f1": 0.2857142857142857
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5725edfe38643c19005acea1",
+      "prompt_tokens": 226,
+      "answer": "Fresno'nun kuzeybatısında, Nielsen Bulvarı'nın güneybatısında, Niel",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5729281baf94a219006aa121",
+      "prompt_tokens": 290,
+      "answer": "Kenya'nın en büyük atletleri arasında, dört seferde ve uzun mesafe koşusu bulunmaktadır.",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5710eca0a58dae1900cd6b3a",
+      "prompt_tokens": 374,
+      "answer": "Henrie de Paris'te Fransız Protestan Lisesi'ni ve Fransız Protestan Lisesi'ni terc",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572811434b864d1900164390",
+      "prompt_tokens": 323,
+      "answer": "Donna Noble'ın Doktor'dan daha fazla değişikliğe uğradığı ve onun bir arkadaşının bir",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "570d28bdb3d812140066d4a7",
+      "prompt_tokens": 233,
+      "answer": "Bedigo ve Geelong'da",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "57096b66200fba1400367fab",
+      "prompt_tokens": 236,
+      "answer": "BSkyB'nin spor portföyü neleri şunlardır:\n\n1. **Situ",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "572757bef1498d1400e8f691",
+      "prompt_tokens": 234,
+      "answer": "1970'lerden beri, Hıristiyan akademilerinde ve özellikle eski bir okulların (bütün k",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "4085b765706037ad129897508e77db8bb5bdb87bdcbda0b3d30433541c969193",
+      "lang": "tr",
+      "key": "5725d79e89a1e219009abf90",
+      "prompt_tokens": 262,
+      "answer": "Elektrikli vizör kask, daha fazla görünürlük için sayfamızın sonuna kadar sür",
+      "exact": 0,
+      "f1": 0
+    }
+  ]
+}

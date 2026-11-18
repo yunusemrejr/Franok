@@ -1,0 +1,60 @@
+{
+  "en": {
+    "whole": {
+      "wins": 80,
+      "pairs": 124,
+      "accuracy": 0.6451612903225806
+    },
+    "opening": {
+      "wins": 77,
+      "pairs": 124,
+      "accuracy": 0.6209677419354839
+    },
+    "by_length": {
+      "shorter": {
+        "wins": 14,
+        "pairs": 43,
+        "accuracy": 0.32558139534883723
+      },
+      "longer": {
+        "wins": 60,
+        "pairs": 75,
+        "accuracy": 0.8
+      },
+      "similar": {
+        "wins": 27,
+        "pairs": 40,
+        "accuracy": 0.675
+      }
+    }
+  },
+  "tr": {
+    "whole": {
+      "wins": 196,
+      "pairs": 235,
+      "accuracy": 0.8340425531914893
+    },
+    "opening": {
+      "wins": 172,
+      "pairs": 235,
+      "accuracy": 0.7319148936170212
+    },
+    "by_length": {
+      "shorter": {
+        "wins": 27,
+        "pairs": 38,
+        "accuracy": 0.7105263157894737
+      },
+      "longer": {
+        "wins": 162,
+        "pairs": 189,
+        "accuracy": 0.8571428571428571
+      },
+      "similar": {
+        "wins": 76,
+        "pairs": 89,
+        "accuracy": 0.8539325842696629
+      }
+    }
+  }
+}

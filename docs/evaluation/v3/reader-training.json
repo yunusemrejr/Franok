@@ -1,0 +1,125 @@
+{
+  "seed": 18435,
+  "history": [
+    {
+      "nll": 4.120319314301014,
+      "threshold": -0.75,
+      "languages": {
+        "en": {
+          "answerable": 192,
+          "exact": 25,
+          "impossible": 64,
+          "abstained_correctly": 9,
+          "answered": 183
+        },
+        "tr": {
+          "answerable": 192,
+          "exact": 34,
+          "impossible": 64,
+          "abstained_correctly": 14,
+          "answered": 138
+        }
+      },
+      "step": 0,
+      "examples": 0,
+      "tokens": 0
+    },
+    {
+      "nll": 4.043696181848645,
+      "threshold": 0.0,
+      "languages": {
+        "en": {
+          "answerable": 192,
+          "exact": 24,
+          "impossible": 64,
+          "abstained_correctly": 21,
+          "answered": 159
+        },
+        "tr": {
+          "answerable": 192,
+          "exact": 29,
+          "impossible": 64,
+          "abstained_correctly": 14,
+          "answered": 142
+        }
+      },
+      "step": 1314,
+      "examples": 41272,
+      "tokens": 7748260
+    },
+    {
+      "nll": 3.949342532083392,
+      "threshold": -0.5,
+      "languages": {
+        "en": {
+          "answerable": 192,
+          "exact": 19,
+          "impossible": 64,
+          "abstained_correctly": 8,
+          "answered": 174
+        },
+        "tr": {
+          "answerable": 192,
+          "exact": 33,
+          "impossible": 64,
+          "abstained_correctly": 14,
+          "answered": 140
+        }
+      },
+      "step": 2634,
+      "examples": 81768,
+      "tokens": 15518109
+    },
+    {
+      "nll": 4.0184888150542974,
+      "threshold": 0.0,
+      "languages": {
+        "en": {
+          "answerable": 192,
+          "exact": 27,
+          "impossible": 64,
+          "abstained_correctly": 9,
+          "answered": 175
+        },
+        "tr": {
+          "answerable": 192,
+          "exact": 36,
+          "impossible": 64,
+          "abstained_correctly": 16,
+          "answered": 137
+        }
+      },
+      "step": 3953,
+      "examples": 122512,
+      "tokens": 23315362
+    },
+    {
+      "nll": 4.006116691976786,
+      "threshold": 0.0,
+      "languages": {
+        "en": {
+          "answerable": 192,
+          "exact": 26,
+          "impossible": 64,
+          "abstained_correctly": 12,
+          "answered": 170
+        },
+        "tr": {
+          "answerable": 192,
+          "exact": 34,
+          "impossible": 64,
+          "abstained_correctly": 18,
+          "answered": 143
+        }
+      },
+      "step": 4497,
+      "examples": 139072,
+      "tokens": 26525188
+    }
+  ],
+  "sampled": {
+    "en": 69536,
+    "tr": 69536
+  },
+  "elapsed_seconds": 263.1190400123596
+}

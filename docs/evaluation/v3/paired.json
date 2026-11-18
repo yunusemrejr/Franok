@@ -1,0 +1,137 @@
+{
+  "belebele-vs-parent": {
+    "items": 240,
+    "clusters": 120,
+    "candidate_correct": 66.0,
+    "reference_correct": 59.0,
+    "gains": 26,
+    "losses": 19,
+    "ties": 195,
+    "difference": 0.029166666666666667,
+    "percentile_95": [
+      -0.025,
+      0.08333333333333333
+    ],
+    "seed": 8527
+  },
+  "belebele-vs-peer": {
+    "items": 240,
+    "clusters": 120,
+    "candidate_correct": 66.0,
+    "reference_correct": 70.0,
+    "gains": 26,
+    "losses": 30,
+    "ties": 184,
+    "difference": -0.016666666666666666,
+    "percentile_95": [
+      -0.07916666666666666,
+      0.04583333333333333
+    ],
+    "seed": 8527
+  },
+  "belebele-vs-lfm2": {
+    "items": 240,
+    "clusters": 120,
+    "candidate_correct": 66.0,
+    "reference_correct": 78.0,
+    "gains": 27,
+    "losses": 39,
+    "ties": 174,
+    "difference": -0.05,
+    "percentile_95": [
+      -0.10833333333333334,
+      0.0125
+    ],
+    "seed": 8527
+  },
+  "xquad-vs-parent": {
+    "items": 128,
+    "clusters": 64,
+    "candidate_correct": 4.0,
+    "reference_correct": 0.0,
+    "gains": 4,
+    "losses": 0,
+    "ties": 124,
+    "difference": 0.03125,
+    "percentile_95": [
+      0.0,
+      0.0703125
+    ],
+    "seed": 8527
+  },
+  "xquad-vs-peer": {
+    "items": 128,
+    "clusters": 64,
+    "candidate_correct": 4.0,
+    "reference_correct": 12.0,
+    "gains": 4,
+    "losses": 12,
+    "ties": 112,
+    "difference": -0.0625,
+    "percentile_95": [
+      -0.1171875,
+      -0.0078125
+    ],
+    "seed": 8527
+  },
+  "xquad-vs-lfm2": {
+    "items": 128,
+    "clusters": 64,
+    "candidate_correct": 4.0,
+    "reference_correct": 8.0,
+    "gains": 4,
+    "losses": 8,
+    "ties": 116,
+    "difference": -0.03125,
+    "percentile_95": [
+      -0.0859375,
+      0.0234375
+    ],
+    "seed": 8527
+  },
+  "rubric-vs-parent": {
+    "items": 32,
+    "clusters": 8,
+    "candidate_correct": 0.0,
+    "reference_correct": 0.0,
+    "gains": 0,
+    "losses": 0,
+    "ties": 32,
+    "difference": 0.0,
+    "percentile_95": [
+      0.0,
+      0.0
+    ],
+    "seed": 8527
+  },
+  "rubric-vs-peer": {
+    "items": 32,
+    "clusters": 8,
+    "candidate_correct": 0.0,
+    "reference_correct": 8.0,
+    "gains": 0,
+    "losses": 8,
+    "ties": 24,
+    "difference": -0.25,
+    "percentile_95": [
+      -0.375,
+      -0.125
+    ],
+    "seed": 8527
+  },
+  "rubric-vs-lfm2": {
+    "items": 32,
+    "clusters": 8,
+    "candidate_correct": 0.0,
+    "reference_correct": 6.0,
+    "gains": 0,
+    "losses": 6,
+    "ties": 26,
+    "difference": -0.1875,
+    "percentile_95": [
+      -0.3125,
+      -0.0625
+    ],
+    "seed": 8527
+  }
+}

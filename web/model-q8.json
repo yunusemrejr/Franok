@@ -1,6 +1,9 @@
 {
   "format": "franok-q8-v1",
   "scale_method": "peak",
+  "full_range": false,
+  "block_covariance": false,
+  "paired_groups": false,
   "config": {
     "vocab": 8192,
     "width": 512,
@@ -679,5 +682,5 @@
     }
   },
   "bytes": 353355776,
-  "sha256": "fe5f24b98b333e23112ccbe885516f9557ab6bb0182540cce2ef82ed80362af7"
+  "sha256": "48b1566431e800e2b3af7d2194900cee3e33c3f1923d4954e29777f2efbeb30b"
 }
