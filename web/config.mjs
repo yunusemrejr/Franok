@@ -13,6 +13,7 @@ export function settings(raw = {}, windowSize = 1024) {
     calculator: raw.calculator !== false,
     conversationHelp: raw.conversationHelp !== false,
     recall: raw.recall !== false,
+    semanticRecall: raw.semanticRecall === true,
     enterSends: raw.enterSends !== false,
   };
 }

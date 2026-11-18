@@ -10,7 +10,7 @@ import time
 from playwright.sync_api import expect, sync_playwright
 
 
-def check(browser, url, output, docs, gold, query, broken=False):
+def check(browser, url, output, docs, gold, query, broken=False, context=False):
     page = browser.new_page(viewport=dict(width=1024, height=740))
     errors = []
     page.on("pageerror", lambda e: errors.append(str(e)))
@@ -57,10 +57,34 @@ def check(browser, url, output, docs, gold, query, broken=False):
     expect(page.locator("#quotechip")).to_contain_text(f"Attached turn {gold + 1}")
     page.reload()
     expect(page.locator("#quotechip")).to_contain_text(f"Attached turn {gold + 1}")
+    source_label = None
+    if context:
+        page.locator("#quotechip button").click()
+        page.locator("#controls").click()
+        page.locator("#contextMeaning").check()
+        page.locator("#tokens").fill("18")
+        page.get_by_role("button", name="Save controls").click()
+        page.locator("#draft").fill("umbrella" if broken else query)
+        page.locator("#send").click()
+        expect(page.locator("#status")).to_contain_text("Generated locally", timeout=240000)
+        details = page.locator(".message.assistant .contextinfo").last
+        details.locator("summary").click()
+        label = "word search" if broken else "meaning search"
+        source = details.get_by_role("button", name=f"Turn {gold + 1} · {label}", exact=False)
+        expect(source).to_be_visible()
+        source_label = source.inner_text()
+        if broken:
+            expect(details).to_contain_text("Meaning search was unavailable")
+        source.click()
+        assert page.locator(f"#turn-{gold}").evaluate("turn => turn.classList.contains('hit')")
+        page.reload()
+        page.locator("#controls").click()
+        expect(page.locator("#contextMeaning")).to_be_checked()
     assert not errors, errors
     page.close()
     return dict(
-        turns=len(docs), turn=gold + 1, seconds=round(elapsed, 3), word_fallback=broken
+        turns=len(docs), turn=gold + 1, seconds=round(elapsed, 3), word_fallback=broken,
+        automatic_source=source_label,
     )
 
 
@@ -68,6 +92,7 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--url")
     p.add_argument("--sets", type=Path)
+    p.add_argument("--context", action="store_true")
     p.add_argument("--out", type=Path, required=True)
     args = p.parse_args()
     args.out.mkdir(exist_ok=True, parents=True)
@@ -90,9 +115,9 @@ if __name__ == "__main__":
         with sync_playwright() as pw:
             browser = pw.chromium.launch(executable_path="/usr/bin/google-chrome")
             rows = [
-                check(browser, url, args.out, docs, gold, query),
+                check(browser, url, args.out, docs, gold, query, context=args.context),
                 check(
-                    browser, url, args.out, [r[0] for r in notes], 4, query, broken=True
+                    browser, url, args.out, [r[0] for r in notes], 4, query, broken=True, context=args.context
                 ),
             ]
             browser.close()

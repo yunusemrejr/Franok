@@ -1,3 +1,13 @@
+export async function loadRecallEncoder(tokenizer, spec) {
+  const response = await fetch(spec.url);
+  if (!response.ok) throw Error('Search weights unavailable.');
+  const bytes = await response.arrayBuffer();
+  const digest = new Uint8Array(await crypto.subtle.digest('SHA-256', bytes));
+  if (Array.from(digest, b => b.toString(16).padStart(2, '0')).join('') !== spec.sha256)
+    throw Error('Search weights failed verification.');
+  return new RecallEncoder(tokenizer, spec, bytes);
+}
+
 export class RecallEncoder {
   constructor(tokenizer, config, buffer) {
     this.tk = tokenizer;

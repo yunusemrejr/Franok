@@ -1,16 +1,12 @@
-import { RecallEncoder } from './semantic.mjs';
+import { loadRecallEncoder } from './semantic.mjs';
 import { retrieve } from './session.mjs';
 import { Tokenizer } from './tokenizer.mjs';
 
 let turns, spec, encoder;
 async function load() {
-  const [weights, tokenizer] = await Promise.all([fetch(spec.url), fetch('./tokenizer.json')]);
-  if (!weights.ok || !tokenizer.ok) throw Error('Search files unavailable.');
-  const bytes = await weights.arrayBuffer();
-  const digest = new Uint8Array(await crypto.subtle.digest('SHA-256', bytes));
-  if (Array.from(digest, b => b.toString(16).padStart(2, '0')).join('') !== spec.sha256)
-    throw Error('Search weights failed verification.');
-  return new RecallEncoder(new Tokenizer(await tokenizer.json()), spec, bytes);
+  const response = await fetch('./tokenizer.json');
+  if (!response.ok) throw Error('Tokenizer unavailable.');
+  return loadRecallEncoder(new Tokenizer(await response.json()), spec);
 }
 
 onmessage = async ({data}) => {

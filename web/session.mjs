@@ -94,7 +94,7 @@ export function recallMessage(text, turns, lang) {
     sources: hits.map(({ index }) => sourceIds[index]),
   };
 }
-export function buildPrompt(tok, turns, lang, limit, raw = {}, systemConditioned = true, pinned = []) {
+export function buildPrompt(tok, turns, lang, limit, raw = {}, systemConditioned = true, pinned = [], encoder = null) {
   const config = settings(raw),
     current = turns.at(-1),
     prefix = [1, lang === 'tr' ? 6 : 5];
@@ -115,6 +115,7 @@ export function buildPrompt(tok, turns, lang, limit, raw = {}, systemConditioned
   const tail = [3, ...ids.slice(-Math.max(1, cap)), 4];
   let space = limit - prefix.length - tail.length;
   const snippets = [];
+  const retrieved = [];
   function take(index, max, focus) {
     if (space < 4 || snippets.some((s) => s.index === index)) return;
     const t = turns[index],
@@ -167,8 +168,12 @@ export function buildPrompt(tok, turns, lang, limit, raw = {}, systemConditioned
     .join(' ');
   if (config.recall && search && recentStart && space > 48) {
     const reserve = Math.min(164, Math.floor(space * 0.19));
-    const hits = retrieve(hist.slice(0, recentStart), search, 2, lang);
-    for (const hit of hits) take(hit.index, reserve / hits.length, hit.focus);
+    const hits = retrieve(hist.slice(0, recentStart), encoder ? current.text : search, 2, lang, encoder);
+    for (const hit of hits) {
+      const inserted = snippets.length;
+      take(hit.index, reserve / hits.length, hit.focus);
+      if (snippets.length > inserted) retrieved.push(hit.index);
+    }
   }
   for (let i = hist.length - 1; i >= Math.max(0, hist.length - 24) && space >= 4; i--) {
     // Preserve room for the question preceding a long assistant reply.
@@ -180,6 +185,7 @@ export function buildPrompt(tok, turns, lang, limit, raw = {}, systemConditioned
   return {
     ids: [...prefix, ...ordered.flatMap((s) => s.seq), ...tail],
     used: ordered.map((s) => s.index),
+    retrieved,
     shortened: ordered.filter((s) => s.partial).map((s) => s.index),
     systemTokens: Math.max(0, prefix.length - 3),
     truncated: ids.length > cap,

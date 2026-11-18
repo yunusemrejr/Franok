@@ -104,6 +104,8 @@ In the app, open **Architecture**, choose English or Turkish and type a sentence
 
 Open **Find in session**, enter a query and select **Search by meaning across English and Turkish**. For example, a Turkish question about a lost key can retrieve an English message about where you left it. Select **Attach** to give the decoder the original words on your next turn. The search runs on your device in a separate worker and can work before loading the chat weights.
 
+In **Session controls**, turn on **Match older context across English and Turkish** to use the same model while drafting replies. The app can retrieve up to two older turns after reserving room for the current question, attached sources, and pins. Expand **Context** under a reply to see which turns were found by meaning or by word search. Each citation opens the original message. If the small search model is unavailable, the app uses word matches and records that in the reply.
+
 The search model learns one 96-dimensional vector per Franok token. It averages the vectors of each text with inverse-document-frequency weights, then normalizes the result. Their dot product measures directional similarity. The search combines this score with BM25 word matching and a bonus for exact short names or identifiers. The table takes 819,200 bytes including its row scales. Literal search remains available for precise lookups. The decoder still reads up to 1,024 tokens per prompt. [Encoder and search implementation](../web/semantic.mjs) · [Search measurements](evaluation/v3/meaning-search.json)
 
 ### Fitting four-bit weights to actual activations

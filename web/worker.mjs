@@ -3,7 +3,7 @@ import { Tokenizer } from './tokenizer.mjs';
 import { buildPrompt } from './session.mjs';
 import { settings } from './config.mjs';
 import { sampleToken } from './sampling.mjs';
-let model, tok, release, wasmBytes, readout;
+let model, tok, release, wasmBytes, readout, recallEncoder, recallSession, previousTurns = [];
 const tell = (kind, values = {}) => postMessage({ kind, ...values });
 async function read(url, label) {
   const r = await fetch(url);
@@ -112,14 +112,35 @@ onmessage = async ({ data }) => {
     }
     const options = settings(data.options, model.c.window),
       limit = options.maxNew;
+    let retrievalMode = 'word';
+    let encoder = null;
+    if (options.recall && options.semanticRecall && release.search && data.turns.length > 5) {
+      try {
+        const { loadRecallEncoder } = await import('./semantic.mjs');
+        recallEncoder ??= await loadRecallEncoder(tok, release.search);
+        encoder = recallEncoder;
+        retrievalMode = 'meaning';
+      } catch {
+        retrievalMode = 'word-fallback';
+      }
+    }
+    if (data.session !== recallSession) previousTurns = [];
+    recallSession = data.session;
+    // Reuse unchanged turn objects so the lexical and semantic indices survive follow-ups.
+    previousTurns = data.turns.map((turn, i) => {
+      const old = previousTurns[i];
+      return old && old.role === turn.role && old.text === turn.text &&
+        old.quote === turn.quote && old.quoteFocus === turn.quoteFocus ? old : turn;
+    });
     const prompt = buildPrompt(
       tok,
-      data.turns,
+      previousTurns,
       data.lang,
       model.c.window - limit,
       options,
       release.systemConditioned !== false,
       data.pins || [],
+      encoder,
     );
     const reused = model.reusePrefix(prompt.ids, prompt.ids.length - 1);
     tell('prefill', { count: prompt.ids.length, reused, truncated: prompt.truncated });
@@ -144,6 +165,8 @@ onmessage = async ({ data }) => {
       reused,
       prefillSeconds: (start - prefillStart) / 1000,
       used: prompt.used,
+      retrieved: prompt.retrieved,
+      retrievalMode,
       shortened: prompt.shortened,
       systemTokens: prompt.systemTokens,
       truncated: prompt.truncated,

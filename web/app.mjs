@@ -43,6 +43,7 @@ const release = await fetch('./release.json')
   .catch(() => ({}));
 const cfgWindow = release.window || 256;
 $('semanticField').hidden = !release.search;
+$('contextMeaningField').hidden = !release.search;
 $('readerOpen').hidden = $('readerAbout').hidden = !release.reader;
 const platform = native ? 'Ubuntu desktop' : 'Browser runtime';
 const format = release.default || (native ? 'q8' : 'q4');
@@ -335,12 +336,15 @@ function message(t, index) {
       (t.usage.model ? t.usage.model + '. ' : '') +
       (t.canonicalGreeting ? 'Standalone greeting normalized to “' + t.canonicalGreeting + '”. ' : '') +
       (t.usage.reused ? t.usage.reused + ' prefix tokens reused. ' : '') +
+      (t.usage.retrievalMode === 'word-fallback' ? 'Meaning search was unavailable. Word matching was used. ' : '') +
       (t.usage.truncated ? 'The current message was shortened. ' : '') +
       (t.usage.used?.length ? 'Earlier turns included:' : 'No earlier turns recorded.');
     details.append(summary, description);
     for (const source of t.usage.used || []) {
       const btn = document.createElement('button');
-      btn.textContent = 'Turn ' + (source + 1) + (t.usage.shortened?.includes(source) ? ' · excerpt' : '');
+      btn.textContent = 'Turn ' + (source + 1) +
+        (t.usage.retrieved?.includes(source) ? (t.usage.retrievalMode === 'meaning' ? ' · meaning search' : ' · word search') : '') +
+        (t.usage.shortened?.includes(source) ? ' · excerpt' : '');
       btn.onclick = () => highlight(source);
       details.append(btn);
     }
@@ -503,6 +507,8 @@ function startWorker() {
         reused: d.reused,
         prefillSeconds: d.prefillSeconds,
         used: d.used,
+        retrieved: d.retrieved,
+        retrievalMode: d.retrievalMode,
         shortened: d.shortened,
         systemTokens: d.systemTokens,
         truncated: d.truncated,
@@ -652,8 +658,9 @@ $('composer').onsubmit = (e) => {
   startWorker();
   worker.postMessage({
     type: 'chat',
+    session: current.id,
     lang: current.lang,
-    turns: context,
+    turns: context.map(({ role, text, quote, quoteFocus }) => ({ role, text, quote, quoteFocus })),
     pins: current.pins || [],
     options: canonicalGreeting ? { ...config, temperature: 0, maxNew: Math.min(24, config.maxNew) } : config,
   });
@@ -812,6 +819,8 @@ function fillPrefs(o) {
   $('calc').checked = o.calculator;
   $('casual').checked = o.conversationHelp;
   $('recall').checked = o.recall;
+  $('contextMeaning').checked = o.semanticRecall;
+  $('contextMeaning').disabled = !o.recall;
   $('enter').checked = o.enterSends;
 }
 $('controls').onclick = () => {
@@ -820,6 +829,7 @@ $('controls').onclick = () => {
 };
 $('temp').oninput = () => ($('tempout').value = Number($('temp').value).toFixed(2));
 $('topp').oninput = () => ($('pout').value = Number($('topp').value).toFixed(2));
+$('recall').onchange = () => { $('contextMeaning').disabled = !$('recall').checked; };
 $('resetprefs').onclick = () => fillPrefs(settings({}, cfgWindow));
 $('prefsform').onsubmit = async (e) => {
   e.preventDefault();
@@ -833,6 +843,7 @@ $('prefsform').onsubmit = async (e) => {
       calculator: $('calc').checked,
       conversationHelp: $('casual').checked,
       recall: $('recall').checked,
+      semanticRecall: $('contextMeaning').checked,
       enterSends: $('enter').checked,
     },
     cfgWindow,
