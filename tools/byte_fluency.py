@@ -81,6 +81,7 @@ def main():
     torch.set_num_threads(a.threads)
     franok_tokenizer = Tokenizer.from_file("web/tokenizer.json")
     franok_tokenizer.decoder = decoders.ByteLevel()
+    prompt_prefix = []
     if a.peer:
         from transformers import AutoTokenizer, AutoModelForCausalLM
 
@@ -92,6 +93,8 @@ def main():
             repo, revision=revision, local_files_only=True, dtype=torch.float32
         ).eval()
         ident = revision
+        if tk.encode("", add_special_tokens=True) == [tk.bos_token_id]:
+            prompt_prefix = [tk.bos_token_id]
 
         def encode(s):
             return tk.encode(s, add_special_tokens=False)
@@ -120,12 +123,18 @@ def main():
     for lang, name, pre, suffix, source in sample(a.data, franok_tokenizer):
         head = encode(pre)
         allids = encode(pre + suffix)
-        if not head or allids[: len(head)] != head or decode(allids) != pre + suffix:
+        split_at_boundary = allids[: len(head)] != head
+        if split_at_boundary:
+            # Some vocabularies merge punctuation and a following newline. The
+            # prefix is already visible at prediction time, so keep it intact.
+            allids = head + encode(suffix)
+        if not head or decode(head) != pre or decode(allids) != pre + suffix:
             raise RuntimeError(
                 "The two text spans must tokenize and decode exactly: "
                 + source["sha256"]
             )
-        scores = predict(torch.tensor([allids[:-1]]))[0, len(head) - 1 :].float()
+        context = prompt_prefix + allids[:-1]
+        scores = predict(torch.tensor([context]))[0, len(prompt_prefix) + len(head) - 1 :].float()
         total = F.cross_entropy(
             scores, torch.tensor(allids[len(head) :]), reduction="sum"
         ).item() / math.log(2)
@@ -138,6 +147,7 @@ def main():
                 bytes=size,
                 bits=total,
                 tokens=len(allids) - len(head),
+                split_at_boundary=split_at_boundary,
             )
         )
         for key in (lang, lang + "-" + name):
@@ -147,7 +157,7 @@ def main():
             sums["bits"] += total
     for sums in result.values():
         sums["bits_per_byte"] = sums["bits"] / sums["bytes"]
-    data = dict(weights=ident, seed=4419073, summary=result, items=rows)
+    data = dict(weights=ident, seed=4419073, prompt_prefix=prompt_prefix, summary=result, items=rows)
     a.out.parent.mkdir(exist_ok=True, parents=True)
     a.out.write_text(json.dumps(data, indent=2) + "\n")
     print({k: round(v["bits_per_byte"], 4) for k, v in result.items()}, flush=True)
