@@ -2,6 +2,8 @@ Options -Indexes
 DirectoryIndex index.html
 <IfModule mod_rewrite.c>
 RewriteEngine On
+# Permanent entry point for portfolio and external links, updated with each release.
+RewriteRule ^downloads/ubuntu/?$ /downloads/franok_0.2.0_amd64.deb [R=302,L]
 # The stable site URL uses GitHub's release CDN for large downloads.
 # The same checksum-verified file remains on the origin as a second source.
 RewriteCond %{QUERY_STRING} !(^|&)mirror=origin(&|$) [NC]

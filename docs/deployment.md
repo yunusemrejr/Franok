@@ -34,3 +34,5 @@ Produce `web/installer.json` with `python3 tools/installer_receipt.py work/packa
 The narrated MP4, bilingual subtitles and cover frame are included in `web/media/`. These assets are versioned with the chat app. The native desktop player can seek offline. The YouTube link opens the independently published film.
 
 For 0.2.0 the public download URL redirects to the identical GitHub release asset. Large transfers from the shared hosting account can be interrupted. Append `?mirror=origin` to download the verified backup directly from Namecheap. Both locations use the checksum published in `web/installer.json`.
+
+The portfolio links to the stable [Ubuntu download](https://franok.yunusemrevurgun.com/downloads/ubuntu). Update its temporary redirect in `deploy/htaccess` after the versioned installer is available. The versioned URL also accepts `?mirror=origin` for the checksum-matched Namecheap copy.
