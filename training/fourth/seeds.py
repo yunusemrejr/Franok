@@ -241,6 +241,187 @@ TOPICS = {
     ],
 }
 
+TOPICS.update(
+    {
+        "phones and computers": [
+            "a phone that runs out of storage",
+            "a laptop fan that gets loud",
+            "choosing a strong password you can remember",
+            "a video call where the sound keeps cutting out",
+            "backing up photos before a trip",
+            "a slow Wi-Fi connection in one room",
+            "an email that went to the wrong person",
+            "cleaning a keyboard with sticky keys",
+            "a phone screen with a small crack",
+            "a printer that says it is offline",
+            "organising files in folders",
+            "a text message from an unknown number asking for money",
+            "setting up a new phone for a grandparent",
+            "a laptop battery that drains quickly",
+        ],
+        "work and office": [
+            "a meeting that always runs over time",
+            "asking a manager for a day off",
+            "a noisy open-plan office",
+            "a to-do list that never gets shorter",
+            "starting a new job next Monday",
+            "writing a short status update for the team",
+            "a colleague who interrupts often",
+            "eating lunch at the desk every day",
+            "preparing for a job interview tomorrow",
+            "a long commute and tired mornings",
+            "saying no to extra work politely",
+            "a shared calendar full of clashes",
+            "learning a new spreadsheet formula",
+            "taking short breaks during a busy shift",
+        ],
+        "neighbours and social life": [
+            "inviting a neighbour for tea",
+            "a friend who is always late",
+            "making friends in a new city",
+            "declining a party invitation",
+            "a loud celebration next door",
+            "a gift for a host when visiting for dinner",
+            "meeting a friend's family for the first time",
+            "a group chat that never stops buzzing",
+            "returning a borrowed book late",
+            "a birthday that was almost forgotten",
+            "a shy child at a family gathering",
+            "keeping in touch with a friend who moved away",
+            "a neighbour's dog that barks all afternoon",
+            "planning a small surprise for a friend",
+        ],
+        "hobbies and games": [
+            "starting to learn the guitar",
+            "a jigsaw puzzle with a missing piece",
+            "choosing a first board game for four people",
+            "taking better photos with a phone",
+            "knitting a first scarf",
+            "a chess opening for a beginner",
+            "keeping a simple diary",
+            "drawing a face that looks right",
+            "a long walk with a bird guide",
+            "building a small model from a kit",
+            "a card game to play on a train",
+            "practising a song for ten minutes a day",
+            "fishing for the first time",
+            "joining a local running group",
+        ],
+        "city life and transport": [
+            "finding the right bus stop",
+            "topping up a travel card",
+            "cycling to work in traffic",
+            "parking in a crowded street",
+            "a train that is delayed by an hour",
+            "crossing a big city by metro",
+            "a taxi fare that seems too high",
+            "walking home at night",
+            "a missed stop on a long bus line",
+            "carrying heavy shopping on public transport",
+            "a ferry timetable with two lines",
+            "sharing a ride with a colleague",
+            "a rainy morning commute",
+            "learning the metro map of a new city",
+        ],
+        "children and family": [
+            "a toddler who refuses to eat vegetables",
+            "a bedtime routine for a five-year-old",
+            "a child who is afraid of the dark",
+            "keeping children busy on a rainy afternoon",
+            "a teenager who stays in their room",
+            "helping with homework without giving the answer",
+            "a grandparent who lives far away",
+            "a sibling quarrel over a toy",
+            "teaching a child to tie shoelaces",
+            "a family dinner with picky eaters",
+            "a first day at a new school",
+            "saying goodbye at nursery without tears",
+            "a baby who wakes up at night",
+            "chores that a seven-year-old can do",
+        ],
+        "bikes and cars": [
+            "a bicycle tyre that goes flat",
+            "a bicycle chain that keeps slipping",
+            "checking the oil level in a car",
+            "a car that will not start on a cold morning",
+            "a warning light on the dashboard",
+            "buying a used bicycle helmet",
+            "packing a car for a long drive",
+            "a windscreen that fogs up inside",
+            "a squeaking brake on a bicycle",
+            "keeping a car clean inside",
+            "choosing a bicycle lock",
+            "a long drive with a sleepy driver",
+            "checking tyre pressure",
+            "learning to ride a bicycle as an adult",
+        ],
+        "small repairs": [
+            "a button that fell off a shirt",
+            "a leaking tap",
+            "a hole in a pair of socks",
+            "a zip that will not close",
+            "a wobbly chair leg",
+            "a light bulb that keeps burning out",
+            "a scratch on a wooden table",
+            "a torn page in a book",
+            "a loose door handle",
+            "a bicycle bell that stopped ringing",
+            "a pot with a loose handle",
+            "a ripped seam on a bag",
+            "a curtain rail that is coming off",
+            "a remote control that stopped working",
+        ],
+        "learning languages": [
+            "remembering new words in another language",
+            "speaking with a stranger in a language you are learning",
+            "a pronunciation that feels impossible",
+            "choosing between an app and a class",
+            "reading a first book in another language",
+            "mixing up two similar words",
+            "a short daily listening habit",
+            "writing a message in a language you are still learning",
+            "the difference between two similar verbs",
+            "keeping going after a month without progress",
+            "a language exchange with a pen friend",
+            "watching films with subtitles to learn",
+            "learning numbers and dates",
+            "polite phrases for a trip abroad",
+        ],
+        "feelings and motivation": [
+            "feeling nervous before speaking in public",
+            "starting a task that feels too big",
+            "a bad day that is hard to shake off",
+            "feeling lonely on a Sunday evening",
+            "being proud of a small success",
+            "comparing yourself with others online",
+            "waiting for important news",
+            "getting back on track after missing a week",
+            "feeling tired but not sleepy",
+            "a friend who is going through a hard time",
+            "making a decision between two good options",
+            "keeping a New Year plan going",
+            "being criticised at work",
+            "needing a quiet hour alone",
+        ],
+        "geography and nature": [
+            "why deserts are cold at night",
+            "how rivers reach the sea",
+            "what a time zone is",
+            "why mountains have snow on top",
+            "how a compass finds north",
+            "what a rainforest is",
+            "why islands have their own animals",
+            "what the equator is",
+            "how long a day is in summer and winter",
+            "why some lakes are salty",
+            "how bees make honey",
+            "why birds fly south for winter",
+            "what a volcano is",
+            "how caves form",
+        ],
+    }
+)
+
 PERSONAS = [
     "a university student", "a retired teacher", "a parent of a toddler",
     "a night-shift nurse", "a new flatmate", "a small-shop owner", "a teenager",
@@ -250,11 +431,28 @@ PERSONAS = [
     "someone who just moved to a new city", "a high-school student",
     "a delivery rider", "someone working from home", "a shy person",
     "an impatient person", "a careful planner", "a hairdresser", "a taxi driver",
+    "a baker", "a nurse's assistant", "a secondary-school teacher", "a plumber",
+    "a first-year engineering student", "a pensioner who likes walking", "a farmer's daughter",
+    "a waiter", "a call-centre worker", "a father of three", "a person learning a second language",
+    "a cyclist", "a bookshop assistant", "a gardener", "a student sharing a room",
+    "a new parent", "a warehouse worker", "a tour guide", "a person who dislikes technology",
+    "a curious ten-year-old with a parent nearby", "a person recovering from a cold",
+    "a volunteer at a food bank", "a cashier", "a train conductor", "an athlete in training",
+    "a person who is always in a hurry", "a thoughtful person who writes full sentences",
+    "a person living alone for the first time", "an exhausted person after a double shift",
 ]
 STYLES = [
     "short and casual", "polite, in full sentences", "terse, with no greeting",
     "a little worried", "curious and chatty but under 30 words",
     "direct and practical",
+    "lower case with no punctuation, like a quick text message",
+    "friendly and slightly humorous",
+    "formal and businesslike",
+    "unsure, with a small apology",
+    "very short, three to six words",
+    "detailed, giving one useful fact about the situation",
+    "a little annoyed",
+    "enthusiastic but vague",
 ]
 TWISTS = [
     "it must cost almost nothing",
@@ -274,6 +472,96 @@ TWISTS = [
     "the weather has turned bad",
     "it needs to last a whole week",
     "the user can use only what is already at home",
+    "the user has just ten euros or about 300 lira",
+    "the user is in a different city from the person involved",
+    "the user tried the first idea and it failed",
+    "the user is doing it for an older relative",
+    "the user is in a hurry and wants only the next step",
+    "the user must keep it secret as a surprise",
+    "the user is doing this for the first time",
+    "it has to be reusable rather than thrown away",
+    "the user lives on the top floor with no lift",
+    "the user wants the safest option, not the fastest",
+    "two people have to share it",
+    "it must work for a person who cannot read small print",
+    "the user has no car",
+]
+# Concrete details that make each first message different from the next.
+ANCHORS = {
+    "en": {
+        "name": [
+            "Sam", "Priya", "Tomasz", "Hana", "Marco", "Aisha", "Keiko", "Lucas", "Fatima", "Oliver",
+            "Chloe", "Dmitri", "Grace", "Yusuf", "Anna", "Mateo", "Zara", "Henrik", "Leila", "Jonas",
+            "Ines", "Rahul", "Mina", "Victor", "Elsa", "Kofi", "Nadia", "Pavel", "Bea", "Ravi",
+        ],
+        "object": [
+            "a green backpack", "a thermos flask", "a pair of old boots", "a wool scarf", "a ceramic mug",
+            "a folding chair", "a wooden spoon", "a bicycle pump", "a desk lamp", "a plastic crate",
+            "a reading light", "a set of keys on a blue ring", "a cast-iron pan", "a small radio",
+            "a cotton shirt", "a metal water bottle", "a hand mirror", "a paper map", "a clay pot",
+            "a tin of paint", "an umbrella with a bent rib", "a sleeping bag", "a laundry basket",
+            "a glass bowl", "a pair of headphones", "a shoebox", "a rubber doormat", "a bedside clock",
+            "a garden hose", "a wall calendar", "a hand towel", "a lunch bag", "a leather belt",
+            "a set of coasters", "a toolbox", "an extension cable", "a picnic blanket", "a jar of honey",
+        ],
+        "number": [
+            "{n} euros", "{n} minutes", "{n} kilometres", "{n} days", "{n} people", "{n} pages",
+            "the number {n}", "about {n} grams", "{n} degrees", "{n} litres",
+        ],
+        "place": [
+            "a small town near the sea", "a flat on the fourth floor", "a village with one shop",
+            "a student dormitory", "a house with a small garden", "a basement flat", "a hostel",
+            "an apartment above a bakery", "a shared house", "a farm in the hills", "a flat near a station",
+            "a house by a river", "a quiet street with trees", "a market town", "a flat on a busy road",
+        ],
+    },
+    "tr": {
+        "name": [
+            "Ayşe", "Mehmet", "Zeynep", "Burak", "Elif", "Kemal", "Selin", "Onur", "Derya", "Emre",
+            "Büşra", "Cem", "Gül", "Hakan", "İpek", "Murat", "Nazlı", "Okan", "Pınar", "Serkan",
+            "Tuğba", "Volkan", "Yasemin", "Ahmet", "Berna", "Ceren", "Doruk", "Esra", "Furkan", "Hülya",
+        ],
+        "object": [
+            "yeşil bir sırt çantası", "bir termos", "eski bir çift bot", "yünlü bir atkı", "seramik bir kupa",
+            "katlanır bir sandalye", "bir tahta kaşık", "bir bisiklet pompası", "bir masa lambası", "plastik bir kasa",
+            "bir okuma lambası", "mavi halkalı bir anahtarlık", "bir dökme demir tava", "küçük bir radyo",
+            "pamuklu bir gömlek", "metal bir su matarası", "bir el aynası", "kâğıt bir harita", "bir toprak çömlek",
+            "bir kutu boya", "teli eğri bir şemsiye", "bir uyku tulumu", "bir çamaşır sepeti",
+            "cam bir kase", "bir çift kulaklık", "bir ayakkabı kutusu", "kauçuk bir paspas", "bir başucu saati",
+            "bir bahçe hortumu", "bir duvar takvimi", "bir el havlusu", "bir beslenme çantası", "deri bir kemer",
+            "bir takım bardak altlığı", "bir alet çantası", "bir uzatma kablosu", "bir piknik örtüsü", "bir kavanoz bal",
+        ],
+        "number": [
+            "{n} lira", "{n} dakika", "{n} kilometre", "{n} gün", "{n} kişi", "{n} sayfa",
+            "{n} sayısı", "yaklaşık {n} gram", "{n} derece", "{n} litre",
+        ],
+        "place": [
+            "denize yakın küçük bir kasaba", "dördüncü kattaki bir daire", "tek marketi olan bir köy",
+            "bir öğrenci yurdu", "küçük bahçeli bir ev", "bodrum katında bir daire", "bir pansiyon",
+            "fırının üstündeki bir daire", "paylaşılan bir ev", "dağlardaki bir çiftlik", "istasyona yakın bir daire",
+            "nehir kenarında bir ev", "ağaçlı sessiz bir sokak", "küçük bir ilçe", "işlek bir caddedeki daire",
+        ],
+    },
+}
+OPENERS = [
+    "a direct question", "a short description of the problem with no question mark",
+    "a request that starts with a polite phrase", "a statement of what the user already tried, then a question",
+    "a question that begins with a question word", "a message that starts with the reason for asking",
+    "a very short question", "a request for a specific number of options or steps",
+    "a worry stated in one sentence", "a question that mentions a time or a deadline",
+]
+LABEL_DOMAINS = [
+    "animals", "geography", "counting and numbers", "days, months and the calendar", "the human body",
+    "foods and kitchen items", "materials such as wood, glass or metal", "colours and shapes",
+    "simple physics such as floating, heat and magnets", "letters, words and spelling",
+    "coins, prices and change", "plants and trees", "sports and games", "musical instruments",
+    "weather and seasons", "tools and what they are for", "transport and vehicles", "time on a clock",
+    "family words", "rooms of a house and furniture",
+]
+LABEL_FORMATS = [
+    "answer yes or no", "pick one of two named options", "answer with only a number",
+    "answer with only a category word", "answer true or false", "answer with one word",
+    "answer with the name of one thing", "pick the odd one out from three words",
 ]
 TASKS = {
     "practical": (
@@ -390,8 +678,22 @@ EXAMPLES = {
 }
 
 
-def build_seeds(count, seed=40404, only=None):
-    """Balanced across language, topic and task type; everything else is random. `only` restricts the language."""
+def anchor(rng, lang):
+    """One concrete detail (a name, an object, a number or a place) for the first user message."""
+    kind = rng.choices(["name", "object", "number", "place"], weights=[3, 4, 3, 2])[0]
+    pick = rng.choice(ANCHORS[lang][kind])
+    if kind == "number":
+        n = rng.choice([rng.randint(2, 20), rng.randint(20, 99), rng.choice([100, 150, 200, 250, 500])])
+        pick = pick.format(n=n)
+    return dict(kind=kind, text=pick)
+
+
+def build_seeds(count, seed=40404, only=None, prefix=None):
+    """Balanced across language, topic and task type; everything else is random. `only` restricts the language.
+
+    Every seed also carries a concrete detail and a message form so first messages differ even when the topic repeats.
+    `prefix` names the id batch; round 2 uses "r2" so ids never collide with the round-1 conversations.
+    """
     rng = random.Random(seed)
     cells = [
         (lang, topic, task)
@@ -400,14 +702,16 @@ def build_seeds(count, seed=40404, only=None):
         for topic in TOPICS
         for task in TASKS
     ]
+    rng.shuffle(cells)
+    prefix = only or "" if prefix is None else prefix
     out = []
     for i in range(count):
         lang, topic, task = cells[i % len(cells)]
-        if i % len(cells) == 0:
+        if i % len(cells) == len(cells) - 1:
             rng.shuffle(cells)
         out.append(
             dict(
-                id=f"{only or ''}{i:06d}",
+                id=f"{prefix}{i:06d}",
                 lang=lang,
                 topic=topic,
                 task=task,
@@ -418,6 +722,10 @@ def build_seeds(count, seed=40404, only=None):
                 if task == "change" or (task in ("practical", "polite") and rng.random() < 0.2)
                 else None,
                 turns=3 if rng.random() < 0.15 else 2,
+                anchor=anchor(rng, lang) if rng.random() < 0.7 else None,
+                opener=rng.choice(OPENERS),
+                domain=rng.choice(LABEL_DOMAINS) if task == "label" else None,
+                format=rng.choice(LABEL_FORMATS) if task == "label" else None,
             )
         )
     return out
@@ -429,6 +737,13 @@ def build_prompt(seed):
     extra = ""
     if seed["twist"] and seed["task"] != "change":
         extra = f"\nOptional detail to weave in if it fits: {seed['twist']}."
+    detail = ""
+    if seed.get("anchor") and seed["task"] in ("practical", "change", "clarify", "refer"):
+        detail += f"\nWork this concrete detail naturally into the first user message (change its wording to fit the sentence): {seed['anchor']['text']}."
+    if seed.get("opener") and seed["task"] in ("practical", "change", "refer"):
+        detail += f"\nThe first user message is {seed['opener']}."
+    if seed.get("domain"):
+        detail += f"\nQuestion domain (replaces the topic above): {seed['domain']}. Answer format: {seed['format']}. Pick an unusual question in that domain, not the first one that comes to mind."
     shown = [
         dict(user=u, assistant=a) for u, a in EXAMPLES[seed["lang"], seed["task"]]
     ]
@@ -437,7 +752,7 @@ def build_prompt(seed):
 Language: {language}. {note}
 Topic: {seed['topic']}. Situation: {seed['hint']}.
 The user is {seed['persona']}. User writing style: {seed['style']}.
-Chat type: {task}{extra}
+Chat type: {task}{extra}{detail}
 Number of turns: {seed['turns']}. A turn is one user message followed by one assistant reply. Later turns continue naturally from the earlier ones.
 
 Rules for assistant replies:

@@ -14,6 +14,22 @@ Answer with one word: GOOD or BAD.
 
 {chat}"""
 
+# Second, stricter pass: the chat is kept only when both passes say GOOD.
+GRADE_STRICT = """You are a strict reviewer of training data for a small chat assistant. Read the chat below, written in {language}, and test every assistant reply against these rules.
+1. Every fact, number and piece of advice is correct and safe for anyone. If you are not sure, it fails.
+2. The reply answers exactly what the user asked, in the format the user asked for (one word, a number, a short answer). A reply that answers a different question fails.
+3. Later replies agree with the earlier ones and use the details the user gave. A reply that contradicts an earlier turn fails.
+4. The wording is natural and grammatical. {language_rule}
+5. The reply invents nothing about the user's own life, a shop, a price or a schedule.
+Answer GOOD only if every reply passes every rule. If any reply has a problem or you have any doubt, answer BAD.
+Answer with one word: GOOD or BAD.
+
+{chat}"""
+RULES = dict(
+    en="A made-up word, a wrong word or an odd phrase fails.",
+    tr="Wrong suffixes, broken vowel harmony, a made-up word, a word borrowed from another language or a literal translation from English fails.",
+)
+
 MODEL = "Qwen/Qwen3-8B"
 REVISION = "b968826d9c46dd6066d109eabc6255188de91218"
 
@@ -33,10 +49,12 @@ def main():
     p.add_argument("--max-seqs", type=int, default=384)
     p.add_argument("--quantization", default=None)
     p.add_argument("--gpu-util", type=float, default=0.92)
+    p.add_argument("--id-prefix", default=None, help="prefix of the seed ids; distinguishes this batch from earlier ones")
+    p.add_argument("--max-minutes", type=float, default=None, help="stop generating after this many minutes (checked after each chunk), then grade what exists")
     args = p.parse_args()
     from vllm import LLM, SamplingParams
 
-    seeds = build_seeds(args.count, args.seed, args.lang)
+    seeds = build_seeds(args.count, args.seed, args.lang, args.id_prefix)
     done = set()
     if args.out.exists():
         done = {json.loads(line)["seed"]["id"] for line in args.out.read_text().splitlines() if line}
@@ -84,6 +102,9 @@ def main():
             f"tokens_per_s={produced / elapsed:.0f} conv_per_s={(lo + len(batch)) / elapsed:.2f}",
             flush=True,
         )
+        if args.max_minutes and elapsed >= 60 * args.max_minutes and lo + len(batch) < len(todo):
+            print(f"time cap reached after {lo + len(batch)} of {len(todo)} conversations", flush=True)
+            break
     if args.grade:
         grade(llm, tok, args.out)
 
@@ -101,19 +122,22 @@ def grade(llm, tok, out):
         conv, reason = parse(r)
         if reason is None and r["seed"]["id"] not in seen:
             todo.append((r["seed"], conv))
-    prompts = [
-        tok.apply_chat_template(
-            [dict(role="user", content=GRADE.format(
-                language="Turkish" if s["lang"] == "tr" else "English",
-                chat="\n".join(f"User: {t['user']}\nAssistant: {t['assistant']}" for t in conv)))],
-            tokenize=False, add_generation_prompt=True, enable_thinking=False)
-        for s, conv in todo
-    ]
+
+    def render(template, s, conv):
+        chat = "\n".join(f"User: {t['user']}\nAssistant: {t['assistant']}" for t in conv)
+        language = "Turkish" if s["lang"] == "tr" else "English"
+        text = template.format(language=language, language_rule=RULES[s["lang"]], chat=chat)
+        return tok.apply_chat_template([dict(role="user", content=text)], tokenize=False, add_generation_prompt=True, enable_thinking=False)
+
     started = time.time()
-    outputs = llm.generate(prompts, SamplingParams(temperature=0.0, max_tokens=3))
+    params = SamplingParams(temperature=0.0, max_tokens=3)
+    first = llm.generate([render(GRADE, s, conv) for s, conv in todo], params)
+    second = llm.generate([render(GRADE_STRICT, s, conv) for s, conv in todo], params)
     with path.open("a") as f:
-        for (s, _), o in zip(todo, outputs):
-            f.write(json.dumps(dict(id=s["id"], verdict=o.outputs[0].text.strip().upper())) + "\n")
+        for (s, _), a, b in zip(todo, first, second):
+            votes = [a.outputs[0].text.strip().upper(), b.outputs[0].text.strip().upper()]
+            verdict = "GOOD" if all(v.startswith("GOOD") for v in votes) else "BAD"
+            f.write(json.dumps(dict(id=s["id"], verdict=verdict, votes=votes)) + "\n")
     print(f"graded {len(todo)} in {time.time() - started:.0f}s", flush=True)
 
 

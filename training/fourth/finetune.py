@@ -188,12 +188,16 @@ def main():
     if a.smoke:
         conv, read = conv[:200], read[:200]
     new_train = Examples([encode_conversation(tok, c, DEFAULT) for c in conv if c["split"] == "train"], 1)
-    new_dev = Examples([encode_conversation(tok, c, DEFAULT) for c in conv if c["split"] == "dev"], 2)
+    # Selection uses the teacher and arithmetic dev rows alone. Exact programmatic rows are low-entropy and get their own diagnostic set.
+    new_dev = Examples([encode_conversation(tok, c, DEFAULT) for c in conv if c["split"] == "dev" and c["source"] != "programmatic"], 2)
+    exact_dev = [encode_conversation(tok, c, DEFAULT) for c in conv if c["split"] == "dev" and c["source"] == "programmatic"]
     read_train = Examples([encode_reading(tok, r) for r in read if r["split"] == "train"], 3)
     read_dev = Examples([encode_reading(tok, r) for r in read if r["split"] == "dev"][:600], 4)
     replay = Conversations("train")
     raw, raw_val = Shards("train"), widen(Shards("val"))
     dev = dict(conversations=new_dev, reading=read_dev)
+    if exact_dev:
+        dev["programmatic"] = Examples(exact_dev, 5)
     print(
         f"new {len(new_train)} train/{len(new_dev)} dev ({new_train.targets} targets), "
         f"reading {len(read_train)} train/{len(read_dev)} dev, prepared in {time.time() - started:.0f}s",

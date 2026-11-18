@@ -162,7 +162,7 @@ def key(conv):
     ).hexdigest()
 
 
-def run(raw_files, arithmetic, out, report, tests, test_digest, grades=()):
+def run(raw_files, arithmetic, out, report, tests, test_digest, grades=(), existing=(), programmatic=()):
     counts = Counter()
     verdict = {}
     for file in grades:
@@ -171,6 +171,16 @@ def run(raw_files, arithmetic, out, report, tests, test_digest, grades=()):
                 row = json.loads(line)
                 verdict[row["id"]] = row["verdict"]
     kept, first_turns, whole = [], set(), set()
+    for file in existing:
+        # Rows of an earlier round were filtered with the same rules; they stay as they are and their openings count as seen.
+        for line in Path(file).read_text().splitlines():
+            if line:
+                row = json.loads(line)
+                counts[f"existing_{row['source']}_{row['lang']}"] += 1
+                first_turns.add(re.sub(r"\W+", " ", fold(row["turns"][0]["user"])).strip())
+                whole.add(key(row["turns"]))
+                kept.append(row)
+    counts["existing_kept"] = len(kept)
     records = []
     for file in raw_files:
         records += [json.loads(line) for line in Path(file).read_text().splitlines() if line]
@@ -196,7 +206,7 @@ def run(raw_files, arithmetic, out, report, tests, test_digest, grades=()):
         s = r["seed"]
         counts["kept_" + s["lang"]] += 1
         kept.append(dict(id=s["id"], lang=s["lang"], source="teacher", task=s["task"], topic=s["topic"], turns=conv))
-    counts["teacher_kept"] = len(kept)
+    counts["teacher_kept"] = len(kept) - counts["existing_kept"]
     for r in arithmetic:
         counts["arithmetic_in"] += 1
         reason = check(r["turns"], r["lang"], tests, language=False)
@@ -210,7 +220,24 @@ def run(raw_files, arithmetic, out, report, tests, test_digest, grades=()):
             continue
         counts["arithmetic_kept"] += 1
         kept.append(r)
+    for r in programmatic:
+        counts["programmatic_in"] += 1
+        counts[f"programmatic_in_{r['kind']}"] += 1
+        reason = check(r["turns"], r["lang"], tests, language=False)
+        if reason is None and key(r["turns"]) in whole:
+            reason = "duplicate"
+        if reason:
+            counts["programmatic_drop_" + reason] += 1
+            counts[f"programmatic_drop_{r['kind']}_{reason}"] += 1
+            continue
+        whole.add(key(r["turns"]))
+        counts["programmatic_kept"] += 1
+        counts[f"programmatic_kept_{r['kind']}"] += 1
+        counts[f"programmatic_kept_{r['lang']}"] += 1
+        kept.append(r)
     for c in kept:
+        if "split" in c:
+            continue
         c["split"] = "dev" if int.from_bytes(hashlib.sha256(c["id"].encode()).digest()[:4], "little") % 100 < 3 else "train"
     by_lang = Counter((c["source"], c["lang"], c["split"]) for c in kept)
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -237,15 +264,19 @@ def main():
     from .arithmetic import generate
 
     p = argparse.ArgumentParser()
-    p.add_argument("raw", nargs="+", type=Path)
+    p.add_argument("raw", nargs="*", type=Path)
     p.add_argument("--arithmetic", type=int, default=3000)
+    p.add_argument("--existing", nargs="*", type=Path, default=[], help="filtered conversation files from an earlier round, kept as they are")
+    p.add_argument("--programmatic", type=int, default=0, help="number of exact programmatic dialogues to add")
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--report", type=Path, required=True)
     p.add_argument("--grades", nargs="*", type=Path, default=[], help="JSONL verdicts from the teacher grading pass")
     p.add_argument("--no-benchmarks", action="store_true", help="skip the XQuAD and Belebele question lists (offline smoke tests only)")
     a = p.parse_args()
     tests, digest = load_tests([] if a.no_benchmarks else benchmark_questions())
-    run(a.raw, generate(a.arithmetic), a.out, a.report, tests, digest, a.grades)
+    from .dialogues import generate as dialogues
+
+    run(a.raw, generate(a.arithmetic) if a.arithmetic else [], a.out, a.report, tests, digest, a.grades, a.existing, dialogues(a.programmatic) if a.programmatic else [])
 
 
 if __name__ == "__main__":
