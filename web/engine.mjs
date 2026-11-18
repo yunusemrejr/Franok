@@ -41,12 +41,30 @@ export class Engine {
         this.f[this.cos / 4 + j] = Math.cos(theta);
         this.f[this.sin / 4 + j] = Math.sin(theta);
       }
+    this.tokens = new Int32Array(m.window);
     this.reset();
   }
   reset() {
     this.pos = 0;
     this.anchor = 0;
     this.last = 0;
+  }
+  reusePrefix(ids, limit = ids.length) {
+    let count = 0;
+    const end = Math.min(this.pos, ids.length, limit);
+    while (count < end && ids[count] === this.tokens[count]) count++;
+    this.pos = count;
+    this.last = count ? this.tokens[count - 1] : 0;
+    // The active group reads the final token of the preceding group.
+    const group = Math.floor((count - 1) / this.c.banks);
+    this.anchor = group > 0 ? this.tokens[group * this.c.banks - 1] : 0;
+    return count;
+  }
+  hidden() {
+    if (!this.pos) throw Error('Read a decoder state after processing a token.');
+    const width = this.c.width;
+    this.w.rms(this.x, this.ptr('norm.weight'), this.norm, width);
+    return this.f.slice(this.norm / 4, this.norm / 4 + width);
   }
   ptr(name) {
     return this.base + this.t[name].offset;
@@ -60,6 +78,7 @@ export class Engine {
       throw Error('Decoder input outside its context.');
     if (pos % c.banks === 0) this.anchor = this.last;
     this.last = token;
+    this.tokens[pos] = token;
     const kernel = this.bits === 8 ? w.gemv8 : w.gemv;
     const mul = (p, x, y, rows, cols) => kernel(p, x, y, rows, cols, this.act, this.scales);
     const tbl = this.ptr('embed.weight'),
@@ -84,7 +103,7 @@ export class Engine {
       mul(p('out.weight'), this.a, this.norm, d, d);
       w.add(this.x, this.norm, d);
       w.rms(this.x, p('post.weight'), this.norm, d);
-      const bank = ((pos % c.banks) + (this.anchor >> layer % 4) + layer) % c.banks;
+      const bank = ((pos % c.banks) + (this.anchor >> (layer % 4)) + layer) % c.banks;
       mul(
         p('up') + (bank * this.t['blocks.' + layer + '.up'].bytes) / c.banks,
         this.norm,

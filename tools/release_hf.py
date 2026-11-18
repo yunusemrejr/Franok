@@ -37,18 +37,49 @@ def publish_weights(args):
     for stage in ("dialogue", "evidence", "rl"):
         for f in ("adapter.json", "adapter.safetensors"):
             mapping[f"adapters/{stage}/{f}"] = run / "adapters" / stage / f
-    for f in (
-        "progress.json",
-        "finished.json",
-        "rl-finished.json",
-        "metrics.jsonl",
-        "rl.jsonl",
-    ):
-        mapping["training-record/" + f] = run / f
+    version = json.loads((ROOT / "package.json").read_text())["version"]
+    logs = ["rl-finished.json", "rl.jsonl"]
+    if (run / "post-finished.json").exists():
+        logs += [
+            "pretrain.jsonl",
+            "recovery.json",
+            "sft.json",
+            "dialogue.json",
+            "evidence.json",
+            "post.jsonl",
+            "post-finished.json",
+        ]
+    else:
+        logs += ["progress.json", "finished.json", "metrics.jsonl"]
+    for f in logs:
+        mapping[f"training-record/{version}/{f}"] = run / f
+    products = run / "adapters/rl/updates.safetensors"
+    if products.is_file():
+        mapping["adapters/rl/updates.safetensors"] = products
+    reader = None
+    if args.reader:
+        folder = run / "reader"
+        config = json.loads((folder / "config.json").read_text())
+        training = json.loads((folder / "training.json").read_text())
+        if training["history"][-1]["step"] <= 0:
+            raise ValueError("No trained reader updates")
+        for f in ("head.safetensors", "config.json", "training.json"):
+            mapping["reader/" + f] = folder / f
+        reader = dict(
+            url="./reader.safetensors",
+            baseSha256=receipt["sha256"],
+            sha256=checksum(folder / "head.safetensors"),
+            **{k: config[k] for k in ("width", "hidden", "max_span", "threshold")},
+        )
     full = run.parent / "fp32"
     proof = json.loads((full / "reconstruction.json").read_text())
     if checksum(full / "model.safetensors") != proof["sha256"]:
         raise ValueError("Wrong FP32 reconstruction")
+    if (
+        receipt.get("fp32_sha256", proof["sha256"]) != proof["sha256"]
+        or proof["fp16_different_elements"]
+    ):
+        raise ValueError("Merged weights disagree with the training host")
     mapping.update(
         {
             "fp32/model.safetensors": full / "model.safetensors",
@@ -80,14 +111,24 @@ def publish_weights(args):
         bytes=(full / "model.safetensors").stat().st_size,
         sha256=proof["sha256"],
     )
-    info = HfApi().create_commit(
+    api = HfApi()
+    if args.revision != "main":
+        api.create_branch(repo_id=REPO, branch=args.revision, exist_ok=True)
+    info = api.create_commit(
         repo_id=REPO,
+        revision=args.revision,
         operations=[
             CommitOperationAdd(path_in_repo=k, path_or_fileobj=v)
             for k, v in mapping.items()
         ],
-        commit_message="Publish extended Franok FP16, calibrated Q4, Q8 and three trained adapters",
+        commit_message=f"Publish Franok {version} full precision, Q4, Q8 and training artifacts",
     )
+    if args.revision != "main":
+        return info
+    if reader:
+        shutil.copyfile(
+            run / "reader/head.safetensors", ROOT / "web/reader.safetensors"
+        )
     for record in formats.values():
         record["url"] = (
             f"https://huggingface.co/{REPO}/resolve/{info.oid}/" + record.pop("file")
@@ -115,6 +156,8 @@ def publish_weights(args):
             youtube="https://youtu.be/XtNThi_pBjM",
         ),
     )
+    if reader:
+        release["reader"] = reader
     (ROOT / "web/release.json").write_text(json.dumps(release, indent=2) + "\n")
     return info
 
@@ -154,6 +197,16 @@ def publish_source():
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("part", choices=("weights", "source"))
+    p.add_argument(
+        "--reader",
+        action="store_true",
+        help="Include the separately evaluated trained passage reader",
+    )
+    p.add_argument(
+        "--revision",
+        default="main",
+        help="Publish experimental weights to a separate branch without activating the app",
+    )
     p.add_argument("--run", type=Path, default=ROOT / "work/v2/run")
     p.add_argument("--export", type=Path, default=ROOT / "work/v2/export")
     args = p.parse_args()

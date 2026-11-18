@@ -1050,3 +1050,16 @@ hr {
     opacity: 0;
   }
 }
+
+#readingForm > label:not(:first-of-type) { margin-top: 1rem; }
+#readingForm .dialogfoot { justify-content: end; }
+#readingForm textarea { resize: vertical; min-height: 6rem; max-height: 40vh; }
+.sourcepassage { margin: .65rem 0; font-size: .92rem; }
+.sourcepassage summary { cursor: pointer; color: var(--muted); }
+.sourcepassage p { white-space: pre-wrap; overflow-wrap: anywhere; }
+.sourcepassage mark { background: #f3cb83; color: #38280b; padding: .06em .12em; }
+.message blockquote { margin: .5em 0; padding: .15em .9em; border-left: 3px solid var(--accent); white-space: pre-wrap; }
+@media (max-width: 520px) {
+  #readerOpen { padding-inline: 7px; }
+  #readerOpen span { display: none; }
+}

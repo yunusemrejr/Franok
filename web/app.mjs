@@ -25,8 +25,10 @@ const make = () => ({
   created: Date.now(),
   updated: Date.now(),
 });
-const title = (s) =>
-  s.name || s.turns.find((t) => t.role === 'user')?.text.slice(0, 60) || 'New conversation';
+const title = (s) => {
+  const first = s.turns.find((t) => t.role === 'user');
+  return s.name || first?.text.slice(0, Math.min(first.questionEnd ?? 60, 60)) || 'New conversation';
+};
 const sessionList = await loadSessions();
 let current = sessionList.find((s) => s.id === activeId()) || sessionList[0] || make();
 let view = 'chat',
@@ -39,6 +41,7 @@ const release = await fetch('./release.json')
   .then((r) => r.json())
   .catch(() => ({}));
 const cfgWindow = release.window || 256;
+$('readerOpen').hidden = $('readerAbout').hidden = !release.reader;
 const platform = native ? 'Ubuntu desktop' : 'Browser runtime';
 const format = release.default || (native ? 'q8' : 'q4');
 const size = release.formats?.[format]?.bytes || 196331520;
@@ -194,6 +197,7 @@ const authorLabels = {
   calculator: ['Calculator', 'Hesap makinesi'],
   language: ['Language setting', 'Dil ayarı'],
   recall: ['Session search', 'Konuşma araması'],
+  reader: ['Franok · passage reader', 'Franok · metin okuma'],
   social: ['Conversation helper', 'Sohbet yardımı'],
   user: ['You', 'Siz'],
   assistant: ['Franok', 'Franok'],
@@ -246,8 +250,45 @@ function message(t, index) {
   }
   const body = document.createElement('div');
   body.className = 'body';
-  writeBody(body, t.text);
+  if (t.tool === 'reader' && t.reading?.accepted) {
+    const quote = document.createElement('blockquote');
+    quote.textContent = t.text;
+    body.append(quote);
+  } else {
+    writeBody(body, Number.isInteger(t.questionEnd) ? t.text.slice(0, t.questionEnd) : t.text);
+  }
   item.append(h, body);
+  const isSource = Number.isInteger(t.questionEnd);
+  const source = isSource ? t : current.turns[t.reading?.source];
+  if (Number.isInteger(source?.questionEnd)) {
+    const details = document.createElement('details'),
+      summary = document.createElement('summary');
+    const tr = current.lang === 'tr';
+    details.className = 'sourcepassage';
+    summary.textContent = t.reading?.accepted
+      ? tr
+        ? 'Metindeki yeri göster'
+        : 'Show highlighted source'
+      : tr
+        ? 'Kaynak metin'
+        : 'Source passage';
+    details.append(summary);
+    details.ontoggle = () => {
+      if (!details.open || details.children.length > 1) return;
+      const passage = source.text.slice(source.questionEnd + 2);
+      const content = document.createElement('p');
+      if (t.reading?.accepted) {
+        const bytes = new TextEncoder().encode(passage),
+          decode = new TextDecoder();
+        const { startByte: a, endByte: b } = t.reading;
+        const mark = document.createElement('mark');
+        mark.textContent = decode.decode(bytes.subarray(a, b));
+        content.append(decode.decode(bytes.subarray(0, a)), mark, decode.decode(bytes.subarray(b)));
+      } else content.textContent = passage;
+      details.append(content);
+    };
+    item.append(details);
+  }
   if (Number.isInteger(t.quote) && current.turns[t.quote]) {
     const a = document.createElement('button');
     a.className = 'source';
@@ -283,6 +324,7 @@ function message(t, index) {
       ' system tokens. ' +
       (t.usage.model ? t.usage.model + '. ' : '') +
       (t.canonicalGreeting ? 'Standalone greeting normalized to “' + t.canonicalGreeting + '”. ' : '') +
+      (t.usage.reused ? t.usage.reused + ' prefix tokens reused. ' : '') +
       (t.usage.truncated ? 'The current message was shortened. ' : '') +
       (t.usage.used?.length ? 'Earlier turns included:' : 'No earlier turns recorded.');
     details.append(summary, description);
@@ -311,6 +353,9 @@ function paint() {
   $('quotechip').querySelector('span').textContent = 'Attached turn ' + (current.quote + 1);
   $('lang').value = current.lang;
   $('draft').value = current.draft || '';
+  $('readerOpen').querySelector('span').textContent = current.lang === 'tr' ? 'Metin oku' : 'Read a passage';
+  $('readerOpen').title = current.lang === 'tr' ? 'Metin hakkında soru sor' : 'Ask about a passage';
+  $('readerOpen').setAttribute('aria-label', $('readerOpen').title);
   $('draft').placeholder = current.lang === 'tr' ? 'Franok’a mesaj yaz…' : 'Message Franok…';
   $('messages').replaceChildren(...current.turns.map(message));
   $('stream').scrollTop = $('stream').scrollHeight;
@@ -326,6 +371,7 @@ function flags(on) {
   $('stop').hidden = !on;
   $('lang').disabled = on;
   $('controls').disabled = on;
+  $('readerOpen').disabled = on;
   $('actions').disabled = on;
 }
 function stop() {
@@ -366,7 +412,37 @@ function startWorker() {
     }
     if (d.kind === 'prefill')
       $('status').textContent =
-        'Reading ' + d.count + ' prompt tokens' + (d.truncated ? ' · current message shortened…' : '…');
+        'Reading ' +
+        (d.count - d.reused) +
+        ' new prompt tokens' +
+        (d.truncated ? ' · current message shortened…' : '…');
+    if (d.kind === 'reading')
+      $('status').textContent =
+        (current.lang === 'tr' ? 'Metin okunuyor' : 'Reading passage') +
+        (d.total ? ' · ' + d.count + ' / ' + d.total : '…');
+    if (d.kind === 'quoted' && answer?.tool === 'reader') {
+      const tr = current.lang === 'tr';
+      answer.text = d.accepted
+        ? d.quote
+        : tr
+          ? 'Franok bu metinde güvenle alıntılayabileceği bir yanıt bulamadı.'
+          : 'Franok could not identify an answer it could confidently quote from this passage.';
+      answer.reading = {
+        ...answer.reading,
+        accepted: d.accepted,
+        startByte: d.startByte,
+        endByte: d.endByte,
+        windows: d.windows,
+        tokens: d.tokens,
+      };
+      const finished = current;
+      answer = null;
+      flags(false);
+      await save();
+      if (activeWorker !== worker || current !== finished || busy) return;
+      paint();
+      $('status').textContent = tr ? 'Metin bu cihazda okundu.' : 'Passage read on this device.';
+    }
     if (d.kind === 'part' && answer) {
       answer.text = d.text;
       const b = $('messages').lastElementChild?.querySelector('.body');
@@ -391,6 +467,8 @@ function startWorker() {
         tokens: d.tokens,
         seconds: d.seconds,
         prompt: d.prompt,
+        reused: d.reused,
+        prefillSeconds: d.prefillSeconds,
         used: d.used,
         shortened: d.shortened,
         systemTokens: d.systemTokens,
@@ -414,6 +492,48 @@ function startWorker() {
     if (d.kind === 'error') fail(d.message);
   };
 }
+$('readerOpen').onclick = () => {
+  if (busy || !release.reader) return;
+  const tr = current.lang === 'tr';
+  $('readingTitle').textContent = tr ? 'Metin hakkında soru sor' : 'Ask about a passage';
+  $('sourceLabel').textContent = tr ? 'Kaynak metin' : 'Source passage';
+  $('questionLabel').textContent = tr ? 'Soru' : 'Question';
+  $('readerHint').textContent = tr
+    ? 'Franok, kaynak metinden doğrudan alıntılayabileceği kısa bir yanıt arar.'
+    : 'Franok looks for a short answer it can quote directly from this text.';
+  $('readSource').textContent = tr ? 'Yanıtı bul' : 'Find answer';
+  $('sourceText').value = Number.isInteger(current.quote) ? current.turns[current.quote]?.text || '' : '';
+  $('sourceQuestion').value = $('draft').value;
+  $('readingDialog').showModal();
+  ($('sourceText').value ? $('sourceQuestion') : $('sourceText')).focus();
+};
+$('readingForm').onsubmit = (e) => {
+  e.preventDefault();
+  if (busy || !release.reader) return;
+  const question = $('sourceQuestion').value.trim(),
+    passage = $('sourceText').value;
+  if (!question || !passage.trim()) return;
+  const source = current.turns.length;
+  current.turns.push({
+    role: 'user',
+    text: question + '\n\n' + passage,
+    questionEnd: question.length,
+    at: Date.now(),
+  });
+  delete current.quote;
+  delete current.quoteFocus;
+  current.draft = '';
+  answer = { role: 'assistant', tool: 'reader', text: '', reading: { source }, at: Date.now() };
+  current.turns.push(answer);
+  $('readingDialog').close();
+  flags(true);
+  save();
+  paint();
+  startWorker();
+  $('status').textContent =
+    current.lang === 'tr' ? 'Metin okuyucu hazırlanıyor…' : 'Preparing passage reader…';
+  worker.postMessage({ type: 'read', question, passage, lang: current.lang });
+};
 $('composer').onsubmit = (e) => {
   e.preventDefault();
   const text = $('draft').value.trim();

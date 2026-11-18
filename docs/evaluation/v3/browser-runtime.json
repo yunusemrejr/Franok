@@ -1,0 +1,96 @@
+{
+  "q4": {
+    "medians": {
+      "32": {
+        "prefill_speedup": 1.1565667783539286,
+        "decode_speedup": 1.1574511540902834,
+        "reference_top1": 31,
+        "decode_steps": 32
+      },
+      "256": {
+        "prefill_speedup": 1.1330960539402803,
+        "decode_speedup": 1.2261791684237928,
+        "reference_top1": 32,
+        "decode_steps": 32
+      },
+      "896": {
+        "prefill_speedup": 1.3813925427562908,
+        "decode_speedup": 1.6319104406097984,
+        "reference_top1": 32,
+        "decode_steps": 32
+      }
+    },
+    "followup": {
+      "fmt": "q4",
+      "prompt": 770,
+      "reused": 757,
+      "warmMs": 143.26299599999948,
+      "coldMs": 8303.308422999999,
+      "ratio": 57.95850048396328,
+      "exact": true
+    },
+    "fp32_before": {
+      "n": 1308,
+      "modelNll": 2.5563980281587257,
+      "fullNll": 2.5285575156082536,
+      "coarseKl": 0.0350820307014913,
+      "top1": 0.8899082568807339
+    },
+    "fp32_after": {
+      "n": 1308,
+      "modelNll": 2.5561584536429423,
+      "fullNll": 2.5285575156082536,
+      "coarseKl": 0.03506060461156311,
+      "top1": 0.8906727828746177
+    },
+    "weights": "b87dd88be8872fad5a7623b0f9c76721043dfdad182f9303750da888911ec83e",
+    "node": "v24.21.0"
+  },
+  "q8": {
+    "medians": {
+      "32": {
+        "prefill_speedup": 0.9555009223589261,
+        "decode_speedup": 1.1868181229684265,
+        "reference_top1": 32,
+        "decode_steps": 32
+      },
+      "256": {
+        "prefill_speedup": 1.367436934903951,
+        "decode_speedup": 1.2760796271775725,
+        "reference_top1": 32,
+        "decode_steps": 32
+      },
+      "896": {
+        "prefill_speedup": 1.402068146663775,
+        "decode_speedup": 1.6925790537638363,
+        "reference_top1": 32,
+        "decode_steps": 32
+      }
+    },
+    "followup": {
+      "fmt": "q8",
+      "prompt": 770,
+      "reused": 757,
+      "warmMs": 165.48757300000034,
+      "coldMs": 8979.35544,
+      "ratio": 54.25999836253554,
+      "exact": true
+    },
+    "fp32_before": {
+      "n": 1308,
+      "modelNll": 2.5275877610792397,
+      "fullNll": 2.5285575156082536,
+      "coarseKl": 0.000283973873353186,
+      "top1": 0.981651376146789
+    },
+    "fp32_after": {
+      "n": 1308,
+      "modelNll": 2.5272502054028125,
+      "fullNll": 2.5285575156082536,
+      "coarseKl": 0.000290142925742153,
+      "top1": 0.9801223241590215
+    },
+    "weights": "fe5f24b98b333e23112ccbe885516f9557ab6bb0182540cce2ef82ed80362af7",
+    "node": "v24.21.0"
+  }
+}

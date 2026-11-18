@@ -53,6 +53,25 @@ Each bank expands 512 features into 2,048. All projections omit bias. The final 
 
 The extended release trains up to 1,024 positions. The first release trained to 256. The application keeps complete saved sessions, retrieves earlier messages by term overlap weighted by inverse document frequency, and fits them into the space left by the current question and system instructions. Search returns the original saved turn and lets the user attach it to a new message. An attachment gets prompt budget first and its local citation survives a restart. A long attachment includes the passage around the search match. Recent turns stay complete whenever there is room. A long reply keeps its beginning and ending, and its citation is marked as an excerpt. The source turn stays available in full. This application feature can retrieve text older than the neural window. Approximate keyword retrieval can miss paraphrases.
 
+### How a passage can supply an exact answer
+
+The experimental passage reader shares the trained bilingual decoder. Chat uses its last state to predict another token. The reader also retains the normalized state at every position, including positions inside the source. It compares each source token with the question words and lets nearby tokens on either side help identify answer boundaries.
+
+```mermaid
+flowchart TD
+  Q["Question followed by original passage"] --> D["12 shared decoder layers"]
+  D --> H["One normalized state per token"]
+  H --> G["Vocabulary scores at the last token"]
+  G --> C["Chat generates the next piece"]
+  H --> A["Align each passage token with question tokens"]
+  A --> L["Score beginnings, endings and lengths"]
+  L --> U{"Best legal span clears the no-answer margin?"}
+  U -->|Yes| S["Copy and highlight those bytes from the source"]
+  U -->|No| N["Report that no confident quote was found"]
+```
+
+For question keys $k_j$ and a passage query $p_i$, the alignment weights are $a_{ij}=\mathrm{softmax}_j(p_i^\top k_j/\sqrt{96})$. The head combines the aligned question vector with the decoder state, then applies short depthwise convolutions and a residual projection. A span starting at $i$ and ending at $j$ receives $s_i+e_j+\ell_{j,j-i}$. Candidate spans cover up to 48 tokens. Both byte boundaries must be valid UTF-8 character boundaries. A separate learned score represents an unanswerable question. The reported quote always comes from the original text. Selecting the right quote is a learned skill and can fail. [PyTorch readout](../franok/span.py) · [Browser readout](../web/reader.mjs)
+
 ### Finding an exact quote in a long chat
 
 Type `/recall train` or `/hatırla tren` in the workspace to quote your earlier messages containing that word. The application returns excerpts with links to their original turns. This search runs on the device and can reach a turn outside the last 1,024 model tokens. When you attach a turn to a new question, the neural model still has to interpret it.
@@ -68,3 +87,9 @@ The browser, Ubuntu app and Python chat command all reuse these attention values
 The worker streams one checked weight file, verifies SHA-256, and reuses a cached copy where available. In the original peak-scale Q4 exporter, each group of 32 weights has a float32 scale $s=\max(|w|)/7$ and sixteen bytes of packed integer weights. Entries $j$ and $j+16$ share a byte. Each group therefore uses 20 bytes. The WebAssembly SIMD kernel quantizes input activations to signed eight-bit values per group, forms integer dot products and accumulates the rescaled products in float32. Norm scales and KV caches stay in float32. The released Q4 exporter tries several scale seeds and alternates code assignment with a least-squares scale fit, keeping the lowest squared reconstruction error for each group. Q8 stores 32 signed bytes and a float32 scale per group. Its integer limit is 127. At 1,024 tokens the twelve-layer key/value cache occupies 12 MiB. First-generation latency includes prompt processing. Device throughput varies.
 
 The reference parity check compares every position of a small deterministic PyTorch example with the incremental WASM decoder, including anchor changes and partial groups. The bilingual tokenizer round-trip test includes Turkish characters, punctuation, literal role-marker text, combining marks and emoji.
+
+### Reusing work on a follow-up
+
+The browser and desktop keep a RAM-only list of the token IDs represented in their key/value cache. At the next turn they compare the new prompt with those IDs until the first difference. They reuse the matching keys and values, reconstruct the active bank group's anchor, and recompute the remaining suffix. Reprocessing the final prompt token supplies fresh vocabulary scores. Changing an attachment, pin, system prompt or the language can shorten the match. Closing the worker discards the cache. A fresh computation and a reused computation produced bit-identical WASM scores in the branching-prefix checks. [Implementation](../web/engine.mjs) · [Prefix tests](../tests/prefix.mjs)
+
+The SIMD runtime evaluates the exponentials for SwiGLU and attention inside WebAssembly. Range reduction uses powers of two and a degree-six polynomial. A fixed-stream A/B benchmark on a Ryzen 5 7530U found median decode speedups of 1.63× for Q4 and 1.69× for Q8 after a prefix of 896 tokens. These are Node-hosted WASM measurements on one laptop. The much shorter, 32-token Q8 prefill was slightly slower. [Benchmark source](../tools/benchmark_wasm.mjs) · [Measurements](evaluation/v3/browser-runtime.json)

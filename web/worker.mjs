@@ -3,7 +3,7 @@ import { Tokenizer } from './tokenizer.mjs';
 import { buildPrompt } from './session.mjs';
 import { settings } from './config.mjs';
 import { sampleToken } from './sampling.mjs';
-let model, tok, release;
+let model, tok, release, wasmBytes, readout;
 const tell = (kind, values = {}) => postMessage({ kind, ...values });
 async function read(url, label) {
   const r = await fetch(url);
@@ -57,6 +57,7 @@ async function load() {
     throw Error('Weight checksum mismatch. Please retry.');
   }
   if (!stored && cache) await cache.put(url, new Response(bytes)).catch(() => {});
+  wasmBytes = wasm;
   model = await createEngine(wasm, manifest, bytes);
   tok = new Tokenizer(spec);
   tell('ready');
@@ -65,7 +66,32 @@ onmessage = async ({ data }) => {
   try {
     await load();
     if (data.type === 'load') return;
-    model.reset();
+    if (data.type === 'read') {
+      const spec = release.reader;
+      if (!spec || spec.baseSha256 !== release.formats.fp16.sha256)
+        throw Error('This checkpoint has no matching passage reader.');
+      const { createReadout, readPassage } = await import('./reader.mjs');
+      if (!readout) {
+        const binary = await (await read(spec.url, 'Passage reader')).arrayBuffer();
+        const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', binary)), (v) =>
+          v.toString(16).padStart(2, '0'),
+        ).join('');
+        if (hash !== spec.sha256) throw Error('Passage-reader checksum mismatch.');
+        readout = await createReadout(wasmBytes, binary, spec);
+      }
+      tell('reading', { count: 0 });
+      const result = readPassage(
+        model,
+        tok,
+        readout,
+        data.question,
+        data.passage,
+        data.lang,
+        (count, total) => tell('reading', { count, total }),
+      );
+      tell('quoted', result);
+      return;
+    }
     const options = settings(data.options, model.c.window),
       limit = options.maxNew;
     const prompt = buildPrompt(
@@ -77,9 +103,11 @@ onmessage = async ({ data }) => {
       release.systemConditioned !== false,
       data.pins || [],
     );
-    tell('prefill', { count: prompt.ids.length, truncated: prompt.truncated });
+    const reused = model.reusePrefix(prompt.ids, prompt.ids.length - 1);
+    tell('prefill', { count: prompt.ids.length, reused, truncated: prompt.truncated });
+    const prefillStart = performance.now();
     let logits;
-    for (let i = 0; i < prompt.ids.length; i++)
+    for (let i = reused; i < prompt.ids.length; i++)
       logits = model.step(prompt.ids[i], i === prompt.ids.length - 1);
     const generated = [],
       start = performance.now();
@@ -95,6 +123,8 @@ onmessage = async ({ data }) => {
       tokens: generated.length,
       seconds: (performance.now() - start) / 1000,
       prompt: prompt.ids.length,
+      reused,
+      prefillSeconds: (start - prefillStart) / 1000,
       used: prompt.used,
       shortened: prompt.shortened,
       systemTokens: prompt.systemTokens,
