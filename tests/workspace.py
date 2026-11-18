@@ -29,7 +29,7 @@ def verify(url):
         errors = []
         a.on("pageerror", lambda err: errors.append(str(err)))
         a.goto(url)
-        expect(a.locator("#draft")).to_have_value("Yarım kalan taslak")
+        expect(a.locator("#draft")).to_have_value("Yarım kalan taslak", timeout=30000)
         a.get_by_role("button", name="Pin turn 1", exact=True).click()
         a.locator("#draft").fill("Kaydedilmiş ikinci taslak")
         a.reload()

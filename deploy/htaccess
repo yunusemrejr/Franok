@@ -1,5 +1,12 @@
 Options -Indexes
 DirectoryIndex index.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# The stable site URL uses GitHub's release CDN for large downloads.
+# The same checksum-verified file remains on the origin as a second source.
+RewriteCond %{QUERY_STRING} !(^|&)mirror=origin(&|$) [NC]
+RewriteRule ^downloads/franok_0\.2\.0_amd64\.deb$ https://github.com/yunusemrejr/Franok/releases/download/v0.2.0/franok_0.2.0_amd64.deb [R=302,L,QSD]
+</IfModule>
 AddType application/wasm .wasm
 AddType text/javascript .mjs
 AddType text/vtt .vtt

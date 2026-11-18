@@ -23,6 +23,8 @@ gtk-launch franok
 
 Omit `--pin` to register the app without adding a dock favorite. The launcher reuses an installed, root-owned Chromium sandbox helper where one is available. The renderer runs with sandboxing and context isolation. Move the checkout only after quitting Franok, then run the installer again to update the launcher path.
 
+On Ubuntu systems that restrict user namespaces, Electron checks the helper beside its executable first. The source launcher hard-links Electron into a private runtime directory alongside a link to the existing system helper. The npm distribution stays intact. A system-wide Debian installation uses the root-owned helper included in the package.
+
 ## Ubuntu and media releases
 
 The project checkout builds the Electron installer with `npm ci`, `npx install-electron`, and `npm run package:ubuntu`. The package carries the UI, WASM runtime, the film and both subtitle tracks. It downloads the pinned Q8 file on first use, verifies its SHA-256 and stores it in the user's application data. The package registers `franok.desktop` with the application menu and Ubuntu dock. Source installations use `desktop/install.sh --pin`.
@@ -30,3 +32,5 @@ The project checkout builds the Electron installer with `npm ci`, `npx install-e
 Produce `web/installer.json` with `python3 tools/installer_receipt.py work/packages/franok_0.2.0_amd64.deb`. Publish the checksum-matched binary to the stable hosting path with `deploy/publish-installer.sh work/packages/franok_0.2.0_amd64.deb`. The hook keeps that downloads directory across code releases. Attach the identical file and its `SHA256SUMS` to the matching GitHub release. The web workspace uses its small same-origin receipt to display the download size and digest.
 
 The narrated MP4, bilingual subtitles and cover frame are included in `web/media/`. These assets are versioned with the chat app. The native desktop player can seek offline. The YouTube link opens the independently published film.
+
+For 0.2.0 the public download URL redirects to the identical GitHub release asset. Large transfers from the shared hosting account can be interrupted. Append `?mirror=origin` to download the verified backup directly from Namecheap. Both locations use the checksum published in `web/installer.json`.

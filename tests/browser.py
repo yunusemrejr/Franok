@@ -1,6 +1,6 @@
 """Run full chat, session persistence, search, diagram, and mobile layout checks."""
 
-import argparse, json, time
+import argparse, json, re, time
 from pathlib import Path
 from playwright.sync_api import sync_playwright, expect
 
@@ -41,10 +41,12 @@ def verify(page, url, folder):
     page.locator("#temp").fill("0.35")
     page.locator("#tokens").fill("42")
     page.get_by_role("button", name="Save controls").click()
+    expect(page.locator("#prefs")).not_to_be_visible()
     page.locator("#draft").fill("Merhaba! İzmir hakkında bir cümle yaz.")
     start = time.monotonic()
     page.locator("#send").click()
     expect(page.locator("#send")).to_be_enabled(timeout=240000)
+    expect(page.locator("#status")).to_contain_text("Generated locally", timeout=15000)
     status = page.locator("#status").inner_text()
     assert "Generated locally" in status, (status, issues)
     reply = page.locator(".message.assistant p").last.inner_text()
@@ -53,7 +55,7 @@ def verify(page, url, folder):
     page.get_by_text(reply, exact=True).wait_for()
     page.locator("#find").click()
     page.locator("#query").fill("İzmir")
-    page.locator("#matches button").first.click()
+    page.locator("#matches").get_by_role("button", name=re.compile(r"^Turn 1 · ")).click()
     assert page.locator("#turn-0").evaluate("e=>e.classList.contains('hit')")
     page.locator("#new").click()
     page.get_by_role("button", name="Merhaba! İzmir hakkında bir cümle yaz.").click()
