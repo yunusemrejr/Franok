@@ -12,7 +12,7 @@ The release contains original code, tokenizer and trained parameters under MIT. 
 
 Exact duplicate records are removed. A deterministic hash assigns approximately 1% of groups to validation. Groups use article IDs, conversation tree IDs, instruction text or extractive source passages, depending on the dataset. English and Turkish have equal sampling probability. Historical documents, quotations, proper names and code can include additional languages. The language selector conditions generation and users can receive mixed-language or inaccurate text.
 
-The tokenizer uses only training partitions and starts with all 256 byte values. The architecture starts from random weights. No teacher or pretrained tokenizer is called by the training pipeline. The separately downloaded comparison model is used only by the evaluation script.
+The tokenizer uses only training partitions and starts with all 256 byte values. The first training pipeline started from random weights and called no teacher or pretrained tokenizer. The fourth run adds teacher-written conversations, described in [Fourth run](#fourth-run). The separately downloaded comparison model is used only by the evaluation script.
 
 ## Extended training
 
@@ -55,3 +55,19 @@ The supervised sampler also uses the earlier open dialogue and instruction colle
 Another 30,834 English and 39,746 Turkish training turns contain concise replies of at most 100 words. The English sample comes from the second UltraChat training shard. The Turkish sample uses Marul records starting at source row 60,000. Both use the same first-question split rule as the earlier dialogue importer and keep up to three complete user/assistant exchanges. [Short-reply selection](../training/third/short_dialogue.py)
 
 The bilingual session-search encoder also uses English–Turkish translations written by Tatoeba contributors, distributed through OPUS and Sentence Transformers. It uses only the English–Turkish Tatoeba training file at revision `767e169873643dc102321cbb83bf5798efdc7d0f`. Of 220,000 distinct English sentence keys, 214,429 went into training and 5,571 into validation. The sentence translations train the search table and never enter the decoder's language-model loss. [Tatoeba data and attribution terms](https://tatoeba.org/en/downloads) · [Pinned distribution](https://huggingface.co/datasets/sentence-transformers/parallel-sentences/tree/767e169873643dc102321cbb83bf5798efdc7d0f/Tatoeba)
+
+## Fourth run
+
+The fourth run adds the sources below to the 0.3 weights. Teacher-written conversations are pinned to exact model revisions. The programmatic generators and filters are MIT licensed like the rest of the repository.
+
+| Source | Use | Upstream license |
+|---|---|---|
+| [Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B/tree/b968826d9c46dd6066d109eabc6255188de91218) | English teacher-written conversations in the round-1 set, graded and filtered | Apache 2.0 |
+| [Qwen3-14B, FP8](https://huggingface.co/Qwen/Qwen3-14B/tree/40c069824f4251a91eefaf281ebe4c544efd3e18) | Turkish teacher-written conversations in the round-1 set, and all teacher-written conversations in round 2 | Apache 2.0 |
+| Programmatic dialogues, [`training/fourth/dialogues.py`](../training/fourth/dialogues.py) | Object tracking, one-word label choices, clarifying questions, and counting with unit arithmetic. 5,405 kept, with each answer computed in code | MIT, this repository |
+| Round-1 arithmetic, [`training/fourth/arithmetic.py`](../training/fourth/arithmetic.py) | 3,000 conversations computed in code, 1,500 per language | MIT, this repository |
+| [SQuAD 2.0](https://rajpurkar.github.io/SQuAD-explorer/) training file and [SQuAD-TR](https://tulap.cmpe.bogazici.edu.tr/entities/dataset/5b23d251-715c-49fa-82fd-8acb87ea43b6) training file | Short-span reading. Answerable questions only, with the SQuAD v1.1 training questions included in the SQuAD 2.0 file. Passages sharing an 8-gram with XQuAD are removed | CC BY-SA 4.0 |
+
+Teacher and programmatic conversations pass the same filter. Malformed output, wrong-language turns, duplicates and overlong turns are dropped. A conversation is also dropped when a user turn has a content-word Jaccard similarity of at least 0.3 with any held-out test turn, or shares any 6-gram with one. The held-out files are `tests/transfer_conversations.json`, `tests/v4_conversations.json`, `tests/conversations.json` and `tests/dialogue.json`. XQuAD and Belebele questions count as test items too. The teacher grades each conversation twice, and only conversations that both passes mark GOOD are kept.
+
+The commands and counts are in the [evaluation report](evaluation/v4/final.md#reproduce).

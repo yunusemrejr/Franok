@@ -1,0 +1,4340 @@
+{
+  "dataset_revisions": {
+    "belebele": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+    "xquad": "51adfef1c1287aab1d2d91b5bead9bcfb9c68583"
+  },
+  "summary": {
+    "belebele": {
+      "en": {
+        "count": 120,
+        "correct": 0.25833333333333336
+      },
+      "tr": {
+        "count": 120,
+        "correct": 0.2916666666666667
+      }
+    }
+  },
+  "items": [
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Babylonians",
+        1
+      ],
+      "scores": [
+        -1.140432686668821,
+        -1.4504437496982576,
+        -1.254354936144529,
+        -1.0015798961297095
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Languages/Hindi",
+        2
+      ],
+      "scores": [
+        -0.7770927110844076,
+        -1.2734999537654932,
+        -0.9659505673073304,
+        -0.9366027224155775
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Saturn%27s_moon_Titan_hosts_liquid_lakes_and_rivers",
+        1
+      ],
+      "scores": [
+        -1.6211879786774837,
+        -0.6146595852762377,
+        -1.1882694073287408,
+        -1.9010814590501959
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/War_zone_safety",
+        2
+      ],
+      "scores": [
+        -0.9724985865613642,
+        -1.93390034126284,
+        -0.3434705130272833,
+        -0.9516260216228503
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Goma",
+        1
+      ],
+      "scores": [
+        -0.4308066513531825,
+        -1.5163343999063799,
+        -1.0085627610758185,
+        -0.3140308811136045
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/New_Zealand_History/Polynesian_Settlement",
+        2
+      ],
+      "scores": [
+        -1.9282585660827045,
+        -0.06694184677876995,
+        -0.4776555500093491,
+        -0.5911645841244864
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Egyptians",
+        1
+      ],
+      "scores": [
+        -1.3191143943575803,
+        -0.9964274381742277,
+        -0.5318407508745825,
+        -1.1009623509526245
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Sensory_Systems/Visual_System",
+        2
+      ],
+      "scores": [
+        -1.7668989873213017,
+        -0.3206724198426598,
+        -1.5571687950568984,
+        -0.5595276998993254
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cook_Islands",
+        2
+      ],
+      "scores": [
+        -1.7347060378745696,
+        -1.5579006377736841,
+        -0.7193487525703459,
+        -0.7223812952884526
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Yoga/Yoga_Tales",
+        1
+      ],
+      "scores": [
+        -0.8408226513100848,
+        -1.6250323624407332,
+        -2.324819997880785,
+        -1.282762336003598
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Kruger_National_Park",
+        2
+      ],
+      "scores": [
+        -1.3166452809801248,
+        -1.4901902915343528,
+        -0.7508648669562303,
+        -1.1932782161005817
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Renault_F1_launch_criminal_complaint_against_former_driver_over_race-fixing_allegation",
+        2
+      ],
+      "scores": [
+        -1.2721338447845916,
+        -1.5665869149003595,
+        -1.067331686695568,
+        -1.1570559297836713
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Swiss_woman_gang-raped_in_Madhya_Pradesh,_India",
+        1
+      ],
+      "scores": [
+        -1.5291867126206014,
+        -2.48571625530975,
+        -1.6995869334627018,
+        -1.1439510879892067
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Brazilian_footballer_Gabriel_Jesus_signs_contract_extension_with_Manchester_City",
+        1
+      ],
+      "scores": [
+        -3.046908134784117,
+        -3.2115155404466535,
+        -2.2394359057802107,
+        -0.870690578784361
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Accordion/Right_hand",
+        1
+      ],
+      "scores": [
+        -0.9328721815826485,
+        -1.455294971876675,
+        -1.147676459696283,
+        -0.9627699143693526
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Funeral_of_Pope_John_Paul_II_takes_place",
+        2
+      ],
+      "scores": [
+        -0.8539999754681139,
+        -1.371042769027068,
+        -0.8107678953539035,
+        -1.310351357094182
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Bali_climate_change_conference_begins",
+        1
+      ],
+      "scores": [
+        -2.06337606149323,
+        -0.8185615827096028,
+        -0.7406999101526204,
+        -0.8083659382771677
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Strong_6.3_earthquake_reported_in_Sumatra,_Indonesia",
+        2
+      ],
+      "scores": [
+        -1.9956532671786407,
+        -0.609033164339279,
+        -1.6253226605817859,
+        -1.911884379555166
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Submarines",
+        1
+      ],
+      "scores": [
+        -0.39614191595448006,
+        -1.2700905283680197,
+        -1.1753340203369151,
+        -2.1931570718692734
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Seven_killed_in_Chinese_bombing",
+        1
+      ],
+      "scores": [
+        -1.6890652713860526,
+        -1.4984833965160953,
+        -2.07323110730418,
+        -2.210034937513656
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Australian_treasurer_enters_nuclear_debate",
+        2
+      ],
+      "scores": [
+        -1.405460149616461,
+        -1.6436980746799463,
+        -2.153749388119071,
+        -1.8961286551682337
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Judge_orders_Baltimore_City_prison_to_produce_plan_for_improvement",
+        2
+      ],
+      "scores": [
+        -1.9615412323958539,
+        -0.6196470051310511,
+        -1.2286417525747355,
+        -0.9195816204169426
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Trade_hall_roof_collapses_in_Poland",
+        1
+      ],
+      "scores": [
+        -1.6000261174936659,
+        -1.9342128135070875,
+        -1.424772885009743,
+        -1.2886940252765933
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Studying_abroad",
+        1
+      ],
+      "scores": [
+        -1.546228526551547,
+        -2.5095080698724073,
+        -2.0947742015450435,
+        -1.1716358785382794
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Alcoholic_beverages",
+        2
+      ],
+      "scores": [
+        -1.076972558392764,
+        -1.1986513014524225,
+        -1.1724989746177643,
+        -1.4528819094775336
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Edmonton_prison_conflict_wounds_eight",
+        2
+      ],
+      "scores": [
+        -1.2467292555853577,
+        -0.7415323020438505,
+        -1.5047175621654842,
+        -1.3411451426157577
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Regional_coding",
+        2
+      ],
+      "scores": [
+        -1.1474317474075129,
+        -1.043413275724636,
+        -0.934901775814553,
+        -1.3895188805603442
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hiking",
+        2
+      ],
+      "scores": [
+        -1.309075455670518,
+        -1.5652338048122898,
+        -1.1878204212342283,
+        -0.9119763739624837
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Scottish_Justice_Secretary_%27acutely_aware_of_unusual_publicity%27_in_Kular_case",
+        1
+      ],
+      "scores": [
+        -1.3971684583999042,
+        -1.646780228480688,
+        -1.6158468971729352,
+        -1.2425463108437755
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Rocket",
+        1
+      ],
+      "scores": [
+        -0.8906521261587714,
+        -2.643617000355839,
+        -2.379933762403207,
+        -3.0572357874755514
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Basics",
+        1
+      ],
+      "scores": [
+        -1.2370317222983764,
+        -1.9668496843747687,
+        -1.0968641108188526,
+        -1.037284981346889
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/German_phrasebook",
+        1
+      ],
+      "scores": [
+        -2.183208096258862,
+        -2.5007517440111373,
+        -1.2864393344553025,
+        -2.426116267401227
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/H5N1_confirmed_in_France",
+        1
+      ],
+      "scores": [
+        -2.6737300061581863,
+        -3.5839237664344865,
+        -3.2802314855962202,
+        -2.6472802078333286
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Tourist_plane_crash_in_Papua_New_Guinea_leaves_thirteen_dead",
+        2
+      ],
+      "scores": [
+        -1.0680560892291817,
+        -1.0840221745088674,
+        -1.821206942868758,
+        -1.0892256053974587
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Wikimedia_Foundation_addresses_controversial_content_conflict",
+        2
+      ],
+      "scores": [
+        -2.241990456722325,
+        -0.8999342554953017,
+        -1.2241446167968852,
+        -2.1976006858962016
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Corcovado_National_Park",
+        2
+      ],
+      "scores": [
+        -0.657632677251586,
+        -0.38736237245977545,
+        -0.13028228658141383,
+        -0.5746018192903269
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Culture",
+        1
+      ],
+      "scores": [
+        -1.6921438243667666,
+        -1.0930029765676423,
+        -1.139244760397644,
+        -1.4808681184638295
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Khyber_Pakhtunkhwa_Provincial_Assembly_votes_to_merge_with_Pakistani_Federally_Administered_Tribal_Areas",
+        1
+      ],
+      "scores": [
+        -0.36659384436904996,
+        -0.1152358249757539,
+        -1.5555313468618117,
+        -0.8925217411113086
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Effect_of_sanctions_%27like_war%27_says_Iran%27s_Ahmadinejad",
+        2
+      ],
+      "scores": [
+        -1.5853311965445527,
+        -0.43526820949186723,
+        -0.11710373975244193,
+        -0.712983587539399
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Asia/Bhutan",
+        2
+      ],
+      "scores": [
+        -1.0503963414799944,
+        -0.9592047034580715,
+        -1.3889273671801758,
+        -0.6976827226284454
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Greeks",
+        2
+      ],
+      "scores": [
+        -0.4979632592872746,
+        -0.5126516415699742,
+        -1.3873155769916883,
+        -0.6121597693280135
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Dangerous_animals",
+        1
+      ],
+      "scores": [
+        -1.4461967615381435,
+        -1.3953446741253794,
+        -1.4461944332074899,
+        -1.7733577209090385
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Four_killed,_four_others_injured_in_Buffalo,_New_York_shooting",
+        1
+      ],
+      "scores": [
+        -1.0649947015683645,
+        -1.0842983296535014,
+        -1.2943605564798155,
+        -1.2660533011213082
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Funeral_travel",
+        2
+      ],
+      "scores": [
+        -0.8916274488115759,
+        -1.2111826082681096,
+        -0.7377930583849213,
+        -0.9949489489013006
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Applied_Ecology/Nature_Tourism",
+        1
+      ],
+      "scores": [
+        -2.051807374984254,
+        -1.3227660295828472,
+        -1.4205843012349968,
+        -2.2079727301531844
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Russian_military_cargo_jet_crash_kills_eleven_in_Siberia",
+        1
+      ],
+      "scores": [
+        -0.9460225932670537,
+        -1.233799071000659,
+        -0.6472847126892127,
+        -1.2845196905923586
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Matt_Kenseth_wins_third_NASCAR_Sprint_Cup_race_of_2012",
+        2
+      ],
+      "scores": [
+        -4.37897510146132,
+        -3.716325946798234,
+        -4.988688119401841,
+        -4.570138112477963
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Aggregators",
+        1
+      ],
+      "scores": [
+        -1.4169657115802985,
+        -1.2242646751594033,
+        -0.9891300678436523,
+        -1.034190671023954
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Lucid_Dreaming/Introduction",
+        1
+      ],
+      "scores": [
+        -1.418371295002288,
+        -1.4616858981425904,
+        -2.1181144785062465,
+        -0.9783211774851885
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/China_promises_cut_in_carbon_dioxide_emissions",
+        2
+      ],
+      "scores": [
+        -0.8703922632133204,
+        -1.1090301106245475,
+        -1.479837195334206,
+        -1.4119300532873182
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Managing_Groups_and_Teams/How_Do_You_Build_High-performing_Virtual_Teams%3F",
+        2
+      ],
+      "scores": [
+        -0.7216206709137214,
+        -0.5362120022317639,
+        -0.7111098431342064,
+        -1.6780870723223034
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Canadian_professional_wrestler_Luna_Vachon_dies_aged_48",
+        2
+      ],
+      "scores": [
+        -2.2809336652227556,
+        -0.9504723708433561,
+        -0.5500493066967078,
+        -0.17352438513014004
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Remembering_the_Templars",
+        2
+      ],
+      "scores": [
+        -0.5113182681112147,
+        -0.9658731860781764,
+        -0.47980122994288105,
+        -1.039139766957354
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/BBC_newsreader_sacked_after_conviction_for_wounding_teenager",
+        1
+      ],
+      "scores": [
+        -0.6720909033050957,
+        -1.610076148623789,
+        -1.240609707870021,
+        -0.7924662763013159
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Infectious_diseases",
+        2
+      ],
+      "scores": [
+        -1.1729186437571497,
+        -3.04113248983478,
+        -2.271949081925336,
+        -3.069314589641787
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hong_Kong",
+        1
+      ],
+      "scores": [
+        -0.83857159820918,
+        -0.45461336807932046,
+        -1.2519254205581,
+        -1.7612968248447833
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Socialization",
+        1
+      ],
+      "scores": [
+        -1.3732128881440278,
+        -1.642590333774374,
+        -1.8137106927532876,
+        -2.0359943093970982
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Serengeti",
+        2
+      ],
+      "scores": [
+        -0.42406495467525424,
+        -0.7255869116056259,
+        -0.7034582335227298,
+        -0.538934052621259
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Meteora",
+        2
+      ],
+      "scores": [
+        -2.7506626976674107,
+        -2.7026823815058427,
+        -0.902568796858924,
+        -1.4132071315679764
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cross_country_skiing",
+        2
+      ],
+      "scores": [
+        -2.50842608544883,
+        -0.9794229700668112,
+        -1.2436235384167236,
+        -0.9574193035963937
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Modern_Photography/Format",
+        1
+      ],
+      "scores": [
+        -1.5997728668896538,
+        -0.9570976069132173,
+        -0.9366860706756953,
+        -0.9656390328862463
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/San_Francisco",
+        1
+      ],
+      "scores": [
+        -1.3093712463607712,
+        -0.5646535480934289,
+        -1.0385468778820164,
+        -1.8083690176904486
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Car_women%27s_rugby_7%27s_tournament",
+        1
+      ],
+      "scores": [
+        -1.3247660673378459,
+        -1.2105568133397178,
+        -1.0301908520334886,
+        -1.593628307586084
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Canadian_Prime_Minister_Harper_agrees_to_send_%27Clean_Air_Act%27_to_committee",
+        2
+      ],
+      "scores": [
+        -0.7851638040236826,
+        -0.8308532500910236,
+        -1.0688180844961275,
+        -1.3121204428397635
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Karzai_declared_winner_of_Afghan_elections,_runoff_polls_cancelled",
+        1
+      ],
+      "scores": [
+        -1.3053138126173336,
+        -1.107896334010445,
+        -2.01811474215066,
+        -1.1591494060310354
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/24_people_rescued_from_roller_coaster_at_California%27s_Great_America_theme_park",
+        2
+      ],
+      "scores": [
+        -2.362740277935899,
+        -1.9760406604048926,
+        -1.3094189299328125,
+        -1.988942353631987
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Japanese_tourist_travels_through_37_countries_on_just_$2",
+        2
+      ],
+      "scores": [
+        -1.8701076062796886,
+        -0.44731202826960714,
+        -2.3672460999661538,
+        -2.8470491334943717
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Cholera_outbreak_hits_Angola",
+        1
+      ],
+      "scores": [
+        -0.5012248764591163,
+        -0.7589853774603658,
+        -0.5008094086026431,
+        -0.818129572479007
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battleships",
+        1
+      ],
+      "scores": [
+        -1.1930232582185487,
+        -0.9203833345927295,
+        -0.6891029298377546,
+        -1.188771304456468
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hill_stations_in_India",
+        2
+      ],
+      "scores": [
+        -1.7443471469742506,
+        -1.595781280356404,
+        -0.9193410734831933,
+        -1.3062172619879544
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Large_earthquake_off_Japan,_tsunami_warning_issued",
+        1
+      ],
+      "scores": [
+        -1.4606431465015122,
+        -0.6161514757633627,
+        -0.7280023096019953,
+        -0.7179485154197743
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/History_of_Islam/Early_Islam",
+        1
+      ],
+      "scores": [
+        -1.3015426141431727,
+        -1.860282081155007,
+        -1.7013407592539047,
+        -1.0974158662161306
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Lucid_Dreaming/Induction_Techniques",
+        2
+      ],
+      "scores": [
+        -1.3739974523497034,
+        -1.267415973829502,
+        -0.5066578904008339,
+        -1.2477240906680045
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Huge_Gay_Pride_parade_held_in_Brazil",
+        2
+      ],
+      "scores": [
+        -0.5782890746627833,
+        -0.4590851403136108,
+        -0.38750867784379495,
+        -0.7537806712756411
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_insurance",
+        2
+      ],
+      "scores": [
+        -0.651105678199925,
+        -1.1018591435485185,
+        -0.6107396960855063,
+        -1.6183300221599466
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Video_recording",
+        2
+      ],
+      "scores": [
+        -1.267677140501421,
+        -0.8443866141029662,
+        -1.1758358858083553,
+        -1.6570576186201027
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Culture_shock",
+        1
+      ],
+      "scores": [
+        -1.2351501625544206,
+        -0.7974018734742373,
+        -2.0036997907158307,
+        -1.115901010580035
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battle_of_Britain",
+        1
+      ],
+      "scores": [
+        -0.7541382459826964,
+        -0.5775530193402308,
+        -0.48284177447034576,
+        -2.4245203265699824
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/A1GP_New_Zealand_speeds_its_way_into_record_books",
+        2
+      ],
+      "scores": [
+        -0.9199624919424542,
+        -1.2805915504102487,
+        -1.2894369695654486,
+        -0.9992952856033964
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Applied_Ecology/New_Societies_and_Cultures",
+        1
+      ],
+      "scores": [
+        -1.3372408327216272,
+        -0.8584931800381952,
+        -1.321333820771253,
+        -0.6333245362909969
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Tokyo_2020",
+        1
+      ],
+      "scores": [
+        -1.207402825408385,
+        -0.6371917827114174,
+        -0.5460438541236049,
+        -0.6166639510219181
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_photography/Film",
+        1
+      ],
+      "scores": [
+        -1.8612045612774313,
+        -1.712434562885809,
+        -0.47000649486724316,
+        -1.4632188751136554
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Golf",
+        1
+      ],
+      "scores": [
+        -3.7987263967289033,
+        -3.366693721200132,
+        -3.098212182511067,
+        -1.6879097530339178
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Race_and_Ethnicity",
+        1
+      ],
+      "scores": [
+        -0.934794234758297,
+        -0.8275350387134266,
+        -1.295411411588597,
+        -1.0912426951435943
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Scientists_say_the_moon_is_slowly_shrinking",
+        2
+      ],
+      "scores": [
+        -0.9647411979997147,
+        -1.0399484169914255,
+        -0.9035852850715853,
+        -0.8731194572915677
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hospitality_exchange",
+        2
+      ],
+      "scores": [
+        -1.2041152738873238,
+        -0.7297684426082893,
+        -1.3155237188483626,
+        -1.3800220921191586
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:The_Elements/Hydrogen",
+        2
+      ],
+      "scores": [
+        -1.0991825240140098,
+        -0.3663618117673887,
+        -2.7626808050979514,
+        -1.4536853583772762
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_advisories",
+        2
+      ],
+      "scores": [
+        -0.9961554486712461,
+        -0.7572106386599411,
+        -1.0099161840953135,
+        -0.6449172143632427
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Glaciers",
+        2
+      ],
+      "scores": [
+        -1.5869503502998084,
+        -1.3165276131434636,
+        -1.0542281097130568,
+        -1.0286597768298147
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cinque_Terre",
+        2
+      ],
+      "scores": [
+        -1.1317471462193074,
+        -1.393389443276693,
+        -1.6929672152613768,
+        -1.4649741385024209
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Red_tide_affects_South_Padre_Island,_Mexico",
+        2
+      ],
+      "scores": [
+        -1.7943523969221127,
+        -1.4566297832255142,
+        -1.9974009251483031,
+        -1.4008206206374978
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Sandra_Fluke_insists_she_will_not_be_silenced",
+        2
+      ],
+      "scores": [
+        -0.7114819654853711,
+        -2.96950862303951,
+        -0.8820427217126307,
+        -0.9963004314597086
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Ecuador",
+        2
+      ],
+      "scores": [
+        -1.2214572108120152,
+        -1.6985352033091312,
+        -1.2074024395832563,
+        -1.262272470462653
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Icelandic_Hekla_volcano_shows_signs_of_activity",
+        2
+      ],
+      "scores": [
+        -1.7441102878291284,
+        -0.5159923098134949,
+        -1.348438209631592,
+        -0.7887605187368832
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Spanish_football:_Sevilla_signs_Aleix_Vidal_from_FC_Barcelona",
+        2
+      ],
+      "scores": [
+        -0.2399846966658122,
+        -1.2881748135481363,
+        -7.850291382391073,
+        -2.343701070109416
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Goats/Introduction",
+        1
+      ],
+      "scores": [
+        -1.6713350797917934,
+        -1.8373462980086304,
+        -1.2856264597606897,
+        -1.1225521752464878
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Tornado_safety",
+        1
+      ],
+      "scores": [
+        -1.2156455780687547,
+        -1.3094043644962938,
+        -0.7025702540322587,
+        -0.8976805115438868
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Mallorca",
+        1
+      ],
+      "scores": [
+        -4.048178011156498,
+        -0.5932476939649448,
+        -2.452276517008891,
+        -0.9807593502224631
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Barcelona",
+        2
+      ],
+      "scores": [
+        -0.7367271734059738,
+        -0.06653564421287583,
+        -0.9009643176347751,
+        -1.0501074644999477
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Light_Bulb",
+        2
+      ],
+      "scores": [
+        -1.0491710713634774,
+        -0.8915908744663296,
+        -0.833792297844926,
+        -2.3744599398585025
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Mysticism/What_is_mysticism%3F",
+        1
+      ],
+      "scores": [
+        -1.0456948901842171,
+        -0.88565989411458,
+        -0.843007475278372,
+        -0.5073865970996019
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Women%E2%80%99s_boxing_to_be_included_in_the_2012_Olympics_for_the_first_time",
+        2
+      ],
+      "scores": [
+        -1.8378790770511975,
+        -1.1750792714218927,
+        -0.9819722920667172,
+        -1.5317556235697174
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Charlotte_with_children",
+        2
+      ],
+      "scores": [
+        -1.9323835343412832,
+        -2.091963059433797,
+        -0.42577849408465956,
+        -1.3301232537935912
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Leak_suggests_John_Kerry_will_recognise_Israel_as_Jewish_state",
+        2
+      ],
+      "scores": [
+        -1.396682148393271,
+        -0.908097710515304,
+        -1.2662821184002397,
+        -0.9911654658057885
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Moon",
+        1
+      ],
+      "scores": [
+        -0.882719452067572,
+        -0.3823404382410013,
+        -0.4602232462770472,
+        -0.6799385462859833
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:South_America/Venezuela",
+        2
+      ],
+      "scores": [
+        -2.1099845743506704,
+        -0.6901799066213536,
+        -1.2575030245506233,
+        -3.049224778920427
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/The_Cold_War/Hungarian_Revolution",
+        1
+      ],
+      "scores": [
+        -0.8538864986153272,
+        -0.9918705686871404,
+        -1.722392806203774,
+        -1.2065771644958267
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/California_bans_sale_of_violent_video_games_to_minors",
+        1
+      ],
+      "scores": [
+        -0.5353743172859633,
+        -2.120738818991654,
+        -0.5585237640810637,
+        -1.0750033633622833
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Hollywood_sign_modified_to_read_%27Hollyweed%27",
+        1
+      ],
+      "scores": [
+        -2.7947597125009302,
+        -1.5197134158978274,
+        -0.729064408557105,
+        -3.228226326291221
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Nadal_beats_Raonic_to_reach_Australian_Open_semis",
+        2
+      ],
+      "scores": [
+        -0.769508535504713,
+        -0.8912192066441892,
+        -1.8692108571461439,
+        -1.945032774986853
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Languages/Estonian",
+        1
+      ],
+      "scores": [
+        -1.6309536097310382,
+        -1.537725490701598,
+        -1.6296889511489048,
+        -1.5621309743244305
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Peak_Oil:_High_Tide_for_an_Oil_Addicted_World/Personal_Action",
+        1
+      ],
+      "scores": [
+        -0.8463438942640139,
+        -1.423193743609536,
+        -1.3436333687831057,
+        -1.3473368301411068
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Murals_and_graffiti",
+        2
+      ],
+      "scores": [
+        -0.6572957523538882,
+        -1.276257731721456,
+        -1.021493646798877,
+        -1.5933054839525578
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/New_Australian_Prime_Minister_signs_Kyoto",
+        2
+      ],
+      "scores": [
+        -0.4748185612474224,
+        -1.2067039211104824,
+        -0.8943198628151728,
+        -1.080872719381136
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/New_South_Wales_government_starts_trial_of_hunting_in_national_parks",
+        2
+      ],
+      "scores": [
+        -1.272371190388804,
+        -0.8396271772756634,
+        -0.8629789656107183,
+        -0.983673820973493
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Fundamentals_of_Transportation/Introduction",
+        2
+      ],
+      "scores": [
+        -1.833507829370519,
+        -1.424271504835379,
+        -1.2546621642612927,
+        -1.1092271473907462
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/California_lawmaker_denies_affairs_after_sexual_discussion_becomes_public",
+        2
+      ],
+      "scores": [
+        -0.5718693792143518,
+        -1.0844997179084934,
+        -1.048281022324043,
+        -1.1305980851322364
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Water_safety",
+        2
+      ],
+      "scores": [
+        -0.9435350950288716,
+        -1.3888939511451304,
+        -1.4007701807807982,
+        -1.6690304581454913
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Hong_Kong_tourists_held_hostage_in_the_Philippines,_nine_killed",
+        2
+      ],
+      "scores": [
+        -0.8853844382719118,
+        -1.2357577031433595,
+        -0.3551549343937063,
+        -1.228262799486118
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Former_U.S._National_Security_Advisor_Zbigniew_Brzezinski_dies_aged_89",
+        1
+      ],
+      "scores": [
+        -0.4006356838637396,
+        -0.9765558881017761,
+        -2.3314818380792697,
+        -2.1838476366007185
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Babylonians",
+        1
+      ],
+      "scores": [
+        -1.4233931129828876,
+        -1.7465513468044365,
+        -1.3900679434378809,
+        -1.312371315226458
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Languages/Hindi",
+        2
+      ],
+      "scores": [
+        -0.9827140768868645,
+        -0.8141037707705612,
+        -1.0161728959778378,
+        -0.8636563127659977
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Saturn%27s_moon_Titan_hosts_liquid_lakes_and_rivers",
+        1
+      ],
+      "scores": [
+        -0.9885448647928594,
+        -1.1469462653710278,
+        -0.7580911828470586,
+        -2.11223179220875
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/War_zone_safety",
+        2
+      ],
+      "scores": [
+        -0.9192417819918528,
+        -0.4657935357919272,
+        -0.4996110003925209,
+        -1.4538528103126376
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Goma",
+        1
+      ],
+      "scores": [
+        -1.5985005507005925,
+        -1.1547760461931955,
+        -0.9870887764306631,
+        -3.3419573189358913
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/New_Zealand_History/Polynesian_Settlement",
+        2
+      ],
+      "scores": [
+        -2.6641955349812845,
+        -0.09653697346552702,
+        -0.3401174957078373,
+        -0.8609741594197443
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Egyptians",
+        1
+      ],
+      "scores": [
+        -1.3486387854210322,
+        -1.9868480718737238,
+        -1.5023520639543537,
+        -1.388170621283067
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Sensory_Systems/Visual_System",
+        2
+      ],
+      "scores": [
+        -1.713570667862723,
+        -0.990116816282015,
+        -1.5196957165749356,
+        -1.1693809551253194
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cook_Islands",
+        2
+      ],
+      "scores": [
+        -1.8151637658970778,
+        -1.4694639620649825,
+        -1.2421179713424968,
+        -1.1225022286615671
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Yoga/Yoga_Tales",
+        1
+      ],
+      "scores": [
+        -2.3472123332286254,
+        -1.3769493439893987,
+        -2.185341543650175,
+        -1.1134579375710478
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Kruger_National_Park",
+        2
+      ],
+      "scores": [
+        -1.0938271584758326,
+        -1.4119514151188786,
+        -0.9869019149420182,
+        -0.9284210898760652
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Renault_F1_launch_criminal_complaint_against_former_driver_over_race-fixing_allegation",
+        2
+      ],
+      "scores": [
+        -1.3599358873432992,
+        -1.7162915589381043,
+        -1.1747603145701841,
+        -1.3896174048728356
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Swiss_woman_gang-raped_in_Madhya_Pradesh,_India",
+        1
+      ],
+      "scores": [
+        -1.6155661576508553,
+        -2.804566177937862,
+        -1.6612506140638912,
+        -1.0102210384401076
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Brazilian_footballer_Gabriel_Jesus_signs_contract_extension_with_Manchester_City",
+        1
+      ],
+      "scores": [
+        -2.3879830026415774,
+        -2.827879943826575,
+        -0.6528174066332766,
+        -1.863516488054175
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Accordion/Right_hand",
+        1
+      ],
+      "scores": [
+        -0.8916949513452224,
+        -1.2299752877900645,
+        -1.0089600441935018,
+        -0.9596300975630816
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Funeral_of_Pope_John_Paul_II_takes_place",
+        2
+      ],
+      "scores": [
+        -1.2967212608614334,
+        -1.3735952661133157,
+        -1.9244420180094772,
+        -0.9622956341081118
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Bali_climate_change_conference_begins",
+        1
+      ],
+      "scores": [
+        -1.3389215570014712,
+        -1.081148142277141,
+        -1.8929218239416705,
+        -0.9089670211113319
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Strong_6.3_earthquake_reported_in_Sumatra,_Indonesia",
+        2
+      ],
+      "scores": [
+        -1.3565086100994612,
+        -1.2027417220464716,
+        -1.6440991473215296,
+        -2.181083426079246
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Submarines",
+        1
+      ],
+      "scores": [
+        -2.229089228657386,
+        -1.6390251671933749,
+        -1.4483774477177214,
+        -1.1263482014513488
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Seven_killed_in_Chinese_bombing",
+        1
+      ],
+      "scores": [
+        -1.2219881434784068,
+        -0.4867594528534801,
+        -1.9138296904521692,
+        -2.782541417108108
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Australian_treasurer_enters_nuclear_debate",
+        2
+      ],
+      "scores": [
+        -1.0869837702617808,
+        -2.1293407498160306,
+        -1.8053064508305199,
+        -1.6627011630939486
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Judge_orders_Baltimore_City_prison_to_produce_plan_for_improvement",
+        2
+      ],
+      "scores": [
+        -1.40885008518133,
+        -1.2779160863164922,
+        -0.7030300777575889,
+        -0.8560325613449482
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Trade_hall_roof_collapses_in_Poland",
+        1
+      ],
+      "scores": [
+        -1.8038492714056213,
+        -1.281751919056309,
+        -1.599234766620781,
+        -1.3238479978784563
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Studying_abroad",
+        1
+      ],
+      "scores": [
+        -1.3371951222013503,
+        -1.1159850067925658,
+        -1.4408973498720823,
+        -0.9310026437888798
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Alcoholic_beverages",
+        2
+      ],
+      "scores": [
+        -1.239167922174003,
+        -1.6533203506594418,
+        -1.7853519616551912,
+        -1.4991940028865043
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Edmonton_prison_conflict_wounds_eight",
+        2
+      ],
+      "scores": [
+        -1.8979641995908605,
+        -2.049825227602032,
+        -1.3261173963181856,
+        -2.2775024863889617
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Regional_coding",
+        2
+      ],
+      "scores": [
+        -1.2215313000082377,
+        -1.405712007278487,
+        -1.1159779064430855,
+        -1.720670822100728
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hiking",
+        2
+      ],
+      "scores": [
+        -1.197233559203723,
+        -1.3519972583600364,
+        -1.4511912628692698,
+        -1.217275900970691
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Scottish_Justice_Secretary_%27acutely_aware_of_unusual_publicity%27_in_Kular_case",
+        1
+      ],
+      "scores": [
+        -1.0837614541017537,
+        -1.1390448856163278,
+        -0.6739776264312355,
+        -1.397208403668742
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Rocket",
+        1
+      ],
+      "scores": [
+        -0.880395831274036,
+        -2.117476306338919,
+        -1.6710274048021272,
+        -1.9575384620824803
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Basics",
+        1
+      ],
+      "scores": [
+        -1.7111519276446627,
+        -2.522188576865394,
+        -2.381309724851751,
+        -1.5861423439842044
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/German_phrasebook",
+        1
+      ],
+      "scores": [
+        -2.768114788969387,
+        -1.7402500539190935,
+        -3.664500250288902,
+        -4.168992818315637
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/H5N1_confirmed_in_France",
+        1
+      ],
+      "scores": [
+        -4.014599510983959,
+        -3.475495000664396,
+        -2.2479935152431314,
+        -2.5586970299496654
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Tourist_plane_crash_in_Papua_New_Guinea_leaves_thirteen_dead",
+        2
+      ],
+      "scores": [
+        -1.4083549113215508,
+        -1.609989497134745,
+        -1.5018414169008278,
+        -1.6832237876119862
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Wikimedia_Foundation_addresses_controversial_content_conflict",
+        2
+      ],
+      "scores": [
+        -1.3681696075320755,
+        -1.3652626636322387,
+        -1.0735287436783825,
+        -1.9135251259773782
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Corcovado_National_Park",
+        2
+      ],
+      "scores": [
+        -0.4742034349488647,
+        -0.2732138328607154,
+        -0.2858176902429839,
+        -0.5494620941561675
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Culture",
+        1
+      ],
+      "scores": [
+        -1.5913130694594764,
+        -1.2804491150330266,
+        -1.3692510607572435,
+        -1.6710323662986908
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Khyber_Pakhtunkhwa_Provincial_Assembly_votes_to_merge_with_Pakistani_Federally_Administered_Tribal_Areas",
+        1
+      ],
+      "scores": [
+        -0.9886327374976055,
+        -0.20643534190843843,
+        -1.0775041933883134,
+        -1.2645326573182631
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Effect_of_sanctions_%27like_war%27_says_Iran%27s_Ahmadinejad",
+        2
+      ],
+      "scores": [
+        -0.7416526438658216,
+        -1.2620079860528284,
+        -0.143047197835105,
+        -0.506141470914587
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Asia/Bhutan",
+        2
+      ],
+      "scores": [
+        -1.220145672580537,
+        -1.027102838775071,
+        -1.9038503402379254,
+        -0.6823475689770787
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Greeks",
+        2
+      ],
+      "scores": [
+        -0.4035804283333733,
+        -0.25983223183344906,
+        -0.592899640348633,
+        -0.31490989266007136
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Dangerous_animals",
+        1
+      ],
+      "scores": [
+        -2.409170983437692,
+        -1.7459072471895818,
+        -1.5036015130617082,
+        -1.2965953084494215
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Four_killed,_four_others_injured_in_Buffalo,_New_York_shooting",
+        1
+      ],
+      "scores": [
+        -2.6177790039134488,
+        -2.8681652061195857,
+        -1.0201342992542197,
+        -2.3630929955495232
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Funeral_travel",
+        2
+      ],
+      "scores": [
+        -1.1551841627217412,
+        -1.3912163039051972,
+        -1.0234525557399083,
+        -0.8578281472120172
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Applied_Ecology/Nature_Tourism",
+        1
+      ],
+      "scores": [
+        -2.216565445151256,
+        -1.2858937102696697,
+        -1.1485129553284261,
+        -1.91258029083897
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Russian_military_cargo_jet_crash_kills_eleven_in_Siberia",
+        1
+      ],
+      "scores": [
+        -0.909437980802371,
+        -1.8951895569671737,
+        -0.603623328213057,
+        -1.6829589361512642
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Matt_Kenseth_wins_third_NASCAR_Sprint_Cup_race_of_2012",
+        2
+      ],
+      "scores": [
+        -3.9511286387903937,
+        -3.666664875553394,
+        -4.725934721039081,
+        -5.662149010651337
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Aggregators",
+        1
+      ],
+      "scores": [
+        -0.887093685815911,
+        -0.999238715681755,
+        -0.7007691653300859,
+        -0.9616680043876246
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Lucid_Dreaming/Introduction",
+        1
+      ],
+      "scores": [
+        -1.2068784582156513,
+        -1.4373805164601114,
+        -1.4957799583347315,
+        -0.3815941796819437
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/China_promises_cut_in_carbon_dioxide_emissions",
+        2
+      ],
+      "scores": [
+        -1.6932605208101497,
+        -1.171495173109085,
+        -1.3576577935686518,
+        -1.1679316100224661
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Managing_Groups_and_Teams/How_Do_You_Build_High-performing_Virtual_Teams%3F",
+        2
+      ],
+      "scores": [
+        -1.0489934004715828,
+        -0.5484828357322394,
+        -0.8539684077997886,
+        -1.0644259057143939
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Canadian_professional_wrestler_Luna_Vachon_dies_aged_48",
+        2
+      ],
+      "scores": [
+        -2.039440924902501,
+        -0.9401331335387957,
+        -1.196047308084052,
+        -0.36711386607293217
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Remembering_the_Templars",
+        2
+      ],
+      "scores": [
+        -1.2574631588860212,
+        -2.1303878035938104,
+        -0.9182019750151473,
+        -1.8328254377968751
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/BBC_newsreader_sacked_after_conviction_for_wounding_teenager",
+        1
+      ],
+      "scores": [
+        -0.9149855156612562,
+        -1.8179640472539011,
+        -2.3579677007657773,
+        -1.1109300547129177
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Infectious_diseases",
+        2
+      ],
+      "scores": [
+        -2.988300921750963,
+        -2.3464715784511725,
+        -1.7727000614813098,
+        -1.9047769534346959
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hong_Kong",
+        1
+      ],
+      "scores": [
+        -1.459869661673746,
+        -0.5583145475439828,
+        -0.7965705872985411,
+        -1.8406617321106
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Socialization",
+        1
+      ],
+      "scores": [
+        -1.7318164187274203,
+        -1.4864438291794688,
+        -1.3320653967826117,
+        -1.6007598711474738
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Serengeti",
+        2
+      ],
+      "scores": [
+        -0.7158640434266227,
+        -0.5807995077047193,
+        -0.6940259492583507,
+        -0.7125880664509747
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Meteora",
+        2
+      ],
+      "scores": [
+        -3.5077141947415043,
+        -3.316579529504956,
+        -0.8178665146724151,
+        -3.867491738999447
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cross_country_skiing",
+        2
+      ],
+      "scores": [
+        -1.314049090144888,
+        -0.4751025624859633,
+        -1.6832987297431286,
+        -2.2049198864136725
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Modern_Photography/Format",
+        1
+      ],
+      "scores": [
+        -1.4157776314124655,
+        -1.003106011778252,
+        -0.8413969254800157,
+        -1.0022229135921912
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/San_Francisco",
+        1
+      ],
+      "scores": [
+        -1.464453822441172,
+        -0.4675341139596975,
+        -1.2623726634345547,
+        -1.6420321282354537
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Car_women%27s_rugby_7%27s_tournament",
+        1
+      ],
+      "scores": [
+        -1.8496202599611544,
+        -0.7284587974625282,
+        -1.156158235903442,
+        -1.4378656940141752
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Canadian_Prime_Minister_Harper_agrees_to_send_%27Clean_Air_Act%27_to_committee",
+        2
+      ],
+      "scores": [
+        -1.368161571727992,
+        -1.570600937675261,
+        -2.5713309031205904,
+        -3.044665214604283
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Karzai_declared_winner_of_Afghan_elections,_runoff_polls_cancelled",
+        1
+      ],
+      "scores": [
+        -0.9100704583662708,
+        -1.1572525874554427,
+        -0.950805613925224,
+        -1.2979554957076578
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/24_people_rescued_from_roller_coaster_at_California%27s_Great_America_theme_park",
+        2
+      ],
+      "scores": [
+        -2.189490506573511,
+        -0.7018874197268742,
+        -1.5638830589658235,
+        -2.3219633925602947
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Japanese_tourist_travels_through_37_countries_on_just_$2",
+        2
+      ],
+      "scores": [
+        -3.1999935731175357,
+        -0.35013151589714736,
+        -1.0475651257848724,
+        -3.0672791594287814
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Cholera_outbreak_hits_Angola",
+        1
+      ],
+      "scores": [
+        -3.8741869702102814,
+        -0.6523537701294951,
+        -0.47316460589432935,
+        -0.39116603676990236
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battleships",
+        1
+      ],
+      "scores": [
+        -1.0545057949277787,
+        -2.3861964372456272,
+        -0.9934942665242625,
+        -0.9205583277718657
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hill_stations_in_India",
+        2
+      ],
+      "scores": [
+        -1.5593294011194705,
+        -1.7650076852705372,
+        -2.775901607670119,
+        -0.9756861323527853
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Large_earthquake_off_Japan,_tsunami_warning_issued",
+        1
+      ],
+      "scores": [
+        -1.4331582346036085,
+        -1.2638725620066686,
+        -0.8512303269259149,
+        -1.0991085257085693
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/History_of_Islam/Early_Islam",
+        1
+      ],
+      "scores": [
+        -1.833278680055963,
+        -1.5170910072778634,
+        -1.6011211744045144,
+        -1.452223611824653
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Lucid_Dreaming/Induction_Techniques",
+        2
+      ],
+      "scores": [
+        -2.671314481211097,
+        -1.3824978017472322,
+        -1.50797803830743,
+        -1.4259609883784896
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Huge_Gay_Pride_parade_held_in_Brazil",
+        2
+      ],
+      "scores": [
+        -0.39620556528628803,
+        -0.6620754136031345,
+        -0.3169342831541728,
+        -0.7362538420813234
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_insurance",
+        2
+      ],
+      "scores": [
+        -0.7811358864558962,
+        -0.5054372780664004,
+        -1.0148640102301445,
+        -1.3271675504951441
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Video_recording",
+        2
+      ],
+      "scores": [
+        -1.4619853501301772,
+        -0.7994672814786764,
+        -1.7461396415689456,
+        -1.505317685224443
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Culture_shock",
+        1
+      ],
+      "scores": [
+        -1.3001754007628692,
+        -0.9098439479885028,
+        -1.0058453520263446,
+        -1.09999586814144
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battle_of_Britain",
+        1
+      ],
+      "scores": [
+        -0.3736200872824779,
+        -0.650847293506889,
+        -0.13045753678124572,
+        -1.1582345759520147
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/A1GP_New_Zealand_speeds_its_way_into_record_books",
+        2
+      ],
+      "scores": [
+        -1.6069405759031252,
+        -2.4471681225702286,
+        -1.1098086137286045,
+        -0.8608134006369176
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Applied_Ecology/New_Societies_and_Cultures",
+        1
+      ],
+      "scores": [
+        -0.9720730552373943,
+        -1.3719663390190684,
+        -0.613554855337336,
+        -1.7858367398717176
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Tokyo_2020",
+        1
+      ],
+      "scores": [
+        -0.994521819435858,
+        -1.592413378629219,
+        -1.041110657871748,
+        -0.7210242158429326
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_photography/Film",
+        1
+      ],
+      "scores": [
+        -2.020702320040463,
+        -1.982993382160898,
+        -0.6365552375787851,
+        -1.0193010275783567
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Golf",
+        1
+      ],
+      "scores": [
+        -3.007432485426478,
+        -2.8338549436423133,
+        -3.6944418617451973,
+        -1.505630266222584
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Race_and_Ethnicity",
+        1
+      ],
+      "scores": [
+        -1.3595337504985812,
+        -1.3083492685186024,
+        -1.2043234460101868,
+        -1.3971775317530784
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Scientists_say_the_moon_is_slowly_shrinking",
+        2
+      ],
+      "scores": [
+        -1.6648606480668682,
+        -1.1159239967117942,
+        -1.5819561636427184,
+        -1.1086780064325998
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hospitality_exchange",
+        2
+      ],
+      "scores": [
+        -1.290518315577447,
+        -1.4287123956813588,
+        -1.2646164817175352,
+        -1.5015677807888521
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:The_Elements/Hydrogen",
+        2
+      ],
+      "scores": [
+        -0.9151790397426159,
+        -0.8640850353713271,
+        -1.7101579837063636,
+        -2.480492369929413
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_advisories",
+        2
+      ],
+      "scores": [
+        -1.5664811684885716,
+        -1.1274561171070887,
+        -1.1631537647329526,
+        -0.943456353877816
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Glaciers",
+        2
+      ],
+      "scores": [
+        -0.5668714207475432,
+        -0.5531126814499021,
+        -1.9045229723634538,
+        -0.724134718841924
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cinque_Terre",
+        2
+      ],
+      "scores": [
+        -2.5550891476422986,
+        -2.9683702392642424,
+        -2.244684065963196,
+        -1.9610113150858557
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Red_tide_affects_South_Padre_Island,_Mexico",
+        2
+      ],
+      "scores": [
+        -1.694682967576038,
+        -1.7994225477812917,
+        -1.905134291767272,
+        -0.764976009660771
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Sandra_Fluke_insists_she_will_not_be_silenced",
+        2
+      ],
+      "scores": [
+        -1.6767336710070908,
+        -1.7395628618521335,
+        -0.53742765777169,
+        -0.5581341738854005
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Ecuador",
+        2
+      ],
+      "scores": [
+        -1.5499199107169315,
+        -0.5122522952439728,
+        -1.2388505707855295,
+        -0.9619064326740754
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Icelandic_Hekla_volcano_shows_signs_of_activity",
+        2
+      ],
+      "scores": [
+        -0.8613465389266921,
+        -0.4833595400472181,
+        -0.7319835250171345,
+        -0.8350564512374772
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Spanish_football:_Sevilla_signs_Aleix_Vidal_from_FC_Barcelona",
+        2
+      ],
+      "scores": [
+        -0.98979353727418,
+        -1.8062105161102395,
+        -5.2711462939087115,
+        -2.6013510209472757
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Goats/Introduction",
+        1
+      ],
+      "scores": [
+        -1.836185466485206,
+        -2.2400760240757407,
+        -1.582312190074048,
+        -1.8359865944315683
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Tornado_safety",
+        1
+      ],
+      "scores": [
+        -1.7367588276522188,
+        -1.4937517124183117,
+        -0.4137140004475757,
+        -1.8268978868698031
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Mallorca",
+        1
+      ],
+      "scores": [
+        -4.086415324816062,
+        -1.0963031810513024,
+        -2.2216796922488116,
+        -2.0856478855821066
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Barcelona",
+        2
+      ],
+      "scores": [
+        -0.6051822560139439,
+        -0.38493009159416747,
+        -0.4310643062141123,
+        -0.8720346035695326
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Light_Bulb",
+        2
+      ],
+      "scores": [
+        -2.9211531443434624,
+        -1.9808968437926522,
+        -2.065294761311446,
+        -3.403361558402158
+      ],
+      "prediction": 1,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Mysticism/What_is_mysticism%3F",
+        1
+      ],
+      "scores": [
+        -1.194740873718081,
+        -1.5145458810311094,
+        -1.3451879327019778,
+        -1.0271798487293833
+      ],
+      "prediction": 3,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Women%E2%80%99s_boxing_to_be_included_in_the_2012_Olympics_for_the_first_time",
+        2
+      ],
+      "scores": [
+        -1.5268308544025755,
+        -1.0012706012142887,
+        -0.42615349315497336,
+        -1.1175799516533036
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Charlotte_with_children",
+        2
+      ],
+      "scores": [
+        -1.2988427301565215,
+        -2.3808986406098485,
+        -1.2475838342557262,
+        -1.434622947741577
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Leak_suggests_John_Kerry_will_recognise_Israel_as_Jewish_state",
+        2
+      ],
+      "scores": [
+        -1.1543044553105282,
+        -1.1622507318927167,
+        -1.3928425230428436,
+        -1.2220460100990211
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Moon",
+        1
+      ],
+      "scores": [
+        -1.6170622379092787,
+        -1.2786158684673123,
+        -1.186106328159446,
+        -1.3323826807855723
+      ],
+      "prediction": 2,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:South_America/Venezuela",
+        2
+      ],
+      "scores": [
+        -2.097103529702371,
+        -1.922506934371344,
+        -1.63370308103885,
+        -0.9521231020534228
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/The_Cold_War/Hungarian_Revolution",
+        1
+      ],
+      "scores": [
+        -1.5455772908635448,
+        -1.2478631117350456,
+        -1.0968378740870655,
+        -0.8549570968041884
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/California_bans_sale_of_violent_video_games_to_minors",
+        1
+      ],
+      "scores": [
+        -0.5684052109925019,
+        -1.3812127191450845,
+        -0.6019476328395917,
+        -1.3460738912995627
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Hollywood_sign_modified_to_read_%27Hollyweed%27",
+        1
+      ],
+      "scores": [
+        -1.0349188569032213,
+        -1.6048896435291882,
+        -0.7049417933069686,
+        -2.168634823516805
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Nadal_beats_Raonic_to_reach_Australian_Open_semis",
+        2
+      ],
+      "scores": [
+        -1.4167335076680219,
+        -1.0163977803943327,
+        -2.1785264550706196,
+        -1.742395021627356
+      ],
+      "prediction": 1,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Languages/Estonian",
+        1
+      ],
+      "scores": [
+        -1.4117688153751782,
+        -1.4693749124449162,
+        -1.446896150868406,
+        -1.4730505705145502
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Peak_Oil:_High_Tide_for_an_Oil_Addicted_World/Personal_Action",
+        1
+      ],
+      "scores": [
+        -1.544772436161762,
+        -1.1734539618670243,
+        -1.4086598488878483,
+        -1.0306424277119972
+      ],
+      "prediction": 3,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Murals_and_graffiti",
+        2
+      ],
+      "scores": [
+        -0.7323053599078181,
+        -2.2236354978712973,
+        -1.298990495393153,
+        -1.7677769369605556
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/New_Australian_Prime_Minister_signs_Kyoto",
+        2
+      ],
+      "scores": [
+        -2.443045724344938,
+        -1.5768982609134055,
+        -0.5988475935703823,
+        -0.9687276533240352
+      ],
+      "prediction": 2,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/New_South_Wales_government_starts_trial_of_hunting_in_national_parks",
+        2
+      ],
+      "scores": [
+        -1.229630094562067,
+        -1.4243317158921793,
+        -1.570897550187888,
+        -1.7039425383997615
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Fundamentals_of_Transportation/Introduction",
+        2
+      ],
+      "scores": [
+        -0.8732495016006349,
+        -1.3250941051541643,
+        -1.4576356696523038,
+        -1.2554856103896719
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/California_lawmaker_denies_affairs_after_sexual_discussion_becomes_public",
+        2
+      ],
+      "scores": [
+        -0.5898779137630551,
+        -1.5725589475133923,
+        -1.1363413466955123,
+        -1.3708309077712058
+      ],
+      "prediction": 0,
+      "correct": 0
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Water_safety",
+        2
+      ],
+      "scores": [
+        -1.0783615785613696,
+        -1.6226002350660436,
+        -3.0285224698751705,
+        -2.1756033030005772
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Hong_Kong_tourists_held_hostage_in_the_Philippines,_nine_killed",
+        2
+      ],
+      "scores": [
+        -1.2150219932107156,
+        -1.4913513596337076,
+        -1.8800284137175376,
+        -1.9607247126633536
+      ],
+      "prediction": 0,
+      "correct": 1
+    },
+    {
+      "suite": "belebele",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Former_U.S._National_Security_Advisor_Zbigniew_Brzezinski_dies_aged_89",
+        1
+      ],
+      "scores": [
+        -1.092118212703141,
+        -1.1969564561140462,
+        -2.415308935251417,
+        -2.800111232461281
+      ],
+      "prediction": 0,
+      "correct": 0
+    }
+  ]
+}

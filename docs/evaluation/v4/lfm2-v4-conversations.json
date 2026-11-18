@@ -1,0 +1,562 @@
+{
+  "model": "LFM2-350M",
+  "revision": "f37d3f5c8c5484bc01dad379a595cf4c68c4e70e",
+  "conversations": [
+    {
+      "id": "en-battery",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My phone battery runs out before the evening. What are two simple ways to make it last longer?"
+        },
+        {
+          "role": "assistant",
+          "content": "1. **Use a Battery-Powered Flashlight**: Instead of relying on your phone's battery, use a flashlight or a portable charger to keep your phone charged throughout the night.\n\n2. **Keep Your Phone Charged**: Make sure your phone is always charged before going to bed. If"
+        },
+        {
+          "role": "user",
+          "content": "I need the screen bright for work. What else could I change?"
+        },
+        {
+          "role": "assistant",
+          "content": "1. **Adjust Display Settings**: Many smartphones have the ability to adjust brightness levels. You can change this in the settings menu to make the screen brighter for work.\n\n2. **Use a Bright Screen Protector**: This device can help protect your screen from dust and fingerprints while keeping your phone's"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-battery",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Telefonumun şarjı akşam olmadan bitiyor. Daha uzun dayanması için iki basit yol söyler misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "İşte bir örnek:\n\nTelefonun şarjının ardından birçok yeni bir çok uzun dayanır (hay 5-10 km) öğrenciler, ama 3-4 km gü"
+        },
+        {
+          "role": "user",
+          "content": "İş için ekranın parlak kalması gerekiyor. Başka neyi değiştirebilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "İş için **nüfus ve bölümle** iki basit olarak çalışır:\n\n* **Keskinçek:** Bu şarjı, telefonunu belirlemek için iki basitleştirilm"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-sentence",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Is “The bus leaves at nine” a question or a statement? Answer with one of those two words."
+        },
+        {
+          "role": "assistant",
+          "content": "Statement."
+        },
+        {
+          "role": "user",
+          "content": "And “Does the bus leave at nine?” Same two choices."
+        },
+        {
+          "role": "assistant",
+          "content": "Statement."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "statement"
+          ],
+          "passed": true,
+          "tokens": 2
+        },
+        {
+          "criterion": [
+            "question"
+          ],
+          "passed": false,
+          "tokens": 2
+        }
+      ]
+    },
+    {
+      "id": "tr-sentence",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "“Otobüs dokuzda kalkıyor” bir soru mu, bir bilgi mi? Bu iki kelimeden biriyle cevap ver."
+        },
+        {
+          "role": "assistant",
+          "content": "\"Kalkıyorların dokuz olarak çok bir kısmında kullanılması gerekir, bu soru arasında bir bilgiyi yönetmek istediğiniz bir çocuğunu önlemek"
+        },
+        {
+          "role": "user",
+          "content": "Peki “Otobüs dokuzda mı kalkıyor?” hangisi? Aynı iki seçenek."
+        },
+        {
+          "role": "assistant",
+          "content": "\"Otobüs dokuzla çok kısmında, bir kalkıyorların kullanıcının önceden yönetmek istiyorum\" (Sonuç olarak, \"Kalkıyorsun dokuzla"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "bilgi"
+          ],
+          "passed": true,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "soru"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-mirror",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Why does the bathroom mirror get foggy after a hot shower?"
+        },
+        {
+          "role": "assistant",
+          "content": "The bathroom mirror becomes foggy after a hot shower due to the formation of condensation. When water evaporates from the skin, it leaves behind moisture. If the temperature of the bathroom is above 100°F (38°C), this moisture condenses on the mirror surface, forming droplets. Over time, these droplets can accumulate"
+        },
+        {
+          "role": "user",
+          "content": "I can't open a window in there. What else could keep the mirror clear?"
+        },
+        {
+          "role": "assistant",
+          "content": "If a window is not opening, there could be several reasons for this. Here are a few possibilities:\n\n1. **Foggy Air Conditioning:** Sometimes, the air conditioning can cause foggy conditions inside your home, including in the bathroom. Ensure that the air conditioning is running and that you're not blocking"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-mirror",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Sıcak duştan sonra banyo aynası neden buğulanıyor?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sıcak duştan sonra, buğulunuz şekilde çok çok kesin bir çok düşünmeyi durumda:\n\n1. **İşte**: Bu durumda, sürekli olarak bir şek"
+        },
+        {
+          "role": "user",
+          "content": "Banyoda pencere açamıyorum. Aynanın buğulanmaması için başka ne yapabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Banyoda pencere açamıyorum. Bu durumda, buğruluğu daha fazla önceki güvenlik sistemleri ve özel bir şekilde çalışacaktır:\n\n1. **Düşük"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-pencils",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "One pack has eight pencils. How many pencils are in three packs?"
+        },
+        {
+          "role": "assistant",
+          "content": "To find out how many pencils are in three packs, you multiply the number of pencils in one pack by the number of packs:\n\n3 packs * 8 pencils/pack = 24 pencils\n\nSo, there are 24 penils in three packs."
+        },
+        {
+          "role": "user",
+          "content": "I gave five of them away. How many are left? Just the number."
+        },
+        {
+          "role": "assistant",
+          "content": "The answer is 3. If you gave away five pencils, and there are originally eight, then you have:\n\n8 pencils - 5 pencils = 3 pencils left."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 56
+        },
+        {
+          "criterion": [
+            "19"
+          ],
+          "passed": false,
+          "tokens": 40
+        }
+      ]
+    },
+    {
+      "id": "tr-pencils",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bir pakette sekiz kalem var. Üç pakette kaç kalem olur?"
+        },
+        {
+          "role": "assistant",
+          "content": "Üç pakette sekiz kalem 2.5 - 5 kalem olarak kullanır. İşte metinde:\n\n- Üç pakette (örneğin, 2 kg - 5 kg) kullanarak kalem 3.75 -"
+        },
+        {
+          "role": "user",
+          "content": "Beş tanesini verdim. Kaç tane kaldı? Sadece sayıyı yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Üç pakette sekiz kalem 2.5 - 5 kalem olarak kullanırken, bu durumda 15 - 30 kalem olmadan kaldırın. İşte konuşmalar:\n\n- Üç pakette ("
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "19"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-polite",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Can you make this message more polite? “Send me the report now.”"
+        },
+        {
+          "role": "assistant",
+          "content": "Certainly, here's a more polite version: \"Could you kindly send me the report at your earliest convenience?\""
+        },
+        {
+          "role": "user",
+          "content": "Now make it a bit more casual, as if I were writing to a friend."
+        },
+        {
+          "role": "assistant",
+          "content": "Hey there! Just wanted to say, could you send me the report right now? It's a quick request!"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 23
+        }
+      ]
+    },
+    {
+      "id": "tr-polite",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bu mesajı daha kibar yapar mısın? “Raporu hemen gönder.”"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu mesajı, özellikle amaçlarının kesin bir karakteristeki çözümüne değerlendirmeyi sağlayabiliriz. İşte daha iyi bir örnek:\n\n\"Rapor"
+        },
+        {
+          "role": "user",
+          "content": "Şimdi bir arkadaşa yazar gibi biraz daha samimi yap."
+        },
+        {
+          "role": "assistant",
+          "content": "Bu örnekte, \"Raporu gibi bir arkadaşının tanımlayım.\" olarak kabul edilir. İlk anlaşılma başvurmanız gerekir:\n\n\"Raporu büyü"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-scissors",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "The scissors are in the top drawer and the tape is on the shelf. Where is the tape?"
+        },
+        {
+          "role": "assistant",
+          "content": "The tape is on the shelf, specifically in the top drawer."
+        },
+        {
+          "role": "user",
+          "content": "I moved the tape to the desk and left the scissors alone. Where are the scissors?"
+        },
+        {
+          "role": "assistant",
+          "content": "The scissors are now on the desk."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 13
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        }
+      ]
+    },
+    {
+      "id": "tr-scissors",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Makas üst çekmecede, bant da rafta. Bant nerede?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bantının üst çekmeceğinin çekme süreçleri:\n\nMakas üst çekeceklerden, kısmınızda neredeyse bir gösterdigi ve rafta sahip ol"
+        },
+        {
+          "role": "user",
+          "content": "Bandı masaya taşıdım, makasa dokunmadım. Makas nerede?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bandı, makasının üst çekmeceğinin biri arasında rafta çalışır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 36
+        }
+      ]
+    },
+    {
+      "id": "en-exercise",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I'd like to start exercising a little at home. What could I do?"
+        },
+        {
+          "role": "assistant",
+          "content": "Starting a home-based exercise routine can be very effective and fun. Here are a few exercises you could consider:\n\n1. **Bodyweight Exercises**: These work all major muscle groups and are easy to do at home. Examples include:\n   - Squats\n   - Push-ups (modified if needed)"
+        },
+        {
+          "role": "user",
+          "content": "My knee hurts, so I'd rather avoid jumping. What would you suggest instead?"
+        },
+        {
+          "role": "assistant",
+          "content": "If knee pain is a concern, especially if you're avoiding high-impact activities like jumping, here are some low-impact alternatives:\n\n1. **Strength Training**: Focus on exercises that strengthen your legs, hips, and core. You can use resistance bands, light weights, or even bodyweight"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-exercise",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Evde biraz egzersiz yapmaya başlamak istiyorum. Ne yapabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu konu şunlardır:\n\n1. **Kişisel Fonksiyonu ve Özellikleri:** İngilizce'de biraz \"evde biraz egzersiz yapmaya başlamak\" olarak k"
+        },
+        {
+          "role": "user",
+          "content": "Dizim ağrıyor, zıplamaktan kaçınmak istiyorum. Bunun yerine ne önerirsin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu konu şunlardır:\n\n1. **Tarihsel Örnekleri ve İşletim Sırasında İmparatorlar:** Zıplamaktan bir yerel tarihsel olarak, biraz \"evde"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-bedtime",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which one is better?"
+        },
+        {
+          "role": "assistant",
+          "content": "It's challenging to definitively say which one is \"better\" without considering the specific context, as preferences can vary greatly. However, if we're comparing two options in a general sense, here's a breakdown:\n\n1. **AI-Driven Tools**: Tools like ChatGPT, GPT-"
+        },
+        {
+          "role": "user",
+          "content": "I mean tea or coffee, right before going to sleep."
+        },
+        {
+          "role": "assistant",
+          "content": "Ah, for a pre-sleep routine, **tea** is often preferred. It's calming and soothing, making it easier to unwind before bed. On the other hand, **coffee** can sometimes be stimulating and might disrupt sleep quality if consumed too close to bedtime.\n\nConsidering your preference"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-bedtime",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hangisi daha iyi?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hangis olarak, daha iyi bir şekilde verilmiştir:\n\n1. **Bu şeklinde değişken**: İngilizce'de \"good\" (bir hızı) veya \"great\""
+        },
+        {
+          "role": "user",
+          "content": "Uyumadan hemen önce çay mı kahve mi, onu soruyorum."
+        },
+        {
+          "role": "assistant",
+          "content": "Bu konu, halkın güvenlik ve çayliğini belirtin. İşte önemli verilmiştir:\n\n- **Çayımda şekilde**: \"Good\" (bir hızı) kah"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    }
+  ]
+}

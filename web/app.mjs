@@ -106,7 +106,7 @@ for (const [name, desc] of [
   ['q4', 'Browser default'],
   ['q8', 'Ubuntu default'],
   ['fp16', 'Native checkpoint'],
-  ['fp32', 'Unrounded final merge'],
+  ['fp32', 'Full precision'],
 ]) {
   const asset = release.formats?.[name];
   if (!asset) continue;

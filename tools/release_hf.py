@@ -7,7 +7,7 @@ import shutil
 import subprocess
 from io import BytesIO
 from pathlib import Path
-from huggingface_hub import CommitOperationAdd, HfApi
+from huggingface_hub import CommitOperationAdd, CommitOperationDelete, HfApi
 
 REPO = "yunusemrejr/Franok"
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,8 +18,42 @@ def checksum(file):
         return hashlib.file_digest(f, "sha256").hexdigest()
 
 
+def finetune_mapping(run, export, version):
+    """Release files for a full-parameter fine-tune whose run directory holds summary.json and best/."""
+    summary = json.loads((run / "summary.json").read_text())
+    best = run / "best"
+    sha = checksum(best / "model.safetensors")
+    if sha != summary["selected_sha256"]:
+        raise ValueError("Fine-tune summary does not match the selected weights")
+    mapping = {
+        "model.safetensors": best / "model.safetensors",
+        "config.json": best / "config.json",
+        "tokenizer.json": export / "tokenizer.json",
+        "LICENSE": ROOT / "LICENSE",
+        "README.md": (ROOT / "docs/MODEL_CARD.md").read_bytes(),
+        f"training-record/{version}/summary.json": run / "summary.json",
+    }
+    for f in ("finetune.log", "filter-report.json"):
+        if (run / f).is_file():
+            mapping[f"training-record/{version}/{f}"] = run / f
+    formats = {
+        "fp32": dict(
+            file="model.safetensors",
+            bytes=(best / "model.safetensors").stat().st_size,
+            sha256=sha,
+        )
+    }
+    return mapping, formats, sha, best
+
+
 def publish_weights(args):
     run, export = args.run, args.export
+    version = json.loads((ROOT / "package.json").read_text())["version"]
+    if (run / "summary.json").is_file() and not (run / "rl-finished.json").is_file():
+        mapping, formats, base_sha, folder = finetune_mapping(run, export, version)
+        # 0.3's adapters and merge stay available at its own revision; main holds only this release.
+        stale = ["adapters/", "fp32/", "dialogue-reward/"]
+        return publish(args, mapping, formats, base_sha, folder, version, stale)
     receipt = json.loads((run / "rl-finished.json").read_text())
     if checksum(run / "model.safetensors") != receipt["sha256"]:
         raise ValueError("RL receipt does not match root weights")
@@ -78,32 +112,6 @@ def publish_weights(args):
         mapping["adapters/rl/updates.safetensors"] = products
         mapping["adapters/pre-rl/model.safetensors"] = run / "pre-rl.safetensors"
         mapping["adapters/pre-rl/config.json"] = run / "config.json"
-    reader = None
-    if args.reader:
-        folder = run / "reader"
-        config = json.loads((folder / "config.json").read_text())
-        training = json.loads((folder / "training.json").read_text())
-        if training["history"][-1]["step"] <= 0:
-            raise ValueError("No trained reader updates")
-        for f in ("head.safetensors", "config.json", "training.json"):
-            mapping["reader/" + f] = folder / f
-        reader = dict(
-            url="./reader.safetensors",
-            baseSha256=receipt["sha256"],
-            sha256=checksum(folder / "head.safetensors"),
-            **{k: config[k] for k in ("width", "hidden", "max_span", "threshold")},
-        )
-    search = None
-    if args.search:
-        cfg = json.loads((args.search / "recall.json").read_text())
-        if checksum(args.search / "recall.bin") != cfg["sha256"]:
-            raise ValueError("Search weights disagree with their training export")
-        for f in ("recall.bin", "recall.json", "training.json"):
-            mapping["search/" + f] = args.search / f
-        search = {
-            k: cfg[k] for k in ("format", "width", "vocab", "maxTokens", "sha256")
-        }
-        search["url"] = "./recall.bin"
     full = run.parent / "fp32"
     proof = json.loads((full / "reconstruction.json").read_text())
     if checksum(full / "model.safetensors") != proof["sha256"]:
@@ -121,6 +129,47 @@ def publish_weights(args):
         }
     )
     formats = {}
+    formats["fp16"] = dict(
+        file="model.safetensors",
+        bytes=(run / "model.safetensors").stat().st_size,
+        sha256=receipt["sha256"],
+    )
+    formats["fp32"] = dict(
+        file="fp32/model.safetensors",
+        bytes=(full / "model.safetensors").stat().st_size,
+        sha256=proof["sha256"],
+    )
+    return publish(args, mapping, formats, receipt["sha256"], run, version)
+
+
+def publish(args, mapping, formats, base_sha, run, version, stale=()):
+    export = args.export
+    reader = None
+    if args.reader:
+        folder = run / "reader"
+        config = json.loads((folder / "config.json").read_text())
+        training = json.loads((folder / "training.json").read_text())
+        if "transferred_from" not in training and training["history"][-1]["step"] <= 0:
+            raise ValueError("No trained reader updates")
+        for f in ("head.safetensors", "config.json", "training.json"):
+            mapping["reader/" + f] = folder / f
+        reader = dict(
+            url="./reader.safetensors",
+            baseSha256=base_sha,
+            sha256=checksum(folder / "head.safetensors"),
+            **{k: config[k] for k in ("width", "hidden", "max_span", "threshold")},
+        )
+    search = None
+    if args.search:
+        cfg = json.loads((args.search / "recall.json").read_text())
+        if checksum(args.search / "recall.bin") != cfg["sha256"]:
+            raise ValueError("Search weights disagree with their training export")
+        for f in ("recall.bin", "recall.json", "training.json"):
+            mapping["search/" + f] = args.search / f
+        search = {
+            k: cfg[k] for k in ("format", "width", "vocab", "maxTokens", "sha256")
+        }
+        search["url"] = "./recall.bin"
     for k, manifest in [("q4", "model.json"), ("q8", "model-q8.json")]:
         path = export / ("model." + k)
         data = json.loads((export / manifest).read_text())
@@ -134,16 +183,6 @@ def publish_weights(args):
             bytes=path.stat().st_size,
             sha256=data["sha256"],
         )
-    formats["fp16"] = dict(
-        file="model.safetensors",
-        bytes=(run / "model.safetensors").stat().st_size,
-        sha256=receipt["sha256"],
-    )
-    formats["fp32"] = dict(
-        file="fp32/model.safetensors",
-        bytes=(full / "model.safetensors").stat().st_size,
-        sha256=proof["sha256"],
-    )
     api = HfApi()
     if args.revision != "main":
         api.create_branch(repo_id=REPO, branch=args.revision, exist_ok=True)
@@ -151,10 +190,13 @@ def publish_weights(args):
         repo_id=REPO,
         revision=args.revision,
         operations=[
-            CommitOperationAdd(path_in_repo=k, path_or_fileobj=v)
-            for k, v in mapping.items()
+            *(CommitOperationDelete(path_in_repo=p, is_folder=True) for p in stale),
+            *(
+                CommitOperationAdd(path_in_repo=k, path_or_fileobj=v)
+                for k, v in mapping.items()
+            ),
         ],
-        commit_message=f"Publish Franok {version} full precision, Q4, Q8 and training artifacts",
+        commit_message=f"Publish Franok {version} weights, Q4, Q8 and training record",
     )
     if args.revision != "main":
         return info

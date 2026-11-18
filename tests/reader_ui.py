@@ -30,7 +30,7 @@ def fixture(export, head, config):
         release["reader"] = dict(
             **spec,
             url="./reader.safetensors",
-            baseSha256=release["formats"]["fp16"]["sha256"],
+            baseSha256=(release["formats"].get("fp16") or release["formats"]["fp32"])["sha256"],
             sha256=hashlib.sha256(weights.read_bytes()).hexdigest(),
         )
         release["reader"]["threshold"] = config

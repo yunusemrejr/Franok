@@ -1,0 +1,1302 @@
+{
+  "dataset_revisions": {
+    "belebele": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+    "xquad": "51adfef1c1287aab1d2d91b5bead9bcfb9c68583"
+  },
+  "summary": {
+    "xquad": {
+      "en": {
+        "count": 64,
+        "exact": 0.15625,
+        "f1": 0.21941964285714285
+      },
+      "tr": {
+        "count": 64,
+        "exact": 0.078125,
+        "f1": 0.12489125457875458
+      }
+    }
+  },
+  "items": [
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5730a4d02461fd1900a9cf2d",
+      "answer": "the North Pacific",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572881d34b864d1900164a5b",
+      "answer": "the Nestorian",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572669a9dd62a815002e8417",
+      "answer": "the formations in which they are found",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5726385e271a42140099d799",
+      "answer": "packets",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5727cc15ff5b5019007d9578",
+      "answer": "Westwood Medical",
+      "exact": 0,
+      "f1": 0.2857142857142857
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56e1b62ecd28a01900c67aa3",
+      "answer": "a Turing machine",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57286fa83acd2414000df9e6",
+      "answer": "1321 to 1323",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57273e50dd62a815002e9a03",
+      "answer": "ENR",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572fc8a904bcaa1900d76d21",
+      "answer": "the English Government",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572940973f37b319004781a7",
+      "answer": "Variations of Snow and Ice",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57273a465951b619008f8702",
+      "answer": "substructure",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5725cc38ec44d21400f3d5bb",
+      "answer": "the Treaty of Rome",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5730b2ac2461fd1900a9cfb4",
+      "answer": "The Use of Money",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56bf36b93aeaaa14008c9564",
+      "answer": "17",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5727aec03acd2414000de991",
+      "answer": "Harvard Stadium",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572fc6f204bcaa1900d76cf6",
+      "answer": "considered legislation",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572735a15951b619008f86c0",
+      "answer": "1998",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5725f39638643c19005acef9",
+      "answer": "subjects",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5727d1c93acd2414000ded40",
+      "answer": "2007",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56beb4343aeaaa14008c925d",
+      "answer": "6",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56d726b60d65d214001983ed",
+      "answer": "Ward",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5725f8f5ec44d21400f3d7b5",
+      "answer": "3.07",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572914f46aef051400154a46",
+      "answer": "the 2007 election",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56dfa0d84a1a83140091ebba",
+      "answer": "mad scientist",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57293e221d046914007791d5",
+      "answer": "second",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572920d73f37b31900478056",
+      "answer": "9–18",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572a13841d0469140077973e",
+      "answer": "moreover",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "571cb27fdd7acb1400e4c133",
+      "answer": "paleoclimatologists",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572663a9f1498d1400e8ddf2",
+      "answer": "the most recent era",
+      "exact": 0,
+      "f1": 0.8571428571428571
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56e181d9e3433e1400422fa3",
+      "answer": "subjects",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572828383acd2414000df5c3",
+      "answer": "Doctor Who",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5726ea985951b619008f8263",
+      "answer": "personultant pharmacists",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56dfb5777aa994140058e021",
+      "answer": "Tesla",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57268a8fdd62a815002e88d0",
+      "answer": "Tyne",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5728e715ff5b5019007da917",
+      "answer": "sickles",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5726847f708984140094c8ae",
+      "answer": "Skyclad",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5726e37ef1498d1400e8eedb",
+      "answer": "1913",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572fdb17b2c2fd1400568521",
+      "answer": "the Mental Health",
+      "exact": 0,
+      "f1": 0.4
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57114e8d50c2381900b54a5e",
+      "answer": "565 °C",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56e7796637bdd419002c4001",
+      "answer": "secondary school teachers",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56e1254ae3433e1400422c66",
+      "answer": "Tesla",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572671e55951b619008f72d7",
+      "answer": "the Grainger Market",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57264d9edd62a815002e80ff",
+      "answer": "1972",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572ffee1947a6a140053cf16",
+      "answer": "1908",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5733f1784776f41900661576",
+      "answer": "April 16, 1754",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572743fb708984140094db93",
+      "answer": "1970s",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56e1ee4de3433e1400423212",
+      "answer": "public",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572750e8dd62a815002e9af0",
+      "answer": "consumer",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57268da7f1498d1400e8e3a0",
+      "answer": "cenophores",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "56beb86b3aeaaa14008c92bf",
+      "answer": "39",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57373d0cc3c5551400e51e86",
+      "answer": "natural",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5726eb8bf1498d1400e8efe6",
+      "answer": "HIV/AIDS",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57309ef18ab72b1400f9c604",
+      "answer": "free",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57286951ff5b5019007da20f",
+      "answer": "Credit Suisse CEO",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5728eef92ca10214002daab3",
+      "answer": "submit cheerfully to the highest penalty",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "571144d1a58dae1900cd6d71",
+      "answer": "close",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5725edfe38643c19005acea1",
+      "answer": "Fresno",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5729281baf94a219006aa121",
+      "answer": "Kenya",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5710eca0a58dae1900cd6b3a",
+      "answer": "Huguenot High School",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572811434b864d1900164390",
+      "answer": "Robert Tyler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "570d28bdb3d812140066d4a7",
+      "answer": "Nationals",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "57096b66200fba1400367fab",
+      "answer": "first-to-air digital terrestrial",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "572757bef1498d1400e8f691",
+      "answer": "change",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "en",
+      "key": "5725d79e89a1e219009abf90",
+      "answer": "one",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5730a4d02461fd1900a9cf2d",
+      "answer": "Fransa",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572881d34b864d1900164a5b",
+      "answer": "Hava tıbbı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572669a9dd62a815002e8417",
+      "answer": "William Smith",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5726385e271a42140099d799",
+      "answer": "paketin sıra numarasıyla",
+      "exact": 0,
+      "f1": 0.2
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5727cc15ff5b5019007d9578",
+      "answer": "Cambridge",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56e1b62ecd28a01900c67aa3",
+      "answer": "yaklaşık f(n)",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57286fa83acd2414000df9e6",
+      "answer": "1321",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57273e50dd62a815002e9a03",
+      "answer": "ENR",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572fc8a904bcaa1900d76d21",
+      "answer": "Devlet",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572940973f37b319004781a7",
+      "answer": "IPCC",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57273a465951b619008f8702",
+      "answer": "yüzde",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5725cc38ec44d21400f3d5bb",
+      "answer": "komutlar",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5730b2ac2461fd1900a9cfb4",
+      "answer": "Kelime",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56bf36b93aeaaa14008c9564",
+      "answer": "iki",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5727aec03acd2414000de991",
+      "answer": "Harvard",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572fc6f204bcaa1900d76cf6",
+      "answer": "birkaç",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572735a15951b619008f86c0",
+      "answer": "1998",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5725f39638643c19005acef9",
+      "answer": "kalmış",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5727d1c93acd2414000ded40",
+      "answer": "2020",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56beb4343aeaaa14008c925d",
+      "answer": "dört",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56d726b60d65d214001983ed",
+      "answer": "Bobcos",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5725f8f5ec44d21400f3d7b5",
+      "answer": "3,07",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572914f46aef051400154a46",
+      "answer": "Kenyatta",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56dfa0d84a1a83140091ebba",
+      "answer": "Tesla",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57293e221d046914007791d5",
+      "answer": "kaliteli sera gazlarının atmosferik konsantrasyonlarını ciddi manada artırdığı",
+      "exact": 0,
+      "f1": 0.7692307692307693
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572920d73f37b31900478056",
+      "answer": "30",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572a13841d0469140077973e",
+      "answer": "kamu",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "571cb27fdd7acb1400e4c133",
+      "answer": "yüz",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572663a9f1498d1400e8ddf2",
+      "answer": "birkaç",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56e181d9e3433e1400422fa3",
+      "answer": "kullanmadaki birim",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572828383acd2414000df5c3",
+      "answer": "Doktor",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5726ea985951b619008f8263",
+      "answer": "yükseklikler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56dfb5777aa994140058e021",
+      "answer": "Benjamin Vail ve Robert Lane",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57268a8fdd62a815002e88d0",
+      "answer": "tüneller",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5728e715ff5b5019007da917",
+      "answer": "sivil itaatsizlik",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5726847f708984140094c8ae",
+      "answer": "Michael Gascoigne",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5726e37ef1498d1400e8eedb",
+      "answer": "1913",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572fdb17b2c2fd1400568521",
+      "answer": "Kamera",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57114e8d50c2381900b54a5e",
+      "answer": "30 °C'dir",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56e7796637bdd419002c4001",
+      "answer": "1,4 milyon",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56e1254ae3433e1400422c66",
+      "answer": "Savaşı Bitirecek Biroğrafya",
+      "exact": 0,
+      "f1": 0.5714285714285714
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572671e55951b619008f72d7",
+      "answer": "Grainger Çarşısı",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57264d9edd62a815002e80ff",
+      "answer": "1974",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572ffee1947a6a140053cf16",
+      "answer": "1908",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5733f1784776f41900661576",
+      "answer": "1754",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572743fb708984140094db93",
+      "answer": "1970'lerin başı",
+      "exact": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56e1ee4de3433e1400423212",
+      "answer": "P ≆ NP",
+      "exact": 0,
+      "f1": 0.2857142857142857
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572750e8dd62a815002e9af0",
+      "answer": "bağımsız",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57268da7f1498d1400e8e3a0",
+      "answer": "yüksek",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "56beb86b3aeaaa14008c92bf",
+      "answer": "39",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57373d0cc3c5551400e51e86",
+      "answer": "komposteles",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5726eb8bf1498d1400e8efe6",
+      "answer": "Hasta",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57309ef18ab72b1400f9c604",
+      "answer": "kapitalizm",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57286951ff5b5019007da20f",
+      "answer": "Jon Corzine",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5728eef92ca10214002daab3",
+      "answer": "bağımsız",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "571144d1a58dae1900cd6d71",
+      "answer": "yüz",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5725edfe38643c19005acea1",
+      "answer": "Fresno",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5729281baf94a219006aa121",
+      "answer": "Kenya",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5710eca0a58dae1900cd6b3a",
+      "answer": "Pomacan",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572811434b864d1900164390",
+      "answer": "Doktor",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "570d28bdb3d812140066d4a7",
+      "answer": "Budgo ve Geelong",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "57096b66200fba1400367fab",
+      "answer": "bağımsız",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "572757bef1498d1400e8f691",
+      "answer": "Hıristiyan akademiler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q8",
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "lang": "tr",
+      "key": "5725d79e89a1e219009abf90",
+      "answer": "yaklaşık",
+      "exact": 0,
+      "f1": 0
+    }
+  ]
+}

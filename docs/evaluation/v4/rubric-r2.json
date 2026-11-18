@@ -1,0 +1,684 @@
+{
+ "reviewer": "Single rubric review by the assistant that ran the training; not blind. Replies truncated at 170 characters for review, full transcripts in the eval files.",
+ "franok04_transfer": [
+  {
+   "case": "en-snack",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Give a cold lunch using those ingredients.",
+   "passed": false
+  },
+  {
+   "case": "en-snack",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Adapt the first lunch to the missing cheese without requiring heat.",
+   "passed": false
+  },
+  {
+   "case": "tr-snack",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Give a cold lunch using those ingredients.",
+   "passed": false
+  },
+  {
+   "case": "tr-snack",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Adapt the first lunch to the missing cheese without requiring heat.",
+   "passed": false
+  },
+  {
+   "case": "en-label",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Answer request only.",
+   "passed": false
+  },
+  {
+   "case": "en-label",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Answer fact only.",
+   "passed": false
+  },
+  {
+   "case": "tr-label",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Answer rica only.",
+   "passed": false
+  },
+  {
+   "case": "tr-label",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Answer tespit only.",
+   "passed": false
+  },
+  {
+   "case": "en-plant",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Connect its growth direction with the light from the window.",
+   "passed": false
+  },
+  {
+   "case": "en-plant",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Suggest rotating or turning the pot in place.",
+   "passed": false
+  },
+  {
+   "case": "tr-plant",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Connect its growth direction with the light from the window.",
+   "passed": false
+  },
+  {
+   "case": "tr-plant",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Suggest rotating or turning the pot in place.",
+   "passed": false
+  },
+  {
+   "case": "en-apples",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Give nine apples, with or without a calculation.",
+   "passed": false
+  },
+  {
+   "case": "en-apples",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Give only 6.",
+   "passed": false
+  },
+  {
+   "case": "tr-apples",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Give nine apples, with or without a calculation.",
+   "passed": false
+  },
+  {
+   "case": "tr-apples",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Give only 6.",
+   "passed": false
+  },
+  {
+   "case": "en-clarify",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Offer an actual polite rephrasing about interruptions.",
+   "passed": false
+  },
+  {
+   "case": "en-clarify",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Give a short usable spoken sentence about wanting to finish.",
+   "passed": false
+  },
+  {
+   "case": "tr-clarify",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Offer an actual polite rephrasing about interruptions.",
+   "passed": false
+  },
+  {
+   "case": "tr-clarify",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Give a short usable spoken sentence about wanting to finish.",
+   "passed": false
+  },
+  {
+   "case": "en-location",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Answer the green envelope.",
+   "passed": true
+  },
+  {
+   "case": "en-location",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Keep track of the unchanged museum ticket and answer the blue envelope.",
+   "passed": false
+  },
+  {
+   "case": "tr-location",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Answer the green envelope.",
+   "passed": true
+  },
+  {
+   "case": "tr-location",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Keep track of the unchanged museum ticket and answer the blue envelope.",
+   "passed": false
+  },
+  {
+   "case": "en-quiet",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Offer a realistic way to meet people outside a party.",
+   "passed": false
+  },
+  {
+   "case": "en-quiet",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Suggest a small reading, book or library group consistent with the new preference.",
+   "passed": false
+  },
+  {
+   "case": "tr-quiet",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Offer a realistic way to meet people outside a party.",
+   "passed": false
+  },
+  {
+   "case": "tr-quiet",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Suggest a small reading, book or library group consistent with the new preference.",
+   "passed": true
+  },
+  {
+   "case": "en-ambiguity",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Ask what options the person is choosing between.",
+   "passed": false
+  },
+  {
+   "case": "en-ambiguity",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Choose or clearly favor the backpack and connect it to the long walk or light load.",
+   "passed": false
+  },
+  {
+   "case": "tr-ambiguity",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Ask what options the person is choosing between.",
+   "passed": false
+  },
+  {
+   "case": "tr-ambiguity",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Choose or clearly favor the backpack and connect it to the long walk or light load.",
+   "passed": false
+  }
+ ],
+ "franok04_v4": [
+  {
+   "case": "en-battery",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Give two realistic battery-saving steps.",
+   "passed": false
+  },
+  {
+   "case": "en-battery",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Suggest a battery-saving change that keeps the screen bright.",
+   "passed": false
+  },
+  {
+   "case": "tr-battery",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Give two realistic battery-saving steps.",
+   "passed": false
+  },
+  {
+   "case": "tr-battery",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Suggest a battery-saving change that keeps the screen bright.",
+   "passed": false
+  },
+  {
+   "case": "en-sentence",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Answer statement only.",
+   "passed": false
+  },
+  {
+   "case": "en-sentence",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Answer question only.",
+   "passed": false
+  },
+  {
+   "case": "tr-sentence",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Answer bilgi only.",
+   "passed": false
+  },
+  {
+   "case": "tr-sentence",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Answer soru only.",
+   "passed": true
+  },
+  {
+   "case": "en-mirror",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Explain that warm moist air condenses on the cooler mirror.",
+   "passed": false
+  },
+  {
+   "case": "en-mirror",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Suggest a fan, wiping, warming the mirror or another fix that needs no window.",
+   "passed": false
+  },
+  {
+   "case": "tr-mirror",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Explain that warm moist air condenses on the cooler mirror.",
+   "passed": false
+  },
+  {
+   "case": "tr-mirror",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Suggest a fan, wiping, warming the mirror or another fix that needs no window.",
+   "passed": false
+  },
+  {
+   "case": "en-pencils",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Give 24, with or without a calculation.",
+   "passed": false
+  },
+  {
+   "case": "en-pencils",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Give only 19.",
+   "passed": false
+  },
+  {
+   "case": "tr-pencils",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Give 24, with or without a calculation.",
+   "passed": false
+  },
+  {
+   "case": "tr-pencils",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Give only 19.",
+   "passed": false
+  },
+  {
+   "case": "en-polite",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Offer a polite rewording that still asks for the report.",
+   "passed": false
+  },
+  {
+   "case": "en-polite",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Offer a casual friendly version that still asks for the report.",
+   "passed": false
+  },
+  {
+   "case": "tr-polite",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Offer a polite rewording that still asks for the report.",
+   "passed": false
+  },
+  {
+   "case": "tr-polite",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Offer a casual friendly version that still asks for the report.",
+   "passed": false
+  },
+  {
+   "case": "en-scissors",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Answer the shelf.",
+   "passed": false
+  },
+  {
+   "case": "en-scissors",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Keep track of the unchanged scissors and answer the top drawer.",
+   "passed": false
+  },
+  {
+   "case": "tr-scissors",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Answer the shelf.",
+   "passed": true
+  },
+  {
+   "case": "tr-scissors",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Keep track of the unchanged scissors and answer the top drawer.",
+   "passed": false
+  },
+  {
+   "case": "en-exercise",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Suggest a realistic exercise that can be done at home.",
+   "passed": false
+  },
+  {
+   "case": "en-exercise",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Suggest a low-impact exercise without jumping.",
+   "passed": false
+  },
+  {
+   "case": "tr-exercise",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Suggest a realistic exercise that can be done at home.",
+   "passed": false
+  },
+  {
+   "case": "tr-exercise",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Suggest a low-impact exercise without jumping.",
+   "passed": false
+  },
+  {
+   "case": "en-bedtime",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Ask which options the person is comparing.",
+   "passed": false
+  },
+  {
+   "case": "en-bedtime",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Favor caffeine-free or herbal tea, or advise against coffee, and connect it to sleep.",
+   "passed": false
+  },
+  {
+   "case": "tr-bedtime",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Ask which options the person is comparing.",
+   "passed": false
+  },
+  {
+   "case": "tr-bedtime",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Favor caffeine-free or herbal tea, or advise against coffee, and connect it to sleep.",
+   "passed": false
+  }
+ ],
+ "lfm2_v4": [
+  {
+   "case": "en-battery",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Give two realistic battery-saving steps.",
+   "passed": false
+  },
+  {
+   "case": "en-battery",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Suggest a battery-saving change that keeps the screen bright.",
+   "passed": false
+  },
+  {
+   "case": "tr-battery",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Give two realistic battery-saving steps.",
+   "passed": false
+  },
+  {
+   "case": "tr-battery",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Suggest a battery-saving change that keeps the screen bright.",
+   "passed": false
+  },
+  {
+   "case": "en-sentence",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Answer statement only.",
+   "passed": true
+  },
+  {
+   "case": "en-sentence",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Answer question only.",
+   "passed": false
+  },
+  {
+   "case": "tr-sentence",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Answer bilgi only.",
+   "passed": false
+  },
+  {
+   "case": "tr-sentence",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Answer soru only.",
+   "passed": false
+  },
+  {
+   "case": "en-mirror",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Explain that warm moist air condenses on the cooler mirror.",
+   "passed": true
+  },
+  {
+   "case": "en-mirror",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Suggest a fan, wiping, warming the mirror or another fix that needs no window.",
+   "passed": false
+  },
+  {
+   "case": "tr-mirror",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Explain that warm moist air condenses on the cooler mirror.",
+   "passed": false
+  },
+  {
+   "case": "tr-mirror",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Suggest a fan, wiping, warming the mirror or another fix that needs no window.",
+   "passed": false
+  },
+  {
+   "case": "en-pencils",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Give 24, with or without a calculation.",
+   "passed": true
+  },
+  {
+   "case": "en-pencils",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Give only 19.",
+   "passed": false
+  },
+  {
+   "case": "tr-pencils",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Give 24, with or without a calculation.",
+   "passed": false
+  },
+  {
+   "case": "tr-pencils",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Give only 19.",
+   "passed": false
+  },
+  {
+   "case": "en-polite",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Offer a polite rewording that still asks for the report.",
+   "passed": true
+  },
+  {
+   "case": "en-polite",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Offer a casual friendly version that still asks for the report.",
+   "passed": true
+  },
+  {
+   "case": "tr-polite",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Offer a polite rewording that still asks for the report.",
+   "passed": false
+  },
+  {
+   "case": "tr-polite",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Offer a casual friendly version that still asks for the report.",
+   "passed": false
+  },
+  {
+   "case": "en-scissors",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Answer the shelf.",
+   "passed": false
+  },
+  {
+   "case": "en-scissors",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Keep track of the unchanged scissors and answer the top drawer.",
+   "passed": false
+  },
+  {
+   "case": "tr-scissors",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Answer the shelf.",
+   "passed": false
+  },
+  {
+   "case": "tr-scissors",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Keep track of the unchanged scissors and answer the top drawer.",
+   "passed": false
+  },
+  {
+   "case": "en-exercise",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Suggest a realistic exercise that can be done at home.",
+   "passed": true
+  },
+  {
+   "case": "en-exercise",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Suggest a low-impact exercise without jumping.",
+   "passed": true
+  },
+  {
+   "case": "tr-exercise",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Suggest a realistic exercise that can be done at home.",
+   "passed": false
+  },
+  {
+   "case": "tr-exercise",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Suggest a low-impact exercise without jumping.",
+   "passed": false
+  },
+  {
+   "case": "en-bedtime",
+   "turn": 1,
+   "language": "en",
+   "criterion": "Ask which options the person is comparing.",
+   "passed": false
+  },
+  {
+   "case": "en-bedtime",
+   "turn": 2,
+   "language": "en",
+   "criterion": "Favor caffeine-free or herbal tea, or advise against coffee, and connect it to sleep.",
+   "passed": true
+  },
+  {
+   "case": "tr-bedtime",
+   "turn": 1,
+   "language": "tr",
+   "criterion": "Ask which options the person is comparing.",
+   "passed": false
+  },
+  {
+   "case": "tr-bedtime",
+   "turn": 2,
+   "language": "tr",
+   "criterion": "Favor caffeine-free or herbal tea, or advise against coffee, and connect it to sleep.",
+   "passed": false
+  }
+ ],
+ "franok04_transfer_passed": 3,
+ "franok04_v4_passed": 2,
+ "lfm2_v4_passed": 8
+}

@@ -1,0 +1,1302 @@
+{
+  "dataset_revisions": {
+    "belebele": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+    "xquad": "51adfef1c1287aab1d2d91b5bead9bcfb9c68583"
+  },
+  "summary": {
+    "xquad": {
+      "en": {
+        "count": 64,
+        "exact": 0.15625,
+        "f1": 0.22503720238095237
+      },
+      "tr": {
+        "count": 64,
+        "exact": 0.0625,
+        "f1": 0.10945226648351648
+      }
+    }
+  },
+  "items": [
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5730a4d02461fd1900a9cf2d",
+      "answer": "France",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572881d34b864d1900164a5b",
+      "answer": "Jesus",
+      "exact": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572669a9dd62a815002e8417",
+      "answer": "the uncertainties of fossils",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5726385e271a42140099d799",
+      "answer": "packets",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5727cc15ff5b5019007d9578",
+      "answer": "Westwood Medical",
+      "exact": 0,
+      "f1": 0.2857142857142857
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56e1b62ecd28a01900c67aa3",
+      "answer": "a Turing machine operating in time f(n)",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57286fa83acd2414000df9e6",
+      "answer": "1321 to 1323",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57273e50dd62a815002e9a03",
+      "answer": "ENR",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572fc8a904bcaa1900d76d21",
+      "answer": "the English Parliament",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572940973f37b319004781a7",
+      "answer": "the IPCC",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57273a465951b619008f8702",
+      "answer": "substruction",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5725cc38ec44d21400f3d5bb",
+      "answer": "the Treaty of Rome",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5730b2ac2461fd1900a9cfb4",
+      "answer": "The United Methodist Church",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56bf36b93aeaaa14008c9564",
+      "answer": "17",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5727aec03acd2414000de991",
+      "answer": "Harvard Stadium",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572fc6f204bcaa1900d76cf6",
+      "answer": "country",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572735a15951b619008f86c0",
+      "answer": "1998",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5725f39638643c19005acef9",
+      "answer": "capes in Australia",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5727d1c93acd2414000ded40",
+      "answer": "2007",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56beb4343aeaaa14008c925d",
+      "answer": "6",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56d726b60d65d214001983ed",
+      "answer": "Ward",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5725f8f5ec44d21400f3d7b5",
+      "answer": "3.3%",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572914f46aef051400154a46",
+      "answer": "the country",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56dfa0d84a1a83140091ebba",
+      "answer": "mad scientist",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57293e221d046914007791d5",
+      "answer": "secure",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572920d73f37b31900478056",
+      "answer": "9–18",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572a13841d0469140077973e",
+      "answer": "moreover",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "571cb27fdd7acb1400e4c133",
+      "answer": "paleoclimatologists",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572663a9f1498d1400e8ddf2",
+      "answer": "that the fourth scale",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56e181d9e3433e1400422fa3",
+      "answer": "in binary notation",
+      "exact": 0,
+      "f1": 0.8
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572828383acd2414000df5c3",
+      "answer": "Doctor Who",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5726ea985951b619008f8263",
+      "answer": "a rich and branching",
+      "exact": 0,
+      "f1": 0.25
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56dfb5777aa994140058e021",
+      "answer": "Tesla",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57268a8fdd62a815002e88d0",
+      "answer": "Tyne and Wear Metro",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5728e715ff5b5019007da917",
+      "answer": "padlocking the gates",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5726847f708984140094c8ae",
+      "answer": "Skyclad",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5726e37ef1498d1400e8eedb",
+      "answer": "1913",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572fdb17b2c2fd1400568521",
+      "answer": "the United Kingdom",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57114e8d50c2381900b54a5e",
+      "answer": "565 °C",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56e7796637bdd419002c4001",
+      "answer": "secondary school teachers",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56e1254ae3433e1400422c66",
+      "answer": "\"A Machine to End War\"",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572671e55951b619008f72d7",
+      "answer": "a fire",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57264d9edd62a815002e80ff",
+      "answer": "1973",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572ffee1947a6a140053cf16",
+      "answer": "1908",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5733f1784776f41900661576",
+      "answer": "April 16, 1754",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572743fb708984140094db93",
+      "answer": "1970s",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56e1ee4de3433e1400423212",
+      "answer": "P",
+      "exact": 0,
+      "f1": 0.4
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572750e8dd62a815002e9af0",
+      "answer": "prohibitum",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57268da7f1498d1400e8e3a0",
+      "answer": "cenophores",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "56beb86b3aeaaa14008c92bf",
+      "answer": "39",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57373d0cc3c5551400e51e86",
+      "answer": "the concept of a force",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5726eb8bf1498d1400e8efe6",
+      "answer": "HIV/AIDS",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57309ef18ab72b1400f9c604",
+      "answer": "pioneered by such theorists",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57286951ff5b5019007da20f",
+      "answer": "Credit Suisse CEO",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5728eef92ca10214002daab3",
+      "answer": "submit cheerfully to the highest penalty",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "571144d1a58dae1900cd6d71",
+      "answer": "close",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5725edfe38643c19005acea1",
+      "answer": "Fresno",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5729281baf94a219006aa121",
+      "answer": "Kenya",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5710eca0a58dae1900cd6b3a",
+      "answer": "Piedmont",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572811434b864d1900164390",
+      "answer": "Rose Tyler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "570d28bdb3d812140066d4a7",
+      "answer": "Nationals",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "57096b66200fba1400367fab",
+      "answer": "first Setanta Sports",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "572757bef1498d1400e8f691",
+      "answer": "Christian academies",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "en",
+      "key": "5725d79e89a1e219009abf90",
+      "answer": "one",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5730a4d02461fd1900a9cf2d",
+      "answer": "Katolik",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572881d34b864d1900164a5b",
+      "answer": "Müslüman tıbbı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572669a9dd62a815002e8417",
+      "answer": "William Smith",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5726385e271a42140099d799",
+      "answer": "paketin sıra numarasıyla",
+      "exact": 0,
+      "f1": 0.2
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5727cc15ff5b5019007d9578",
+      "answer": "Harvard Tıp Okulu",
+      "exact": 0,
+      "f1": 0.25
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56e1b62ecd28a01900c67aa3",
+      "answer": "dört",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57286fa83acd2414000df9e6",
+      "answer": "1321",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57273e50dd62a815002e9a03",
+      "answer": "ENR",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572fc8a904bcaa1900d76d21",
+      "answer": "Serbest Hükümet",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572940973f37b319004781a7",
+      "answer": "IPCC",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57273a465951b619008f8702",
+      "answer": "yüzde",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5725cc38ec44d21400f3d5bb",
+      "answer": "kalem",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5730b2ac2461fd1900a9cfb4",
+      "answer": "Kanada Perhizi",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56bf36b93aeaaa14008c9564",
+      "answer": "20–18",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5727aec03acd2414000de991",
+      "answer": "Harvard",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572fc6f204bcaa1900d76cf6",
+      "answer": "komitlerin",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572735a15951b619008f86c0",
+      "answer": "1998",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5725f39638643c19005acef9",
+      "answer": "kalmış,",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5727d1c93acd2414000ded40",
+      "answer": "2020",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56beb4343aeaaa14008c925d",
+      "answer": "dört",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56d726b60d65d214001983ed",
+      "answer": "Bobby Fowler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5725f8f5ec44d21400f3d7b5",
+      "answer": "3,07",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572914f46aef051400154a46",
+      "answer": "Kenyatta",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56dfa0d84a1a83140091ebba",
+      "answer": "Tesla",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57293e221d046914007791d5",
+      "answer": "kaliteli sera gazlarının atmosferik konsantrasyonlarını ciddi manada artırdığı",
+      "exact": 0,
+      "f1": 0.7692307692307693
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572920d73f37b31900478056",
+      "answer": "30",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572a13841d0469140077973e",
+      "answer": "kamu",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "571cb27fdd7acb1400e4c133",
+      "answer": "yüz",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572663a9f1498d1400e8ddf2",
+      "answer": "dördüncü",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56e181d9e3433e1400422fa3",
+      "answer": "kalit",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572828383acd2414000df5c3",
+      "answer": "Doktor",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5726ea985951b619008f8263",
+      "answer": "yükseklikler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56dfb5777aa994140058e021",
+      "answer": "Tesla",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57268a8fdd62a815002e88d0",
+      "answer": "tüneller",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5728e715ff5b5019007da917",
+      "answer": "sivil itaatsizlik",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5726847f708984140094c8ae",
+      "answer": "Michael Gascoigne",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5726e37ef1498d1400e8eedb",
+      "answer": "1913",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572fdb17b2c2fd1400568521",
+      "answer": "Kamu",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57114e8d50c2381900b54a5e",
+      "answer": "paslanmaz çeliğin sürünme sınırı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56e7796637bdd419002c4001",
+      "answer": "1,4 milyon",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56e1254ae3433e1400422c66",
+      "answer": "Dini",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572671e55951b619008f72d7",
+      "answer": "Grainger Çarşısı",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57264d9edd62a815002e80ff",
+      "answer": "1974",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572ffee1947a6a140053cf16",
+      "answer": "1908",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5733f1784776f41900661576",
+      "answer": "1754",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572743fb708984140094db93",
+      "answer": "1970'lerin başı",
+      "exact": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56e1ee4de3433e1400423212",
+      "answer": "P ≆ NP",
+      "exact": 0,
+      "f1": 0.2857142857142857
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572750e8dd62a815002e9af0",
+      "answer": "dokuz",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57268da7f1498d1400e8e3a0",
+      "answer": "yüzde",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "56beb86b3aeaaa14008c92bf",
+      "answer": "39",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57373d0cc3c5551400e51e86",
+      "answer": "komposteles",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5726eb8bf1498d1400e8efe6",
+      "answer": "yaklaşık",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57309ef18ab72b1400f9c604",
+      "answer": "kapitalizm",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57286951ff5b5019007da20f",
+      "answer": "Larry Ellison",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5728eef92ca10214002daab3",
+      "answer": "kötü itaatsizlere bir itiraf",
+      "exact": 0,
+      "f1": 0.3333333333333333
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "571144d1a58dae1900cd6d71",
+      "answer": "yüz",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5725edfe38643c19005acea1",
+      "answer": "Fresno",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5729281baf94a219006aa121",
+      "answer": "Kenya",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5710eca0a58dae1900cd6b3a",
+      "answer": "Pomacan",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572811434b864d1900164390",
+      "answer": "Doktor",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "570d28bdb3d812140066d4a7",
+      "answer": "Budgo ve Geelong",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "57096b66200fba1400367fab",
+      "answer": "kamal reklam geliri kaybı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "572757bef1498d1400e8f691",
+      "answer": "kızıl",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "suite": "xquad",
+      "format": "q4",
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "lang": "tr",
+      "key": "5725d79e89a1e219009abf90",
+      "answer": "bir",
+      "exact": 0,
+      "f1": 0
+    }
+  ]
+}

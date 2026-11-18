@@ -1,6 +1,6 @@
 # Training Franok
 
-Franok began with an empty tokenizer vocabulary and randomly initialized decoder weights. The first Colab run fitted the byte-pair vocabulary to English and Turkish training text, trained a 256-position decoder and taught it the user/assistant turn format. The extended run resumed that exact Franok checkpoint and its tokenizer at [revision 7633d06](https://huggingface.co/yunusemrejr/Franok/tree/7633d06180ebbc836af02c590f96f8ac28a4829a). A third-party model supplied neither starting parameters nor runtime answers. Several open corpora contain previously generated synthetic examples.
+Franok began with an empty tokenizer vocabulary and randomly initialized decoder weights. The first Colab run fitted the byte-pair vocabulary to English and Turkish training text, trained a 256-position decoder and taught it the user/assistant turn format. The extended run resumed that exact Franok checkpoint and its tokenizer at [revision 7633d06](https://huggingface.co/yunusemrejr/Franok/tree/7633d06180ebbc836af02c590f96f8ac28a4829a). In the first three runs, a third-party model supplied neither starting parameters nor runtime answers. Several open corpora contain previously generated synthetic examples. The fourth run trains on conversations written by open teacher models, described in [its section](#fourth-run-teacher-written-conversations).
 
 ## What a training example looks like
 
@@ -91,3 +91,14 @@ The [evaluation protocol and sample identifiers](evaluation/v3/README.md) were p
 During response tuning, the vocabulary projection and cross-entropy run only at supervised answer positions. Every prefix token still contributes through causal attention. During reinforcement sampling, six candidate replies can share the prefix key/value state and retain completed groups of eight tokens. Each reply keeps its own anchor as soon as the candidates diverge. The gradient pass uses teacher forcing over the full prompt and sampled reply. [Training sampler](../franok/rollout.py) · [Cache equivalence test](../tests/rollout.py)
 
 The released run used 236.6 L4 minutes. Supervised and low-rank training consumed 35,864,087 supervised target positions after continued pretraining. Reinforcement learning sampled 7,338 replies, made 825 optimizer updates and selected merge scale 1.0. [Third-run measurements and receipts](evaluation/v3/final.md)
+
+## Fourth run: teacher-written conversations
+
+Release 0.4 starts from the FP32 merge of 0.3, SHA-256 `b7d97329…`, and trains every weight. The architecture and tensor shapes do not change. The stage has four parts.
+
+1. **Write.** Qwen3-8B (revision `b968826d9c46dd6066d109eabc6255188de91218`) and Qwen3-14B (revision `40c069824f4251a91eefaf281ebe4c544efd3e18`, FP8) write one conversation per seed. Each seed fixes a topic, a task, a persona, a style and a twist. Thinking is disabled. Sampling uses temperature 0.8, top-p 0.95 and top-k 50.
+2. **Grade.** The same teacher reads each conversation with a general check and a stricter one. A conversation is kept only when both return GOOD.
+3. **Filter.** Malformed output, wrong-language turns, duplicates and overlong turns are dropped. A conversation is also dropped when one of its user turns has a content-word Jaccard similarity of at least 0.3 with a held-out test turn, or shares any 6-gram with one. Programmatic dialogues are computed from code templates and involve no model.
+4. **Tune.** Full-parameter AdamW trains on a mixture by target tokens: 55% new conversations, 20% reading examples from SQuAD and SQuAD-TR, 10% replay of 0.3 conversations and 15% raw English and Turkish text. The peak learning rate is 4e-5. Loss is taken on assistant tokens only.
+
+The checkpoint is the one with the lowest development conversation loss among those whose raw-text loss stays within 0.02 nats of the starting model in both languages. The run selected step 768 of 3,940. It took 1,400 seconds. Commands, counts and results are in the [evaluation report](evaluation/v4/final.md).

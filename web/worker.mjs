@@ -86,7 +86,7 @@ onmessage = async ({ data }) => {
     }
     if (data.type === 'read') {
       const spec = release.reader;
-      if (!spec || spec.baseSha256 !== release.formats.fp16.sha256)
+      if (!spec || spec.baseSha256 !== (release.formats.fp16 ?? release.formats.fp32).sha256)
         throw Error('This checkpoint has no matching passage reader.');
       const { createReadout, readPassage } = await import('./reader.mjs');
       if (!readout) {
