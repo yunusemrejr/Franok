@@ -13,6 +13,11 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--run", type=Path, required=True)
     p.add_argument("--out", type=Path, required=True)
+    p.add_argument(
+        "--recover-fp16",
+        action="store_true",
+        help="Recover the rounded checkpoint if both training-host digests are available.",
+    )
     args = p.parse_args()
     cfg = Config(**json.loads((args.run / "config.json").read_text()))
     net = Franok(cfg).eval()
@@ -35,7 +40,27 @@ def main():
     else:
         load_adapter(net, args.run / "adapters/rl")
         merge(net)
-    actual = load_file(str(args.run / "model.safetensors"))
+    receipt_path = args.run / "rl-finished.json"
+    receipt = json.loads(receipt_path.read_text()) if receipt_path.is_file() else {}
+    native = args.run / "model.safetensors"
+    if not native.exists() and args.recover_fp16:
+        if not (
+            products.is_file() and receipt.get("fp32_sha256") and receipt.get("sha256")
+        ):
+            raise ValueError("Missing immutable training-host products or checksums")
+        pending = args.run / "reconstructed-fp16.tmp"
+        save_file(
+            {k: v.half().contiguous() for k, v in net.state_dict().items()},
+            str(pending),
+        )
+        with pending.open("rb") as f:
+            if hashlib.file_digest(f, "sha256").hexdigest() != receipt["sha256"]:
+                pending.unlink()
+                raise ValueError(
+                    "Rounded reconstruction disagrees with the training-host SHA-256"
+                )
+        pending.replace(native)
+    actual = load_file(str(native))
     mismatches = 0
     worst = 0.0
     for k, v in net.state_dict().items():
@@ -48,8 +73,6 @@ def main():
     save_file(net.state_dict(), str(dest))
     with dest.open("rb") as f:
         sha = hashlib.file_digest(f, "sha256").hexdigest()
-    receipt_path = args.run / "rl-finished.json"
-    receipt = json.loads(receipt_path.read_text()) if receipt_path.is_file() else {}
     if mismatches or (receipt.get("fp32_sha256") and receipt["fp32_sha256"] != sha):
         raise ValueError(
             f"Reconstructed weights disagree with training host: {mismatches} FP16 differences, FP32 SHA-256 {sha}"

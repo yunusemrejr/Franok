@@ -31,12 +31,19 @@ def main():
     np.testing.assert_array_equal(codes, restored)
     weights = group.reshape(32, 2, 64)
     activations = rng.standard_normal((2, 90, 64)).astype("float32")
-    gram = activations.transpose(0, 2, 1) @ activations / 90 + np.eye(64, dtype="float32") * 0.25
+    gram = (
+        activations.transpose(0, 2, 1) @ activations / 90
+        + np.eye(64, dtype="float32") * 0.25
+    )
+
     def pair_error(s, q):
         residual = weights - (s * q).reshape(weights.shape)
         return np.einsum("rgi,gij,rgj->rg", residual, gram, residual)
+
     neighbour_scale, neighbour_codes = refine_pairs(group, step, codes, gram)
-    assert np.all(pair_error(neighbour_scale, neighbour_codes) <= pair_error(step, codes) + 1e-5)
+    assert np.all(
+        pair_error(neighbour_scale, neighbour_codes) <= pair_error(step, codes) + 1e-5
+    )
     print(
         "All 16 codes round-trip. Every refined group preserved or reduced calibration error."
     )

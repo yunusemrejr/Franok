@@ -1,6 +1,6 @@
 # Franok third-run evaluation
 
-The third run continues the 314,061,312-parameter release from the pinned [Franok parent](https://huggingface.co/yunusemrejr/Franok/tree/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b). The comparison model is [SmolLM2-360M-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/tree/a10cc1512eabd3dde888204e902eca88bddb4951). Each model uses its own vocabulary and role formatting.
+The third run continues the 314,061,312-parameter release from the pinned [Franok parent](https://huggingface.co/yunusemrejr/Franok/tree/db3e8a10bd3fcefde40acdc25ba7c6dc59cde32b). The first comparison model is [SmolLM2-360M-Instruct](https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/tree/a10cc1512eabd3dde888204e902eca88bddb4951). A second reference, [Liquid AI’s LFM2-350M](https://huggingface.co/LiquidAI/LFM2-350M/tree/f37d3f5c8c5484bc01dad379a595cf4c68c4e70e), has 354,483,968 parameters. Each model uses its own vocabulary and role formatting. Both external checkpoints are used only for evaluation.
 
 ## Passage reading
 

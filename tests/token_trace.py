@@ -39,11 +39,15 @@ def verify(browser, url, out, prediction=False):
         items.nth(i).click()
         button.click()
         expect(page.locator("#pieceOdds li")).to_have_count(5, timeout=240000)
-        values = page.locator("#pieceOdds meter").evaluate_all("els => els.map(e => e.value)")
+        values = page.locator("#pieceOdds meter").evaluate_all(
+            "els => els.map(e => e.value)"
+        )
         assert sorted(values, reverse=True) == values and 0 < sum(values) <= 1.00001
         measured = dict(top5=values, note=page.locator("#predictionNote").inner_text())
         assert "−ln(p)" in measured["note"]
-        page.locator("#tracePrediction").screenshot(path=out / "next-token-probabilities.png")
+        page.locator("#tracePrediction").screenshot(
+            path=out / "next-token-probabilities.png"
+        )
     page.locator("#layer").fill("3")
     slot = i % 8
     anchor = ids[i // 8 * 8 - 1]
@@ -69,7 +73,8 @@ def verify(browser, url, out, prediction=False):
         anchor=anchor,
         layer=3,
         bank=bank,
-        widths=[360, 1100], prediction=measured,
+        widths=[360, 1100],
+        prediction=measured,
     )
 
 
@@ -90,7 +95,10 @@ if __name__ == "__main__":
         with sync_playwright() as pw:
             b = pw.chromium.launch(executable_path="/usr/bin/google-chrome")
             report = verify(
-                b, a.url or f"http://127.0.0.1:{server.server_port}/", a.out, a.prediction
+                b,
+                a.url or f"http://127.0.0.1:{server.server_port}/",
+                a.out,
+                a.prediction,
             )
             b.close()
         (a.out / "receipt.json").write_text(json.dumps(report, indent=2) + "\n")

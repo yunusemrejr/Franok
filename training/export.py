@@ -88,10 +88,14 @@ def refine_pairs(rows, scales, codes, covariance):
         own = slice(side * 32, side * 32 + 32)
         other = slice((1 - side) * 32, (1 - side) * 32 + 32)
         block = covariance[:, own, own]
-        projection = np.linalg.solve(block, covariance[:, own, other]).transpose(0, 2, 1)
+        projection = np.linalg.solve(block, covariance[:, own, other]).transpose(
+            0, 2, 1
+        )
         residual = weights[:, :, other] - scale[:, :, 1 - side, None] * q[:, :, other]
         target = (weights[:, :, own] + residual @ projection).reshape(-1, 32)
-        metrics = np.broadcast_to(block[:, None], (pairs, n_rows, 32, 32)).reshape(-1, 32, 32)
+        metrics = np.broadcast_to(block[:, None], (pairs, n_rows, 32, 32)).reshape(
+            -1, 32, 32
+        )
         diagonal = np.diagonal(metrics, axis1=1, axis2=2)
         step, candidate = quantize_grouped(target, 4, True, diagonal, True)
         step, candidate = refine_block(target, step, candidate, metrics, -8)
@@ -103,8 +107,12 @@ def refine_pairs(rows, scales, codes, covariance):
             return np.einsum("bi,bij,bj->b", d, metrics, d)
 
         take = error(step, candidate) < error(old_scale, old_codes)
-        scale[:, :, side] = np.where(take, step[:, 0], old_scale[:, 0]).reshape(pairs, n_rows)
-        q[:, :, own] = np.where(take[:, None], candidate, old_codes).reshape(pairs, n_rows, 32)
+        scale[:, :, side] = np.where(take, step[:, 0], old_scale[:, 0]).reshape(
+            pairs, n_rows
+        )
+        q[:, :, own] = np.where(take[:, None], candidate, old_codes).reshape(
+            pairs, n_rows, 32
+        )
     return scale.transpose(1, 0, 2).reshape(-1, 1), q.transpose(1, 0, 2).reshape(-1, 32)
 
 
@@ -126,7 +134,9 @@ def export(
     if covariance and calibration is None:
         raise ValueError("Supply a measured block-covariance calibration")
     if paired_groups and not (covariance and full_range):
-        raise ValueError("Fitting neighbouring groups requires full-range Q4 and covariance calibration")
+        raise ValueError(
+            "Fitting neighbouring groups requires full-range Q4 and covariance calibration"
+        )
     out.mkdir(parents=True, exist_ok=True)
     weights = out / f"model.q{bits}"
     catalog = {}
@@ -166,8 +176,13 @@ def export(
                 chunk = 32768
                 if paired_groups:
                     pair_cov = calibration[key + ".cov64"]
-                    if pair_cov.shape != (banks, groups_per_row // 2, 64, 64) or groups_per_row % 2:
-                        raise ValueError("Invalid adjacent-group calibration for " + key)
+                    if (
+                        pair_cov.shape != (banks, groups_per_row // 2, 64, 64)
+                        or groups_per_row % 2
+                    ):
+                        raise ValueError(
+                            "Invalid adjacent-group calibration for " + key
+                        )
                     # Keep a chunk within a single bank, with complete output rows.
                     chunk = math.gcd(128, a.shape[-2]) * groups_per_row
                 for first in range(0, len(blocks), chunk):
@@ -263,7 +278,11 @@ if __name__ == "__main__":
         action="store_true",
         help="Fit Q4 codes with measured within-block activation covariance",
     )
-    p.add_argument("--paired-groups", action="store_true", help="Correct errors across adjacent Q4 groups.")
+    p.add_argument(
+        "--paired-groups",
+        action="store_true",
+        help="Correct errors across adjacent Q4 groups.",
+    )
     args = p.parse_args()
     calibration = None
     if args.calibration:

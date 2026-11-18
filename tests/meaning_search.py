@@ -63,27 +63,38 @@ def check(browser, url, output, docs, gold, query, broken=False, context=False):
         page.locator("#controls").click()
         page.locator("#contextMeaning").check()
         page.locator("#tokens").fill("18")
+        page.locator("#temp").fill("0")
         page.get_by_role("button", name="Save controls").click()
+        expect(page.locator("#prefs")).not_to_be_visible()
         page.locator("#draft").fill("umbrella" if broken else query)
         page.locator("#send").click()
-        expect(page.locator("#status")).to_contain_text("Generated locally", timeout=240000)
+        expect(page.locator("#status")).to_contain_text(
+            "Generated locally", timeout=240000
+        )
         details = page.locator(".message.assistant .contextinfo").last
         details.locator("summary").click()
         label = "word search" if broken else "meaning search"
-        source = details.get_by_role("button", name=f"Turn {gold + 1} · {label}", exact=False)
+        source = details.get_by_role(
+            "button", name=f"Turn {gold + 1} · {label}", exact=False
+        )
         expect(source).to_be_visible()
         source_label = source.inner_text()
         if broken:
             expect(details).to_contain_text("Meaning search was unavailable")
         source.click()
-        assert page.locator(f"#turn-{gold}").evaluate("turn => turn.classList.contains('hit')")
+        assert page.locator(f"#turn-{gold}").evaluate(
+            "turn => turn.classList.contains('hit')"
+        )
         page.reload()
         page.locator("#controls").click()
         expect(page.locator("#contextMeaning")).to_be_checked()
     assert not errors, errors
     page.close()
     return dict(
-        turns=len(docs), turn=gold + 1, seconds=round(elapsed, 3), word_fallback=broken,
+        turns=len(docs),
+        turn=gold + 1,
+        seconds=round(elapsed, 3),
+        word_fallback=broken,
         automatic_source=source_label,
     )
 
@@ -117,7 +128,14 @@ if __name__ == "__main__":
             rows = [
                 check(browser, url, args.out, docs, gold, query, context=args.context),
                 check(
-                    browser, url, args.out, [r[0] for r in notes], 4, query, broken=True, context=args.context
+                    browser,
+                    url,
+                    args.out,
+                    [r[0] for r in notes],
+                    4,
+                    query,
+                    broken=True,
+                    context=args.context,
                 ),
             ]
             browser.close()

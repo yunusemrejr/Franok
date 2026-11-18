@@ -51,13 +51,20 @@ def publish_weights(args):
         ]
         continued = run.parent / "lm"
         heldout = run.parent / "evaluation/continued-text.json"
-        if checksum(continued / "model.safetensors") != json.loads(heldout.read_text())["sha256"]:
-            raise ValueError("Pretraining and held-out text receipts refer to different weights")
+        if (
+            checksum(continued / "model.safetensors")
+            != json.loads(heldout.read_text())["sha256"]
+        ):
+            raise ValueError(
+                "Pretraining and held-out text receipts refer to different weights"
+            )
         mapping["pretrained/model.safetensors"] = continued / "model.safetensors"
         mapping["pretrained/config.json"] = continued / "config.json"
         mapping["pretrained/tokenizer.json"] = export / "tokenizer.json"
         mapping["pretrained/validation.json"] = heldout
-        mapping[f"training-record/{version}/data-preparation.json"] = run.parent / "preparation.json"
+        mapping[f"training-record/{version}/data-preparation.json"] = (
+            run.parent / "preparation.json"
+        )
     else:
         logs += ["progress.json", "finished.json", "metrics.jsonl"]
     for f in logs:
@@ -180,7 +187,7 @@ def publish_weights(args):
         video=dict(
             url="./media/franok-from-scratch.mp4",
             poster="./media/franok-poster.jpg",
-            captions={l: "./media/franok-" + l + ".vtt" for l in ["en", "tr"]},
+            captions={lang: "./media/franok-" + lang + ".vtt" for lang in ["en", "tr"]},
             youtube="https://youtu.be/XtNThi_pBjM",
         ),
     )

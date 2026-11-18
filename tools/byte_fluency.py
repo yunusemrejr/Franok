@@ -12,7 +12,7 @@ from torch.nn import functional as F
 from tokenizers import Tokenizer, decoders
 from safetensors.torch import load_file
 from franok.model import Config, Franok
-from tools.reading import BASE
+from tools.reading import PEERS
 
 
 def sample(data, tokenizer):
@@ -73,7 +73,7 @@ def main():
     p = argparse.ArgumentParser()
     g = p.add_mutually_exclusive_group(required=True)
     g.add_argument("--run", type=Path)
-    g.add_argument("--peer", action="store_true")
+    g.add_argument("--peer", nargs="?", const="smollm2", choices=PEERS)
     p.add_argument("--data", type=Path, required=True)
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--threads", type=int, default=3)
@@ -84,12 +84,14 @@ def main():
     if a.peer:
         from transformers import AutoTokenizer, AutoModelForCausalLM
 
-        repo = "HuggingFaceTB/SmolLM2-360M-Instruct"
-        tk = AutoTokenizer.from_pretrained(repo, revision=BASE, local_files_only=True)
+        repo, revision = PEERS[a.peer]
+        tk = AutoTokenizer.from_pretrained(
+            repo, revision=revision, local_files_only=True
+        )
         model = AutoModelForCausalLM.from_pretrained(
-            repo, revision=BASE, local_files_only=True, dtype=torch.float32
+            repo, revision=revision, local_files_only=True, dtype=torch.float32
         ).eval()
-        ident = BASE
+        ident = revision
 
         def encode(s):
             return tk.encode(s, add_special_tokens=False)

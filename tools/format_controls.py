@@ -36,9 +36,18 @@ def cases(count=24):
             context = prefix[np.flatnonzero(prefix == 3)[-1] + 1 :]
             user, correct, foil = (
                 corpus.tokenizer.decode(v.astype(int).tolist()).strip()
-                for v in (context, records.data[m + 1 : e - 1], records.foils[f : g - 1])
+                for v in (
+                    context,
+                    records.data[m + 1 : e - 1],
+                    records.foils[f : g - 1],
+                )
             )
-            if not correct or not foil or correct.casefold() == foil.casefold() or user in seen:
+            if (
+                not correct
+                or not foil
+                or correct.casefold() == foil.casefold()
+                or user in seen
+            ):
                 continue
             second = len(seen) % 2
             options = (foil, correct) if second else (correct, foil)

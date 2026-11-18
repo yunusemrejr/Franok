@@ -18,7 +18,7 @@ from tokenizers import Tokenizer, decoders
 
 from franok.incremental import Decoder
 from franok.model import Franok, Config
-from .reading import BASE, REV
+from .reading import PEERS, REV
 
 XQUAD = "51adfef1c1287aab1d2d91b5bead9bcfb9c68583"
 SYSTEM = {
@@ -112,7 +112,7 @@ def main():
     parser.add_argument("suite", choices=("belebele", "xquad"))
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--run", type=Path)
-    group.add_argument("--peer", action="store_true")
+    group.add_argument("--peer", nargs="?", const="smollm2", choices=PEERS)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--threads", type=int, default=3)
     args = parser.parse_args()
@@ -121,12 +121,14 @@ def main():
     if args.peer:
         from transformers import AutoTokenizer, AutoModelForCausalLM
 
-        repo = "HuggingFaceTB/SmolLM2-360M-Instruct"
-        tok = AutoTokenizer.from_pretrained(repo, revision=BASE, local_files_only=True)
+        repo, revision = PEERS[args.peer]
+        tok = AutoTokenizer.from_pretrained(
+            repo, revision=revision, local_files_only=True
+        )
         model = AutoModelForCausalLM.from_pretrained(
-            repo, revision=BASE, local_files_only=True, dtype=torch.float32
+            repo, revision=revision, local_files_only=True, dtype=torch.float32
         ).eval()
-        identity = BASE
+        identity = revision
 
         def prefix(item):
             turns = [
@@ -156,6 +158,15 @@ def main():
             return tok.decode(tokens, skip_special_tokens=True).strip()
 
         def option_scores(head, tails):
+            if args.peer == "lfm2":
+                # Its hybrid convolution cache has no batch-repeat operation.
+                rows = [torch.tensor(head + tail[:-1]) for tail in tails]
+                batch = torch.nn.utils.rnn.pad_sequence(rows, batch_first=True)
+                return model(
+                    batch,
+                    use_cache=False,
+                    logits_to_keep=batch.shape[1] - len(head) + 1,
+                ).logits
             first = model(torch.tensor([head]), use_cache=True, logits_to_keep=1)
             cache = first.past_key_values
             cache.batch_repeat_interleave(len(tails))

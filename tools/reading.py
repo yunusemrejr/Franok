@@ -11,6 +11,10 @@ from franok.model import Config,Franok
 
 REV="7899cdfa4e1e0d733fd77c848e2c273cb1d32be2"
 BASE="a10cc1512eabd3dde888204e902eca88bddb4951"
+PEERS = {
+    "smollm2": ("HuggingFaceTB/SmolLM2-360M-Instruct", BASE),
+    "lfm2": ("LiquidAI/LFM2-350M", "f37d3f5c8c5484bc01dad379a595cf4c68c4e70e"),
+}
 
 @torch.inference_mode()
 def main():
