@@ -37,3 +37,18 @@ In the previous Turkish extractive training shard, all 99,502 training records a
 Each number is mean next-token loss in nats on 64 windows of 256 target tokens. These windows come from held-out shards outside the small shard used to select the pretraining checkpoint. Both models saw the same token IDs. Lower is better. The evaluation records the input seed and weight digest. [Text evaluator](../../../tools/text_validation.py)
 
 The v0.2 parent answered 59 of 240 Belebele questions correctly. SmolLM2-360M-Instruct answered 70. On the separate 128-question XQuAD generation test, Franok had zero exact answers. SmolLM2 had twelve in English and zero in Turkish. On the 32 qualitative conversation criteria, Franok passed zero and SmolLM2 passed eight. A single model-assisted review graded the anonymized replies against the published rubrics. These small samples describe the named tests.
+
+### Bilingual session search
+
+Each query must retrieve the correct source passage from distinct candidates. Top-one counts below use the same query and candidate texts for word search (BM25) and optional meaning search (learned cosine similarity plus BM25). The encoder was frozen before the Belebele confirmation. These scores measure retrieval. They do not measure the decoder's answer to the question.
+
+| Query → stored language | Candidate passages | Word search | Meaning search |
+| --- | ---: | ---: | ---: |
+| Belebele English → Turkish | 120 | 28/120 | 59/120 |
+| Belebele Turkish → English | 120 | 30/120 | 57/120 |
+| Belebele English → English | 120 | 104/120 | 100/120 |
+| Belebele Turkish → Turkish | 120 | 74/120 | 83/120 |
+| XQuAD English → Turkish | 64 | 23/64 | 40/64 |
+| XQuAD Turkish → English | 64 | 27/64 | 43/64 |
+
+In a separate 1,000-turn collection, 24 short notes were mixed with 976 held-out conversational distractors. Word search found the intended note first for 4/24 same-language paraphrases and 0/24 translated paraphrases. Meaning search found it first for 8/24 in each group. The small note collection guided development. It is more difficult than the passage tests, and users can inspect the source before attaching it. [All groups and training log](meaning-search.json) · [Fixed notes](../../../tests/recall_cases.json) · [Evaluation code](../../../experiments/recall/evaluate.mjs)

@@ -14,6 +14,8 @@ from tokenizers import decoders
 
 from franok.lora import attach, merge, save_adapter
 from franok.model import Config, Franok
+from franok.preference import ReplyPreference
+from .preference import dialogue_source
 from training.extended.rl import reward
 from training.extended.train import save_net
 from .batches import Conversations
@@ -26,6 +28,13 @@ class Tasks:
     def __init__(self, conversations):
         self.records = conversations.records
         self.pool = {}
+        self.dialogue = {l: [] for l in LANGUAGES}
+        for (lang, name), source in self.records.items():
+            if dialogue_source(name):
+                a, m, e = source.index.T
+                selected = np.flatnonzero((m - a < 190) & (e - m >= 6) & (e - m <= 64))
+                if len(selected):
+                    self.dialogue[lang].append((source, selected))
         for (lang, name), source in self.records.items():
             if name not in ("passages", "logic", "commonsense"):
                 continue
@@ -45,6 +54,17 @@ class Tasks:
                 )
 
     def draw(self, rng, lang, tok, kind):
+        if kind == "dialogue":
+            source, available = self.dialogue[lang][
+                rng.integers(len(self.dialogue[lang]))
+            ]
+            a, m, e = source.index[available[rng.integers(len(available))]]
+            pre = source.data[a : m + 1].astype(int).tolist()
+            return (
+                pre,
+                tok.decode(source.data[m + 1 : e - 1].astype(int).tolist()).strip(),
+                kind,
+            )
         name, _, choice = kind.partition("-")
         choices = self.pool[lang, kind]
         j = choices[rng.integers(len(choices))]
@@ -95,6 +115,19 @@ def main():
         "en": ("logic", "passages", "passages-choice", "commonsense"),
         "tr": ("logic", "passages", "passages-choice"),
     }
+    scorer = None
+    folder = OUT / "dialogue-reward"
+    if (folder / "validation.json").exists():
+        proof = json.loads((folder / "validation.json").read_text())
+        if all(
+            proof[l]["whole"]["pairs"] >= 32 and proof[l]["whole"]["accuracy"] >= 0.58
+            for l in LANGUAGES
+        ):
+            scorer = (
+                ReplyPreference(model.c.width).to(device).eval().requires_grad_(False)
+            )
+            scorer.load_state_dict(load_file(str(folder / "head.safetensors")))
+            kinds = {l: (*k, "dialogue") for l, k in kinds.items()}
     fixed = np.random.default_rng(202617)
     dev = [
         (lang, held.draw(fixed, lang, tok, k))
@@ -123,7 +156,12 @@ def main():
         tokens = []
         oldlogs = []
         live = torch.ones(count, dtype=torch.bool, device=device)
-        for _ in range(min(26, max(6, len(tok.encode(answer).ids) + 6))):
+        maximum = (
+            36
+            if kind == "dialogue"
+            else min(26, max(6, len(tok.encode(answer).ids) + 6))
+        )
+        for _ in range(maximum):
             lp = logits(ids)[:, -1].log_softmax(-1)
             ids1 = lp.argmax(-1) if greedy else torch.multinomial(lp.exp(), 1)[:, 0]
             ids1 = torch.where(live, ids1, 2)
@@ -140,6 +178,20 @@ def main():
             for r in generated.tolist()
         ]
         values = torch.tensor([reward(s, answer) for s in decoded], device=device)
+        if kind == "dialogue":
+            # Evaluate every candidate with the same frozen decoder and preference head.
+            # Preserve the caller's scale during selection of the final RL adapter.
+            previous = model.blocks[0].lora_qkv.scale / 2.0
+            try:
+                set_scale(model, 0)
+                with torch.autocast(device, dtype=torch.bfloat16):
+                    states = model.hidden(ids)
+                content = (mask & (generated != 2)).sum(1)
+                mark = torch.full_like(content, len(pre) - 1)
+                pref = scorer(ReplyPreference.features(states, mark, content)).sigmoid()
+                values = torch.where(content > 0, 0.8 * pref + 0.2 * values, 0.0)
+            finally:
+                set_scale(model, previous)
         return ids, generated, torch.stack(oldlogs, 1), mask, values
 
     @torch.no_grad()
@@ -165,7 +217,7 @@ def main():
 
     begin = time.time()
     initial = evaluate()
-    log(initial=initial, seed=43317, group=6)
+    log(initial=initial, seed=43317, group=6, dialogue_reward_active=scorer is not None)
     totals = Counter()
     source_counts = Counter()
     sums = Counter()
@@ -243,6 +295,7 @@ def main():
 
     result = dict(
         seed=43317,
+        dialogue_reward_active=scorer is not None,
         rollouts=totals["rollouts"],
         optimizer_updates=totals["updates"],
         tokens=totals["tokens"],

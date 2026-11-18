@@ -256,13 +256,15 @@
         </section>
       </main>
     </div>
-    <dialog id="search">
+    <dialog id="search" aria-labelledby="findTitle">
       <div class="dialogtitle">
-        <h2>Find in session</h2>
+        <h2 id="findTitle">Find in session</h2>
         <button data-close class="icon" aria-label="Close search">×</button>
       </div>
       <label for="query">Search the full conversation</label
       ><input id="query" type="search" placeholder="Word or phrase" />
+      <label class="check" id="semanticField" hidden><input id="semanticSearch" type="checkbox" /> Search by meaning across English and Turkish</label>
+      <span id="searchStatus" class="hint" role="status"></span>
       <p>
         Type <code>/recall</code> or <code>/hatırla</code> followed by a word in chat to quote your earlier
         messages.

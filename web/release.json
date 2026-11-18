@@ -41,5 +41,13 @@
       "tr": "./media/franok-tr.vtt"
     },
     "youtube": "https://youtu.be/XtNThi_pBjM"
+  },
+  "search": {
+    "format": "franok-recall-i8-v1",
+    "vocab": 8192,
+    "width": 96,
+    "maxTokens": 160,
+    "sha256": "bd13993aaeb81264b3dbbbb3e4914648bfc4d8f4911a32d64071340187e25d42",
+    "url": "./recall.bin"
   }
 }

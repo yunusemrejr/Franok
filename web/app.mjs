@@ -41,6 +41,7 @@ const release = await fetch('./release.json')
   .then((r) => r.json())
   .catch(() => ({}));
 const cfgWindow = release.window || 256;
+$('semanticField').hidden = !release.search;
 $('readerOpen').hidden = $('readerAbout').hidden = !release.reader;
 const platform = native ? 'Ubuntu desktop' : 'Browser runtime';
 const format = release.default || (native ? 'q8' : 'q4');
@@ -674,9 +675,39 @@ document.querySelector('.brand').onclick = (e) => {
 };
 for (const id of ['slot', 'anchor', 'layer']) $(id).oninput = diagram;
 $('filter').oninput = history;
+let searchWorker, searchTimer, searchSequence = 0;
 function search() {
-  const q = $('query').value.trim(),
-    hits = q ? retrieve(current.turns, q, 20, current.lang) : [];
+  const sequence = ++searchSequence;
+  clearTimeout(searchTimer);
+  const q = $('query').value.trim();
+  const literal = q ? retrieve(current.turns, q, 20, current.lang) : [];
+  showMatches(q, literal);
+  $('searchStatus').textContent = '';
+  if (!q || !release.search || !$('semanticSearch').checked || !current.turns.length) return;
+  $('searchStatus').textContent = 'Searching by meaning…';
+  searchTimer = setTimeout(() => {
+    if (!searchWorker) {
+      searchWorker = new Worker(new URL('./search-worker.mjs', import.meta.url), { type: 'module' });
+      searchWorker.onerror = () => {
+        $('searchStatus').textContent = 'Meaning search is unavailable. Word matches are shown.';
+        searchWorker?.terminate();
+        searchWorker = null;
+      };
+      searchWorker.onmessage = ({ data }) => {
+        if (data.sequence !== searchSequence || !$('search').open) return;
+        if (data.error) {
+          $('searchStatus').textContent = 'Meaning search is unavailable. Word matches are shown.';
+          return;
+        }
+        showMatches($('query').value.trim(), data.matches.map(h => ({ ...h, turn: current.turns[h.index] })));
+        $('searchStatus').textContent = data.matches.length + ' results from this session.';
+      };
+      searchWorker.postMessage({ turns: current.turns.map(({text}) => ({text})), spec: release.search });
+    }
+    searchWorker.postMessage({ sequence, query: q, lang: current.lang });
+  }, 160);
+}
+function showMatches(q, hits) {
   const list = $('matches');
   list.replaceChildren();
   if (q && !hits.length) list.textContent = 'No matching turns.';
@@ -685,7 +716,7 @@ function search() {
     row.className = 'matchrow';
     const jump = document.createElement('button'),
       attach = document.createElement('button');
-    jump.textContent = 'Turn ' + (h.index + 1) + ' · ' + excerpt(h.turn.text, h.focus, current.lang, 150);
+    jump.textContent = 'Turn ' + (h.index + 1) + (h.lexical === 0 ? ' · Related by meaning · ' : ' · ') + excerpt(h.turn.text, h.focus, current.lang, 150);
     jump.onclick = () => {
       $('search').close();
       highlight(h.index);
@@ -711,7 +742,13 @@ $('find').onclick = () => {
   $('search').showModal();
   $('query').focus();
 };
-$('query').oninput = search;
+$('query').oninput = $('semanticSearch').onchange = search;
+$('search').addEventListener('close', () => {
+  ++searchSequence;
+  clearTimeout(searchTimer);
+  searchWorker?.terminate();
+  searchWorker = null;
+});
 $('quotechip').querySelector('button').onclick = () => {
   delete current.quote;
   delete current.quoteFocus;

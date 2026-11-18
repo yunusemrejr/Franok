@@ -49,6 +49,8 @@ def cases(suite, ids):
                 yield dict(
                     lang=lang,
                     key=key,
+                    passage=row["flores_passage"],
+                    question=row["question"],
                     prompt=row["flores_passage"] + "\n\n" + row["question"],
                     choices=[row[f"mc_answer{j}"] for j in range(1, 5)],
                     gold=int(row["correct_answer_num"]) - 1,

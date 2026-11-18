@@ -9,10 +9,13 @@ export const terms = (text, lang = 'en') => normalized(text, lang).match(wordPat
 const lexicalCache = new WeakMap();
 function indexedWords(turn, lang) {
   const cached = lexicalCache.get(turn);
-  if (cached && cached.text === turn.text && cached.lang === lang) return cached.words;
-  const words = new Set(terms(turn.text, lang));
-  lexicalCache.set(turn, { text: turn.text, lang, words });
-  return words;
+  if (cached?.text === turn.text && cached.lang === lang) return cached;
+  const tokens = terms(turn.text, lang),
+    frequencies = new Map();
+  for (const t of tokens) frequencies.set(t, (frequencies.get(t) || 0) + 1);
+  const index = { text: turn.text, lang, frequencies, length: tokens.length };
+  lexicalCache.set(turn, index);
+  return index;
 }
 const locate = (text, term, lang) => {
   if (!term) return -1;
@@ -25,27 +28,36 @@ export function excerpt(text, term, lang, width = 240) {
   const start = Math.max(0, Math.min(text.length - width, at - Math.floor(width / 4)));
   return (start ? '…' : '') + text.slice(start, start + width) + (start + width < text.length ? '…' : '');
 }
-export function retrieve(turns, query, count = 3, lang = 'en') {
+export function retrieve(turns, query, count = 3, lang = 'en', encoder = null) {
   const needles = [...new Set(terms(query, lang))];
-  if (!needles.length) return [];
+  if (!turns.length || !needles.length) return [];
   const docs = turns.map((turn, index) => ({ turn, index, words: indexedWords(turn, lang) }));
+  const mean = docs.reduce((n, d) => n + d.words.length, 0) / docs.length || 1;
   const weighted = needles
-    .map((term) => ({
-      term,
-      weight: Math.log(1 + (docs.length + 0.5) / (0.5 + docs.filter((d) => d.words.has(term)).length)),
-    }))
-    .sort((a, b) => b.weight - a.weight);
-  return docs
-    .map((d) => {
-      const matches = weighted.filter((entry) => d.words.has(entry.term));
-      return {
-        turn: d.turn,
-        index: d.index,
-        focus: matches[0]?.term,
-        score: matches.reduce((sum, entry) => sum + entry.weight, 0),
-      };
+    .map((term) => {
+      const df = docs.reduce((n, d) => n + Number(d.words.frequencies.has(term)), 0);
+      return { term, df, weight: Math.log1p((docs.length - df + 0.5) / (df + 0.5)) };
     })
-    .filter((d) => d.score > 0)
+    .sort((a, b) => b.weight - a.weight);
+  const total = weighted.reduce((n, v) => n + v.weight, 0);
+  const vector = encoder?.encode(query);
+  const hasIdentifier = needles.some((t) => /\d/u.test(t));
+  return docs
+    .map(({ turn, index, words }) => {
+      const matches = weighted.filter((v) => words.frequencies.has(v.term));
+      const lengthPenalty = 1.2 * (0.25 + (0.75 * words.length) / mean);
+      let lexical = 0;
+      for (const v of matches) {
+        const tf = words.frequencies.get(v.term);
+        lexical += (v.weight * tf * 2.2) / (tf + lengthPenalty);
+      }
+      const semantic = vector ? encoder.score(vector, turn) : 0;
+      // Preserve precise lookup for a short literal name or an alphanumeric identifier.
+      const exact = matches.length === needles.length && (needles.length <= 2 || hasIdentifier);
+      const score = vector ? semantic + (0.6 * lexical) / total + (exact ? 1 : 0) : lexical;
+      return { turn, index, focus: matches[0]?.term, score, semantic, lexical };
+    })
+    .filter((v) => v.lexical > 0 || (vector && v.semantic >= 0.3))
     .sort((a, b) => b.score - a.score || b.index - a.index)
     .slice(0, count);
 }

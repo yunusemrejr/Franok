@@ -53,6 +53,10 @@ def publish_weights(args):
         logs += ["progress.json", "finished.json", "metrics.jsonl"]
     for f in logs:
         mapping[f"training-record/{version}/{f}"] = run / f
+    reward = run / "dialogue-reward"
+    if (reward / "validation.json").is_file():
+        for f in ("head.safetensors", "training.json", "validation.json"):
+            mapping["dialogue-reward/" + f] = reward / f
     products = run / "adapters/rl/updates.safetensors"
     if products.is_file():
         mapping["adapters/rl/updates.safetensors"] = products
@@ -71,6 +75,17 @@ def publish_weights(args):
             sha256=checksum(folder / "head.safetensors"),
             **{k: config[k] for k in ("width", "hidden", "max_span", "threshold")},
         )
+    search = None
+    if args.search:
+        cfg = json.loads((args.search / "recall.json").read_text())
+        if checksum(args.search / "recall.bin") != cfg["sha256"]:
+            raise ValueError("Search weights disagree with their training export")
+        for f in ("recall.bin", "recall.json", "training.json"):
+            mapping["search/" + f] = args.search / f
+        search = {
+            k: cfg[k] for k in ("format", "width", "vocab", "maxTokens", "sha256")
+        }
+        search["url"] = "./recall.bin"
     full = run.parent / "fp32"
     proof = json.loads((full / "reconstruction.json").read_text())
     if checksum(full / "model.safetensors") != proof["sha256"]:
@@ -129,6 +144,8 @@ def publish_weights(args):
         shutil.copyfile(
             run / "reader/head.safetensors", ROOT / "web/reader.safetensors"
         )
+    if search:
+        shutil.copyfile(args.search / "recall.bin", ROOT / "web/recall.bin")
     for record in formats.values():
         record["url"] = (
             f"https://huggingface.co/{REPO}/resolve/{info.oid}/" + record.pop("file")
@@ -156,6 +173,8 @@ def publish_weights(args):
             youtube="https://youtu.be/XtNThi_pBjM",
         ),
     )
+    if search:
+        release["search"] = search
     if reader:
         release["reader"] = reader
     (ROOT / "web/release.json").write_text(json.dumps(release, indent=2) + "\n")
@@ -206,6 +225,11 @@ if __name__ == "__main__":
         "--revision",
         default="main",
         help="Publish experimental weights to a separate branch without activating the app",
+    )
+    p.add_argument(
+        "--search",
+        type=Path,
+        help="Directory containing the trained bilingual session-search export",
     )
     p.add_argument("--run", type=Path, default=ROOT / "work/v2/run")
     p.add_argument("--export", type=Path, default=ROOT / "work/v2/export")

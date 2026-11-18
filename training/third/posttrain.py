@@ -17,6 +17,7 @@ from franok.lora import attach, merge, save_adapter
 from training.extended.train import save_net
 from .batches import BOUNDARIES, Conversations
 from .controls import ControlledChoices
+from .preference import DialogueReward, labelled_states
 from .pretrain import LANGUAGES, OUT, Shards
 
 
@@ -27,22 +28,29 @@ def log(**fields):
     print(fields, flush=True)
 
 
-def losses(model, x, y):
+def losses(model, x, y, preference=False, opening=None):
     device = model.embed.weight.device
     x = torch.as_tensor(x, device=device)
     y = torch.as_tensor(y, device=device)
     with torch.autocast(
         device.type, enabled=device.type == "cuda", dtype=torch.bfloat16
     ):
+        features = None
+        if preference:
+            states = model.hidden(x)
+            features = labelled_states(states, y, opening)
+            logits = F.linear(states, model.embed.weight)
+        else:
+            logits = model(x)
         flat = F.cross_entropy(
-            model(x).flatten(0, 1), y.flatten(), ignore_index=-100, reduction="none"
+            logits.flatten(0, 1), y.flatten(), ignore_index=-100, reduction="none"
         )
         token = flat.view_as(y)
         counts = (y != -100).sum(1)
         per = token.sum(1) / counts.clamp_min(1)
         # A terse correct answer gets its own training weight alongside a long reply.
         positive = 0.5 * (per.mean() + token.sum() / counts.sum().clamp_min(1))
-    return positive, per
+    return positive, per, features
 
 
 @torch.no_grad()
@@ -106,6 +114,11 @@ def main():
     train, val = Conversations("train"), Conversations("val")
     formats = ControlledChoices(train)
     lm = Shards("train")
+    with torch.random.fork_rng(devices=[]):
+        torch.manual_seed(78103)
+        reward_head = DialogueReward(
+            cfg.width, model.embed.weight.device, OUT / "dialogue-reward"
+        )
     reader = None
     if not args.skip_reader and (OUT.parent / "spans/receipt.json").is_file():
         from .reader import ReaderTraining
@@ -184,7 +197,13 @@ def main():
                 x, y, names = train.batch(rng, upper, capacity, paired)
             opt.zero_grad(set_to_none=True)
             try:
-                loss, per = losses(model, x, y)
+                loss, per, features = losses(
+                    model,
+                    x,
+                    y,
+                    preference=paired,
+                    opening=20 if step % 3 == 0 else None,
+                )
                 if paired:
                     good, bad = per.chunk(2)
                     loss = (
@@ -208,6 +227,8 @@ def main():
             positions += x.size
             draw_counts.update(names)
             step += 1
+            if paired:
+                reward_head.update(features, names)
             if reader is not None and step % 5 == 0:
                 reader_loss = reader.update(
                     min(8192, capacity), 0.0008 * min(1.0, (reader.steps + 1) / 16)
@@ -280,6 +301,9 @@ def main():
             elapsed_seconds=time.time() - started,
         )
         progress.write_text(json.dumps(result, indent=2) + "\n")
+        reward_head.save()
+        if stage == "evidence":
+            log(dialogue_reward_validation=reward_head.evaluate(model, val))
         if reader is not None:
             reader.snapshot(OUT / "reader-warm")
             (OUT / "reader-warm/training.json").write_text(

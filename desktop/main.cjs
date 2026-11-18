@@ -39,6 +39,7 @@ const types = {
   '.jpg': 'image/jpeg',
   '.svg': 'image/svg+xml',
   '.wasm': 'application/wasm',
+  '.bin': 'application/octet-stream',
   '.safetensors': 'application/octet-stream',
   '.json': 'application/json',
   '.woff2': 'font/woff2',

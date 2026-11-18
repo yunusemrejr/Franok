@@ -170,6 +170,19 @@ class Conversations:
             longest = max(len(good), len(bad) if bad is not None else 0)
             if len(pre) + len(default) + longest - 1 <= upper:
                 pre = np.concatenate([pre[:2], default, pre[2:]])
+        if (
+            paired
+            and name not in ("human", "passages", "commonsense")
+            and rng.random() < 0.15
+        ):
+            # Copying the user's entire question is a common failure on new conversations.
+            # Keep human-ranked alternatives intact and skip cases that actually request copying.
+            users = np.flatnonzero(pre == 3)
+            q = pre[users[-1] + 1 : -1] if len(users) else []
+            if 6 <= len(q) <= 100 and len(pre) + len(q) <= upper:
+                left, right = set(q), set(good[:-1])
+                if len(left & right) / max(1, len(left | right)) < 0.4:
+                    bad = np.r_[q, 2]
         return pre, good, bad, name
 
     def batch(self, rng, upper, capacity, paired=False, lang=None):
