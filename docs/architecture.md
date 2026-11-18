@@ -94,6 +94,10 @@ The browser and desktop keep a RAM-only list of the token IDs represented in the
 
 The SIMD runtime evaluates the exponentials for SwiGLU and attention inside WebAssembly. Range reduction uses powers of two and a degree-six polynomial. A fixed-stream A/B benchmark on a Ryzen 5 7530U found median decode speedups of 1.63× for Q4 and 1.69× for Q8 after a prefix of 896 tokens. These are Node-hosted WASM measurements on one laptop. The much shorter, 32-token Q8 prefill was slightly slower. [Benchmark source](../tools/benchmark_wasm.mjs) · [Measurements](evaluation/v3/browser-runtime.json)
 
+### Trace your own sentence
+
+In the app, open **Architecture**, choose English or Turkish and type a sentence. Select any token to follow its route. The sequence includes its start, language and end markers, as in a pretraining document. A leading ▁ marks a space. A token containing only part of a UTF-8 character appears as hexadecimal bytes. For a token in the first group the anchor is zero. In later groups the highlighted route uses the actual ID of the last token in the preceding group. Arrow keys move between pieces and the layer control changes the route. [Interactive example](https://franok.yunusemrevurgun.com/#about)
+
 ### Finding a turn in a different language
 
 Open **Find in session**, enter a query and select **Search by meaning across English and Turkish**. For example, a Turkish question about a lost key can retrieve an English message about where you left it. Select **Attach** to give the decoder the original words on your next turn. The search runs on your device in a separate worker and can work before loading the chat weights.

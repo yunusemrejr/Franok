@@ -158,10 +158,16 @@
           </div>
           <h2>Trace one token</h2>
           <p>
-            Move the controls. The previous group’s final token shifts which bank processes each of the next
-            eight slots.
+            Select a piece of text to see which bank reads it. Start and language markers count as positions. Each full group of eight sends one token to each bank.
           </p>
           <div class="figure">
+            <div class="token-explorer" id="tokenExplorer" hidden>
+              <label for="traceText">Try a sentence</label>
+              <div class="trace-input"><input id="traceText" maxlength="180" type="text" spellcheck="false" />
+                <select id="traceLanguage" aria-label="Example language"><option value="en">English</option><option value="tr">Türkçe</option></select></div>
+              <div id="tracePieces" role="group" aria-label="Token pieces"></div>
+              <p id="traceInfo" aria-live="polite"></p>
+            </div>
             <svg
               id="dial"
               viewBox="0 0 660 220"
@@ -174,7 +180,7 @@
                 ><input id="slot" type="range" min="0" max="7" value="0" /></label
               ><label
                 >Previous token ID <output id="anchorout">0</output
-                ><input id="anchor" type="range" min="0" max="63" value="0" /></label
+                ><input id="anchor" type="range" min="0" max="8191" value="0" /></label
               ><label
                 >Layer <output id="layerout">0</output
                 ><input id="layer" type="range" min="0" max="11" value="0"

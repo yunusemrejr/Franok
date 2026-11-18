@@ -1063,3 +1063,18 @@ hr {
   #readerOpen { padding-inline: 7px; }
   #readerOpen span { display: none; }
 }
+.token-explorer { border-bottom: 1px solid var(--line); padding: .4rem 0 .9rem; }
+.token-explorer > label { font-size: .86rem; font-weight: 650; }
+.trace-input { display: flex; gap: .45rem; margin-block: .35rem .75rem; }
+.trace-input input, .trace-input select { color: var(--ink); background: var(--paper); border: 1px solid var(--faint); border-radius: 4px; padding: .4rem .5rem; }
+.trace-input input { flex: 1; min-width: 0; }
+#tracePieces { display: flex; flex-wrap: wrap; gap: .2rem; }
+#tracePieces button { font: .84rem var(--mono); line-height: 1.5; padding: .12rem .35rem; border: 1px solid var(--line); border-radius: 3px; }
+#tracePieces .trace-control { color: var(--muted); border-style: dashed; }
+#tracePieces [aria-pressed='true'] { border-color: var(--accent); background: var(--highlight); color: var(--ink); }
+#traceInfo { font: .77rem var(--mono); color: var(--muted); margin: .7rem 0 0; }
+@media (max-width: 560px) {
+  #dial .node text, #dial .litnode text { font-size: 22px; }
+  #dial .diagramlabel text { font-size: 15px; }
+  .figure .controls { align-items: end; }
+}

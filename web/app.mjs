@@ -1,7 +1,7 @@
 import { unsupportedOutput, languageNotice } from './language.mjs';
 import { calculate } from './calculator.mjs';
 import { conversationAction } from './conversation.mjs';
-import { diagram } from './diagram.mjs';
+import { diagram, openTrace } from './diagram.mjs';
 import { retrieve, recallMessage, excerpt } from './session.mjs';
 import { defaults, settings } from './config.mjs';
 import { loadSessions, saveSession, saveDraft, removeSession, activeId, setActive } from './store.mjs';
@@ -179,7 +179,10 @@ function changeView(name, replace = false) {
     view === 'chat' ? title(current) : view === 'about' ? 'Model documentation' : 'Distribution';
   $('find').hidden = $('actions').hidden = view !== 'chat';
   menu(false);
-  if (view === 'about') diagram();
+  if (view === 'about') {
+    diagram();
+    openTrace();
+  }
   else if (!$('explainer').paused) $('explainer').pause();
   if (location.hash !== '#' + view)
     window.history[replace ? 'replaceState' : 'pushState'](
