@@ -1,32 +1,32 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "window": 1024,
   "default": "q4",
   "systemConditioned": true,
-  "revision": "70ff3f2a8ab3be8afb5e5e9734c5067de0d86421",
+  "revision": "e0162a991e33ef8660c8924633f03a965f8edb08",
   "formats": {
     "fp32": {
       "bytes": 1256251968,
-      "sha256": "8259f95e933c5e021dc29258bb21982532229e574bd7bc29cc83417a14b67738",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/70ff3f2a8ab3be8afb5e5e9734c5067de0d86421/model.safetensors"
+      "sha256": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/e0162a991e33ef8660c8924633f03a965f8edb08/model.safetensors"
     },
     "q4": {
       "manifest": "./model.json",
       "bytes": 196331520,
-      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/70ff3f2a8ab3be8afb5e5e9734c5067de0d86421/model.q4"
+      "sha256": "c8c434bf7b02506f2276aed4abbd1069fc11f73db749f8ea9d5151d969383751",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/e0162a991e33ef8660c8924633f03a965f8edb08/model.q4"
     },
     "q8": {
       "manifest": "./model-q8.json",
       "bytes": 353355776,
-      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/70ff3f2a8ab3be8afb5e5e9734c5067de0d86421/model.q8"
+      "sha256": "d473d6447db9c535e1f224152b042631e763fa7b3ac53711f745513930dbff5e",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/e0162a991e33ef8660c8924633f03a965f8edb08/model.q8"
     }
   },
   "installer": {
-    "file": "franok_0.4.0_amd64.deb",
-    "version": "0.4.0",
-    "url": "https://franok.yunusemrevurgun.com/downloads/franok_0.4.0_amd64.deb"
+    "file": "franok_0.5.0_amd64.deb",
+    "version": "0.5.0",
+    "url": "https://franok.yunusemrevurgun.com/downloads/franok_0.5.0_amd64.deb"
   },
   "video": {
     "url": "./media/franok-from-scratch.mp4",
@@ -47,7 +47,7 @@
   },
   "reader": {
     "url": "./reader.safetensors",
-    "baseSha256": "8259f95e933c5e021dc29258bb21982532229e574bd7bc29cc83417a14b67738",
+    "baseSha256": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
     "sha256": "a45f947d0fa7655f747bed2fed1cc445140a28675f7bbc06a8f7f531087f895b",
     "width": 512,
     "hidden": 96,
