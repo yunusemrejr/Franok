@@ -1,37 +1,32 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "window": 1024,
   "default": "q4",
   "systemConditioned": true,
-  "revision": "7fa5a52b2e2467569ded106a1e39ef20f3c4c083",
+  "revision": "70ff3f2a8ab3be8afb5e5e9734c5067de0d86421",
   "formats": {
+    "fp32": {
+      "bytes": 1256251968,
+      "sha256": "8259f95e933c5e021dc29258bb21982532229e574bd7bc29cc83417a14b67738",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/70ff3f2a8ab3be8afb5e5e9734c5067de0d86421/model.safetensors"
+    },
     "q4": {
       "manifest": "./model.json",
       "bytes": 196331520,
-      "sha256": "925c7323ed5bd82f3d741e16b0308c18016f2ac2204273d3841dce53be6b3aca",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7fa5a52b2e2467569ded106a1e39ef20f3c4c083/model.q4"
+      "sha256": "31f390c01d5adc3670a341d7cb0ccba63ae9847c02da46568f11053b767d5492",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/70ff3f2a8ab3be8afb5e5e9734c5067de0d86421/model.q4"
     },
     "q8": {
       "manifest": "./model-q8.json",
       "bytes": 353355776,
-      "sha256": "48b1566431e800e2b3af7d2194900cee3e33c3f1923d4954e29777f2efbeb30b",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7fa5a52b2e2467569ded106a1e39ef20f3c4c083/model.q8"
-    },
-    "fp16": {
-      "bytes": 628129304,
-      "sha256": "534fea55e692aafd06c36bcabbcbf6ea97549f6f5a85f44d4352279c3d50f7c6",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7fa5a52b2e2467569ded106a1e39ef20f3c4c083/model.safetensors"
-    },
-    "fp32": {
-      "bytes": 1256251968,
-      "sha256": "b7d97329fb1ea8250a1818c168217d9b163178640138c11069ca8209a4552530",
-      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/7fa5a52b2e2467569ded106a1e39ef20f3c4c083/fp32/model.safetensors"
+      "sha256": "30669db143f60048d83e62177644d36ea7406a95221eac5cb9d3311b8b47045a",
+      "url": "https://huggingface.co/yunusemrejr/Franok/resolve/70ff3f2a8ab3be8afb5e5e9734c5067de0d86421/model.q8"
     }
   },
   "installer": {
-    "file": "franok_0.3.0_amd64.deb",
-    "version": "0.3.0",
-    "url": "https://franok.yunusemrevurgun.com/downloads/franok_0.3.0_amd64.deb"
+    "file": "franok_0.4.0_amd64.deb",
+    "version": "0.4.0",
+    "url": "https://franok.yunusemrevurgun.com/downloads/franok_0.4.0_amd64.deb"
   },
   "video": {
     "url": "./media/franok-from-scratch.mp4",
@@ -52,7 +47,7 @@
   },
   "reader": {
     "url": "./reader.safetensors",
-    "baseSha256": "534fea55e692aafd06c36bcabbcbf6ea97549f6f5a85f44d4352279c3d50f7c6",
+    "baseSha256": "8259f95e933c5e021dc29258bb21982532229e574bd7bc29cc83417a14b67738",
     "sha256": "a45f947d0fa7655f747bed2fed1cc445140a28675f7bbc06a8f7f531087f895b",
     "width": 512,
     "hidden": 96,
