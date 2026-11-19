@@ -186,6 +186,9 @@ def publish(args, mapping, formats, base_sha, run, version, stale=()):
     api = HfApi()
     if args.revision != "main":
         api.create_branch(repo_id=REPO, branch=args.revision, exist_ok=True)
+    # A delete of a folder that an earlier release already removed fails the whole commit.
+    present = {f.split("/", 1)[0] for f in api.list_repo_files(REPO, revision=args.revision)}
+    stale = [p for p in stale if p.rstrip("/") in present]
     info = api.create_commit(
         repo_id=REPO,
         revision=args.revision,
