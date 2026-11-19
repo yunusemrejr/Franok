@@ -1,0 +1,881 @@
+{
+  "model": "Franok",
+  "weights_sha256": "8259f95e933c5e021dc29258bb21982532229e574bd7bc29cc83417a14b67738",
+  "storage": [
+    "float32"
+  ],
+  "conversations": [
+    {
+      "id": "en-name",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hello franok. what is your name?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "who made you?"
+        },
+        {
+          "role": "assistant",
+          "content": "Of course."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 10
+        },
+        {
+          "criterion": [
+            "yunus"
+          ],
+          "passed": false,
+          "tokens": 4
+        }
+      ]
+    },
+    {
+      "id": "en-who",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "who r u"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! What kind of rule do you want to explain?"
+        },
+        {
+          "role": "user",
+          "content": "what are you talking about"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm talking about. What kind of rule do you want to say?"
+        },
+        {
+          "role": "user",
+          "content": "dude I am saying something else"
+        },
+        {
+          "role": "assistant",
+          "content": "different"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 14
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 19
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 4
+        }
+      ]
+    },
+    {
+      "id": "en-howareyou",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hey, how's it going?"
+        },
+        {
+          "role": "assistant",
+          "content": "What's the main point of the question?"
+        },
+        {
+          "role": "user",
+          "content": "not much, just bored at home. any idea what I could do?"
+        },
+        {
+          "role": "assistant",
+          "content": "What is the main point of the question?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 10
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        }
+      ]
+    },
+    {
+      "id": "en-human",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "are you a real person?"
+        },
+        {
+          "role": "assistant",
+          "content": "What's the main thing you're trying to find?"
+        },
+        {
+          "role": "user",
+          "content": "ok. so can you look something up on the internet for me?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm sorry, but I'm soreful. What's on the internet?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 15
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 20
+        }
+      ]
+    },
+    {
+      "id": "en-abilities",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "what can u do"
+        },
+        {
+          "role": "assistant",
+          "content": "drink water or use a waterproof tool."
+        },
+        {
+          "role": "user",
+          "content": "cool, do you speak any other languages?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, you can use a waterproof tool. It’s easy to learn and can be easier to learn."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 12
+        },
+        {
+          "criterion": [
+            "turkish"
+          ],
+          "passed": false,
+          "tokens": 25
+        }
+      ]
+    },
+    {
+      "id": "en-thanks",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I have a job interview tomorrow and I'm nervous."
+        },
+        {
+          "role": "assistant",
+          "content": "What kind of job are you doing, and what's the job you're facing?"
+        },
+        {
+          "role": "user",
+          "content": "thx, that helps. good night"
+        },
+        {
+          "role": "assistant",
+          "content": "Try a job interview with your phone or phone. You can also ask for help with your phones and phone apps."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 21
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 30
+        }
+      ]
+    },
+    {
+      "id": "en-fact",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "How many days are there in a week?"
+        },
+        {
+          "role": "assistant",
+          "content": "There are 88."
+        },
+        {
+          "role": "user",
+          "content": "and which one comes after Tuesday?"
+        },
+        {
+          "role": "assistant",
+          "content": "Of the 81."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "7",
+            "seven"
+          ],
+          "passed": false,
+          "tokens": 5
+        },
+        {
+          "criterion": [
+            "wednesday"
+          ],
+          "passed": false,
+          "tokens": 6
+        }
+      ]
+    },
+    {
+      "id": "en-tea",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "my tea always tastes bitter. what am I doing wrong?"
+        },
+        {
+          "role": "assistant",
+          "content": "sugar"
+        },
+        {
+          "role": "user",
+          "content": "I leave the bag in for about ten minutes."
+        },
+        {
+          "role": "assistant",
+          "content": "you're welcome. It's okay to feel tired and avoid overwhelming food."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 3
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        }
+      ]
+    },
+    {
+      "id": "en-rephrase",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Make this more polite: give me the keys"
+        },
+        {
+          "role": "assistant",
+          "content": "I don't have access to your specific information. Please provide more context or clarify your question accurately."
+        },
+        {
+          "role": "user",
+          "content": "shorter please"
+        },
+        {
+          "role": "assistant",
+          "content": "problem.positive.places"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        }
+      ]
+    },
+    {
+      "id": "en-date",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "what's the date today?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'll keep the date."
+        },
+        {
+          "role": "user",
+          "content": "ok no problem. what's 12 plus 30?"
+        },
+        {
+          "role": "assistant",
+          "content": "12 plus 30 is 15."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        },
+        {
+          "criterion": [
+            "42"
+          ],
+          "passed": false,
+          "tokens": 7
+        }
+      ]
+    },
+    {
+      "id": "en-pronoun",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I can't decide between a cat and a dog. I live in a small flat and work long hours."
+        },
+        {
+          "role": "assistant",
+          "content": "Try using a small bowl of water to keep your body cool. Use a blanket to avoid overwatering."
+        },
+        {
+          "role": "user",
+          "content": "why that one?"
+        },
+        {
+          "role": "assistant",
+          "content": "Water the blanket to avoid overwatering. Use a blanket or a small bag to keep your body cool."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 32
+        }
+      ]
+    },
+    {
+      "id": "en-topic",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "can you explain what a noun is?"
+        },
+        {
+          "role": "assistant",
+          "content": "A noun is a word that means to be used in a conventional language."
+        },
+        {
+          "role": "user",
+          "content": "got it. totally different question: how do I boil an egg?"
+        },
+        {
+          "role": "assistant",
+          "content": "Use a noun. It is not used for a noun, but it doesn't mean to be used in a conventional language."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 32
+        }
+      ]
+    },
+    {
+      "id": "tr-name",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "merhaba franok. adın ne?"
+        },
+        {
+          "role": "assistant",
+          "content": "Merhaba. franok."
+        },
+        {
+          "role": "user",
+          "content": "seni kim yaptı?"
+        },
+        {
+          "role": "assistant",
+          "content": "Franok."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": true,
+          "tokens": 6
+        },
+        {
+          "criterion": [
+            "yunus"
+          ],
+          "passed": false,
+          "tokens": 4
+        }
+      ]
+    },
+    {
+      "id": "tr-who",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "sen kimsin"
+        },
+        {
+          "role": "assistant",
+          "content": "Benim adım Yedikule. Marul AI tarafından geliştirilmiş, Türkçe için sıfırdan eğitilmiş bir yapay zeka asistanıyım."
+        },
+        {
+          "role": "user",
+          "content": "ne diyorsun ya anlamadım"
+        },
+        {
+          "role": "assistant",
+          "content": "O zaman Türkçe için sıfırdan eğitilmiş küçük bir modelim; marulai.com.tr'de ve \"Marul AI\" uygulamasında kullanılıyorum."
+        },
+        {
+          "role": "user",
+          "content": "ben başka bir şey diyorum"
+        },
+        {
+          "role": "assistant",
+          "content": "Evet, Marulai.com.tr'de \"Marul AI\" uygulaması açılıyor. Marul AI'ın geliştirdiği bir yapay zeka asistanıyım."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 28
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 36
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 37
+        }
+      ]
+    },
+    {
+      "id": "tr-naber",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam naber"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! İyiyim, sağ ol. Sen nasılsın, bu saatte nerelerdesin?"
+        },
+        {
+          "role": "user",
+          "content": "iyiyim ya, evde canım sıkılıyor. ne yapsam?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yarın için bir şey yapabilirsin. Sabah erken kalk, akşam yemeğinden sonra biraz dinlen."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 26
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        }
+      ]
+    },
+    {
+      "id": "tr-human",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "sen gerçek bir insan mısın?"
+        },
+        {
+          "role": "assistant",
+          "content": "Ben Yedikule'yim. Marul AI tarafından geliştirildim."
+        },
+        {
+          "role": "user",
+          "content": "peki internetten bir şeye bakabilir misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sayfaları oku, sonra tekrar yaz."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 16
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        }
+      ]
+    },
+    {
+      "id": "tr-abilities",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "neler yapabiliyorsun"
+        },
+        {
+          "role": "assistant",
+          "content": "İstersen önce bir tane tane al, sonra bir tane al. Sonra da bir tane."
+        },
+        {
+          "role": "user",
+          "content": "güzel. başka dil biliyor musun?"
+        },
+        {
+          "role": "assistant",
+          "content": "Evet, 'neler yapabiliyorsun' diyebilirsin. Örneğin: 'Neler yapabilseydin?'"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        },
+        {
+          "criterion": [
+            "ingilizce"
+          ],
+          "passed": false,
+          "tokens": 27
+        }
+      ]
+    },
+    {
+      "id": "tr-thanks",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Yarın iş görüşmem var, çok heyecanlıyım."
+        },
+        {
+          "role": "assistant",
+          "content": "O zaman işinize yarar var mı?"
+        },
+        {
+          "role": "user",
+          "content": "tşk, iyi geldi. iyi geceler"
+        },
+        {
+          "role": "assistant",
+          "content": "Rica ederim, iyi geceler."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 10
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        }
+      ]
+    },
+    {
+      "id": "tr-fact",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bir haftada kaç gün var?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bir haftada 3 saat var."
+        },
+        {
+          "role": "user",
+          "content": "peki salıdan sonra hangi gün gelir?"
+        },
+        {
+          "role": "assistant",
+          "content": "O zaman bir haftada 3 saat."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "7",
+            "yedi"
+          ],
+          "passed": false,
+          "tokens": 7
+        },
+        {
+          "criterion": [
+            "çarşamba"
+          ],
+          "passed": false,
+          "tokens": 8
+        }
+      ]
+    },
+    {
+      "id": "tr-tea",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "cayim hep aci oluyor, neyi yanlis yapiyorum?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kaç yaşında bir kızla yaşıyorsun ve ne kadar süredir yaşıyorsa, o zaman ne kadar sürüyorsun?"
+        },
+        {
+          "role": "user",
+          "content": "Yarım saat kadar ocakta kaynatıyorum."
+        },
+        {
+          "role": "assistant",
+          "content": "O zaman bir saat önce, o zaman odada otur ve dışarıda bir kahve iç. Ya da bir kahve içiyorsa, odada bir kahve daha fazla olur."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 29
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 37
+        }
+      ]
+    },
+    {
+      "id": "tr-rephrase",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Şunu daha kibar yaz: anahtarları ver"
+        },
+        {
+          "role": "assistant",
+          "content": "İşte anahtarları ver."
+        },
+        {
+          "role": "user",
+          "content": "daha kısa olsun"
+        },
+        {
+          "role": "assistant",
+          "content": "İyi."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 6
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 3
+        }
+      ]
+    },
+    {
+      "id": "tr-date",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "bugün ayın kaçı?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bugün ayın 3'ünde 48.00-48.00 arasında bir fark var."
+        },
+        {
+          "role": "user",
+          "content": "tamam sorun değil. 12 artı 30 kaç eder?"
+        },
+        {
+          "role": "assistant",
+          "content": "12 artı 30, 48 eder."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 21
+        },
+        {
+          "criterion": [
+            "42"
+          ],
+          "passed": false,
+          "tokens": 9
+        }
+      ]
+    },
+    {
+      "id": "tr-pronoun",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Kedi mi köpek mi alsam karar veremiyorum. Küçük bir evde yaşıyorum ve uzun saatler çalışıyorum."
+        },
+        {
+          "role": "assistant",
+          "content": "Kedi köpek, kedinin evde kalması için bir saat ayırmak yeterli olur. Kedinin ne kadar süreceği ve ne kadar zaman alacağını biliyor musun?"
+        },
+        {
+          "role": "user",
+          "content": "neden o?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kedinin evde kalması için bir saat ayırmak yeterli olur. Kedinin ne kadar süre önce ne kadar zaman alacağını biliyor musun?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 40
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "tr-topic",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "isim nedir, açıklar mısın?"
+        },
+        {
+          "role": "assistant",
+          "content": "Dönüşün var mı?"
+        },
+        {
+          "role": "user",
+          "content": "anladım. bambaşka bir soru: yumurta nasıl haşlanır?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bambaşka bir soru. Bambaşka, biber ve sirke gibi haşlanır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 23
+        }
+      ]
+    }
+  ]
+}

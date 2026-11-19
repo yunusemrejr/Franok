@@ -1,0 +1,387 @@
+{
+  "model": "Franok",
+  "weights_sha256": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+  "storage": [
+    "float32"
+  ],
+  "conversations": [
+    {
+      "id": "en-math",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "can you help me with math?"
+        },
+        {
+          "role": "assistant",
+          "content": "I can answer simple questions, explain things simply and help with short texts. Small sums are fine too. What would you like to try?"
+        },
+        {
+          "role": "user",
+          "content": "calculus"
+        },
+        {
+          "role": "assistant",
+          "content": "Calculus is a massive ball that pulls many people across the body. It is like a spinning top that picks up some of the energy."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 33
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 37
+        }
+      ]
+    },
+    {
+      "id": "en-howareyou-code",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hey how are you"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm doing well. What would you like to talk about?"
+        },
+        {
+          "role": "user",
+          "content": "can you write me a short python script about printing stuff?"
+        },
+        {
+          "role": "assistant",
+          "content": "print('Select')\nThis code prints the word SD in a variable."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 16
+        },
+        {
+          "criterion": [
+            "print"
+          ],
+          "passed": true,
+          "tokens": 23
+        }
+      ]
+    },
+    {
+      "id": "en-poem",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "write me a poem"
+        },
+        {
+          "role": "assistant",
+          "content": "The sky is a lovely place to sit in the sun. It is a bright, green hairdresser."
+        },
+        {
+          "role": "user",
+          "content": "nice, now make it about the sea"
+        },
+        {
+          "role": "assistant",
+          "content": "The sea is a bright, green hairdresser. It is a very colorful place."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 22
+        }
+      ]
+    },
+    {
+      "id": "en-hi-help",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hi"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! I'm Franok. How are you?"
+        },
+        {
+          "role": "user",
+          "content": "what should I cook tonight? I only have eggs and rice"
+        },
+        {
+          "role": "assistant",
+          "content": "Small eggs and rice are a good choice. They are filling and easy to make."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 13
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        }
+      ]
+    },
+    {
+      "id": "tr-math",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "matematikte bana yardım eder misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yardımcı olabilirim. Hangi konuda takıldın; kesirler, denklemler ya da geometri mi?"
+        },
+        {
+          "role": "user",
+          "content": "kesirler"
+        },
+        {
+          "role": "assistant",
+          "content": "Kesirler, bir sayının içinde başka bir sayının kaç kez olduğunu bulmaktır. Örneğin 2, 3, 4 ve 6 sayılarının toplamı 3 eder."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 33
+        }
+      ]
+    },
+    {
+      "id": "tr-nasilsin-kod",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam nasılsın"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! Ben Franok, senin küçük sohbet asistanıyım. Bugün sana nasıl yardımcı olabilirim?"
+        },
+        {
+          "role": "user",
+          "content": "bana ekrana yazı yazdıran kısa bir python kodu yazar mısın?"
+        },
+        {
+          "role": "assistant",
+          "content": "for i in range(3):\n    print(i)\nBu kod ekrana Merhaba yazar."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        },
+        {
+          "criterion": [
+            "print"
+          ],
+          "passed": true,
+          "tokens": 25
+        }
+      ]
+    },
+    {
+      "id": "tr-siir",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "bana bir şiir yaz"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! Ben bir asistan olduğum için her zaman hazırım. Senin günün nasıl geçiyor?"
+        },
+        {
+          "role": "user",
+          "content": "güzel, şimdi deniz hakkında olsun"
+        },
+        {
+          "role": "assistant",
+          "content": "Deniz denizleri çok güzeldir, denizler ise deniz dalgaları çok güzeldir. Deniz dalgaları çok sever, deniz dalgaları da sever."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 23
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 30
+        }
+      ]
+    },
+    {
+      "id": "tr-selam-yemek",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! Ben bir asistan olduğum için her zaman yardıma hazırım. Senin günün nasıl geçiyor?"
+        },
+        {
+          "role": "user",
+          "content": "akşama ne pişirsem? evde sadece yumurta ve pirinç var"
+        },
+        {
+          "role": "assistant",
+          "content": "Yumurta ve pirinç çok güzel bir seçim. Yumurta ve Pilav yapabilirsin."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 26
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 23
+        }
+      ]
+    },
+    {
+      "id": "en-name-insist",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hi! I'm Franok. How can I help?"
+        },
+        {
+          "role": "user",
+          "content": "what is your name"
+        },
+        {
+          "role": "assistant",
+          "content": "My name is Franok. What can I do for you?"
+        },
+        {
+          "role": "user",
+          "content": "no you are franok"
+        },
+        {
+          "role": "assistant",
+          "content": "Nice to meet you too. How can I help?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 14
+        },
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": true,
+          "tokens": 13
+        },
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 12
+        }
+      ]
+    },
+    {
+      "id": "tr-ad-israr",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "merhaba"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! Ben bir asistan olduğum için her zaman yardıma hazırım. Senin günün nasıl geçiyor?"
+        },
+        {
+          "role": "user",
+          "content": "adın ne"
+        },
+        {
+          "role": "assistant",
+          "content": "Ben bir asistan olduğum için her zaman yardıma hazırım. Dinlenmek için kendine zaman ayırabiliyor musun?"
+        },
+        {
+          "role": "user",
+          "content": "hayır sen franoksun"
+        },
+        {
+          "role": "assistant",
+          "content": "Ben bir asistan olduğum için duygularım yok ama her şey yolunda. Sen nasılsın?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 26
+        },
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 27
+        },
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 20
+        }
+      ]
+    }
+  ]
+}

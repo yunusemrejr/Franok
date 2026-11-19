@@ -216,7 +216,7 @@
               <li><b>Practice conversation.</b> Supervised tuning trained all layers on assistant replies. Earlier turns and system instructions were visible while the model learned which words should follow.</li>
               <li><b>Compare replies.</b> Two low-rank adapters tuned dialogue and the choice between a supported answer and an alternative. These small updates can be inspected separately.</li>
               <li><b>Learn from its own attempts.</b> Franok sampled six answers to a prompt. Reinforcement learning compared their rewards within the group and adjusted another adapter.</li>
-              <li><b>Practice with a teacher.</b> Larger open models, Qwen3-8B and Qwen3-14B, wrote practice conversations, and a grading pass removed the weak ones. Franok also practiced answering from a given passage and keeping counts and object locations straight, using generated dialogues whose answers are known exactly.</li>
+              <li><b>Practice with a teacher.</b> Larger open models, Gemma 4 26B and 31B, wrote practice conversations about everyday chat, and a grading pass removed the weak ones. A programmatic set taught Franok its own name and maker. Franok also practiced answering from a given passage and keeping counts and object locations straight, using generated dialogues whose answers are known exactly.</li>
             </ol>
             <p><a href="https://github.com/yunusemrejr/Franok/blob/main/docs/training.md">Training equations, data and Colab steps ↗</a></p>
           </details>
@@ -227,10 +227,12 @@
           <details>
             <summary>How well does Franok hold a conversation?</summary>
             <p>
-              Franok met 3 of 32 conversation criteria across 16 English and Turkish chats, and 2 of 32 on a
-              second set written before its latest training. It often loses the topic on a follow-up. The published transcripts show each prompt, the answer it
-              gave and what counted as a successful response.
-              <a href="https://github.com/yunusemrejr/Franok/blob/main/docs/evaluation/v4/final.md">Read the test conversations ↗</a>
+              A judge model that could not see which system wrote each reply read 50 held-out chat turns in
+              English and Turkish. It found 25 of Franok's replies sensible and on topic, and 14 that did
+              everything the turn asked. Greetings, questions about itself and simple follow-ups usually work;
+              facts, sums and step-by-step advice are often wrong. The published transcripts show each prompt,
+              the answer and the verdict.
+              <a href="https://github.com/yunusemrejr/Franok/blob/main/docs/evaluation/v5/final.md">Read the test conversations ↗</a>
             </p>
           </details>
           <details id="readerAbout" hidden>

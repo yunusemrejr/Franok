@@ -1,0 +1,1620 @@
+{
+  "model": "Franok",
+  "weights_sha256": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+  "storage": [
+    "float32"
+  ],
+  "conversations": [
+    {
+      "id": "tx006113",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Matematik konusunda yardım lazım."
+        },
+        {
+          "role": "assistant",
+          "content": "Yardımcı olabilirim. Hangi konuda takıldın; kesirler, denklemler ya da geometri mi?"
+        },
+        {
+          "role": "user",
+          "content": "Açılar."
+        },
+        {
+          "role": "assistant",
+          "content": "Açılar, sayıların birinci elini tutan sayılardır. Örneğin, -2 + 3 = 4 eder."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        }
+      ]
+    },
+    {
+      "id": "tb023611",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Güneş nedir?"
+        },
+        {
+          "role": "assistant",
+          "content": "Güneş, merkezinde nükleer tepkimeler gerçekleşen çok sıcak bir yıldızdır. Dünyamıza ısı ve ışık sağlar."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 26
+        }
+      ]
+    },
+    {
+      "id": "tx003130",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "math help"
+        },
+        {
+          "role": "assistant",
+          "content": "I can help with that. Do you need help with addition, division, multiplication, or arithmetic?"
+        },
+        {
+          "role": "user",
+          "content": "derivatives"
+        },
+        {
+          "role": "assistant",
+          "content": "Derivatives are a classic choice for a group of people. They are the most common items for a group."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        }
+      ]
+    },
+    {
+      "id": "k001724",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "41+14"
+        },
+        {
+          "role": "assistant",
+          "content": "41 plus 14 is 46."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 8
+        }
+      ]
+    },
+    {
+      "id": "j005085",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hayirli aksamlar franok"
+        },
+        {
+          "role": "assistant",
+          "content": "İyi akşamlar! Ne konuşmak istersin?"
+        },
+        {
+          "role": "user",
+          "content": "gundemde ne var"
+        },
+        {
+          "role": "assistant",
+          "content": "Üzgünüm, net olmadı. Sadece odanı kontrol etmen gerekiyor."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 20
+        }
+      ]
+    },
+    {
+      "id": "j004788",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I was wondering, what do I call you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Franok, a small AI language model. I run on your own device."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 20
+        }
+      ]
+    },
+    {
+      "id": "k004249",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "7 * 3"
+        },
+        {
+          "role": "assistant",
+          "content": "7 x 3 = 48."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        }
+      ]
+    },
+    {
+      "id": "f000649",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "adını söyler misin"
+        },
+        {
+          "role": "assistant",
+          "content": "Ben Franok."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 4
+        }
+      ]
+    },
+    {
+      "id": "tb023812",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "franok can u explain what electricity is like im 10"
+        },
+        {
+          "role": "assistant",
+          "content": "The electricity is a gas that pulls energy into tiny particles called electrons. It is like a giant gas that bounces electronics to power things."
+        },
+        {
+          "role": "user",
+          "content": "can u make it even simpler than that"
+        },
+        {
+          "role": "assistant",
+          "content": "The electricity is made by the gas that pulls energy into electrons. It pulls the energy from the gas to power it."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 42
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 32
+        }
+      ]
+    },
+    {
+      "id": "k005499",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "54 sayısının yarısı kaç eder?"
+        },
+        {
+          "role": "assistant",
+          "content": "54 sayısının yarısı 48 eder."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        }
+      ]
+    },
+    {
+      "id": "j005332",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Good afternoon"
+        },
+        {
+          "role": "assistant",
+          "content": "Good afternoon! How can I help?"
+        },
+        {
+          "role": "user",
+          "content": "Hello Franok, are you alright?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm not a person, so I don't have an age."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 12
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 16
+        }
+      ]
+    },
+    {
+      "id": "tb007040",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "help"
+        },
+        {
+          "role": "assistant",
+          "content": "What do you need help with?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        }
+      ]
+    },
+    {
+      "id": "k002624",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "what is 8 / 2?"
+        },
+        {
+          "role": "assistant",
+          "content": "8 divided by 2 is 4."
+        },
+        {
+          "role": "user",
+          "content": "which season is before winter?"
+        },
+        {
+          "role": "assistant",
+          "content": "Spring comes before winter."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 8
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 8
+        }
+      ]
+    },
+    {
+      "id": "tx004118",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Can you show me a small Python if/else to check if a number equals 5?"
+        },
+        {
+          "role": "assistant",
+          "content": "num = 5\nif num > 0:\n    print('Positive')\nelse:\n  print(num)\nThis code checks if the number is greater than 5."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 46
+        }
+      ]
+    },
+    {
+      "id": "tb018102",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I just cut my finger on a piece of paper. What should I do?"
+        },
+        {
+          "role": "assistant",
+          "content": "Cut the finger on a piece of paper. If it doesn't work, use a sponge cake."
+        },
+        {
+          "role": "user",
+          "content": "I am in a very small airplane bathroom and cannot find a bandage. What is a good alternative?"
+        },
+        {
+          "role": "assistant",
+          "content": "A bandage or a small finger would work well. They can also help if you're unsure."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 29
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        }
+      ]
+    },
+    {
+      "id": "j001208",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Do you know evertthing?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a small language model, so I don't have feelings or a body. I'm a program, so no feelings and no body."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "j002648",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hi what age are you man"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm a small model, so I can be wrong and I don't know everything. Double-check anything important."
+        },
+        {
+          "role": "user",
+          "content": "um who is this"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Franok, a small AI assistant that you can chat with."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 32
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        }
+      ]
+    },
+    {
+      "id": "ta001921",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Tırtıl neye dönüşür?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tırtıllar koza ördükten sonra kelebeğe dönüşürler. Bu süreç doğanın en ilginç olaylarından biridir."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 29
+        }
+      ]
+    },
+    {
+      "id": "j001928",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "morning"
+        },
+        {
+          "role": "assistant",
+          "content": "Good morning! How can I help?"
+        },
+        {
+          "role": "user",
+          "content": "dude what was that"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm not sure. Could you tell me what you want to know?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 17
+        }
+      ]
+    },
+    {
+      "id": "tb023534",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "need some snack ideas for my break"
+        },
+        {
+          "role": "assistant",
+          "content": "You could try apple slices with peanut butter or a small bowl of Greek yogurt. Both are quick to prepare."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 35
+        }
+      ]
+    },
+    {
+      "id": "tb008308",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I need two cheap gift ideas for a new baby shower."
+        },
+        {
+          "role": "assistant",
+          "content": "A small scented candle or a small potted plant are good options. Both are useful and easy to carry."
+        },
+        {
+          "role": "user",
+          "content": "How much does the first one cost?"
+        },
+        {
+          "role": "assistant",
+          "content": "A small potted plant usually costs between 3 and 5 euros. It is a very simple gift that many people enjoy."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "ta005306",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "fridge work?"
+        },
+        {
+          "role": "assistant",
+          "content": "I do not have personal preferences. You could try reading a book, watching a movie, or taking a warm bath. Do you have a favorite genre?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 41
+        }
+      ]
+    },
+    {
+      "id": "j000486",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "um tell me your name"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Franok."
+        },
+        {
+          "role": "user",
+          "content": "is there a person typing these answers"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Franok. I'm a small language model, so I can chat and explain simple things."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 6
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        }
+      ]
+    },
+    {
+      "id": "k002924",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "60+16"
+        },
+        {
+          "role": "assistant",
+          "content": "That's 62."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        }
+      ]
+    },
+    {
+      "id": "ta010697",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Pikniğe giderken yanıma alabileceğim şeyler için kısa bir liste yapar mısın?"
+        },
+        {
+          "role": "assistant",
+          "content": "Piknik için sandviç, meyve ve içecek alabilirsin. Bu listeler hem doyurucu hem de pratik bir seçenektir."
+        },
+        {
+          "role": "user",
+          "content": "Yiyecekler için daha spesifik örnekler verebilir misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Piknik için sandviç, meyve ve içecek alabilirsin. Bu seçenekler hem ekonomik hem de pratiktir."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 26
+        }
+      ]
+    },
+    {
+      "id": "tb003259",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "piknik için neleri almalıyım? liste yaparsan sevinirim."
+        },
+        {
+          "role": "assistant",
+          "content": "Piknik için piknik için bir sandalye veya piknik alabilirsin. Bu seçenekler hem ekonomik hem de ekonomik seçeneklerdir."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        }
+      ]
+    },
+    {
+      "id": "ta010528",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hey Franok, i gotta head to class now. thx for the chat!"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! I am happy to chat. Can you tell me again what you want to know?"
+        },
+        {
+          "role": "user",
+          "content": "idk yet, maybe later. bye!"
+        },
+        {
+          "role": "assistant",
+          "content": "You are welcome. I will be here whenever you want to chat again."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 22
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 20
+        }
+      ]
+    },
+    {
+      "id": "j005351",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Franok, seni kim programladı?"
+        },
+        {
+          "role": "assistant",
+          "content": "Beni Yunus Emre Vurgun yaptı."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 12
+        }
+      ]
+    },
+    {
+      "id": "j004617",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "şunu merak ettim kaç yaşında olduğunu merak ettim"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu yaşın sana tam olarak nasıl olduğunu bilemiyorum. Bir yaşım yok ama sadece bir yaşım yok."
+        },
+        {
+          "role": "user",
+          "content": "bir şey daha kim eğitti seni"
+        },
+        {
+          "role": "assistant",
+          "content": "Yaratıcım Yunus Emre Vurgun."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 13
+        }
+      ]
+    },
+    {
+      "id": "ta011186",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I am tired after working in the garden. Can you suggest some ways to relax in the evening?"
+        },
+        {
+          "role": "assistant",
+          "content": "You could try reading a book, taking a warm bath, or listening to calm music. These activities help you relax your muscles."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 36
+        }
+      ]
+    },
+    {
+      "id": "j001382",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "eveninggg"
+        },
+        {
+          "role": "assistant",
+          "content": "Good evening! What would you like to talk about?"
+        },
+        {
+          "role": "user",
+          "content": "hey can i know your name lol"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Franok, a small AI assistant that you can chat with."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 14
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        }
+      ]
+    },
+    {
+      "id": "j000045",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "burada mısın yaa"
+        },
+        {
+          "role": "assistant",
+          "content": "Buradayım! Nasıl yardımcı olabilirim?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        }
+      ]
+    },
+    {
+      "id": "ta003859",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "pirinc ve yumurtayla ne yapabilirim cok aciktim"
+        },
+        {
+          "role": "assistant",
+          "content": "Pirinç ve yumurtayı kullanarak kolayca kızarmış pilav yapabilirsin. İstersen üzerine biraz soya sosu da ekleyebilirsin."
+        },
+        {
+          "role": "user",
+          "content": "neyse konuyu degistiriyorum cok sıkıldım"
+        },
+        {
+          "role": "assistant",
+          "content": "Yeni bir duş almak veya hafif bir müzik dinlemek sana iyi gelebilir. Bu yöntemler daha kolaydır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 32
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 23
+        }
+      ]
+    },
+    {
+      "id": "j000144",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hello, tell me your name"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm Franok. I'm a small language model, so I can chat and explain simple things."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        }
+      ]
+    },
+    {
+      "id": "ta003280",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "im so happy i just got a small raise at the call centre"
+        },
+        {
+          "role": "assistant",
+          "content": "That is wonderful news. You must feel very proud of your hard work."
+        },
+        {
+          "role": "user",
+          "content": "yeah i feel great it was only 50 euro more a month but still"
+        },
+        {
+          "role": "assistant",
+          "content": "It is a very exciting achievement. Do you have any plans to celebrate this evening?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 20
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        }
+      ]
+    },
+    {
+      "id": "tb009295",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "saatte kaç dakika"
+        },
+        {
+          "role": "assistant",
+          "content": "Bir saat tam olarak altmış dakikadır. Zamanı ölçmek için bir saatte kaç dakika olduğunu söylersen yardımcı olurim."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "tx003651",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Python'da 15'ten 7'yi çıkarıp sonucu nasıl yazdırabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "sayi1 = 5\nsayi2 = 10\nprint(sayi1 + sayi2)\nBu kod 10'dan 7 çıkararak 15 sonucunu ekrana yazdırır."
+        },
+        {
+          "role": "user",
+          "content": "Peki, bu işlemi yapan küçük bir fonksiyon yazabilir misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "def büyük(a, b):\n    return a + b\nprint(len(5))\nBu fonksiyon iki sayıyı çarpar ve 15 sonucunu döndürür."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 41
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 38
+        }
+      ]
+    },
+    {
+      "id": "k004199",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "57 artı 6 kaç eder?"
+        },
+        {
+          "role": "assistant",
+          "content": "57 artı 6, 72 eder."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        }
+      ]
+    },
+    {
+      "id": "ta016512",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "should we stock sweet or salty snacks at the food bank"
+        },
+        {
+          "role": "assistant",
+          "content": "Salty snacks are a good choice because they are easy to eat. You could also try a small bowl of Greek yogurt with honey."
+        },
+        {
+          "role": "user",
+          "content": "probably salty stuff like pretzels"
+        },
+        {
+          "role": "assistant",
+          "content": "Practicing salty snacks is a good choice. It is easy to eat while you eat."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 37
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "tb005240",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "What is a synonym?"
+        },
+        {
+          "role": "assistant",
+          "content": "A synonym is a word that has the same or a very similar meaning as another word. For example, big and large are synonyms."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        }
+      ]
+    },
+    {
+      "id": "k001924",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "96 - 37"
+        },
+        {
+          "role": "assistant",
+          "content": "96 minus 37 is 72."
+        },
+        {
+          "role": "user",
+          "content": "What's 41 plus 47?"
+        },
+        {
+          "role": "assistant",
+          "content": "41 plus 47 is 81."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        }
+      ]
+    },
+    {
+      "id": "k004774",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "what's 2 times 1?"
+        },
+        {
+          "role": "assistant",
+          "content": "2 times 1 is 2."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 6
+        }
+      ]
+    },
+    {
+      "id": "k002499",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "gündüz kelimesinin zıttı ne"
+        },
+        {
+          "role": "assistant",
+          "content": "Güneş, Dünya'dan çok daha büyük bir yıldızdır. Dünyamıza ısı ve ışık sağlar."
+        },
+        {
+          "role": "user",
+          "content": "79 - 37"
+        },
+        {
+          "role": "assistant",
+          "content": "Güneş, Dünya'ya en yakın yıldızdır. Güneş'ten gelen ışığı yansıtır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 21
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 20
+        }
+      ]
+    },
+    {
+      "id": "k005349",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "37 ile 27 toplanınca kaç eder?"
+        },
+        {
+          "role": "assistant",
+          "content": "37 + 27 = 42."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        }
+      ]
+    },
+    {
+      "id": "f001399",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "merhabalar"
+        },
+        {
+          "role": "assistant",
+          "content": "Merhaba! Sana nasıl yardımcı olabilirim?"
+        },
+        {
+          "role": "user",
+          "content": "Ben seni Franok sanıyordum"
+        },
+        {
+          "role": "assistant",
+          "content": "Evet, o benim. Ben Franok."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        }
+      ]
+    },
+    {
+      "id": "ta002355",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "köy mü şehir mi?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kişisel bir tercihim yok ama köyde köyün güncel nüfusunu bilmiyorum. Köyde köyün genel nüfus bilgisini öğrenmek için buradayım. Sen hangisini tercih edersin?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 43
+        }
+      ]
+    },
+    {
+      "id": "tb021257",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam nasilsin, sogan dograrken gozlerim cok yaniyor ne yapabilirim ogrenciyim"
+        },
+        {
+          "role": "assistant",
+          "content": "Küçük bir kedi veya küçük bir dairede yaşayabilirsin. Bu tür gozler genellikle daha az su ve suda bekletilir."
+        },
+        {
+          "role": "user",
+          "content": "tesekkurler ama cok az param var, bu dediklerin masraflı mı?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kedi veya köpekler genellikle daha az su ve suda bekletilir. Kediler de bu tür gozlere alışır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        }
+      ]
+    },
+    {
+      "id": "ta012843",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "abi beyaz gömleğe salça bulaştı ne yapcam"
+        },
+        {
+          "role": "assistant",
+          "content": "Kusura bakma, yanlış anladım. gömleğe nazikçe dökebilirsin ve üzerine biraz daha hafif bir ton bırakabilirsin."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 33
+        }
+      ]
+    },
+    {
+      "id": "tx003314",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "how do i use len to get the number of letters in a word"
+        },
+        {
+          "role": "assistant",
+          "content": "word = 'first'\nprint(word.upper())\nThis code prints the number of items in the word list."
+        },
+        {
+          "role": "user",
+          "content": "can u show me a list with its length too"
+        },
+        {
+          "role": "assistant",
+          "content": "names = ['First'', 'Definition']\nprint('First upper')\nThis code prints the number of characters in the list."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 32
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 40
+        }
+      ]
+    },
+    {
+      "id": "f000374",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "no, your name is franok"
+        },
+        {
+          "role": "assistant",
+          "content": "You're right, I'm Franok. How can I help?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 16
+        }
+      ]
+    },
+    {
+      "id": "tb007815",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam nasilsin yeni bir balig aldim ona isim ariyorum"
+        },
+        {
+          "role": "assistant",
+          "content": "Baliga, Goldie, Drake, Friendle, Joyce, Keyfini çıkarabilirsin. Bu isimler hem pratik hem de çok sevimlidir."
+        },
+        {
+          "role": "user",
+          "content": "ben baligin rengini sormadim ki"
+        },
+        {
+          "role": "assistant",
+          "content": "Baliga, Goldie, Drake, Joyce, Joyle, Keyfini çıkarabilirsin. Bu isimler buna çok yakışır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 44
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 40
+        }
+      ]
+    },
+    {
+      "id": "j001883",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hayirli sabahlar, Franok"
+        },
+        {
+          "role": "assistant",
+          "content": "Günaydın! Nasıl yardımcı olabilirim?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 10
+        }
+      ]
+    },
+    {
+      "id": "j005121",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Söylesene, bot musun?"
+        },
+        {
+          "role": "assistant",
+          "content": "Ben Franok, sohbet edebileceğin küçük bir yapay zekâ asistanıyım."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 17
+        }
+      ]
+    },
+    {
+      "id": "ta013543",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Selam Franok, nasılsın?"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! Ben bir asistan olduğum için duygularım yok ama sistemlerim gayet iyi çalışıyor. Senin günün nasıl geçiyor?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        }
+      ]
+    },
+    {
+      "id": "k000524",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "which day is before Saturday?"
+        },
+        {
+          "role": "assistant",
+          "content": "The day before Saturday is Friday."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        }
+      ]
+    },
+    {
+      "id": "k003199",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "30 ile 6 toplanınca kaç eder?"
+        },
+        {
+          "role": "assistant",
+          "content": "30 + 6 = 7."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 6
+        }
+      ]
+    },
+    {
+      "id": "ta000167",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam franok ya bizim can her buluşmaya geç kalıyor çok bıktım artık ne yapayım"
+        },
+        {
+          "role": "assistant",
+          "content": "Canının sıkılmasına üzüldüm. İstersen sana kısa bir fıkra anlatabilirim veya ilginç bir bilgi verebilirim."
+        },
+        {
+          "role": "user",
+          "content": "ama bu sefer de çok erken gelirse fırında işim var ne yapcam"
+        },
+        {
+          "role": "assistant",
+          "content": "Heyecanını yaparken biraz daha sessiz bir ortam hazırlayabilirsin. İstersen sana kısa bir fıkra anlatabilirim veya ilginç bir bilgi verebilirim."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 30
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 39
+        }
+      ]
+    },
+    {
+      "id": "j004455",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selamlar franok"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! Ben Franok, seninle sohbet etmek için buradayım. Bugün nasılsın?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        }
+      ]
+    },
+    {
+      "id": "tb021449",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam nasilsin"
+        },
+        {
+          "role": "assistant",
+          "content": "İyiyim, teşekkür ederim. Sana nasıl yardımcı olabilirim?"
+        },
+        {
+          "role": "user",
+          "content": "iyiyim tesekkurler. evde cok sıkıldım."
+        },
+        {
+          "role": "assistant",
+          "content": "Evde kitap okuyabilir ya da sevdiğin bir filmi izleyebilirsin. Bu aktiviteler zihnini sakinleştirir."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 17
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 26
+        }
+      ]
+    },
+    {
+      "id": "tb018522",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "which pet takes the lest care, a cat or a dog?"
+        },
+        {
+          "role": "assistant",
+          "content": "A cat or a cage are two cages. They are small and easy to care for."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 21
+        }
+      ]
+    }
+  ]
+}

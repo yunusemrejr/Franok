@@ -96,6 +96,7 @@ if __name__ == "__main__":
                     (root / f.name).symlink_to(f.resolve())
             manifest = json.loads(Path("web/release.json").read_text())
             manifest["formats"]["q4"]["url"] = "./fixture.q4"
+            manifest["formats"].pop("q8", None)  # the fixture is Q4, so the page must not choose Q8
             (root / "fixture.q4").symlink_to(a.weights.resolve())
             (root / "release.json").write_text(json.dumps(manifest))
             server = ThreadingHTTPServer(

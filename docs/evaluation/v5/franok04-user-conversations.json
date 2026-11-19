@@ -1,0 +1,387 @@
+{
+  "model": "Franok",
+  "weights_sha256": "8259f95e933c5e021dc29258bb21982532229e574bd7bc29cc83417a14b67738",
+  "storage": [
+    "float32"
+  ],
+  "conversations": [
+    {
+      "id": "en-math",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "can you help me with math?"
+        },
+        {
+          "role": "assistant",
+          "content": "What math are you using?"
+        },
+        {
+          "role": "user",
+          "content": "calculus"
+        },
+        {
+          "role": "assistant",
+          "content": "patterns"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 4
+        }
+      ]
+    },
+    {
+      "id": "en-howareyou-code",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hey how are you"
+        },
+        {
+          "role": "assistant",
+          "content": "school or school?"
+        },
+        {
+          "role": "user",
+          "content": "can you write me a short python script about printing stuff?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sure. Here's a short python script that uses the text to print the text:\n\n```python\ndef print_python\nprint(factors_python, 'r', 't', 'r', 'r')\n```\n\nIn this python"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 5
+        },
+        {
+          "criterion": [
+            "print"
+          ],
+          "passed": true,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-poem",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "write me a poem"
+        },
+        {
+          "role": "assistant",
+          "content": "What's the main idea of your own words?"
+        },
+        {
+          "role": "user",
+          "content": "nice, now make it about the sea"
+        },
+        {
+          "role": "assistant",
+          "content": "water it, then it's the sea."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        }
+      ]
+    },
+    {
+      "id": "en-hi-help",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hi"
+        },
+        {
+          "role": "assistant",
+          "content": "hello"
+        },
+        {
+          "role": "user",
+          "content": "what should I cook tonight? I only have eggs and rice"
+        },
+        {
+          "role": "assistant",
+          "content": "healthy flavor"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 2
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 6
+        }
+      ]
+    },
+    {
+      "id": "tr-math",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "matematikte bana yardım eder misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Elbette. Başka bir şey öğrenmek istiyorsan, ne kadar zaman ayırdığını ve hangi tür kaynaklara baktığını söyleyebilirim."
+        },
+        {
+          "role": "user",
+          "content": "kesirler"
+        },
+        {
+          "role": "assistant",
+          "content": "Küçük bir sayıya bak, her gün aynı şekilde yazabilirsin. Örneğin: 'Maalesef bu tür kaynaklar için en iyi zamandır.'"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 32
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 33
+        }
+      ]
+    },
+    {
+      "id": "tr-nasilsin-kod",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam nasılsın"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam! İyiyim, sağ ol. Senden naber, gün nasıl geçiyor?"
+        },
+        {
+          "role": "user",
+          "content": "bana ekrana yazı yazdıran kısa bir python kodu yazar mısın?"
+        },
+        {
+          "role": "assistant",
+          "content": "Python, CSS, and CSS."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 23
+        },
+        {
+          "criterion": [
+            "print"
+          ],
+          "passed": false,
+          "tokens": 10
+        }
+      ]
+    },
+    {
+      "id": "tr-siir",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "bana bir şiir yaz"
+        },
+        {
+          "role": "assistant",
+          "content": "Kitap, bir hikâye ya da bir hikâyeyi yaz. Kitabın konusu nedir?"
+        },
+        {
+          "role": "user",
+          "content": "güzel, şimdi deniz hakkında olsun"
+        },
+        {
+          "role": "assistant",
+          "content": "Kitabın konusu nedir?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 8
+        }
+      ]
+    },
+    {
+      "id": "tr-selam-yemek",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam"
+        },
+        {
+          "role": "assistant",
+          "content": "Selam, hoş geldin! Sana nasıl yardımcı olabilirim?"
+        },
+        {
+          "role": "user",
+          "content": "akşama ne pişirsem? evde sadece yumurta ve pirinç var"
+        },
+        {
+          "role": "assistant",
+          "content": "Kahve, biber ve zeytinyağı gibi basit bir yemek hazırla. Sütü azar ekle, sonra da karıştır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 15
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 30
+        }
+      ]
+    },
+    {
+      "id": "en-name-insist",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hi! I'm Open Assistant an AI-powered chatbot, how can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "what is your name"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! What kind of chatbot are you in mind?"
+        },
+        {
+          "role": "user",
+          "content": "no you are franok"
+        },
+        {
+          "role": "assistant",
+          "content": "you're welcome"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 26
+        },
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 14
+        },
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 8
+        }
+      ]
+    },
+    {
+      "id": "tr-ad-israr",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "merhaba"
+        },
+        {
+          "role": "assistant",
+          "content": "Merhaba! Bugün size nasıl yardımcı olabilirim?"
+        },
+        {
+          "role": "user",
+          "content": "adın ne"
+        },
+        {
+          "role": "assistant",
+          "content": "her gün, her zaman bir şey yapabilirsin."
+        },
+        {
+          "role": "user",
+          "content": "hayır sen franoksun"
+        },
+        {
+          "role": "assistant",
+          "content": "İyi ki! Her zaman iyi."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 10
+        },
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 11
+        },
+        {
+          "criterion": [
+            "franok"
+          ],
+          "passed": false,
+          "tokens": 8
+        }
+      ]
+    }
+  ]
+}

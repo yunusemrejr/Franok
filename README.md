@@ -15,7 +15,7 @@ For a bilingual session, turn on **Match older context across English and Turkis
 Install the Debian package on amd64 Ubuntu.
 
 ```sh
-sudo apt install ./franok_0.4.0_amd64.deb
+sudo apt install ./franok_0.5.0_amd64.deb
 ```
 
 For a source installation, run `npm ci`, `npx install-electron`, then `npm run install:ubuntu -- --pin` and `gtk-launch franok`. Both installations register the same desktop identifier. A second click on the dock icon brings the running window forward. The [GitHub releases](https://github.com/yunusemrejr/Franok/releases) include installers and SHA-256 digests.
@@ -26,14 +26,14 @@ At layer two, suppose the last token in the previous eight-token group has ID 17
 
 ## Train or inspect the model
 
-The [Colab notebook](https://colab.research.google.com/github/yunusemrejr/Franok/blob/main/training/Franok.ipynb) covers the lineage from random initialization. The third run starts from Franok’s own second checkpoint. It predicts another 383,385,600 English and Turkish text tokens, then trains on conversation turns, passage questions and changes of instruction. Two low-rank stages specialize in dialogue and evidence. An on-policy reinforcement stage samples six replies per prompt. The fourth run fine-tunes the third release in full on 35,672 conversations: teacher-written ones from Qwen3-8B and Qwen3-14B that a grading pass checked, programmatic dialogues with computed answers, and older conversations. A contamination filter removes overlap with the test sets. Short-span reading from SQuAD and SQuAD-TR, replayed conversations and raw text complete the mixture. The architecture page shows how to trace actual tokens, and the training guide gives the loss equations and checkpoint-selection procedure.
+The [Colab notebook](https://colab.research.google.com/github/yunusemrejr/Franok/blob/main/training/Franok.ipynb) covers the lineage from random initialization. The third run starts from Franok’s own second checkpoint. It predicts another 383,385,600 English and Turkish text tokens, then trains on conversation turns, passage questions and changes of instruction. Two low-rank stages specialize in dialogue and evidence. An on-policy reinforcement stage samples six replies per prompt. The fourth run fine-tunes the third release in full on 35,672 conversations: teacher-written ones from Qwen3-8B and Qwen3-14B that a grading pass checked, programmatic dialogues with computed answers, and older conversations. A contamination filter removes overlap with the test sets. Short-span reading from SQuAD and SQuAD-TR, replayed conversations and raw text complete the mixture. The fifth run fine-tunes the fourth release in full on 51,300 everyday dialogues: 63,000 written and graded twice by Gemma 4 26B and 1,500 Turkish ones from Gemma 4 31B, of which 38,522 survive the filter, plus 12,778 computed in code. 150 million tokens of SODA transcripts join the English raw text. The architecture page shows how to trace actual tokens, and the training guide gives the loss equations and checkpoint-selection procedure.
 
 - [Training stages, math and reproduction commands](docs/training.md)
 - [Open datasets, licenses and attributions](docs/data.md)
-- [Release 0.4 results, direct conversations and held-out reading](docs/evaluation/v4/final.md)
+- [Release 0.5 results, direct conversations and judge verdicts](docs/evaluation/v5/final.md)
 - [Public weights, adapter base, three LoRAs and logs](https://huggingface.co/yunusemrejr/Franok/tree/main)
 - [Packaging, Namecheap and Cloudflare deployment](docs/deployment.md)
 
 For the PyTorch reference, download `config.json`, `tokenizer.json` and `model.safetensors` to one directory, install `requirements.txt`, then run `python -m franok.chat DIRECTORY --lang tr`. The reference accepts a custom system instruction and sampling settings. Build the SIMD runtime with `bash runtime/build.sh`.
 
-Franok's code and trained weights are MIT licensed. Across 32 held-out conversation turns, Franok 0.4 passed 3, compared with 0 for Franok 0.3, 8 for SmolLM2-360M-Instruct and 6 for LFM2-350M. On a second set written before the training data existed, Franok 0.4 passed 2 of 32 and LFM2-350M passed 8. Replies in both languages can still lose the question on follow-up. [Results and direct transcripts](docs/evaluation/v4/final.md) Earlier reports cover the [first release](docs/evaluation/README.md), the [second release](docs/evaluation/v2/README.md) and the [third release](docs/evaluation/v3/final.md).
+Franok's code and trained weights are MIT licensed. On 50 held-out conversation turns in English and Turkish, a blind judge found that Franok 0.5 met the written requirement in 7 of 25 English and 7 of 25 Turkish turns, compared with 0 and 2 for Franok 0.4 and 10 and 0 for LFM2-350M. The model answered "12 plus 30" with 72. The prompts are short everyday chat, and with 50 million active parameters, factual knowledge, long answers, real programming and multi-step maths remain out of reach. [Results and direct transcripts](docs/evaluation/v5/final.md) Earlier reports cover the [fourth release](docs/evaluation/v4/final.md), the [first release](docs/evaluation/README.md), the [second release](docs/evaluation/v2/README.md) and the [third release](docs/evaluation/v3/final.md).

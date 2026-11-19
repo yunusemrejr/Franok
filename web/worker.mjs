@@ -10,10 +10,12 @@ async function read(url, label) {
   if (!r.ok) throw Error(label + ' returned HTTP ' + r.status + '.');
   return r;
 }
-async function load() {
+let loading;
+const load = (format) => (loading ||= fetchModel(format).catch((e) => ((loading = null), Promise.reject(e))));
+async function fetchModel(chosen) {
   if (model) return;
   release = await (await read('./release.json', 'Release manifest')).json();
-  const format = release.default || 'q4';
+  const format = release.formats?.[chosen] ? chosen : release.default || 'q4';
   const asset = release.formats?.[format] || { url: release.weights, manifest: './model.json' };
   const [manifest, spec, wasm] = await Promise.all([
     read(asset.manifest, 'Model manifest').then((r) => r.json()),
@@ -64,7 +66,7 @@ async function load() {
 }
 onmessage = async ({ data }) => {
   try {
-    await load();
+    await load(data.format);
     if (data.type === 'load') return;
     if (data.type === 'predict') {
       const { ids, target } = data;

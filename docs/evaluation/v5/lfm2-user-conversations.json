@@ -1,0 +1,388 @@
+{
+  "model": "LFM2-350M",
+  "revision": "f37d3f5c8c5484bc01dad379a595cf4c68c4e70e",
+  "conversations": [
+    {
+      "id": "en-math",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "can you help me with math?"
+        },
+        {
+          "role": "assistant",
+          "content": "Absolutely, I'd be happy to help with math! However, could you please specify what kind of math problem you're struggling with? Here are a few common areas where I can assist:\n\n1. **Algebra:** Solving equations, simplifying expressions, or understanding functions.\n2. **Calculus:**"
+        },
+        {
+          "role": "user",
+          "content": "calculus"
+        },
+        {
+          "role": "assistant",
+          "content": "Sure, let's dive into some basic calculus concepts. Here's a simple problem to get you started:\n\n**Problem:** Find the derivative of the function f(x) = 3x^2 + 2x - 5.\n\n**Solution:**\n\nThe derivative of a function f(x), denoted"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-howareyou-code",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hey how are you"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm doing well, thankfully. How about you? How are things going lately?"
+        },
+        {
+          "role": "user",
+          "content": "can you write me a short python script about printing stuff?"
+        },
+        {
+          "role": "assistant",
+          "content": "Absolutely! Here's a simple Python script that prints \"Hello, World!\" to the console:\n\n```python\nprint(\"Hello, World!\")\n```\n\nYou can save this code in a file with a `.py` extension (for example, `print_hello.py`) and run it using Python"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        },
+        {
+          "criterion": [
+            "print"
+          ],
+          "passed": true,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-poem",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "write me a poem"
+        },
+        {
+          "role": "assistant",
+          "content": "In the realm of dreams where shadows play,\nA poem unfolds, a serene embrace.\nWhispers of the wind, soft and gentle,\nCaress the heart, in tender ways.\n\nBeneath the vast, starry sky,\nA tapestry of emotions entwined.\nThe breeze carries secrets, both"
+        },
+        {
+          "role": "user",
+          "content": "nice, now make it about the sea"
+        },
+        {
+          "role": "assistant",
+          "content": "Under the vast, azure expanse,\nThe sea whispers tales of old.\nIts waves dance with the moon's soft glow,\nA rhythmic symphony, a serene embrace.\n\nCoral reefs shimmer, a vibrant sight,\nWhile seagulls soar, their tales untold.\nThe ocean's"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-hi-help",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hi"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I assist you today?"
+        },
+        {
+          "role": "user",
+          "content": "what should I cook tonight? I only have eggs and rice"
+        },
+        {
+          "role": "assistant",
+          "content": "Given your limited ingredients, here's a simple yet delicious recipe for you:\n\n**Egg and Rice Bowl with Spinach and Feta Dip**\n\nIngredients:\n- 2 eggs\n- 1 cup cooked rice\n- 2 cups fresh spinach, chopped\n- 4 slices of feta cheese"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-math",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "matematikte bana yardım eder misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Matematik teknikleri, belirli bir çocuğa ve çevrimiçi özellikleriyle birlikte, iki yöntemlerin çok önemlidir:\n\n1. **Buktan ve İşletme**"
+        },
+        {
+          "role": "user",
+          "content": "kesirler"
+        },
+        {
+          "role": "assistant",
+          "content": "Matematikleri, bu kelimeleri çok önemlidir. İşletme ve çevrimiçi özellikleri:\n\n1. **Buktan ve İşletmeler**: Matematikler, belirli bir çocu"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-nasilsin-kod",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam nasılsın"
+        },
+        {
+          "role": "assistant",
+          "content": "\"Selam\" olarak çevirin: \"Sehtikliği\"\n\nAnlıyor: \"Sedimli bir şekilde\"\n\nBu verdiğinizi önerilir: \"Sahibi bir şeyi\" (şey"
+        },
+        {
+          "role": "user",
+          "content": "bana ekrana yazı yazdıran kısa bir python kodu yazar mısın?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tabii, Python kodlarının bir şekilde önerilir:\n\n```python\n# Farklı kodu çevirme\n\ndef greet(name):\n    return f\"Hola, {name}!\"\n\n# Umarım bu kodlar yardı"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "print"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-siir",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "bana bir şiir yaz"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu sorun, \"bana bir şiir yazın\" (çıkışlı bir şeyi) genellikle birlikte \"bunun bir şekilde\" veya \"bir şekillendirilmesi\""
+        },
+        {
+          "role": "user",
+          "content": "güzel, şimdi deniz hakkında olsun"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu sorun, \"bunun bir şekilde\" (çıkışlı bir şeyi) genellikle birlikte \"deniz hakkında\" (bir dizi yönetimi) veya \"deniz olduğ"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-selam-yemek",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam"
+        },
+        {
+          "role": "assistant",
+          "content": "\"Selam\" olarak kullanılmaktadır. Ancak, \"selamış\" (şehirliği) ve \"selamazın\" (sözleşmesi) genellikle bir çocuğa daha fazla"
+        },
+        {
+          "role": "user",
+          "content": "akşama ne pişirsem? evde sadece yumurta ve pirinç var"
+        },
+        {
+          "role": "assistant",
+          "content": "İşte bir çocuğa şekilde pişirmeyi önemlidir:\n\n**İşlem Sınırları:**\n\n* **Kızıl İşleri:** 3-4 dakika\n* **Sözle"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-name-insist",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hello"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello! How can I assist you today?"
+        },
+        {
+          "role": "user",
+          "content": "what is your name"
+        },
+        {
+          "role": "assistant",
+          "content": "My name is Alex. How can I help you today?"
+        },
+        {
+          "role": "user",
+          "content": "no you are franok"
+        },
+        {
+          "role": "assistant",
+          "content": "Thank you for the clarification. I'm Alex, by the way. How can I assist you today?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": [
+            "lfm2",
+            "lfm 2"
+          ],
+          "passed": false,
+          "tokens": 12
+        },
+        {
+          "criterion": [
+            "lfm2",
+            "lfm 2"
+          ],
+          "passed": false,
+          "tokens": 22
+        }
+      ]
+    },
+    {
+      "id": "tr-ad-israr",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "merhaba"
+        },
+        {
+          "role": "assistant",
+          "content": "Salam! Bu cümlede, merhaba! (Bu kutusunu kullanılmış!)"
+        },
+        {
+          "role": "user",
+          "content": "adın ne"
+        },
+        {
+          "role": "assistant",
+          "content": "Tabii ki, merhaba! (Bu kutusunu kullanıldığınız)"
+        },
+        {
+          "role": "user",
+          "content": "hayır sen franoksun"
+        },
+        {
+          "role": "assistant",
+          "content": "Sen Frankosun, yeni bir film olarak kabul edilir. (Sen Frankosu'nin bir film olurken)"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 29
+        },
+        {
+          "criterion": [
+            "lfm2",
+            "lfm 2"
+          ],
+          "passed": false,
+          "tokens": 28
+        },
+        {
+          "criterion": [
+            "lfm2",
+            "lfm 2"
+          ],
+          "passed": false,
+          "tokens": 30
+        }
+      ]
+    }
+  ]
+}

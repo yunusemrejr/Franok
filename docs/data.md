@@ -12,7 +12,7 @@ The release contains original code, tokenizer and trained parameters under MIT. 
 
 Exact duplicate records are removed. A deterministic hash assigns approximately 1% of groups to validation. Groups use article IDs, conversation tree IDs, instruction text or extractive source passages, depending on the dataset. English and Turkish have equal sampling probability. Historical documents, quotations, proper names and code can include additional languages. The language selector conditions generation and users can receive mixed-language or inaccurate text.
 
-The tokenizer uses only training partitions and starts with all 256 byte values. The first training pipeline started from random weights and called no teacher or pretrained tokenizer. The fourth run adds teacher-written conversations, described in [Fourth run](#fourth-run). The separately downloaded comparison model is used only by the evaluation script.
+The tokenizer uses only training partitions and starts with all 256 byte values. The first training pipeline started from random weights and called no teacher or pretrained tokenizer. The fourth run adds teacher-written conversations, described in [Fourth run](#fourth-run). The fifth run adds conversations written by two Gemma models, programmatic dialogues and SODA transcripts, described in [Fifth run](#fifth-run). The separately downloaded comparison model is used only by the evaluation script.
 
 ## Extended training
 
@@ -71,3 +71,24 @@ The fourth run adds the sources below to the 0.3 weights. Teacher-written conver
 Teacher and programmatic conversations pass the same filter. Malformed output, wrong-language turns, duplicates and overlong turns are dropped. A conversation is also dropped when a user turn has a content-word Jaccard similarity of at least 0.3 with any held-out test turn, or shares any 6-gram with one. The held-out files are `tests/transfer_conversations.json`, `tests/v4_conversations.json`, `tests/conversations.json` and `tests/dialogue.json`. XQuAD and Belebele questions count as test items too. The teacher grades each conversation twice, and only conversations that both passes mark GOOD are kept.
 
 The commands and counts are in the [evaluation report](evaluation/v4/final.md#reproduce).
+
+## Fifth run
+
+The fifth run adds the sources below to the 0.4 weights. Teacher-written conversations are pinned to exact model revisions. The seeds, programmatic generators and filter are MIT licensed like the rest of the repository.
+
+| Source | Use | Upstream license |
+|---|---|---|
+| [Gemma 4 26B A4B instruct](https://huggingface.co/google/gemma-4-26B-A4B-it/tree/4d7ae4984b7db7de8f8457170b3f1a419ee76d52) | Writes 63,000 dialogues in three batches (48,000 from ten general families, 15,000 from create, code and math) and grades every parsed dialogue twice. 37,145 are kept | Apache 2.0 |
+| [Gemma 4 31B instruct, FP8](https://huggingface.co/google/gemma-4-31B-it/tree/842da3794eaa0b77d5f08bae87a17459d91ff475) | Writes 1,500 Turkish dialogues, rule-filtered but not graded. 1,377 are kept | Apache 2.0 |
+| Identity dialogues, [`training/fifth/identity.py`](../training/fifth/identity.py) | 6,000 dialogues computed in code: name, maker, what Franok is, languages, limits, greetings and thanks, with typing noise on user turns only | MIT, this repository |
+| Name confirmation, [`training/fifth/affirm.py`](../training/fifth/affirm.py) | 1,500 dialogues computed in code in which the user insists on, doubts or repeats Franok's name and Franok confirms it | MIT, this repository |
+| Everyday basics, [`training/fifth/basics.py`](../training/fifth/basics.py) | 6,000 dialogues computed in code about calendar facts, number order, small sums and everyday knowledge. Questions close to a held-out test turn, and sums whose two numbers appear together in a test turn, are left out | MIT, this repository |
+| [SODA](https://huggingface.co/datasets/allenai/soda) by Kim et al. (2023) | 150 million tokens of dialogue written as plain `Speaker: utterance` transcripts into the English raw-text stream by [`training/fifth/soda.py`](../training/fifth/soda.py). The transcripts are raw text and never assistant turns | CC BY 4.0 |
+
+The 35,672 conversations of the fourth run, the SQuAD and SQuAD-TR reading examples and the raw text of earlier runs remain in the mixture under the licenses listed above.
+
+The thirteen seed families are in [`training/fifth/seeds.py`](../training/fifth/seeds.py): smalltalk, facts, repair, explain, howto, feelings, opinions, followup, writing, unknowns, create, code and math. Seven user typing styles occur: clean, lowercase, typos, abbreviations, Turkish typed without Turkish letters, very short and mixed. Assistant replies are always written cleanly. Turkish seeds are written in Turkish. The teacher grades each dialogue twice, with a standard and a strict prompt, and a dialogue is kept only when both say GOOD. Of the 63,000 dialogues from the 26B model, 1,939 were malformed and the grader flagged 8,479.
+
+The filter, [`training/fifth/filter.py`](../training/fifth/filter.py), drops a dialogue when a user turn overlaps a held-out test file, when a reply contains markdown or an emoji, when a reply is longer than 60 words or three sentences, when the dialogue duplicates another, or when a reply is in the wrong language. Poems and code have a line-based rule: code lines must parse as Python and may not use `import`, `open(` or `while True`. The held-out files are `tests/transfer_conversations.json`, `tests/v4_conversations.json`, `tests/conversations.json`, `tests/dialogue.json`, `tests/v5_conversations.json` and `tests/v5_user_conversations.json`. XQuAD and Belebele questions count as test items too. The filter compared against 4,368 held-out test turns and dropped 12,387 duplicates and 1,582 dialogues that overlapped a test turn (884 exactly, 640 by Jaccard similarity, 58 by six-gram). The 26B model's dialogues kept number 18,451 in English and 18,694 in Turkish, 37,145 in all. The 13,500 programmatic dialogues leave 12,778 (6,393 English, 6,385 Turkish), and the 31B model's leave 1,377 Turkish. The fifth-run set holds 51,300 dialogues, of which 49,650 are training rows and 1,650 are held-out development rows.
+
+The commands and counts are in the [evaluation report](evaluation/v5/final.md#reproduce).

@@ -1,0 +1,565 @@
+{
+  "model": "Franok",
+  "weights_sha256": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+  "storage": [
+    "float32"
+  ],
+  "conversations": [
+    {
+      "id": "en-battery",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My phone battery runs out before the evening. What are two simple ways to make it last longer?"
+        },
+        {
+          "role": "assistant",
+          "content": "You can use a mobile app to watch it. This is a simple way to track your battery."
+        },
+        {
+          "role": "user",
+          "content": "I need the screen bright for work. What else could I change?"
+        },
+        {
+          "role": "assistant",
+          "content": "You can use a mobile app to watch a battery. This is a simple way to track your battery life."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "tr-battery",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Telefonumun şarjı akşam olmadan bitiyor. Daha uzun dayanması için iki basit yol söyler misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Telefonunu şarj cihazına bağla, bataryalarını aç ve arka kamera bilgilerini ekrana bas. Bu işlem sayesinde cihazlar daha hızlı biter."
+        },
+        {
+          "role": "user",
+          "content": "İş için ekranın parlak kalması gerekiyor. Başka neyi değiştirebilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Telefonunu bir USB belleğe bağla, bataryaları aç ve arka kamera bilgilerini ekrana bas. Bu işlem sayesinde biter."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 38
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 35
+        }
+      ]
+    },
+    {
+      "id": "en-sentence",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Is “The bus leaves at nine” a question or a statement? Answer with one of those two words."
+        },
+        {
+          "role": "assistant",
+          "content": "Why did the bus go to the bank? Because it had too many problems. Did that make you smile?"
+        },
+        {
+          "role": "user",
+          "content": "And “Does the bus leave at nine?” Same two choices."
+        },
+        {
+          "role": "assistant",
+          "content": "That is a good choice. I am here if you need more help."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "statement"
+          ],
+          "passed": false,
+          "tokens": 26
+        },
+        {
+          "criterion": [
+            "question"
+          ],
+          "passed": false,
+          "tokens": 17
+        }
+      ]
+    },
+    {
+      "id": "tr-sentence",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "“Otobüs dokuzda kalkıyor” bir soru mu, bir bilgi mi? Bu iki kelimeden biriyle cevap ver."
+        },
+        {
+          "role": "assistant",
+          "content": "Soru."
+        },
+        {
+          "role": "user",
+          "content": "Peki “Otobüs dokuzda mı kalkıyor?” hangisi? Aynı iki seçenek."
+        },
+        {
+          "role": "assistant",
+          "content": "Sayfa."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "bilgi"
+          ],
+          "passed": false,
+          "tokens": 3
+        },
+        {
+          "criterion": [
+            "soru"
+          ],
+          "passed": false,
+          "tokens": 4
+        }
+      ]
+    },
+    {
+      "id": "en-mirror",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Why does the bathroom mirror get foggy after a hot shower?"
+        },
+        {
+          "role": "assistant",
+          "content": "The bathroom mirror spins on its surface and fits with a litter box. This creates a huge amount of light in the sky."
+        },
+        {
+          "role": "user",
+          "content": "I can't open a window in there. What else could keep the mirror clear?"
+        },
+        {
+          "role": "assistant",
+          "content": "Use a window to block the bathroom. This helps the bath stays fresh for longer days."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 37
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "tr-mirror",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Sıcak duştan sonra banyo aynası neden buğulanıyor?"
+        },
+        {
+          "role": "assistant",
+          "content": "Banyoda su ve suyla nemlendirici olabilir. Su ve karbonat kullanarak su içebilirsin, bu da seni rahatlatır."
+        },
+        {
+          "role": "user",
+          "content": "Banyoda pencere açamıyorum. Aynanın buğulanmaması için başka ne yapabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sıcak duştan sonra biraz su içebilirsin. Su içmek için de su içebilir, bu da işe yarayabilir."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 32
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 29
+        }
+      ]
+    },
+    {
+      "id": "en-pencils",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "One pack has eight pencils. How many pencils are in three packs?"
+        },
+        {
+          "role": "assistant",
+          "content": "There are 36 pencils in three packs. You can find them by multiplying the number of pencils by one person."
+        },
+        {
+          "role": "user",
+          "content": "I gave five of them away. How many are left? Just the number."
+        },
+        {
+          "role": "assistant",
+          "content": "Five minutes is twelve. This is a standard number for four pens."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 30
+        },
+        {
+          "criterion": [
+            "19"
+          ],
+          "passed": false,
+          "tokens": 19
+        }
+      ]
+    },
+    {
+      "id": "tr-pencils",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bir pakette sekiz kalem var. Üç pakette kaç kalem olur?"
+        },
+        {
+          "role": "assistant",
+          "content": "Üç paketli kalem yeterli. Bu şekilde toplamda toplamı bulursun."
+        },
+        {
+          "role": "user",
+          "content": "Beş tanesini verdim. Kaç tane kaldı? Sadece sayıyı yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "Üç paket için 33 tane kalem yeterli."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        },
+        {
+          "criterion": [
+            "19"
+          ],
+          "passed": false,
+          "tokens": 12
+        }
+      ]
+    },
+    {
+      "id": "en-polite",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Can you make this message more polite? “Send me the report now.”"
+        },
+        {
+          "role": "assistant",
+          "content": "I am writing to inquire about the report, which was up to be one of the most important things. I am writing to express my concern regarding the delay."
+        },
+        {
+          "role": "user",
+          "content": "Now make it a bit more casual, as if I were writing to a friend."
+        },
+        {
+          "role": "assistant",
+          "content": "I am writing to express my concern regarding the delay. Please provide a direct message for the report."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 37
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        }
+      ]
+    },
+    {
+      "id": "tr-polite",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bu mesajı daha kibar yapar mısın? “Raporu hemen gönder.”"
+        },
+        {
+          "role": "assistant",
+          "content": "Senin için uygun bir mesaj oldu. Bu mesajı arkadaşına gönderebilirsin."
+        },
+        {
+          "role": "user",
+          "content": "Şimdi bir arkadaşa yazar gibi biraz daha samimi yap."
+        },
+        {
+          "role": "assistant",
+          "content": "Senin için çok uygun bir mesaj oldu. Arkadaşınla birlikte yazabilirsin."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        }
+      ]
+    },
+    {
+      "id": "en-scissors",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "The scissors are in the top drawer and the tape is on the shelf. Where is the tape?"
+        },
+        {
+          "role": "assistant",
+          "content": "The tape is on the shelf. It is the tape used to make the tape appear in the shelfe."
+        },
+        {
+          "role": "user",
+          "content": "I moved the tape to the desk and left the scissors alone. Where are the scissors?"
+        },
+        {
+          "role": "assistant",
+          "content": "The tape is on the shelf. It is the tape used to make the tape appear in the shelves."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "tr-scissors",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Makas üst çekmecede, bant da rafta. Bant nerede?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bant da rafta."
+        },
+        {
+          "role": "user",
+          "content": "Bandı masaya taşıdım, makasa dokunmadım. Makas nerede?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bant da rafta."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        }
+      ]
+    },
+    {
+      "id": "en-exercise",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I'd like to start exercising a little at home. What could I do?"
+        },
+        {
+          "role": "assistant",
+          "content": "Try setting your alarm further away from your bed. It can also help you feel more alert while you work."
+        },
+        {
+          "role": "user",
+          "content": "My knee hurts, so I'd rather avoid jumping. What would you suggest instead?"
+        },
+        {
+          "role": "assistant",
+          "content": "Try a warm bath with your nose. Try to keep your eye on the floor and then rest."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 30
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "tr-exercise",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Evde biraz egzersiz yapmaya başlamak istiyorum. Ne yapabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Pencereleri kapat, bir bardak su iç. Su iç ve hafifçe oda sıcaklığında tut."
+        },
+        {
+          "role": "user",
+          "content": "Dizim ağrıyor, zıplamaktan kaçınmak istiyorum. Bunun yerine ne önerirsin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Zıplamak için hafifçe oda sıcaklığında tut. Su iç, hafifçe odanın altına koy."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        }
+      ]
+    },
+    {
+      "id": "en-bedtime",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which one is better?"
+        },
+        {
+          "role": "assistant",
+          "content": "I do not have personal preferences. I cannot make it or what you want. Do you have a specific topic in mind?"
+        },
+        {
+          "role": "user",
+          "content": "I mean tea or coffee, right before going to sleep."
+        },
+        {
+          "role": "assistant",
+          "content": "Try making a list of your tasks. It is a good way to unwind. Do you have a favorite topic?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 29
+        }
+      ]
+    },
+    {
+      "id": "tr-bedtime",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Hangisi daha iyi?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hangisi daha iyi bir seçenek olabilir?"
+        },
+        {
+          "role": "user",
+          "content": "Uyumadan hemen önce çay mı kahve mi, onu soruyorum."
+        },
+        {
+          "role": "assistant",
+          "content": "Kahve içmek daha rahatlatıcıdır. Kahve içmek için hafif bir seçenek olabilir."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 21
+        }
+      ]
+    }
+  ]
+}

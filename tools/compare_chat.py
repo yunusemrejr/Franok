@@ -21,6 +21,21 @@ def normal(text):
     return re.sub(r"[^\w:.]+", " ", s).strip().rstrip(".")
 
 
+def meets(answer, criteria, case):
+    if criteria is None:
+        return None
+    return any(
+        (
+            answer == c
+            if case.get("verbatim")
+            else normal(answer) == normal(c)
+            if case.get("exact")
+            else normal(c) in normal(answer)
+        )
+        for c in criteria
+    )
+
+
 @torch.inference_mode()
 def main():
     p = argparse.ArgumentParser()
@@ -28,6 +43,8 @@ def main():
     p.add_argument("--peer", nargs="?", const="smollm2", choices=PEERS)
     p.add_argument("--cases", type=Path, default=Path("tests/conversations.json"))
     p.add_argument("--out", type=Path, required=True)
+    p.add_argument("--temperature", type=float, default=0.58, help="sampling temperature for cases that do not set one")
+    p.add_argument("--repeat-penalty", type=float, default=0.55, help="subtracted from the logit of each token generated in the last 32 steps")
     args = p.parse_args()
     if args.peer:
         from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -106,7 +123,7 @@ def main():
         checks = []
         seed = 17941
         lang = sc["lang"]
-        temp = sc.get("temperature", 0.58)
+        temp = sc.get("temperature", args.temperature)
         for j, q in enumerate(sc["turns"]):
             turns.append(dict(role="user", content=q))
             guide = DEFAULT[lang]
@@ -120,7 +137,7 @@ def main():
                 logits, cache = step(ids, cache)
                 logits[list(invalid)] = -np.inf
                 if generated:
-                    logits[list(set(generated[-32:]))] -= 0.55
+                    logits[list(set(generated[-32:]))] -= args.repeat_penalty
                 if len(generated) >= 3:
                     for k in range(3, len(generated)):
                         if generated[k - 3 : k] == generated[-3:]:
@@ -153,20 +170,7 @@ def main():
             criteria = sc["expect"][j]
             if args.peer and criteria == ["franok"]:
                 criteria = ["smollm", "smol lm"] if args.peer == "smollm2" else ["lfm2", "lfm 2"]
-            passed = (
-                None
-                if criteria is None
-                else any(
-                    (
-                        answer == c
-                        if sc.get("verbatim")
-                        else normal(answer) == normal(c)
-                        if sc.get("exact")
-                        else normal(c) in normal(answer)
-                    )
-                    for c in criteria
-                )
-            )
+            passed = meets(answer, criteria, sc)
             checks.append(
                 dict(criterion=criteria, passed=passed, tokens=len(generated))
             )

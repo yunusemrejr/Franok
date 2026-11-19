@@ -1,9 +1,9 @@
-import { unsupportedOutput, languageNotice } from './language.mjs';
+import { unsupportedOutput, languageNotice, detectLanguage } from './language.mjs';
 import { calculate } from './calculator.mjs';
 import { conversationAction } from './conversation.mjs';
 import { diagram, openTrace } from './diagram.mjs';
 import { retrieve, recallMessage, excerpt } from './session.mjs';
-import { defaults, settings } from './config.mjs';
+import { defaults, settings, weightFormat } from './config.mjs';
 import { loadSessions, saveSession, saveDraft, removeSession, activeId, setActive } from './store.mjs';
 
 const $ = (id) => document.getElementById(id);
@@ -46,7 +46,7 @@ $('semanticField').hidden = !release.search;
 $('contextMeaningField').hidden = !release.search;
 $('readerOpen').hidden = $('readerAbout').hidden = !release.reader;
 const platform = native ? 'Ubuntu desktop' : 'Browser runtime';
-const format = release.default || (native ? 'q8' : 'q4');
+const format = weightFormat(release);
 const size = release.formats?.[format]?.bytes || 196331520;
 const initialStatus = 'First model download · ' + Math.round(size / 1e6) + ' MB';
 $('status').textContent = initialStatus;
@@ -103,8 +103,8 @@ if (release.installer) {
   $('debsha').parentElement.hidden = true;
 }
 for (const [name, desc] of [
-  ['q4', 'Browser default'],
-  ['q8', 'Ubuntu default'],
+  ['q4', format === 'q4' ? 'Browser default' : 'Phone default'],
+  ['q8', native ? 'Ubuntu default' : format === 'q8' ? 'Browser default' : 'Desktop default'],
   ['fp16', 'Native checkpoint'],
   ['fp32', 'Full precision'],
 ]) {
@@ -413,6 +413,7 @@ function predictPiece(ids, target, update) {
 function startWorker() {
   if (worker) return;
   const activeWorker = (worker = new Worker('./worker.mjs', { type: 'module' }));
+  worker.postMessage({ type: 'load', format });
   function fail(msg) {
     const wasPrediction = Boolean(prediction);
     if (prediction) prediction({ kind: 'error', message: msg });
@@ -582,6 +583,11 @@ $('composer').onsubmit = (e) => {
   e.preventDefault();
   const text = $('draft').value.trim();
   if (!text || busy) return;
+  const written = detectLanguage(text);
+  if (written && written !== current.lang) {
+    current.lang = written;
+    $('lang').value = written;
+  }
   const config = settings(current.options, cfgWindow);
   const social =
     config.conversationHelp && !config.system.trim() && !Number.isInteger(current.quote)

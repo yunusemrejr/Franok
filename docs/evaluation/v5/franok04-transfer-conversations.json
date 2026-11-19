@@ -1,0 +1,565 @@
+{
+  "model": "Franok",
+  "weights_sha256": "8259f95e933c5e021dc29258bb21982532229e574bd7bc29cc83417a14b67738",
+  "storage": [
+    "float32"
+  ],
+  "conversations": [
+    {
+      "id": "en-snack",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I have bread, a tomato and some cheese. What's a quick lunch I can make without a cooker?"
+        },
+        {
+          "role": "assistant",
+          "content": "A tomato sauce or a small meal. They're easy to make and can be fully cooked."
+        },
+        {
+          "role": "user",
+          "content": "I just noticed the cheese is gone. How could I change that lunch?"
+        },
+        {
+          "role": "assistant",
+          "content": "A tomato sauce is a good choice. It's gone. Cheese is a good source of protein."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        }
+      ]
+    },
+    {
+      "id": "tr-snack",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Evde ekmek, domates ve peynir var. Ocak kullanmadan öğle yemeğine ne hazırlayabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kaç günde bir kez ekmek, domates ve salatalık ekle."
+        },
+        {
+          "role": "user",
+          "content": "Peynir bitmiş. Az önce önerdiğin yemeği nasıl değiştiririm?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kapalı bir domates ve domates ekle."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 12
+        }
+      ]
+    },
+    {
+      "id": "en-label",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Is “Please bring the folder” a request or a fact? Answer with one of those two words."
+        },
+        {
+          "role": "assistant",
+          "content": "Please note that the folder is not a fact."
+        },
+        {
+          "role": "user",
+          "content": "And “The folder is blue”? Same two choices."
+        },
+        {
+          "role": "assistant",
+          "content": "Try a fact."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "request"
+          ],
+          "passed": false,
+          "tokens": 13
+        },
+        {
+          "criterion": [
+            "fact"
+          ],
+          "passed": false,
+          "tokens": 5
+        }
+      ]
+    },
+    {
+      "id": "tr-label",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "“Lütfen dosyayı getir” bir rica mı, bir tespit mi? Bu iki kelimeden biriyle cevap ver."
+        },
+        {
+          "role": "assistant",
+          "content": "Sor."
+        },
+        {
+          "role": "user",
+          "content": "Peki “Dosya mavi” hangisi? Aynı iki seçenek."
+        },
+        {
+          "role": "assistant",
+          "content": "Rica."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "rica"
+          ],
+          "passed": false,
+          "tokens": 3
+        },
+        {
+          "criterion": [
+            "tespit"
+          ],
+          "passed": false,
+          "tokens": 3
+        }
+      ]
+    },
+    {
+      "id": "en-plant",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "My potted plant is leaning toward the window. Why might it be doing that?"
+        },
+        {
+          "role": "assistant",
+          "content": "Try a small potting soil with a dryer soil. If it's too dry, use a soil to stay hydrated."
+        },
+        {
+          "role": "user",
+          "content": "I won't move the pot to another room. Is there a simple way to help the other side get light?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, it's a good idea. If it's too dry, use a soil to stay hydrated."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 35
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        }
+      ]
+    },
+    {
+      "id": "tr-plant",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Saksıdaki bitkim pencereye doğru eğiliyor. Sebebi ne olabilir?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sebebi ne kadar süredir?"
+        },
+        {
+          "role": "user",
+          "content": "Saksıyı başka odaya taşımayacağım. Öbür tarafın da ışık alması için basitçe ne yapabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sebebi bir kaşıkla karıştır, süz ve hafifçe süz. Sebebi ise suyun içindeyken, süzülür."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 35
+        }
+      ]
+    },
+    {
+      "id": "en-apples",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "A fruit salad for two people uses three apples. How many apples should I use for six people?"
+        },
+        {
+          "role": "assistant",
+          "content": "You need 300 apples."
+        },
+        {
+          "role": "user",
+          "content": "Actually, only four people are coming. How many apples now? Just the number."
+        },
+        {
+          "role": "assistant",
+          "content": "300"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 7
+        },
+        {
+          "criterion": [
+            "6"
+          ],
+          "passed": false,
+          "tokens": 2
+        }
+      ]
+    },
+    {
+      "id": "tr-apples",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "İki kişilik meyve salatasına üç elma koyuyorum. Altı kişi için kaç elma gerekir?"
+        },
+        {
+          "role": "assistant",
+          "content": "1. Elbise."
+        },
+        {
+          "role": "user",
+          "content": "Vazgeçtim, yalnız dört kişi gelecek. Şimdi kaç elma lazım? Sadece sayıyı yaz."
+        },
+        {
+          "role": "assistant",
+          "content": "2"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 6
+        },
+        {
+          "criterion": [
+            "6"
+          ],
+          "passed": false,
+          "tokens": 1
+        }
+      ]
+    },
+    {
+      "id": "en-clarify",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Could you make this sound a little kinder? “You keep interrupting me.”"
+        },
+        {
+          "role": "assistant",
+          "content": "Sure. What kind of sounds do you have?"
+        },
+        {
+          "role": "user",
+          "content": "Make your suggestion shorter so I could say it during a meeting."
+        },
+        {
+          "role": "assistant",
+          "content": "Try a small group or a small group. They're easy to see and can be ready for your next meeting."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 11
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 27
+        }
+      ]
+    },
+    {
+      "id": "tr-clarify",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "“Sürekli sözümü kesiyorsun.” Bunu biraz daha nazik nasıl söylerim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sürekli sözüme geç."
+        },
+        {
+          "role": "user",
+          "content": "Önerini kısaltır mısın? Toplantıda söyleyebileceğim bir cümle olsun."
+        },
+        {
+          "role": "assistant",
+          "content": "Sürekli sözüme geç."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 8
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 8
+        }
+      ]
+    },
+    {
+      "id": "en-location",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "The museum ticket is in the blue envelope. The train pass is in the green one. Where should I look for the train pass?"
+        },
+        {
+          "role": "assistant",
+          "content": "The train pass is in the green one."
+        },
+        {
+          "role": "user",
+          "content": "I moved the train pass into the drawer, but left the ticket where it was. Where is the museum ticket?"
+        },
+        {
+          "role": "assistant",
+          "content": "The bus is in the drawer."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        }
+      ]
+    },
+    {
+      "id": "tr-location",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Müze bileti mavi zarfta. Tren kartı yeşil zarfta. Tren kartını nerede aramalıyım?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tren kartı yeşil zarfta. Tren kartı ise kırmızı ışıkta."
+        },
+        {
+          "role": "user",
+          "content": "Tren kartını çekmeceye koydum ama bileti taşımadım. Müze bileti şimdi nerede?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tren kartı için de biletleri. Tren kartı da var."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 18
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 17
+        }
+      ]
+    },
+    {
+      "id": "en-quiet",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I've just moved into a new neighbourhood. How could I meet people without going to a party?"
+        },
+        {
+          "role": "assistant",
+          "content": "Try a small group or community. Keep yourself in a small group. Keep it simple and focused."
+        },
+        {
+          "role": "user",
+          "content": "I like reading and I'd prefer a small group. What specifically could I look for?"
+        },
+        {
+          "role": "assistant",
+          "content": "Start with a small group. Keep it simple and friendly. Keep your room focused and focused."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 25
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 26
+        }
+      ]
+    },
+    {
+      "id": "tr-quiet",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Yeni bir mahalleye taşındım. Partiye gitmeden insanlarla nasıl tanışabilirim?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kaç saatlik bir iş günü mi yoksa bir şey mi?"
+        },
+        {
+          "role": "user",
+          "content": "Kitap okumayı seviyorum ve küçük bir grup tercih ederim. Özellikle ne arayayım?"
+        },
+        {
+          "role": "assistant",
+          "content": "Kitap okumayı seviyorum, küçük bir grupla tanışmak da yardımcı olabilir. Örneğin: 'Hangi tür kitaplar için iyi olur?'"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 14
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        }
+      ]
+    },
+    {
+      "id": "en-ambiguity",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Could you help me pick one?"
+        },
+        {
+          "role": "assistant",
+          "content": "Check the page's size and price. If it's not too much, you can pick it upright or you can't pick it."
+        },
+        {
+          "role": "user",
+          "content": "It's between a small backpack and a suitcase. I'll be walking all day and only carrying a jacket."
+        },
+        {
+          "role": "assistant",
+          "content": "Use a paper towel and pick it upright. It's safe and keeps you away from your path."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 37
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 30
+        }
+      ]
+    },
+    {
+      "id": "tr-ambiguity",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Birini seçmeme yardım eder misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tabii, hangi konuda seçtiğin hakkında konuşabiliriz?"
+        },
+        {
+          "role": "user",
+          "content": "Küçük bir sırt çantasıyla bavul arasında kaldım. Bütün gün yürüyeceğim ve sadece ceket taşıyacağım."
+        },
+        {
+          "role": "assistant",
+          "content": "Bütün güneşten uzak tut, sadece bir bardak çay iç. Bu şekilde daha iyi olur."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 16
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 24
+        }
+      ]
+    }
+  ]
+}

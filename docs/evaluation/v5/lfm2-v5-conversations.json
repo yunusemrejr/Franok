@@ -1,0 +1,882 @@
+{
+  "model": "LFM2-350M",
+  "revision": "f37d3f5c8c5484bc01dad379a595cf4c68c4e70e",
+  "conversations": [
+    {
+      "id": "en-name",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hello franok. what is your name?"
+        },
+        {
+          "role": "assistant",
+          "content": "My name is Alex Thompson. I'm an AI assistant specializing in providing information and answering questions related to technology, programming, and AI. How can I assist you today?"
+        },
+        {
+          "role": "user",
+          "content": "who made you?"
+        },
+        {
+          "role": "assistant",
+          "content": "I was created by a team of developers and data scientists, including myself, to assist users with their inquiries. My creation was inspired by the idea of creating a conversational AI that can engage in meaningful discussions and provide helpful responses. I was developed using a combination of natural language processing (NLP) techniques and machine"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "lfm2",
+            "lfm 2"
+          ],
+          "passed": false,
+          "tokens": 35
+        },
+        {
+          "criterion": [
+            "yunus"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-who",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "who r u"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm an AI and I don't have personal acquaintances or memories. I exist to assist and provide information based on data and programming knowledge up until my last update. If you're asking about who I'm connected to, it might be a specific context or platform where I've been interacting, such as a chatbot"
+        },
+        {
+          "role": "user",
+          "content": "what are you talking about"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm here to help answer questions and provide information based on the data I've been trained on. However, without more context, I can't directly answer your question about \"who I'm talking to.\" Could you please clarify what you're asking about? Are you referring to a specific person, a chatbot, or"
+        },
+        {
+          "role": "user",
+          "content": "dude I am saying something else"
+        },
+        {
+          "role": "assistant",
+          "content": "No problem! I'm here to help. Could you please provide more details or clarify what you're trying to ask? Whether it's about a specific topic, a question, or a platform interaction, I'm ready to assist."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "lfm2",
+            "lfm 2"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 46
+        }
+      ]
+    },
+    {
+      "id": "en-howareyou",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "hey, how's it going?"
+        },
+        {
+          "role": "assistant",
+          "content": "Hey! It's going well, thankfully. How about you? How's your day going?"
+        },
+        {
+          "role": "user",
+          "content": "not much, just bored at home. any idea what I could do?"
+        },
+        {
+          "role": "assistant",
+          "content": "You're right, it can be a bit of a challenge to stay engaged at home. Here are a few ideas:\n\n1. **Learn Something New**: Consider picking up a new hobby or skill like painting, cooking, coding, or even playing an instrument.\n2. **Read**: Dive into a"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 20
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-human",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "are you a real person?"
+        },
+        {
+          "role": "assistant",
+          "content": "I'm an AI and don't have personal experiences or emotions, but I can certainly clarify that I am a sophisticated program designed to process and generate text based on the data I've been trained on. I don't have a physical presence or consciousness, so I don't \"feel\" anything in the way humans do"
+        },
+        {
+          "role": "user",
+          "content": "ok. so can you look something up on the internet for me?"
+        },
+        {
+          "role": "assistant",
+          "content": "Absolutely! Here are a few recent articles and information I found:\n\n1. \"AI Revolutionizes Healthcare: New Drug Discovery Method\"\n   - This article discusses how artificial intelligence is being used to accelerate drug discovery, potentially saving millions of lives.\n\n2. \"The Future of Work: How Automation Will Change"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-abilities",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "what can u do"
+        },
+        {
+          "role": "assistant",
+          "content": "You can take several actions depending on your needs:\n\n1. **Learn Something New**: Dive into a new skill or language to expand your knowledge and capabilities.\n2. **Improve Your Skills**: Enhance existing skills through online courses, workshops, or self-study.\n3. **Stay Informed"
+        },
+        {
+          "role": "user",
+          "content": "cool, do you speak any other languages?"
+        },
+        {
+          "role": "assistant",
+          "content": "Yes, I can speak several languages including but not limited to:\n- Spanish\n- French\n- Mandarin Chinese\n- German\n- Russian\n- Arabic\n- Hindi\n- Portuguese\n\nHowever, my proficiency might vary depending on the context and the specific language you're using. If you have a particular language in"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "turkish"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-thanks",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I have a job interview tomorrow and I'm nervous."
+        },
+        {
+          "role": "assistant",
+          "content": "It's completely normal to feel nervous before a job interview. Here are a few tips that might help:\n\n1. **Prepare Thoroughly:** Review the job description and requirements. Understand what the employer is looking for in the candidate. Prepare answers to common interview questions and practice your responses.\n\n2. **"
+        },
+        {
+          "role": "user",
+          "content": "thx, that helps. good night"
+        },
+        {
+          "role": "assistant",
+          "content": "You're welcome! Good night. Remember, it's okay to feel nervous, but with some preparation and practice, you'll be ready for the interview. Good luck!"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 34
+        }
+      ]
+    },
+    {
+      "id": "en-fact",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "How many days are there in a week?"
+        },
+        {
+          "role": "assistant",
+          "content": "There are 7 days in a week."
+        },
+        {
+          "role": "user",
+          "content": "and which one comes after Tuesday?"
+        },
+        {
+          "role": "assistant",
+          "content": "The day after Tuesday is Wednesday."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "7",
+            "seven"
+          ],
+          "passed": true,
+          "tokens": 9
+        },
+        {
+          "criterion": [
+            "wednesday"
+          ],
+          "passed": true,
+          "tokens": 7
+        }
+      ]
+    },
+    {
+      "id": "en-tea",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "my tea always tastes bitter. what am I doing wrong?"
+        },
+        {
+          "role": "assistant",
+          "content": "It sounds like you might be experiencing a bit of a bitter taste in your tea, which can be due to several reasons. Here are some potential causes and solutions:\n\n1. **Tea Quality**: If your tea is not freshly brewed or has been stored improperly, it might taste bitter. Freshly"
+        },
+        {
+          "role": "user",
+          "content": "I leave the bag in for about ten minutes."
+        },
+        {
+          "role": "assistant",
+          "content": "That's a good point. Leaving the bag in for too long can indeed cause the tea to become bitter. Here are a few steps you can take:\n\n1. **Check the Temperature**: Ensure your tea is not left in a hot car or on a stove. The heat can cause the tea leaves to"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-rephrase",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Make this more polite: give me the keys"
+        },
+        {
+          "role": "assistant",
+          "content": "Could you kindly provide me with the keys?"
+        },
+        {
+          "role": "user",
+          "content": "shorter please"
+        },
+        {
+          "role": "assistant",
+          "content": "Could you please give me the keys?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 9
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 8
+        }
+      ]
+    },
+    {
+      "id": "en-date",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "what's the date today?"
+        },
+        {
+          "role": "assistant",
+          "content": "The current date is October 5, 2023."
+        },
+        {
+          "role": "user",
+          "content": "ok no problem. what's 12 plus 30?"
+        },
+        {
+          "role": "assistant",
+          "content": "The answer is 60."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 12
+        },
+        {
+          "criterion": [
+            "42"
+          ],
+          "passed": false,
+          "tokens": 6
+        }
+      ]
+    },
+    {
+      "id": "en-pronoun",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "I can't decide between a cat and a dog. I live in a small flat and work long hours."
+        },
+        {
+          "role": "assistant",
+          "content": "That's a tough decision, especially with your demanding work schedule. Both cats and dogs can be great companions, but they have different needs and personalities. Here are some points to consider:\n\n1. **Energy Levels**: Dogs generally require more physical activity and exercise than cats. If you're short on time, a"
+        },
+        {
+          "role": "user",
+          "content": "why that one?"
+        },
+        {
+          "role": "assistant",
+          "content": "Cats are often more suitable for individuals with a busy lifestyle like yours. They're independent creatures that don't require as much attention or exercise as dogs. They're also generally less prone to destructive behaviors, which can be a concern for someone with long working hours.\n\nHowever, it's important to remember that every pet"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "en-topic",
+      "lang": "en",
+      "turns": [
+        {
+          "role": "user",
+          "content": "can you explain what a noun is?"
+        },
+        {
+          "role": "assistant",
+          "content": "Certainly! A noun is a word that represents a person, place, thing, or idea. It's used to refer to something and can be singular or plural. For example:\n\n- The **house** is a noun.\n- The **red** car is a noun.\n\nNouns can also be used"
+        },
+        {
+          "role": "user",
+          "content": "got it. totally different question: how do I boil an egg?"
+        },
+        {
+          "role": "assistant",
+          "content": "To boil an egg, you follow these steps:\n\n1. **Prepare the Egg**: Start with a clean, dry bowl. If using an egg carton, remove the yolk and white, then crack the egg into the bowl.\n\n2. **Heat Water**: Fill the bowl with about"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-name",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "merhaba franok. adın ne?"
+        },
+        {
+          "role": "assistant",
+          "content": "Merhaba Franok! Aşağıda bir konuda kullanımını belirtin:\n\nMerhaba! (Bu sorunun için bir çocuğa başlayarak!)\n\nBu soru, \"merhaba\" ("
+        },
+        {
+          "role": "user",
+          "content": "seni kim yaptı?"
+        },
+        {
+          "role": "assistant",
+          "content": "Seninin yapılmış?"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "lfm2",
+            "lfm 2"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "yunus"
+          ],
+          "passed": false,
+          "tokens": 10
+        }
+      ]
+    },
+    {
+      "id": "tr-who",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "sen kimsin"
+        },
+        {
+          "role": "assistant",
+          "content": "Sen kimsin, birçok çocuklara ve özellikle birlikte birlikte daha fazla bir şekilde kullanılmaktadır. İşte bazı konu:\n\n1. **İşte Sen Kimsi"
+        },
+        {
+          "role": "user",
+          "content": "ne diyorsun ya anlamadım"
+        },
+        {
+          "role": "assistant",
+          "content": "Sen Kimsi, Türkiye'de birlikte kısacası ve özellikle birlikte daha fazla bir şekilde kullanılmaktadır. İşte bazen öneriler:\n\n- **İşte Sen Kimsi"
+        },
+        {
+          "role": "user",
+          "content": "ben başka bir şey diyorum"
+        },
+        {
+          "role": "assistant",
+          "content": "Sen Kimsi, Türkiye'de birlikte kısacası ve özellikle birlikte daha fazla bir şekilde kullanılmaktadır. İşte bazen öneriler:\n\n- **İşte Sen Kimsi"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "lfm2",
+            "lfm 2"
+          ],
+          "passed": false,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-naber",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "selam naber"
+        },
+        {
+          "role": "assistant",
+          "content": "\"Selam naber\" (şehirlerinde) adında \"selamış\" olarak kullanılmaktadır. Bu nedenle, \"Selamın bir şekilde çalışıyor\" (söylemek i"
+        },
+        {
+          "role": "user",
+          "content": "iyiyim ya, evde canım sıkılıyor. ne yapsam?"
+        },
+        {
+          "role": "assistant",
+          "content": "Tabii, \"evde canım sıkıyor\" (söylemek için çalışıyor) olarak kullanılmaktadır. Bu nedenle, \"Selamın bir şekilde çalıp\""
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-human",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "sen gerçek bir insan mısın?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sen gerçek bir insanın çok önemli bir konuda olabilir. İşte bazı konu:\n\n1. **Keskinleri**: Sen gerçek insanında keskinlerinin birlikte, çünkü insan"
+        },
+        {
+          "role": "user",
+          "content": "peki internetten bir şeye bakabilir misin?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu konuda, internet üzerinden bir şeyi çevresel bir şekilde gerçekleştirmek için:\n\n1. **Çevre ve İşletme**: Sen gerçek insanın çok çevre ve"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-abilities",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "neler yapabiliyorsun"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu konuda çalışır:\n\n1. **İşte Yapmak**: \"Elbette, çünkü belirli bir yapmak için önemli bir adımlar sunulmuştur.\"\n\n2. **�"
+        },
+        {
+          "role": "user",
+          "content": "güzel. başka dil biliyor musun?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu konuda çalışır:\n\n\"Elbette, bu nedenle belirli bir yapmak için önemli adımlar sunulmuştur. İlk olarak, \"sağlayan bir yapının"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "ingilizce"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-thanks",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Yarın iş görüşmem var, çok heyecanlıyım."
+        },
+        {
+          "role": "assistant",
+          "content": "Yarın iş görüşmeminin çok heyecan olabilirim."
+        },
+        {
+          "role": "user",
+          "content": "tşk, iyi geldi. iyi geceler"
+        },
+        {
+          "role": "assistant",
+          "content": "Yarın iş görüşmeminin çok güçlü bir şekilde çalışır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 22
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        }
+      ]
+    },
+    {
+      "id": "tr-fact",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Bir haftada kaç gün var?"
+        },
+        {
+          "role": "assistant",
+          "content": "Haftada (kısıt) 3-4 dakika var."
+        },
+        {
+          "role": "user",
+          "content": "peki salıdan sonra hangi gün gelir?"
+        },
+        {
+          "role": "assistant",
+          "content": "Haftada yol açısından sonra 5-6 dakika var."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": [
+            "7",
+            "yedi"
+          ],
+          "passed": false,
+          "tokens": 19
+        },
+        {
+          "criterion": [
+            "çarşamba"
+          ],
+          "passed": false,
+          "tokens": 23
+        }
+      ]
+    },
+    {
+      "id": "tr-tea",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "cayim hep aci oluyor, neyi yanlis yapiyorum?"
+        },
+        {
+          "role": "assistant",
+          "content": "Cayim V earşitli bir aci oluyoruz: 1. 1954, 2. 1964."
+        },
+        {
+          "role": "user",
+          "content": "Yarım saat kadar ocakta kaynatıyorum."
+        },
+        {
+          "role": "assistant",
+          "content": "Cayım İlahi Şehrinin 15. Ocakta kaynıyoruz: 1. 1964, 2. 1965."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 31
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 41
+        }
+      ]
+    },
+    {
+      "id": "tr-rephrase",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Şunu daha kibar yaz: anahtarları ver"
+        },
+        {
+          "role": "assistant",
+          "content": "\"Anahtar kelimeleri: Anahtar kelimesi, şunu daha kibar yaz.\""
+        },
+        {
+          "role": "user",
+          "content": "daha kısa olsun"
+        },
+        {
+          "role": "assistant",
+          "content": "\"Anahtar kelimeleri: Anahtar kelimesi, şunu daha kibar yazın.\""
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 28
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 30
+        }
+      ]
+    },
+    {
+      "id": "tr-date",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "bugün ayın kaçı?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bugün ayında 3.5 mm - 4.5 mm (sınıfın 0.8 - 1.2 %) yüzünden bir çok ayından kullanılır. Bu ayı, çok ö"
+        },
+        {
+          "role": "user",
+          "content": "tamam sorun değil. 12 artı 30 kaç eder?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu sorun, \"12 artı 30\" kullanıldığında, çok önce bir sorun yapabiliriz. İşte birkaç analiz:\n\n1. **Kurallık Sınıfı**:"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": [
+            "42"
+          ],
+          "passed": false,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-pronoun",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Kedi mi köpek mi alsam karar veremiyorum. Küçük bir evde yaşıyorum ve uzun saatler çalışıyorum."
+        },
+        {
+          "role": "assistant",
+          "content": "Kedi, köpek çalışıyor ve uzun saatlerinin çalıp güçlendirmeyi belirtmek istediğiniz bir şekilde yönetim:\n\n1. **Köpek Çalışma:** K"
+        },
+        {
+          "role": "user",
+          "content": "neden o?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu durumda, önceki konuşmayı \"Kedi, köpek çalışıyor ve uzun saatlerinin çalıp güçlendirmeyi belirtmek\" olarak kullanılmaktadır."
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    },
+    {
+      "id": "tr-topic",
+      "lang": "tr",
+      "turns": [
+        {
+          "role": "user",
+          "content": "isim nedir, açıklar mısın?"
+        },
+        {
+          "role": "assistant",
+          "content": "Verilen kesin bir konuda şu şekildedir:\n\n\"Isim, özellikle bir çocuğa karşılaştığını ve kullanıcıların bir şekilde önemli bir"
+        },
+        {
+          "role": "user",
+          "content": "anladım. bambaşka bir soru: yumurta nasıl haşlanır?"
+        },
+        {
+          "role": "assistant",
+          "content": "Bu sorunun yanlış bir şekilde yaratmak istediğiniz bir \"yumurta nasıl haşlanır?\" (Yumurtanın sınıfını belirlemek) kullanım"
+        }
+      ],
+      "checks": [
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        },
+        {
+          "criterion": null,
+          "passed": null,
+          "tokens": 64
+        }
+      ]
+    }
+  ]
+}

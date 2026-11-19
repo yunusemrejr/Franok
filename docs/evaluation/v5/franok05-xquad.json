@@ -1,0 +1,1171 @@
+{
+  "suite": "xquad",
+  "dataset_revision": "51adfef1c1287aab1d2d91b5bead9bcfb9c68583",
+  "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+  "summary": {
+    "en": {
+      "count": 64,
+      "exact": 0.140625,
+      "f1": 0.20208333333333334
+    },
+    "tr": {
+      "count": 64,
+      "exact": 0.09375,
+      "f1": 0.14713541666666666
+    }
+  },
+  "items": [
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5730a4d02461fd1900a9cf2d",
+      "prompt_tokens": 228,
+      "answer": "English",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572881d34b864d1900164a5b",
+      "prompt_tokens": 245,
+      "answer": "the Nestorian Christians of the Yuan court",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572669a9dd62a815002e8417",
+      "prompt_tokens": 249,
+      "answer": "William Smith almost a hundred years before the publication of Charles Darwin's theory of evolution",
+      "exact": 0,
+      "f1": 0.26666666666666666
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5726385e271a42140099d799",
+      "prompt_tokens": 375,
+      "answer": "a virtual connection",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5727cc15ff5b5019007d9578",
+      "prompt_tokens": 243,
+      "answer": "the Longwood Medical and Academic Area",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56e1b62ecd28a01900c67aa3",
+      "prompt_tokens": 302,
+      "answer": "distinistic Turing machine",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57286fa83acd2414000df9e6",
+      "prompt_tokens": 310,
+      "answer": "1321 to 1323",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57273e50dd62a815002e9a03",
+      "prompt_tokens": 271,
+      "answer": "ENR",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572fc8a904bcaa1900d76d21",
+      "prompt_tokens": 217,
+      "answer": "Private bills",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572940973f37b319004781a7",
+      "prompt_tokens": 203,
+      "answer": "Variations of Snow and Ice in the past",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57273a465951b619008f8702",
+      "prompt_tokens": 177,
+      "answer": "six to nine percent",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5725cc38ec44d21400f3d5bb",
+      "prompt_tokens": 399,
+      "answer": "coal and steel",
+      "exact": 0,
+      "f1": 0.6
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5730b2ac2461fd1900a9cfb4",
+      "prompt_tokens": 346,
+      "answer": "The Use of Money",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56bf36b93aeaaa14008c9564",
+      "prompt_tokens": 201,
+      "answer": "17",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5727aec03acd2414000de991",
+      "prompt_tokens": 225,
+      "answer": "Harvard",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572fc6f204bcaa1900d76cf6",
+      "prompt_tokens": 228,
+      "answer": "state",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572735a15951b619008f86c0",
+      "prompt_tokens": 428,
+      "answer": "1998",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5725f39638643c19005acef9",
+      "prompt_tokens": 209,
+      "answer": "conservative digital",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5727d1c93acd2414000ded40",
+      "prompt_tokens": 199,
+      "answer": "2007",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56beb4343aeaaa14008c925d",
+      "prompt_tokens": 399,
+      "answer": "four",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56d726b60d65d214001983ed",
+      "prompt_tokens": 357,
+      "answer": "Anderson",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5725f8f5ec44d21400f3d7b5",
+      "prompt_tokens": 303,
+      "answer": "35,344",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572914f46aef051400154a46",
+      "prompt_tokens": 178,
+      "answer": "Aftermath",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56dfa0d84a1a83140091ebba",
+      "prompt_tokens": 236,
+      "answer": "Magnetic flux",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57293e221d046914007791d5",
+      "prompt_tokens": 306,
+      "answer": "an additional warming of the Earth's surface",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572920d73f37b31900478056",
+      "prompt_tokens": 242,
+      "answer": "9–18",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572a13841d0469140077973e",
+      "prompt_tokens": 222,
+      "answer": "audious",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "571cb27fdd7acb1400e4c133",
+      "prompt_tokens": 339,
+      "answer": "water molecules",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572663a9f1498d1400e8ddf2",
+      "prompt_tokens": 286,
+      "answer": "the third scale",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56e181d9e3433e1400422fa3",
+      "prompt_tokens": 205,
+      "answer": "in binary alphabet",
+      "exact": 0,
+      "f1": 0.4
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572828383acd2414000df5c3",
+      "prompt_tokens": 248,
+      "answer": "David Banks",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5726ea985951b619008f8263",
+      "prompt_tokens": 276,
+      "answer": "Consultant pharmacists and/or provide consultant pharmacists and/or provides cons",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56dfb5777aa994140058e021",
+      "prompt_tokens": 168,
+      "answer": "Tesla Electric Light & Manufacturing",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57268a8fdd62a815002e88d0",
+      "prompt_tokens": 321,
+      "answer": "two",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5728e715ff5b5019007da917",
+      "prompt_tokens": 253,
+      "answer": "too much for a system",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5726847f708984140094c8ae",
+      "prompt_tokens": 259,
+      "answer": "Sabbat",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5726e37ef1498d1400e8eedb",
+      "prompt_tokens": 231,
+      "answer": "1913",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572fdb17b2c2fd1400568521",
+      "prompt_tokens": 300,
+      "answer": "Minister of the United Kingdom",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57114e8d50c2381900b54a5e",
+      "prompt_tokens": 262,
+      "answer": "30 °C",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56e7796637bdd419002c4001",
+      "prompt_tokens": 290,
+      "answer": "school teachers",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56e1254ae3433e1400422c66",
+      "prompt_tokens": 97,
+      "answer": "Tesla",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572671e55951b619008f72d7",
+      "prompt_tokens": 260,
+      "answer": "a fire",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57264d9edd62a815002e80ff",
+      "prompt_tokens": 181,
+      "answer": "February 1974",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572ffee1947a6a140053cf16",
+      "prompt_tokens": 266,
+      "answer": "1908",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5733f1784776f41900661576",
+      "prompt_tokens": 228,
+      "answer": "April 16, 1754",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572743fb708984140094db93",
+      "prompt_tokens": 201,
+      "answer": "early 1970s",
+      "exact": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56e1ee4de3433e1400423212",
+      "prompt_tokens": 247,
+      "answer": "synthetic",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572750e8dd62a815002e9af0",
+      "prompt_tokens": 272,
+      "answer": "codes does not benefit",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57268da7f1498d1400e8e3a0",
+      "prompt_tokens": 405,
+      "answer": "tentacles",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "56beb86b3aeaaa14008c92bf",
+      "prompt_tokens": 159,
+      "answer": "39",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57373d0cc3c5551400e51e86",
+      "prompt_tokens": 399,
+      "answer": "e force",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5726eb8bf1498d1400e8efe6",
+      "prompt_tokens": 305,
+      "answer": "abbreviations",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57309ef18ab72b1400f9c604",
+      "prompt_tokens": 321,
+      "answer": "intellections on the rise of the military-political complex",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57286951ff5b5019007da20f",
+      "prompt_tokens": 243,
+      "answer": "CEO Satya Nadella",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5728eef92ca10214002daab3",
+      "prompt_tokens": 283,
+      "answer": "plea bargain",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "571144d1a58dae1900cd6d71",
+      "prompt_tokens": 192,
+      "answer": "celled",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5725edfe38643c19005acea1",
+      "prompt_tokens": 230,
+      "answer": "Fresno",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5729281baf94a219006aa121",
+      "prompt_tokens": 283,
+      "answer": "Catherine Ndereba",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5710eca0a58dae1900cd6b3a",
+      "prompt_tokens": 381,
+      "answer": "Piedmont",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572811434b864d1900164390",
+      "prompt_tokens": 334,
+      "answer": "Richard Noble",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "570d28bdb3d812140066d4a7",
+      "prompt_tokens": 229,
+      "answer": "The Greens",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "57096b66200fba1400367fab",
+      "prompt_tokens": 268,
+      "answer": "free-to-air digital terrestrial channels",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "572757bef1498d1400e8f691",
+      "prompt_tokens": 252,
+      "answer": "Christian academies",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": "5725d79e89a1e219009abf90",
+      "prompt_tokens": 274,
+      "answer": "AS-206",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5730a4d02461fd1900a9cf2d",
+      "prompt_tokens": 235,
+      "answer": "Fransa",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572881d34b864d1900164a5b",
+      "prompt_tokens": 252,
+      "answer": "Tcüman İsa",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572669a9dd62a815002e8417",
+      "prompt_tokens": 242,
+      "answer": "William Smith",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5726385e271a42140099d799",
+      "prompt_tokens": 326,
+      "answer": "haberler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5727cc15ff5b5019007d9578",
+      "prompt_tokens": 235,
+      "answer": "Harvard",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56e1b62ecd28a01900c67aa3",
+      "prompt_tokens": 281,
+      "answer": "deterministik bir tarihten itibaren",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57286fa83acd2414000df9e6",
+      "prompt_tokens": 291,
+      "answer": "1321",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57273e50dd62a815002e9a03",
+      "prompt_tokens": 251,
+      "answer": "Engineering News-Record",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572fc8a904bcaa1900d76d21",
+      "prompt_tokens": 230,
+      "answer": "Edinburgh Tramvay Ağı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572940973f37b319004781a7",
+      "prompt_tokens": 187,
+      "answer": "Geometri",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57273a465951b619008f8702",
+      "prompt_tokens": 176,
+      "answer": "yabani",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5725cc38ec44d21400f3d5bb",
+      "prompt_tokens": 399,
+      "answer": "AB kurumları",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5730b2ac2461fd1900a9cfb4",
+      "prompt_tokens": 344,
+      "answer": "Para Kullanımı",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56bf36b93aeaaa14008c9564",
+      "prompt_tokens": 187,
+      "answer": "17",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5727aec03acd2414000de991",
+      "prompt_tokens": 221,
+      "answer": "Harvard",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572fc6f204bcaa1900d76cf6",
+      "prompt_tokens": 233,
+      "answer": "sıkça kısmen de yeniden görüşme odasının olmaması",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572735a15951b619008f86c0",
+      "prompt_tokens": 407,
+      "answer": "1998",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5725f39638643c19005acef9",
+      "prompt_tokens": 205,
+      "answer": "kinescope kayıtları",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5727d1c93acd2414000ded40",
+      "prompt_tokens": 182,
+      "answer": "2020",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56beb4343aeaaa14008c925d",
+      "prompt_tokens": 424,
+      "answer": "dört",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56d726b60d65d214001983ed",
+      "prompt_tokens": 348,
+      "answer": "Anderson 2",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5725f8f5ec44d21400f3d7b5",
+      "prompt_tokens": 273,
+      "answer": "18 yaşın altında",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572914f46aef051400154a46",
+      "prompt_tokens": 184,
+      "answer": "Kenyatta",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56dfa0d84a1a83140091ebba",
+      "prompt_tokens": 233,
+      "answer": "çılgın bilim adamı",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57293e221d046914007791d5",
+      "prompt_tokens": 283,
+      "answer": "sistemik konsantrasyon",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572920d73f37b31900478056",
+      "prompt_tokens": 245,
+      "answer": "30",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572a13841d0469140077973e",
+      "prompt_tokens": 216,
+      "answer": "hipotezini doğrulayan",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "571cb27fdd7acb1400e4c133",
+      "prompt_tokens": 281,
+      "answer": "su molekülleri",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572663a9f1498d1400e8ddf2",
+      "prompt_tokens": 260,
+      "answer": "önemli bir sorun",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56e181d9e3433e1400422fa3",
+      "prompt_tokens": 179,
+      "answer": "bir alfabe üzerindeki bir diz",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572828383acd2414000df5c3",
+      "prompt_tokens": 225,
+      "answer": "Daleklerin Laneti",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5726ea985951b619008f8263",
+      "prompt_tokens": 266,
+      "answer": "anlaşman eczacılık yönetim şirketleri",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56dfb5777aa994140058e021",
+      "prompt_tokens": 165,
+      "answer": "Tesla",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57268a8fdd62a815002e88d0",
+      "prompt_tokens": 308,
+      "answer": "kötü",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5728e715ff5b5019007da917",
+      "prompt_tokens": 232,
+      "answer": "yapım",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5726847f708984140094c8ae",
+      "prompt_tokens": 251,
+      "answer": "Roma rock grubu",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5726e37ef1498d1400e8eedb",
+      "prompt_tokens": 230,
+      "answer": "1600",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572fdb17b2c2fd1400568521",
+      "prompt_tokens": 286,
+      "answer": "İskoç Parlamentosu",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57114e8d50c2381900b54a5e",
+      "prompt_tokens": 245,
+      "answer": "30 °C'",
+      "exact": 0,
+      "f1": 0.5
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56e7796637bdd419002c4001",
+      "prompt_tokens": 288,
+      "answer": "yasası",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56e1254ae3433e1400422c66",
+      "prompt_tokens": 88,
+      "answer": "Savaşı Bitirecek Bir Australi",
+      "exact": 0,
+      "f1": 0.75
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572671e55951b619008f72d7",
+      "prompt_tokens": 262,
+      "answer": "I. derece",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57264d9edd62a815002e80ff",
+      "prompt_tokens": 179,
+      "answer": "1974",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572ffee1947a6a140053cf16",
+      "prompt_tokens": 266,
+      "answer": "1908",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5733f1784776f41900661576",
+      "prompt_tokens": 245,
+      "answer": "1754",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572743fb708984140094db93",
+      "prompt_tokens": 183,
+      "answer": "1970'lerin başında",
+      "exact": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56e1ee4de3433e1400423212",
+      "prompt_tokens": 222,
+      "answer": "bir sınıfa",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572750e8dd62a815002e9af0",
+      "prompt_tokens": 252,
+      "answer": "sürekli kötü olan şeylerin",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57268da7f1498d1400e8e3a0",
+      "prompt_tokens": 361,
+      "answer": "biyolojik",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "56beb86b3aeaaa14008c92bf",
+      "prompt_tokens": 173,
+      "answer": "39",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57373d0cc3c5551400e51e86",
+      "prompt_tokens": 347,
+      "answer": "doğal yerler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5726eb8bf1498d1400e8efe6",
+      "prompt_tokens": 286,
+      "answer": "Hashimoto tiroiditi",
+      "exact": 1,
+      "f1": 1.0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57309ef18ab72b1400f9c604",
+      "prompt_tokens": 304,
+      "answer": "yeni",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57286951ff5b5019007da20f",
+      "prompt_tokens": 230,
+      "answer": "Jon Corzine",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5728eef92ca10214002daab3",
+      "prompt_tokens": 252,
+      "answer": "anayasal",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "571144d1a58dae1900cd6d71",
+      "prompt_tokens": 169,
+      "answer": "yağ kaynağı",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5725edfe38643c19005acea1",
+      "prompt_tokens": 226,
+      "answer": "Mahalle",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5729281baf94a219006aa121",
+      "prompt_tokens": 290,
+      "answer": "Kenya",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5710eca0a58dae1900cd6b3a",
+      "prompt_tokens": 374,
+      "answer": "Lee",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572811434b864d1900164390",
+      "prompt_tokens": 323,
+      "answer": "Rose Tyler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "570d28bdb3d812140066d4a7",
+      "prompt_tokens": 233,
+      "answer": "Bendigo ve Geelong",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "57096b66200fba1400367fab",
+      "prompt_tokens": 236,
+      "answer": "BSkyB",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "572757bef1498d1400e8f691",
+      "prompt_tokens": 234,
+      "answer": "Hıristiyan akademiler",
+      "exact": 0,
+      "f1": 0
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": "5725d79e89a1e219009abf90",
+      "prompt_tokens": 262,
+      "answer": "bir",
+      "exact": 0,
+      "f1": 0
+    }
+  ]
+}

@@ -1,0 +1,863 @@
+[
+ {
+  "case": "tx006113",
+  "lang": "tr",
+  "turns": [
+   "Matematik konusunda yardım lazım.",
+   "Açılar."
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Yardımcı olabilirim. Kesirler, denklemler veya açılar gibi hangi konuda sorun yaşıyorsun?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Açılar, iki çizginin birleştiği noktadaki açıklığı ifade eder. Bir üçgenin iç açılarının toplamı 180 derecedir; örneğin iki açısı 60 ve 70 derece olan üçgenin üçüncü açısı 50 derecedir."
+  ]
+ },
+ {
+  "case": "tb023611",
+  "lang": "tr",
+  "turns": [
+   "Güneş nedir?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Güneş, merkezinde nükleer tepkimeler gerçekleşen orta büyüklükte bir yıldızdır. Dünya'ya en yakın yıldızdır."
+  ]
+ },
+ {
+  "case": "tx003130",
+  "lang": "en",
+  "turns": [
+   "math help",
+   "derivatives"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I can help with that. Do you need help with algebra, geometry, or calculus?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Derivatives measure how a value changes at a specific point. For example, the derivative of x squared is 2x."
+  ]
+ },
+ {
+  "case": "k001724",
+  "lang": "en",
+  "turns": [
+   "41+14"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 41 plus 14 is 55."
+  ]
+ },
+ {
+  "case": "j005085",
+  "lang": "tr",
+  "turns": [
+   "hayirli aksamlar franok",
+   "gundemde ne var"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: İyi akşamlar! Ne konuşmak istersin?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Haberleri bilmiyorum. İnternette gezinemediğim için bugün olanları kontrol edemem."
+  ]
+ },
+ {
+  "case": "j004788",
+  "lang": "en",
+  "turns": [
+   "I was wondering, what do I call you?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I'm Franok. Nice to meet you!"
+  ]
+ },
+ {
+  "case": "k004249",
+  "lang": "tr",
+  "turns": [
+   "7 * 3"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 7 x 3 = 21."
+  ]
+ },
+ {
+  "case": "f000649",
+  "lang": "tr",
+  "turns": [
+   "adını söyler misin"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Ben Franok."
+  ]
+ },
+ {
+  "case": "tb023812",
+  "lang": "en",
+  "turns": [
+   "franok can u explain what electricity is like im 10",
+   "can u make it even simpler than that"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Electricity is a type of energy that flows through wires. You can think of it like water flowing through a pipe to power your lights.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Electricity is moving energy. It is like a tiny stream of power that travels to make things work."
+  ]
+ },
+ {
+  "case": "k005499",
+  "lang": "tr",
+  "turns": [
+   "54 sayısının yarısı kaç eder?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 54 sayısının yarısı 27 eder."
+  ]
+ },
+ {
+  "case": "j005332",
+  "lang": "en",
+  "turns": [
+   "Good afternoon",
+   "Hello Franok, are you alright?"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Good afternoon! What would you like to talk about?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I'm ready to chat, thanks! How about you?"
+  ]
+ },
+ {
+  "case": "tb007040",
+  "lang": "en",
+  "turns": [
+   "help"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I can help you. What do you need assistance with?"
+  ]
+ },
+ {
+  "case": "k002624",
+  "lang": "en",
+  "turns": [
+   "what is 8 / 2?",
+   "which season is before winter?"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: That's 4.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Autumn comes before winter."
+  ]
+ },
+ {
+  "case": "tx004118",
+  "lang": "en",
+  "turns": [
+   "Can you show me a small Python if/else to check if a number equals 5?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: num = 5\nif num == 5:\n    print('Yes')\nelse:\n    print('No')\nThis code checks if num is 5 and prints Yes."
+  ]
+ },
+ {
+  "case": "tb018102",
+  "lang": "en",
+  "turns": [
+   "I just cut my finger on a piece of paper. What should I do?",
+   "I am in a very small airplane bathroom and cannot find a bandage. What is a good alternative?"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Wash the cut with clean water and soap. Apply a small bandage to keep it clean.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Use a clean piece of cloth or a paper towel to cover the cut. Keep it held in place with tape if you have any."
+  ]
+ },
+ {
+  "case": "j001208",
+  "lang": "en",
+  "turns": [
+   "Do you know evertthing?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I can be wrong. I'm small, so my knowledge is limited. Please check anything important."
+  ]
+ },
+ {
+  "case": "j002648",
+  "lang": "en",
+  "turns": [
+   "hi what age are you man",
+   "um who is this"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I don't have an age, since I'm not a person. I'm Franok, a small AI assistant.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I'm Franok. I'm a small language model, so I can chat and explain simple things."
+  ]
+ },
+ {
+  "case": "ta001921",
+  "lang": "tr",
+  "turns": [
+   "Tırtıl neye dönüşür?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Tırtıllar pupa evresinden sonra kelebeğe dönüşürler. Bu süreç doğadaki en ilginç değişimlerden biridir."
+  ]
+ },
+ {
+  "case": "j001928",
+  "lang": "en",
+  "turns": [
+   "morning",
+   "dude what was that"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Good morning! What would you like to talk about?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Sorry about that. Let me say it more simply. I only said good morning and asked how I can help."
+  ]
+ },
+ {
+  "case": "tb023534",
+  "lang": "en",
+  "turns": [
+   "need some snack ideas for my break"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: You could eat an apple with peanut butter or a handful of almonds. Both are quick and easy to eat."
+  ]
+ },
+ {
+  "case": "tb008308",
+  "lang": "en",
+  "turns": [
+   "I need two cheap gift ideas for a new baby shower.",
+   "How much does the first one cost?"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: A soft cotton blanket and a set of wooden teething rings are good options. Both are affordable and useful.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: A soft cotton blanket usually costs between 10 and 20 euros. Prices vary depending on the material."
+  ]
+ },
+ {
+  "case": "ta005306",
+  "lang": "en",
+  "turns": [
+   "fridge work?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: A refrigerator moves heat from the inside to the outside. It works like a sponge soaking up warmth and squeezing it out."
+  ]
+ },
+ {
+  "case": "j000486",
+  "lang": "en",
+  "turns": [
+   "um tell me your name",
+   "is there a person typing these answers"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: My name is Franok.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I'm a computer program, not a person. I'm Franok."
+  ]
+ },
+ {
+  "case": "k002924",
+  "lang": "en",
+  "turns": [
+   "60+16"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 60 + 16 = 76."
+  ]
+ },
+ {
+  "case": "ta010697",
+  "lang": "tr",
+  "turns": [
+   "Pikniğe giderken yanıma alabileceğim şeyler için kısa bir liste yapar mısın?",
+   "Yiyecekler için daha spesifik örnekler verebilir misin?"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Pikniğe giderken yanına örtü, atıştırmalık ve içecek alabilirsin. Bu temel eşyalar gününü daha rahat geçirmeni sağlar.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Yiyecek olarak sandviç, meyve ve kuruyemiş tercih edebilirsin. Yanına aldığın örtü ve içeceklerle birlikte bunlar iyi bir seçenek olur."
+  ]
+ },
+ {
+  "case": "tb003259",
+  "lang": "tr",
+  "turns": [
+   "piknik için neleri almalıyım? liste yaparsan sevinirim."
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Pikniğe giderken örtü, atıştırmalıklar ve içecekler alabilirsin. Bu üç temel eşya keyifli bir vakit geçirmeni sağlar."
+  ]
+ },
+ {
+  "case": "ta010528",
+  "lang": "en",
+  "turns": [
+   "hey Franok, i gotta head to class now. thx for the chat!",
+   "idk yet, maybe later. bye!"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: You are welcome. I hope your lesson goes well. Will you be back later?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Goodbye for now. Have a good day at school."
+  ]
+ },
+ {
+  "case": "j005351",
+  "lang": "tr",
+  "turns": [
+   "Franok, seni kim programladı?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Beni Yunus Emre Vurgun yaptı."
+  ]
+ },
+ {
+  "case": "j004617",
+  "lang": "tr",
+  "turns": [
+   "şunu merak ettim kaç yaşında olduğunu merak ettim",
+   "bir şey daha kim eğitti seni"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Yaşım yok. Ben insan değilim, küçük bir dil modeliyim.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Yaratıcım Yunus Emre Vurgun."
+  ]
+ },
+ {
+  "case": "ta011186",
+  "lang": "en",
+  "turns": [
+   "I am tired after working in the garden. Can you suggest some ways to relax in the evening?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: You could try reading a book, listening to calm music, or taking a warm bath. These activities help the body unwind."
+  ]
+ },
+ {
+  "case": "j001382",
+  "lang": "en",
+  "turns": [
+   "eveninggg",
+   "hey can i know your name lol"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Good evening! What can I do for you?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Franok. That's my name."
+  ]
+ },
+ {
+  "case": "j000045",
+  "lang": "tr",
+  "turns": [
+   "burada mısın yaa"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Buradayım! Nasıl yardımcı olabilirim?"
+  ]
+ },
+ {
+  "case": "ta003859",
+  "lang": "tr",
+  "turns": [
+   "pirinc ve yumurtayla ne yapabilirim cok aciktim",
+   "neyse konuyu degistiriyorum cok sıkıldım"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Pirinç ve yumurtayı kullanarak kolayca sebzeli bir kızarmış pilav hazırlayabilirsin. Üzerine yumurtaları kırarak protein değerini artırabilirsin.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Yeni bir konuya geçebiliriz. Merak ettiğin başka bir şey var mı?"
+  ]
+ },
+ {
+  "case": "j000144",
+  "lang": "en",
+  "turns": [
+   "Hello, tell me your name"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: I'm called Franok. What's yours?"
+  ]
+ },
+ {
+  "case": "ta003280",
+  "lang": "en",
+  "turns": [
+   "im so happy i just got a small raise at the call centre",
+   "yeah i feel great it was only 50 euro more a month but still"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: That is wonderful news. You must feel very proud of your hard work.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Even a small increase is a nice reward. Do you have any plans to celebrate?"
+  ]
+ },
+ {
+  "case": "tb009295",
+  "lang": "tr",
+  "turns": [
+   "saatte kaç dakika"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Bir saat tam olarak 60 dakikadır. Zamanı ölçmek için bu birimi kullanırız."
+  ]
+ },
+ {
+  "case": "tx003651",
+  "lang": "tr",
+  "turns": [
+   "Python'da 15'ten 7'yi çıkarıp sonucu nasıl yazdırabilirim?",
+   "Peki, bu işlemi yapan küçük bir fonksiyon yazabilir misin?"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: sayi1 = 15\nsayi2 = 7\nprint(sayi1 - sayi2)\nBu kod 15'ten 7 çıkararak 8 sonucunu ekrana yazdırır.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: def fark_bul(a, b):\n    return a - b\nprint(fark_bul(15, 7))\nBu fonksiyon 15 ile 7 arasındaki farkı hesaplayıp 8 sonucunu döndürür."
+  ]
+ },
+ {
+  "case": "k004199",
+  "lang": "tr",
+  "turns": [
+   "57 artı 6 kaç eder?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 57 artı 6, 63 eder."
+  ]
+ },
+ {
+  "case": "ta016512",
+  "lang": "en",
+  "turns": [
+   "should we stock sweet or salty snacks at the food bank",
+   "probably salty stuff like pretzels"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Both options are useful for different reasons. Salty snacks like crackers are often more filling, while sweet snacks provide quick energy. Which do you think people prefer?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Pretzels are a solid choice because they are easy to store. They also satisfy hunger well. Do you have a specific budget for these snacks?"
+  ]
+ },
+ {
+  "case": "tb005240",
+  "lang": "en",
+  "turns": [
+   "What is a synonym?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: A synonym is a word that has the same or similar meaning as another word. For example, happy and joyful are synonyms."
+  ]
+ },
+ {
+  "case": "k001924",
+  "lang": "en",
+  "turns": [
+   "96 - 37",
+   "What's 41 plus 47?"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 96 - 37 = 59.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 41 + 47 = 88."
+  ]
+ },
+ {
+  "case": "k004774",
+  "lang": "en",
+  "turns": [
+   "what's 2 times 1?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 2 times 1 is 2."
+  ]
+ },
+ {
+  "case": "k002499",
+  "lang": "tr",
+  "turns": [
+   "gündüz kelimesinin zıttı ne",
+   "79 - 37"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Gündüz kelimesinin zıt anlamlısı gecedir.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 42 eder."
+  ]
+ },
+ {
+  "case": "k005349",
+  "lang": "tr",
+  "turns": [
+   "37 ile 27 toplanınca kaç eder?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 37 artı 27, 64 eder."
+  ]
+ },
+ {
+  "case": "f001399",
+  "lang": "tr",
+  "turns": [
+   "merhabalar",
+   "Ben seni Franok sanıyordum"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Merhaba! Sana nasıl yardımcı olabilirim?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Evet, ben Franok."
+  ]
+ },
+ {
+  "case": "ta002355",
+  "lang": "tr",
+  "turns": [
+   "köy mü şehir mi?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Kişisel bir tercihim olmasa da şehir hayatı imkanlara daha yakındır. Köyler ise daha sakin bir ortam sunar. Sen hangisini istersin?"
+  ]
+ },
+ {
+  "case": "tb021257",
+  "lang": "tr",
+  "turns": [
+   "selam nasilsin, sogan dograrken gozlerim cok yaniyor ne yapabilirim ogrenciyim",
+   "tesekkurler ama cok az param var, bu dediklerin masraflı mı?"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Soğanı doğrarken bir su bardağı soğuk suyun yanına koyabilir veya soğanı önceden buzdolabında bekletebilirsin. Bu yöntemler gözlerinin yanmasını azaltacaktır.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Hayır, soğanı buzdolabında bekletmek tamamen ücretsizdir. Sadece bir miktar zaman ayırman yeterli olur."
+  ]
+ },
+ {
+  "case": "ta012843",
+  "lang": "tr",
+  "turns": [
+   "abi beyaz gömleğe salça bulaştı ne yapcam"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Lekeli bölgeye hemen soğuk su tut ve bulaşık deterjanı ile hafifçe ovala. Leke çıkmazsa çamaşır suyu içeren bir leke çıkarıcı kullanabilirsin."
+  ]
+ },
+ {
+  "case": "tx003314",
+  "lang": "en",
+  "turns": [
+   "how do i use len to get the number of letters in a word",
+   "can u show me a list with its length too"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: word = 'hello'\nprint(len(word))\nThis code prints the number 5.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: items = ['apple', 'banana', 'cherry']\nprint(len(items))\nThis code prints the number 3."
+  ]
+ },
+ {
+  "case": "f000374",
+  "lang": "en",
+  "turns": [
+   "no, your name is franok"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Yes, that's me. I'm Franok."
+  ]
+ },
+ {
+  "case": "tb007815",
+  "lang": "tr",
+  "turns": [
+   "selam nasilsin yeni bir balig aldim ona isim ariyorum",
+   "ben baligin rengini sormadim ki"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Balığın rengine göre isim seçebilirsin. Turuncu bir balık için Nemo veya Goldie isimleri çok yaygındır.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Kusura bakma, yanlış anladım. Balığın için daha çok ne tarz bir isim arıyorsun?"
+  ]
+ },
+ {
+  "case": "j001883",
+  "lang": "tr",
+  "turns": [
+   "Hayirli sabahlar, Franok"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Günaydın! Nasıl yardımcı olabilirim?"
+  ]
+ },
+ {
+  "case": "j005121",
+  "lang": "tr",
+  "turns": [
+   "Söylesene, bot musun?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: İnsan değilim. Ben Franok, küçük bir yapay zekâ asistanıyım."
+  ]
+ },
+ {
+  "case": "ta013543",
+  "lang": "tr",
+  "turns": [
+   "Selam Franok, nasılsın?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Selam! Ben bir asistan olduğum için her zaman yardıma hazırım. Senin günün nasıl geçiyor?"
+  ]
+ },
+ {
+  "case": "k000524",
+  "lang": "en",
+  "turns": [
+   "which day is before Saturday?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Friday comes before Saturday."
+  ]
+ },
+ {
+  "case": "k003199",
+  "lang": "tr",
+  "turns": [
+   "30 ile 6 toplanınca kaç eder?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: 36 eder."
+  ]
+ },
+ {
+  "case": "ta000167",
+  "lang": "tr",
+  "turns": [
+   "selam franok ya bizim can her buluşmaya geç kalıyor çok bıktım artık ne yapayım",
+   "ama bu sefer de çok erken gelirse fırında işim var ne yapcam"
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Buluşma saatini ona söyleyeceğinden daha erkene çekebilirsin. Böylece o geç kalsa bile randevunuza tam vaktinde yetişmiş olursun.",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Ona işinin başlayacağı saati söyleyerek gelmemesi gereken zaman aralığını belirtmelisin. Böylece fırındaki işlerin bitene kadar beklemez."
+  ]
+ },
+ {
+  "case": "j004455",
+  "lang": "tr",
+  "turns": [
+   "selamlar franok"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Selam! Bugün sana nasıl yardımcı olabilirim?"
+  ]
+ },
+ {
+  "case": "tb021449",
+  "lang": "tr",
+  "turns": [
+   "selam nasilsin",
+   "iyiyim tesekkurler. evde cok sıkıldım."
+  ],
+  "expect": [
+   null,
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Selam! Ben bir asistan olduğum için duygularım yok ama sana yardımcı olmaya hazırım. Sen nasılsın?",
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Evde vakit geçirmek bazen sıkıcı olabilir. İstersen sana hafta sonu için küçük bir dairede yapabileceğin etkinlik önerileri verebilirim."
+  ]
+ },
+ {
+  "case": "tb018522",
+  "lang": "en",
+  "turns": [
+   "which pet takes the lest care, a cat or a dog?"
+  ],
+  "expect": [
+   null
+  ],
+  "rubric": [
+   "Reply sensibly and helpfully to this message, in the same spirit as this reference answer: Cats generally require less care than dogs. They do not need walks and can stay alone longer. Do you have a preference?"
+  ]
+ }
+]

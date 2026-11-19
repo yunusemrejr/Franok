@@ -26,6 +26,7 @@ def fixture(export, head, config):
         (root / "reader.safetensors").symlink_to(weights.resolve())
         release = json.loads(Path("web/release.json").read_text())
         release["formats"]["q4"]["url"] = "./fixture.q4"
+        release["formats"].pop("q8", None)  # the fixture is Q4, so the page must not choose Q8
         # The test fixture exercises both possible decisions independently of task accuracy.
         release["reader"] = dict(
             **spec,

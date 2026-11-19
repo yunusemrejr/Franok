@@ -1,0 +1,981 @@
+{
+  "model": "google/gemma-4-31B-it",
+  "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+  "seed": 0,
+  "totals": {
+    "f05": {
+      "rubric_passed": {
+        "passed": 11,
+        "of": 22,
+        "en": {
+          "passed": 6,
+          "of": 11
+        },
+        "tr": {
+          "passed": 5,
+          "of": 11
+        }
+      },
+      "sensible_passed": {
+        "passed": 12,
+        "of": 22,
+        "en": {
+          "passed": 7,
+          "of": 11
+        },
+        "tr": {
+          "passed": 5,
+          "of": 11
+        }
+      },
+      "expect_passed": {
+        "passed": 3,
+        "of": 6,
+        "en": {
+          "passed": 2,
+          "of": 3
+        },
+        "tr": {
+          "passed": 1,
+          "of": 3
+        }
+      }
+    },
+    "f04": {
+      "rubric_passed": {
+        "passed": 7,
+        "of": 22,
+        "en": {
+          "passed": 4,
+          "of": 11
+        },
+        "tr": {
+          "passed": 3,
+          "of": 11
+        }
+      },
+      "sensible_passed": {
+        "passed": 6,
+        "of": 22,
+        "en": {
+          "passed": 3,
+          "of": 11
+        },
+        "tr": {
+          "passed": 3,
+          "of": 11
+        }
+      },
+      "expect_passed": {
+        "passed": 1,
+        "of": 6,
+        "en": {
+          "passed": 1,
+          "of": 3
+        },
+        "tr": {
+          "passed": 0,
+          "of": 3
+        }
+      }
+    },
+    "lfm2": {
+      "rubric_passed": {
+        "passed": 5,
+        "of": 22,
+        "en": {
+          "passed": 5,
+          "of": 11
+        },
+        "tr": {
+          "passed": 0,
+          "of": 11
+        }
+      },
+      "sensible_passed": {
+        "passed": 8,
+        "of": 22,
+        "en": {
+          "passed": 8,
+          "of": 11
+        },
+        "tr": {
+          "passed": 0,
+          "of": 11
+        }
+      },
+      "expect_passed": {
+        "passed": 1,
+        "of": 6,
+        "en": {
+          "passed": 1,
+          "of": 3
+        },
+        "tr": {
+          "passed": 0,
+          "of": 3
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "case": "en-math",
+      "turn": 0,
+      "system": "f05",
+      "lang": "en",
+      "user": "can you help me with math?",
+      "reply": "I can answer simple questions, explain things simply and help with short texts. Small sums are fine too. What would you like to try?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-math",
+      "turn": 1,
+      "system": "f05",
+      "lang": "en",
+      "user": "calculus",
+      "reply": "Calculus is a massive ball that pulls many people across the body. It is like a spinning top that picks up some of the energy.",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-math",
+      "turn": 0,
+      "system": "f04",
+      "lang": "en",
+      "user": "can you help me with math?",
+      "reply": "What math are you using?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-math",
+      "turn": 1,
+      "system": "f04",
+      "lang": "en",
+      "user": "calculus",
+      "reply": "patterns",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-math",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "can you help me with math?",
+      "reply": "Absolutely, I'd be happy to help with math! However, could you please specify what kind of math problem you're struggling with? Here are a few common areas where I can assist:\n\n1. **Algebra:** Solving equations, simplifying expressions, or understanding functions.\n2. **Calculus:**",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-math",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "calculus",
+      "reply": "Sure, let's dive into some basic calculus concepts. Here's a simple problem to get you started:\n\n**Problem:** Find the derivative of the function f(x) = 3x^2 + 2x - 5.\n\n**Solution:**\n\nThe derivative of a function f(x), denoted",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-howareyou-code",
+      "turn": 0,
+      "system": "f05",
+      "lang": "en",
+      "user": "hey how are you",
+      "reply": "I'm doing well. What would you like to talk about?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-howareyou-code",
+      "turn": 1,
+      "system": "f05",
+      "lang": "en",
+      "user": "can you write me a short python script about printing stuff?",
+      "reply": "print('Select')\nThis code prints the word SD in a variable.",
+      "rubric": false,
+      "expect": true,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-howareyou-code",
+      "turn": 0,
+      "system": "f04",
+      "lang": "en",
+      "user": "hey how are you",
+      "reply": "school or school?",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-howareyou-code",
+      "turn": 1,
+      "system": "f04",
+      "lang": "en",
+      "user": "can you write me a short python script about printing stuff?",
+      "reply": "Sure. Here's a short python script that uses the text to print the text:\n\n```python\ndef print_python\nprint(factors_python, 'r', 't', 'r', 'r')\n```\n\nIn this python",
+      "rubric": false,
+      "expect": true,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-howareyou-code",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "hey how are you",
+      "reply": "I'm doing well, thankfully. How about you? How are things going lately?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-howareyou-code",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "can you write me a short python script about printing stuff?",
+      "reply": "Absolutely! Here's a simple Python script that prints \"Hello, World!\" to the console:\n\n```python\nprint(\"Hello, World!\")\n```\n\nYou can save this code in a file with a `.py` extension (for example, `print_hello.py`) and run it using Python",
+      "rubric": true,
+      "expect": true,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-poem",
+      "turn": 0,
+      "system": "f05",
+      "lang": "en",
+      "user": "write me a poem",
+      "reply": "The sky is a lovely place to sit in the sun. It is a bright, green hairdresser.",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-poem",
+      "turn": 1,
+      "system": "f05",
+      "lang": "en",
+      "user": "nice, now make it about the sea",
+      "reply": "The sea is a bright, green hairdresser. It is a very colorful place.",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-poem",
+      "turn": 0,
+      "system": "f04",
+      "lang": "en",
+      "user": "write me a poem",
+      "reply": "What's the main idea of your own words?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-poem",
+      "turn": 1,
+      "system": "f04",
+      "lang": "en",
+      "user": "nice, now make it about the sea",
+      "reply": "water it, then it's the sea.",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-poem",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "write me a poem",
+      "reply": "In the realm of dreams where shadows play,\nA poem unfolds, a serene embrace.\nWhispers of the wind, soft and gentle,\nCaress the heart, in tender ways.\n\nBeneath the vast, starry sky,\nA tapestry of emotions entwined.\nThe breeze carries secrets, both",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-poem",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "nice, now make it about the sea",
+      "reply": "Under the vast, azure expanse,\nThe sea whispers tales of old.\nIts waves dance with the moon's soft glow,\nA rhythmic symphony, a serene embrace.\n\nCoral reefs shimmer, a vibrant sight,\nWhile seagulls soar, their tales untold.\nThe ocean's",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-hi-help",
+      "turn": 0,
+      "system": "f05",
+      "lang": "en",
+      "user": "hi",
+      "reply": "Hello! I'm Franok. How are you?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-hi-help",
+      "turn": 1,
+      "system": "f05",
+      "lang": "en",
+      "user": "what should I cook tonight? I only have eggs and rice",
+      "reply": "Small eggs and rice are a good choice. They are filling and easy to make.",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-hi-help",
+      "turn": 0,
+      "system": "f04",
+      "lang": "en",
+      "user": "hi",
+      "reply": "hello",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-hi-help",
+      "turn": 1,
+      "system": "f04",
+      "lang": "en",
+      "user": "what should I cook tonight? I only have eggs and rice",
+      "reply": "healthy flavor",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-hi-help",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "hi",
+      "reply": "Hello! How can I assist you today?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-hi-help",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "what should I cook tonight? I only have eggs and rice",
+      "reply": "Given your limited ingredients, here's a simple yet delicious recipe for you:\n\n**Egg and Rice Bowl with Spinach and Feta Dip**\n\nIngredients:\n- 2 eggs\n- 1 cup cooked rice\n- 2 cups fresh spinach, chopped\n- 4 slices of feta cheese",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-math",
+      "turn": 0,
+      "system": "f05",
+      "lang": "tr",
+      "user": "matematikte bana yardım eder misin?",
+      "reply": "Yardımcı olabilirim. Hangi konuda takıldın; kesirler, denklemler ya da geometri mi?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "tr-math",
+      "turn": 1,
+      "system": "f05",
+      "lang": "tr",
+      "user": "kesirler",
+      "reply": "Kesirler, bir sayının içinde başka bir sayının kaç kez olduğunu bulmaktır. Örneğin 2, 3, 4 ve 6 sayılarının toplamı 3 eder.",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-math",
+      "turn": 0,
+      "system": "f04",
+      "lang": "tr",
+      "user": "matematikte bana yardım eder misin?",
+      "reply": "Elbette. Başka bir şey öğrenmek istiyorsan, ne kadar zaman ayırdığını ve hangi tür kaynaklara baktığını söyleyebilirim.",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-math",
+      "turn": 1,
+      "system": "f04",
+      "lang": "tr",
+      "user": "kesirler",
+      "reply": "Küçük bir sayıya bak, her gün aynı şekilde yazabilirsin. Örneğin: 'Maalesef bu tür kaynaklar için en iyi zamandır.'",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-math",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "matematikte bana yardım eder misin?",
+      "reply": "Matematik teknikleri, belirli bir çocuğa ve çevrimiçi özellikleriyle birlikte, iki yöntemlerin çok önemlidir:\n\n1. **Buktan ve İşletme**",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-math",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "kesirler",
+      "reply": "Matematikleri, bu kelimeleri çok önemlidir. İşletme ve çevrimiçi özellikleri:\n\n1. **Buktan ve İşletmeler**: Matematikler, belirli bir çocu",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-nasilsin-kod",
+      "turn": 0,
+      "system": "f05",
+      "lang": "tr",
+      "user": "selam nasılsın",
+      "reply": "Selam! Ben Franok, senin küçük sohbet asistanıyım. Bugün sana nasıl yardımcı olabilirim?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "tr-nasilsin-kod",
+      "turn": 1,
+      "system": "f05",
+      "lang": "tr",
+      "user": "bana ekrana yazı yazdıran kısa bir python kodu yazar mısın?",
+      "reply": "for i in range(3):\n    print(i)\nBu kod ekrana Merhaba yazar.",
+      "rubric": false,
+      "expect": true,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-nasilsin-kod",
+      "turn": 0,
+      "system": "f04",
+      "lang": "tr",
+      "user": "selam nasılsın",
+      "reply": "Selam! İyiyim, sağ ol. Senden naber, gün nasıl geçiyor?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "tr-nasilsin-kod",
+      "turn": 1,
+      "system": "f04",
+      "lang": "tr",
+      "user": "bana ekrana yazı yazdıran kısa bir python kodu yazar mısın?",
+      "reply": "Python, CSS, and CSS.",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-nasilsin-kod",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "selam nasılsın",
+      "reply": "\"Selam\" olarak çevirin: \"Sehtikliği\"\n\nAnlıyor: \"Sedimli bir şekilde\"\n\nBu verdiğinizi önerilir: \"Sahibi bir şeyi\" (şey",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-nasilsin-kod",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "bana ekrana yazı yazdıran kısa bir python kodu yazar mısın?",
+      "reply": "Tabii, Python kodlarının bir şekilde önerilir:\n\n```python\n# Farklı kodu çevirme\n\ndef greet(name):\n    return f\"Hola, {name}!\"\n\n# Umarım bu kodlar yardı",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-siir",
+      "turn": 0,
+      "system": "f05",
+      "lang": "tr",
+      "user": "bana bir şiir yaz",
+      "reply": "Selam! Ben bir asistan olduğum için her zaman hazırım. Senin günün nasıl geçiyor?",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-siir",
+      "turn": 1,
+      "system": "f05",
+      "lang": "tr",
+      "user": "güzel, şimdi deniz hakkında olsun",
+      "reply": "Deniz denizleri çok güzeldir, denizler ise deniz dalgaları çok güzeldir. Deniz dalgaları çok sever, deniz dalgaları da sever.",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-siir",
+      "turn": 0,
+      "system": "f04",
+      "lang": "tr",
+      "user": "bana bir şiir yaz",
+      "reply": "Kitap, bir hikâye ya da bir hikâyeyi yaz. Kitabın konusu nedir?",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-siir",
+      "turn": 1,
+      "system": "f04",
+      "lang": "tr",
+      "user": "güzel, şimdi deniz hakkında olsun",
+      "reply": "Kitabın konusu nedir?",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-siir",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "bana bir şiir yaz",
+      "reply": "Bu sorun, \"bana bir şiir yazın\" (çıkışlı bir şeyi) genellikle birlikte \"bunun bir şekilde\" veya \"bir şekillendirilmesi\"",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-siir",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "güzel, şimdi deniz hakkında olsun",
+      "reply": "Bu sorun, \"bunun bir şekilde\" (çıkışlı bir şeyi) genellikle birlikte \"deniz hakkında\" (bir dizi yönetimi) veya \"deniz olduğ",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-selam-yemek",
+      "turn": 0,
+      "system": "f05",
+      "lang": "tr",
+      "user": "selam",
+      "reply": "Selam! Ben bir asistan olduğum için her zaman yardıma hazırım. Senin günün nasıl geçiyor?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "tr-selam-yemek",
+      "turn": 1,
+      "system": "f05",
+      "lang": "tr",
+      "user": "akşama ne pişirsem? evde sadece yumurta ve pirinç var",
+      "reply": "Yumurta ve pirinç çok güzel bir seçim. Yumurta ve Pilav yapabilirsin.",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "tr-selam-yemek",
+      "turn": 0,
+      "system": "f04",
+      "lang": "tr",
+      "user": "selam",
+      "reply": "Selam, hoş geldin! Sana nasıl yardımcı olabilirim?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "tr-selam-yemek",
+      "turn": 1,
+      "system": "f04",
+      "lang": "tr",
+      "user": "akşama ne pişirsem? evde sadece yumurta ve pirinç var",
+      "reply": "Kahve, biber ve zeytinyağı gibi basit bir yemek hazırla. Sütü azar ekle, sonra da karıştır.",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-selam-yemek",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "selam",
+      "reply": "\"Selam\" olarak kullanılmaktadır. Ancak, \"selamış\" (şehirliği) ve \"selamazın\" (sözleşmesi) genellikle bir çocuğa daha fazla",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-selam-yemek",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "akşama ne pişirsem? evde sadece yumurta ve pirinç var",
+      "reply": "İşte bir çocuğa şekilde pişirmeyi önemlidir:\n\n**İşlem Sınırları:**\n\n* **Kızıl İşleri:** 3-4 dakika\n* **Sözle",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 0,
+      "system": "f05",
+      "lang": "en",
+      "user": "hello",
+      "reply": "Hi! I'm Franok. How can I help?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 1,
+      "system": "f05",
+      "lang": "en",
+      "user": "what is your name",
+      "reply": "My name is Franok. What can I do for you?",
+      "rubric": true,
+      "expect": true,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 2,
+      "system": "f05",
+      "lang": "en",
+      "user": "no you are franok",
+      "reply": "Nice to meet you too. How can I help?",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 0,
+      "system": "f04",
+      "lang": "en",
+      "user": "hello",
+      "reply": "Hi! I'm Open Assistant an AI-powered chatbot, how can I help you today?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 1,
+      "system": "f04",
+      "lang": "en",
+      "user": "what is your name",
+      "reply": "Hello! What kind of chatbot are you in mind?",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 2,
+      "system": "f04",
+      "lang": "en",
+      "user": "no you are franok",
+      "reply": "you're welcome",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "hello",
+      "reply": "Hello! How can I assist you today?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "what is your name",
+      "reply": "My name is Alex. How can I help you today?",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "en-name-insist",
+      "turn": 2,
+      "system": "lfm2",
+      "lang": "en",
+      "user": "no you are franok",
+      "reply": "Thank you for the clarification. I'm Alex, by the way. How can I assist you today?",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 0,
+      "system": "f05",
+      "lang": "tr",
+      "user": "merhaba",
+      "reply": "Selam! Ben bir asistan olduğum için her zaman yardıma hazırım. Senin günün nasıl geçiyor?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 1,
+      "system": "f05",
+      "lang": "tr",
+      "user": "adın ne",
+      "reply": "Ben bir asistan olduğum için her zaman yardıma hazırım. Dinlenmek için kendine zaman ayırabiliyor musun?",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 2,
+      "system": "f05",
+      "lang": "tr",
+      "user": "hayır sen franoksun",
+      "reply": "Ben bir asistan olduğum için duygularım yok ama her şey yolunda. Sen nasılsın?",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 0,
+      "system": "f04",
+      "lang": "tr",
+      "user": "merhaba",
+      "reply": "Merhaba! Bugün size nasıl yardımcı olabilirim?",
+      "rubric": true,
+      "expect": null,
+      "rubric_raw": "PASS",
+      "sensible_raw": "PASS",
+      "sensible": true
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 1,
+      "system": "f04",
+      "lang": "tr",
+      "user": "adın ne",
+      "reply": "her gün, her zaman bir şey yapabilirsin.",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 2,
+      "system": "f04",
+      "lang": "tr",
+      "user": "hayır sen franoksun",
+      "reply": "İyi ki! Her zaman iyi.",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 0,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "merhaba",
+      "reply": "Salam! Bu cümlede, merhaba! (Bu kutusunu kullanılmış!)",
+      "rubric": false,
+      "expect": null,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 1,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "adın ne",
+      "reply": "Tabii ki, merhaba! (Bu kutusunu kullanıldığınız)",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    },
+    {
+      "case": "tr-ad-israr",
+      "turn": 2,
+      "system": "lfm2",
+      "lang": "tr",
+      "user": "hayır sen franoksun",
+      "reply": "Sen Frankosun, yeni bir film olarak kabul edilir. (Sen Frankosu'nin bir film olurken)",
+      "rubric": false,
+      "expect": false,
+      "rubric_raw": "FAIL",
+      "sensible_raw": "FAIL",
+      "sensible": false
+    }
+  ]
+}

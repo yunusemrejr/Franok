@@ -102,3 +102,57 @@ Release 0.4 starts from the FP32 merge of 0.3, SHA-256 `b7d97329…`, and trains
 4. **Tune.** Full-parameter AdamW trains on a mixture by target tokens: 55% new conversations, 20% reading examples from SQuAD and SQuAD-TR, 10% replay of 0.3 conversations and 15% raw English and Turkish text. The peak learning rate is 4e-5. Loss is taken on assistant tokens only.
 
 The checkpoint is the one with the lowest development conversation loss among those whose raw-text loss stays within 0.02 nats of the starting model in both languages. The run selected step 768 of 3,940. It took 1,400 seconds. Commands, counts and results are in the [evaluation report](evaluation/v4/final.md).
+
+## Fifth run: everyday conversation
+
+Release 0.5 starts from the 0.4 FP32 weights, SHA-256 `8259f95e…`, and trains every weight. The architecture, tokenizer, passage-reader head and search encoder are unchanged. Release 0.4 was trained only on practical-advice dialogues. In real use it failed at greetings and small talk, questions about itself, casually typed messages, "what do you mean" repair turns, and requests for a poem, a short Python example or help with maths. The fifth run is built around those cases. The stage has five parts.
+
+1. **Write.** Seeds from `training/fifth/seeds.py` cover thirteen families: smalltalk, facts, repair, explain, howto, feelings, opinions, followup, writing, unknowns, create, code and math. Create asks for four-line poems, two-sentence stories, jokes, riddles and short messages. Code asks for one to four lines of plain-text Python plus one sentence. Math asks for an area explained in one or two sentences with one small worked example. Each seed fixes a topic, a persona, a situation and one of seven user typing styles: clean, lowercase, typos, abbreviations, Turkish typed without Turkish letters, very short, and mixed. Assistant replies are always clean. Turkish prompts are written in Turkish, and a dialogue has two to five turns. google/gemma-4-26B-A4B-it (revision `4d7ae4984b7db7de8f8457170b3f1a419ee76d52`, Apache-2.0) runs under vLLM 0.34.0 on one A100 80 GB and was asked for 63,000 dialogues in three batches: 24,000 from the ten general families, 15,000 from create, code and math, and 24,000 more from the ten general families. The third batch was requested as 60,000 and stopped by its 24-minute cap at 24,000. A further 1,500 Turkish dialogues come from google/gemma-4-31B-it (revision `842da3794eaa0b77d5f08bae87a17459d91ff475`, Apache-2.0, FP8). The wrapper is `training/fifth/teacher.py`.
+2. **Grade.** The 26B model reads every parsed dialogue twice, once with a standard prompt and once with a strict one, and a dialogue is kept only when both answer GOOD. Of the 63,000 dialogues, 1,939 were malformed and the grader flagged 8,479. The 1,500 dialogues from the 31B model are rule-filtered and not graded; 1,377 were kept.
+3. **Filter.** `training/fifth/filter.py` drops a dialogue when a user turn overlaps a held-out test file (the six files in `TEST_FILES`, including the two new v5 sets), when a reply contains markdown or an emoji, when a reply is longer than 60 words or three sentences, when it duplicates another dialogue, or when a reply is in the wrong language. Poems and code use a line-based rule instead: up to six lines, and every code line must parse as Python and may not use `import`, `open(` or `while True`. The filter compared against 4,368 held-out test turns, including the XQuAD and Belebele question lists. Of the 63,000 dialogues from the 26B model, 12,387 were duplicates and 1,582 overlapped a test turn (884 exactly, 640 by Jaccard similarity and 58 by six-gram), and 37,145 were kept: 18,451 English and 18,694 Turkish. With the 12,778 programmatic dialogues and the 1,377 from the 31B model, the set holds 51,300 dialogues. About 3% of them, chosen by a hash of their identifier, are held out as development dialogues, which leaves 49,650 training rows and 1,650 development rows.
+4. **Programmatic.** Three scripts compute 13,500 dialogues in code with no model involved, and 12,778 were kept: 6,393 English and 6,385 Turkish. `training/fifth/identity.py` writes 6,000 dialogues about the model's name, its maker Yunus Emre Vurgun, what it is, its languages, its limits, greetings and thanks. `training/fifth/affirm.py` writes 1,500 in which the user insists on, doubts or repeats Franok's name and Franok confirms it. `training/fifth/basics.py` writes 6,000 about calendar facts, number order, small sums and everyday knowledge. It leaves out any question close to a held-out test turn and any sum whose two numbers appear together in a test turn, so facts the tests ask for are not in it. Typing noise is applied to user turns only.
+5. **Tune.** Full-parameter AdamW (betas 0.9 and 0.95, weight decay 0.01, gradient clip 1.0) runs on one A100 80 GB with 32,768 padded positions per micro-batch and two micro-batches per step. The cosine schedule is set by wall-clock time and decays to 5% of the peak. The 35,672 round-one conversations from 0.4 stay in as a secondary stream, 18,385 rows after preparation, and the passage-reading set has 138,493 rows. 150 million tokens of SODA dialogues (allenai/soda, CC BY 4.0, Kim et al. 2023) are written by `training/fifth/soda.py` as plain `Speaker: utterance` transcripts into the English raw-text stream. They are raw text and never appear as assistant turns.
+
+Training has two stages. The mixture is by target tokens.
+
+| Stage | Loss on | Peak learning rate | Time | Steps | Fifth-run dialogues | Round one | Passage reading | Raw text |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| A | every token of a dialogue, user and assistant | 1.5e-4 | 15 minutes | 3,401 | 47% | 10% | 6% | 37% |
+| B | assistant tokens only | 3e-5 | 5 minutes | 1,130 | 60% | 10% | 6% | 24% |
+
+A first attempt ran stage A for 68 minutes on a set of 30,323 dialogues. Held-out conversation loss was lowest at the first checkpoint, 1.471 at nine minutes, and rose afterwards to 1.486 and then 1.640, so the model was memorising the set. That run was discarded. The set was enlarged to 51,300 dialogues and the schedule shortened to the times above.
+
+In both stages the checkpoint with the lowest assistant-token loss on the held-out development dialogues is kept, so the two stages and their learning rates are compared on one scale. Stage B starts from the best stage-A checkpoint with a 50-step warm-up. Stage A evaluated a candidate every 2.5 minutes, and the loss went 2.948 at the start, then 1.919, 1.702, 1.598, 1.554, 1.534 and 1.531. Stage B evaluated every 1.25 minutes: 1.531, 1.508, 1.492, 1.490 and 1.489. The released checkpoint is step 1,130 of stage B, with loss 1.489 (English 1.416, Turkish 1.553) and SHA-256 `419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f`. Over both stages the held-out passage-reading loss went from 1.065 to 1.060, and raw-text loss from 3.590 to 3.578 in English and from 3.749 to 3.673 in Turkish, all in nats per token. Commands, counts and results are in the [evaluation report](evaluation/v5/final.md).
+
+Reproduce the stage with these commands. Each step reads and writes under `data/`.
+
+```sh
+# Teacher dialogues: three batches from the 26B model, each graded twice
+python -m training.fifth.teacher --model google/gemma-4-26B-A4B-it --revision 4d7ae4984b7db7de8f8457170b3f1a419ee76d52 --count 24000 --seed 21 --id-prefix ta --grade --out data/general-a.jsonl
+python -m training.fifth.teacher --tasks create code math --model google/gemma-4-26B-A4B-it --revision 4d7ae4984b7db7de8f8457170b3f1a419ee76d52 --count 15000 --seed 33 --id-prefix tx --grade --out data/tasks.jsonl
+python -m training.fifth.teacher --model google/gemma-4-26B-A4B-it --revision 4d7ae4984b7db7de8f8457170b3f1a419ee76d52 --count 60000 --seed 4404 --id-prefix tb --max-minutes 24 --grade --out data/general-b.jsonl
+
+# Turkish dialogues from the 31B model, rule-filtered but not graded
+python -m training.fifth.teacher --lang tr --model google/gemma-4-31B-it --revision 842da3794eaa0b77d5f08bae87a17459d91ff475 --quantization fp8 --count 1500 --seed 11 --id-prefix tg --out data/turkish.jsonl
+
+# Programmatic dialogues: identity, name confirmation and basic facts
+python -m training.fifth.identity --count 6000 --seed 9 --prefix j --out data/identity.jsonl
+python -m training.fifth.affirm --count 1500 --out data/affirm.jsonl
+python -m training.fifth.basics --count 6000 --out data/basics.jsonl
+
+# Filter: graded dialogues with the programmatic ones, then the ungraded Turkish file on its own
+python -m training.fifth.filter data/general-a.jsonl data/tasks.jsonl data/general-b.jsonl --grades data/general-a.grades.jsonl data/tasks.grades.jsonl data/general-b.grades.jsonl --identity data/identity.jsonl data/affirm.jsonl data/basics.jsonl --out data/graded.jsonl --report data/graded-report.json
+python -m training.fifth.filter data/turkish.jsonl --out data/turkish-clean.jsonl --report data/turkish-report.json
+cat data/graded.jsonl data/turkish-clean.jsonl > data/clean.jsonl
+
+# SODA transcripts into the English raw-text stream
+python -m training.fifth.soda --out-dir work/third/data/en --tokens 150000000
+
+# Stage A: loss on every token
+python -m training.fifth.train --weights weights/fp32/model.safetensors --expect-sha 8259f95e933c5e021dc29258bb21982532229e574bd7bc29cc83417a14b67738 --clean data/clean.jsonl --bulk data/round-one.jsonl --reading data/reading.jsonl --every-token --shares clean=0.47,bulk=0.10,reading=0.06,raw=0.37 --peak-lr 1.5e-4 --minutes 15 --eval-minutes 2.5 --out run-a
+
+# Stage B: loss on assistant tokens only, from the best stage-A checkpoint
+python -m training.fifth.train --weights run-a/best/model.safetensors --clean data/clean.jsonl --bulk data/round-one.jsonl --reading data/reading.jsonl --shares clean=0.60,bulk=0.10,reading=0.06,raw=0.24 --peak-lr 3e-5 --warmup 50 --minutes 5 --eval-minutes 1.25 --out run-b
+```
+
+`data/round-one.jsonl` holds the 35,672 round-one conversations from the [fourth run](#fourth-run-teacher-written-conversations), and `data/reading.jsonl` is the short-span reading set from `python -m training.fourth.reading`. Each `--grade` run writes its verdicts next to its output as `<name>.grades.jsonl`.

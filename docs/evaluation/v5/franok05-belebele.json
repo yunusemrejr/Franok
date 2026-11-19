@@ -1,0 +1,4337 @@
+{
+  "suite": "belebele",
+  "dataset_revision": "7899cdfa4e1e0d733fd77c848e2c273cb1d32be2",
+  "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+  "summary": {
+    "en": {
+      "count": 120,
+      "correct": 0.24166666666666667
+    },
+    "tr": {
+      "count": 120,
+      "correct": 0.26666666666666666
+    }
+  },
+  "items": [
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Babylonians",
+        1
+      ],
+      "prompt_tokens": 192,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.4616375434689406,
+        -1.6455591201782227,
+        -1.3060118538992747,
+        -1.1489440173637577
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Languages/Hindi",
+        2
+      ],
+      "prompt_tokens": 167,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.8234214186668396,
+        -1.7741688319614954,
+        -1.1348354505456013,
+        -1.3268717956542968
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Saturn%27s_moon_Titan_hosts_liquid_lakes_and_rivers",
+        1
+      ],
+      "prompt_tokens": 141,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.1113298416137696,
+        -0.10865827798843383,
+        -1.0899885722569056,
+        -2.165273348490397
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/War_zone_safety",
+        2
+      ],
+      "prompt_tokens": 185,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.105852444966634,
+        -2.1742761400010853,
+        -0.5974716387296978,
+        -1.251394271850586
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Goma",
+        1
+      ],
+      "prompt_tokens": 238,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.4828010472384366,
+        -1.927298979325728,
+        -1.0359666188557943,
+        -1.2770819664001465
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/New_Zealand_History/Polynesian_Settlement",
+        2
+      ],
+      "prompt_tokens": 249,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -2.1961965560913086,
+        -0.0895824974233454,
+        -0.6737954992997018,
+        -0.5064170625474718
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Egyptians",
+        1
+      ],
+      "prompt_tokens": 202,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.2620303992069128,
+        -0.9971802234649658,
+        -0.5744185909148185,
+        -1.1258125305175781
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Sensory_Systems/Visual_System",
+        2
+      ],
+      "prompt_tokens": 144,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.9986936395818538,
+        -0.47729092836380005,
+        -1.6291847229003906,
+        -0.8917603810628255
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cook_Islands",
+        2
+      ],
+      "prompt_tokens": 196,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -2.02290948232015,
+        -2.4252246856689452,
+        -0.7565498806181408,
+        -0.9306406798186125
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Yoga/Yoga_Tales",
+        1
+      ],
+      "prompt_tokens": 245,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.9771735509236653,
+        -1.7155408298268038,
+        -2.306557464599609,
+        -1.5236439912215523
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Kruger_National_Park",
+        2
+      ],
+      "prompt_tokens": 220,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.462208849318484,
+        -1.7423934936523438,
+        -0.9382884187518425,
+        -1.1934635639190674
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Renault_F1_launch_criminal_complaint_against_former_driver_over_race-fixing_allegation",
+        2
+      ],
+      "prompt_tokens": 127,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.2802388872419084,
+        -1.8789359198676214,
+        -1.0797445933024088,
+        -1.5523413296403556
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Swiss_woman_gang-raped_in_Madhya_Pradesh,_India",
+        1
+      ],
+      "prompt_tokens": 181,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.6002471677718624,
+        -2.294897896902902,
+        -1.6272950423391241,
+        -1.5646253824234009
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Brazilian_footballer_Gabriel_Jesus_signs_contract_extension_with_Manchester_City",
+        1
+      ],
+      "prompt_tokens": 111,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.2822270393371582,
+        -2.7229552268981934,
+        -2.155754804611206,
+        -0.6999558806419373
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Accordion/Right_hand",
+        1
+      ],
+      "prompt_tokens": 156,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -0.9246775862099468,
+        -1.6238330205281575,
+        -1.3091367483139038,
+        -1.1466728309532264
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Funeral_of_Pope_John_Paul_II_takes_place",
+        2
+      ],
+      "prompt_tokens": 145,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.063609970940484,
+        -2.052193535698785,
+        -1.107740220569429,
+        -1.49538758743641
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Bali_climate_change_conference_begins",
+        1
+      ],
+      "prompt_tokens": 143,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.2885754903157554,
+        -0.9255383189131574,
+        -0.8435142834981283,
+        -1.0119275348942454
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Strong_6.3_earthquake_reported_in_Sumatra,_Indonesia",
+        2
+      ],
+      "prompt_tokens": 118,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.1561243693033854,
+        -0.8260666131973267,
+        -1.7112491832059973,
+        -2.2850546155657088
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Submarines",
+        1
+      ],
+      "prompt_tokens": 205,
+      "gold": 3,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.7752489362444196,
+        -1.569558824811663,
+        -1.2882135391235352,
+        -2.642466163635254
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Seven_killed_in_Chinese_bombing",
+        1
+      ],
+      "prompt_tokens": 127,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.9304388863699777,
+        -1.547186497279576,
+        -2.089138958905194,
+        -2.8284354209899902
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Australian_treasurer_enters_nuclear_debate",
+        2
+      ],
+      "prompt_tokens": 152,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.8093447251753374,
+        -1.6569991392247818,
+        -1.6734695434570312,
+        -1.3723223759577825
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Judge_orders_Baltimore_City_prison_to_produce_plan_for_improvement",
+        2
+      ],
+      "prompt_tokens": 226,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.2435853481292725,
+        -0.6870781050788032,
+        -1.6633372836642795,
+        -0.9223860634697808
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Trade_hall_roof_collapses_in_Poland",
+        1
+      ],
+      "prompt_tokens": 139,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.8085020610264368,
+        -1.913601068349985,
+        -1.4767374038696288,
+        -1.307710920061384
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Studying_abroad",
+        1
+      ],
+      "prompt_tokens": 230,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.7042215787447417,
+        -3.221766789754232,
+        -2.496690205165318,
+        -1.3951436678568523
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Alcoholic_beverages",
+        2
+      ],
+      "prompt_tokens": 163,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.0780240951045867,
+        -1.3589297703334264,
+        -1.3890519911243069,
+        -1.6216402689615885
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Edmonton_prison_conflict_wounds_eight",
+        2
+      ],
+      "prompt_tokens": 206,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.2793879301651665,
+        -0.7498728632926941,
+        -2.109723524613814,
+        -1.3067533175150554
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Regional_coding",
+        2
+      ],
+      "prompt_tokens": 155,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.3488235473632812,
+        -1.2603118650374874,
+        -0.9665878520292395,
+        -1.4593119467458417
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hiking",
+        2
+      ],
+      "prompt_tokens": 163,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.5660141706466675,
+        -1.2716444730758667,
+        -1.1773314339773995,
+        -0.9517157181449558
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Scottish_Justice_Secretary_%27acutely_aware_of_unusual_publicity%27_in_Kular_case",
+        1
+      ],
+      "prompt_tokens": 236,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.2824411392211914,
+        -2.182117886013455,
+        -1.5732320513044085,
+        -1.603752326965332
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Rocket",
+        1
+      ],
+      "prompt_tokens": 152,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.8434641838073731,
+        -2.9716304432262075,
+        -3.0281044642130532,
+        -3.435964584350586
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Basics",
+        1
+      ],
+      "prompt_tokens": 161,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.4379142761230468,
+        -1.691275914510091,
+        -1.3351295471191407,
+        -1.0695157732282365
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/German_phrasebook",
+        1
+      ],
+      "prompt_tokens": 138,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.321224403381348,
+        -3.1543451309204102,
+        -1.7128335952758789,
+        -2.6696856362479076
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/H5N1_confirmed_in_France",
+        1
+      ],
+      "prompt_tokens": 158,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.493658185005188,
+        -3.971441904703776,
+        -3.836917495727539,
+        -3.3574150085449217
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Tourist_plane_crash_in_Papua_New_Guinea_leaves_thirteen_dead",
+        2
+      ],
+      "prompt_tokens": 170,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.4570475397883236,
+        -1.124887912831408,
+        -2.3578643798828125,
+        -1.180389404296875
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Wikimedia_Foundation_addresses_controversial_content_conflict",
+        2
+      ],
+      "prompt_tokens": 168,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.893209139506022,
+        -0.9828333854675293,
+        -1.4887259347098214,
+        -2.5733333769298734
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Corcovado_National_Park",
+        2
+      ],
+      "prompt_tokens": 251,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -0.2596665024757385,
+        -0.13956851618630545,
+        -0.2938916002001081,
+        -0.4848499894142151
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Culture",
+        1
+      ],
+      "prompt_tokens": 200,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.9480674743652344,
+        -1.4183968077314661,
+        -1.384673789695457,
+        -1.9235988307643581
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Khyber_Pakhtunkhwa_Provincial_Assembly_votes_to_merge_with_Pakistani_Federally_Administered_Tribal_Areas",
+        1
+      ],
+      "prompt_tokens": 115,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -0.4396168390909831,
+        -0.09656533598899841,
+        -1.3858094215393066,
+        -1.0124841169877485
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Effect_of_sanctions_%27like_war%27_says_Iran%27s_Ahmadinejad",
+        2
+      ],
+      "prompt_tokens": 230,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.086131913321359,
+        -0.017721068114042282,
+        -0.2881586334922097,
+        -1.0038563410441081
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Asia/Bhutan",
+        2
+      ],
+      "prompt_tokens": 222,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.2953683176348287,
+        -1.4703628726121856,
+        -1.6913882168856533,
+        -0.7010076310899522
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Greeks",
+        2
+      ],
+      "prompt_tokens": 167,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -0.5760909716288248,
+        -0.4240574359893799,
+        -1.571729850769043,
+        -1.0190246899922688
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Dangerous_animals",
+        1
+      ],
+      "prompt_tokens": 101,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.5736526820970618,
+        -1.6807788502086292,
+        -1.7157322810246394,
+        -1.848098373413086
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Four_killed,_four_others_injured_in_Buffalo,_New_York_shooting",
+        1
+      ],
+      "prompt_tokens": 164,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.2425134240127191,
+        -1.1095080168350884,
+        -1.066546122233073,
+        -1.2088212966918945
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Funeral_travel",
+        2
+      ],
+      "prompt_tokens": 122,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.1208650743639148,
+        -1.19786921087301,
+        -0.9060572182259908,
+        -1.1928158846768466
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Applied_Ecology/Nature_Tourism",
+        1
+      ],
+      "prompt_tokens": 142,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -2.2852721441359747,
+        -1.753301544189453,
+        -1.6559738159179687,
+        -2.6995759443803267
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Russian_military_cargo_jet_crash_kills_eleven_in_Siberia",
+        1
+      ],
+      "prompt_tokens": 145,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.9937907536824544,
+        -1.3582503578879617,
+        -0.8096377724095395,
+        -1.5567172506581182
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Matt_Kenseth_wins_third_NASCAR_Sprint_Cup_race_of_2012",
+        2
+      ],
+      "prompt_tokens": 180,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -5.8347578048706055,
+        -5.679102897644043,
+        -6.474612236022949,
+        -7.48635721206665
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Aggregators",
+        1
+      ],
+      "prompt_tokens": 124,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.4073160911092952,
+        -1.0366538365681965,
+        -0.8959510326385498,
+        -1.1266528235541449
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Lucid_Dreaming/Introduction",
+        1
+      ],
+      "prompt_tokens": 199,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.8679616928100586,
+        -1.6327168391301081,
+        -1.8376050676618303,
+        -1.0102249643077021
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/China_promises_cut_in_carbon_dioxide_emissions",
+        2
+      ],
+      "prompt_tokens": 173,
+      "gold": 3,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.6894382996992632,
+        -1.1391494750976563,
+        -1.2405032751695164,
+        -1.267386771537162
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Managing_Groups_and_Teams/How_Do_You_Build_High-performing_Virtual_Teams%3F",
+        2
+      ],
+      "prompt_tokens": 210,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -0.838306018284389,
+        -0.5885787418910435,
+        -0.7862409182957241,
+        -1.8312102231112393
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Canadian_professional_wrestler_Luna_Vachon_dies_aged_48",
+        2
+      ],
+      "prompt_tokens": 191,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -2.712818145751953,
+        -1.0189027105058943,
+        -0.7294764518737793,
+        -0.062409547659067005
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Remembering_the_Templars",
+        2
+      ],
+      "prompt_tokens": 143,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.5097654342651368,
+        -1.1015737056732178,
+        -0.15775164365768432,
+        -1.4806991815567017
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/BBC_newsreader_sacked_after_conviction_for_wounding_teenager",
+        1
+      ],
+      "prompt_tokens": 165,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -0.8970626422337123,
+        -1.3241543579101562,
+        -1.6072115898132324,
+        -0.8557821909586588
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Infectious_diseases",
+        2
+      ],
+      "prompt_tokens": 204,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.169828255971273,
+        -3.6350724356515065,
+        -2.0519607067108154,
+        -2.9334802627563477
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hong_Kong",
+        1
+      ],
+      "prompt_tokens": 225,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.101960923936632,
+        -0.41695347699252044,
+        -1.2136941485934787,
+        -1.5850775241851807
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Socialization",
+        1
+      ],
+      "prompt_tokens": 297,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.3423335075378418,
+        -1.8061934879847936,
+        -2.104456901550293,
+        -1.9872093200683594
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Serengeti",
+        2
+      ],
+      "prompt_tokens": 169,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.5025062561035156,
+        -0.9334242971319902,
+        -0.8645699364798409,
+        -0.6454207301139832
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Meteora",
+        2
+      ],
+      "prompt_tokens": 214,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -3.595547539847238,
+        -3.042221705118815,
+        -0.895362913608551,
+        -1.6345264434814453
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cross_country_skiing",
+        2
+      ],
+      "prompt_tokens": 189,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -2.3496187650240383,
+        -0.5205599069595337,
+        -0.9697396596272786,
+        -1.1482140677315849
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Modern_Photography/Format",
+        1
+      ],
+      "prompt_tokens": 211,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.992956320444743,
+        -1.3520543098449707,
+        -0.9641123499189105,
+        -0.9835344314575195
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/San_Francisco",
+        1
+      ],
+      "prompt_tokens": 198,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.6320972082749852,
+        -0.69482421875,
+        -1.167454806241122,
+        -1.8737767537434895
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Car_women%27s_rugby_7%27s_tournament",
+        1
+      ],
+      "prompt_tokens": 203,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.0036137580871582,
+        -1.5876510938008626,
+        -1.3437300564949972,
+        -2.134493350982666
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Canadian_Prime_Minister_Harper_agrees_to_send_%27Clean_Air_Act%27_to_committee",
+        2
+      ],
+      "prompt_tokens": 298,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.7959134989771349,
+        -0.8462870717048645,
+        -1.2057695388793945,
+        -2.131403923034668
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Karzai_declared_winner_of_Afghan_elections,_runoff_polls_cancelled",
+        1
+      ],
+      "prompt_tokens": 136,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.2131784984043665,
+        -1.4044296264648437,
+        -1.9970706059382513,
+        -1.2807650566101074
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/24_people_rescued_from_roller_coaster_at_California%27s_Great_America_theme_park",
+        2
+      ],
+      "prompt_tokens": 145,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.503737555609809,
+        -1.527707815170288,
+        -1.0230353219168526,
+        -1.903778314590454
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Japanese_tourist_travels_through_37_countries_on_just_$2",
+        2
+      ],
+      "prompt_tokens": 94,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.8996784210205078,
+        -0.8341605322701591,
+        -3.0801441192626955,
+        -3.744909922281901
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Cholera_outbreak_hits_Angola",
+        1
+      ],
+      "prompt_tokens": 132,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.5208804321289062,
+        -0.7359234491984049,
+        -0.67844329561506,
+        -0.8926040386331493
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battleships",
+        1
+      ],
+      "prompt_tokens": 224,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.4464035034179688,
+        -1.0734120941162109,
+        -0.5990162456736845,
+        -1.4019012451171875
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hill_stations_in_India",
+        2
+      ],
+      "prompt_tokens": 105,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.8387298583984375,
+        -1.7516531626383463,
+        -0.9663751602172852,
+        -1.4563823427472795
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Large_earthquake_off_Japan,_tsunami_warning_issued",
+        1
+      ],
+      "prompt_tokens": 184,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.72416185077868,
+        -0.6581393946772036,
+        -1.0204715728759766,
+        -0.879691998163859
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/History_of_Islam/Early_Islam",
+        1
+      ],
+      "prompt_tokens": 256,
+      "gold": 0,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.615520214212352,
+        -1.947055180867513,
+        -1.5482237339019775,
+        -1.2057399204799106
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Lucid_Dreaming/Induction_Techniques",
+        2
+      ],
+      "prompt_tokens": 215,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.4393751210179822,
+        -1.4061575437846936,
+        -0.6374752391468395,
+        -1.7039108276367188
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Huge_Gay_Pride_parade_held_in_Brazil",
+        2
+      ],
+      "prompt_tokens": 187,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -0.48561725616455076,
+        -0.25091202118817496,
+        -0.45536339667535597,
+        -0.9281013662164862
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_insurance",
+        2
+      ],
+      "prompt_tokens": 204,
+      "gold": 3,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.6073521084255642,
+        -1.1067391148319952,
+        -0.6605128412661345,
+        -1.864101063121449
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Video_recording",
+        2
+      ],
+      "prompt_tokens": 166,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.3974536714099703,
+        -0.7212780223173254,
+        -1.241168146548064,
+        -1.8555470421200706
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Culture_shock",
+        1
+      ],
+      "prompt_tokens": 209,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.4919877303274054,
+        -0.7600182564027848,
+        -2.4811742305755615,
+        -1.5190187692642212
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battle_of_Britain",
+        1
+      ],
+      "prompt_tokens": 205,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.1443952832903181,
+        -1.3309617723737444,
+        -1.068757692972819,
+        -3.1206658681233725
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/A1GP_New_Zealand_speeds_its_way_into_record_books",
+        2
+      ],
+      "prompt_tokens": 209,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.0394154276166643,
+        -1.3554856300354003,
+        -1.553237728956269,
+        -1.1964453672751403
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Applied_Ecology/New_Societies_and_Cultures",
+        1
+      ],
+      "prompt_tokens": 161,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.6359260783475988,
+        -1.0608838399251301,
+        -1.4679414961073134,
+        -0.9006433486938477
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Tokyo_2020",
+        1
+      ],
+      "prompt_tokens": 211,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.49840632351962,
+        -0.3512415409088135,
+        -0.4475699152265276,
+        -0.5905498398674859
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_photography/Film",
+        1
+      ],
+      "prompt_tokens": 175,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.877483928904814,
+        -1.7525500247353,
+        -0.8294380051749093,
+        -1.5966040962620784
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Golf",
+        1
+      ],
+      "prompt_tokens": 142,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -4.333686065673828,
+        -4.067777633666992,
+        -3.8780226707458496,
+        -2.3449432373046877
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Race_and_Ethnicity",
+        1
+      ],
+      "prompt_tokens": 156,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -0.8946755392509594,
+        -0.6845865885416667,
+        -1.3122900182550603,
+        -1.125908406575521
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Scientists_say_the_moon_is_slowly_shrinking",
+        2
+      ],
+      "prompt_tokens": 166,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.0361881256103516,
+        -1.2512801942371188,
+        -0.9937200273786272,
+        -1.0990768614269437
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hospitality_exchange",
+        2
+      ],
+      "prompt_tokens": 211,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.4276191836497822,
+        -0.9711012686452558,
+        -1.3717380099826388,
+        -1.5200525057517875
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:The_Elements/Hydrogen",
+        2
+      ],
+      "prompt_tokens": 122,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.327893614768982,
+        -0.06035248041152954,
+        -3.4317977905273436,
+        -1.6161408424377441
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_advisories",
+        2
+      ],
+      "prompt_tokens": 199,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.301926612854004,
+        -0.9520474786627783,
+        -1.0061918640136718,
+        -0.7077101002568784
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Glaciers",
+        2
+      ],
+      "prompt_tokens": 141,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.9234217007954915,
+        -1.1012732187906902,
+        -0.9029885292053222,
+        -1.126230239868164
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cinque_Terre",
+        2
+      ],
+      "prompt_tokens": 197,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -1.315088418813852,
+        -2.0375646591186523,
+        -2.0696400729092685,
+        -1.5814470714992948
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Red_tide_affects_South_Padre_Island,_Mexico",
+        2
+      ],
+      "prompt_tokens": 178,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -2.229189092462713,
+        -1.8812249225118887,
+        -2.2232131958007812,
+        -1.5249176025390625
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Sandra_Fluke_insists_she_will_not_be_silenced",
+        2
+      ],
+      "prompt_tokens": 123,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.7767192721366882,
+        -3.431306692270132,
+        -1.0014684540884835,
+        -0.8784294128417969
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Ecuador",
+        2
+      ],
+      "prompt_tokens": 211,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.3637643293900923,
+        -1.7823210216703869,
+        -1.2621606525621916,
+        -1.3190816991469438
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Icelandic_Hekla_volcano_shows_signs_of_activity",
+        2
+      ],
+      "prompt_tokens": 191,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.0113078846650967,
+        -0.4422003746032715,
+        -1.6965672419621394,
+        -0.4625125211827895
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Spanish_football:_Sevilla_signs_Aleix_Vidal_from_FC_Barcelona",
+        2
+      ],
+      "prompt_tokens": 78,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -0.9145506024360657,
+        -0.7083504796028137,
+        -6.39490270614624,
+        -2.615994691848755
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Goats/Introduction",
+        1
+      ],
+      "prompt_tokens": 165,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.7579054151262556,
+        -1.9607651050274189,
+        -1.0574162556574895,
+        -1.1439458302089147
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Tornado_safety",
+        1
+      ],
+      "prompt_tokens": 148,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.6622964768182664,
+        -1.6394114243356805,
+        -0.7202074948479148,
+        -1.384586944580078
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Mallorca",
+        1
+      ],
+      "prompt_tokens": 141,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -5.165868759155273,
+        -1.2736628532409668,
+        -3.405989074707031,
+        -1.439814567565918
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Barcelona",
+        2
+      ],
+      "prompt_tokens": 186,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -0.5252928733825684,
+        -0.01421171533209937,
+        -1.0310287475585938,
+        -0.8916706244150797
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Light_Bulb",
+        2
+      ],
+      "prompt_tokens": 189,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.4115405082702637,
+        -1.0894901752471924,
+        -0.9118091583251953,
+        -3.109294891357422
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Mysticism/What_is_mysticism%3F",
+        1
+      ],
+      "prompt_tokens": 213,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.2759812908408084,
+        -1.3005929129464286,
+        -1.134255059874884,
+        -0.6803923138117386
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Women%E2%80%99s_boxing_to_be_included_in_the_2012_Olympics_for_the_first_time",
+        2
+      ],
+      "prompt_tokens": 134,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.010675811767578,
+        -1.3250833299424913,
+        -1.0782157673555262,
+        -1.9265081232244319
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Charlotte_with_children",
+        2
+      ],
+      "prompt_tokens": 210,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.106098175048828,
+        -2.1542927668644833,
+        -0.406860718360314,
+        -1.5893340110778809
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Leak_suggests_John_Kerry_will_recognise_Israel_as_Jewish_state",
+        2
+      ],
+      "prompt_tokens": 159,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.4887210300990514,
+        -0.8821154055388077,
+        -1.4674089943490378,
+        -0.84927001953125
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Moon",
+        1
+      ],
+      "prompt_tokens": 153,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.1651907256155303,
+        -0.4176354885101318,
+        -0.4789808713472806,
+        -0.6058413926945176
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:South_America/Venezuela",
+        2
+      ],
+      "prompt_tokens": 149,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.4984122685023715,
+        -0.8355673876675692,
+        -1.7644952535629272,
+        -3.224797566731771
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/The_Cold_War/Hungarian_Revolution",
+        1
+      ],
+      "prompt_tokens": 168,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.1539257594517298,
+        -1.4878856952373798,
+        -1.8499332004123263,
+        -1.3557730010061553
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/California_bans_sale_of_violent_video_games_to_minors",
+        1
+      ],
+      "prompt_tokens": 140,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -0.861360317323266,
+        -2.362806865147182,
+        -0.8352844424364043,
+        -1.6345309151543512
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Hollywood_sign_modified_to_read_%27Hollyweed%27",
+        1
+      ],
+      "prompt_tokens": 137,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -3.006945176558061,
+        -1.8790871938069662,
+        -1.2945454915364583,
+        -3.8900718688964844
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Nadal_beats_Raonic_to_reach_Australian_Open_semis",
+        2
+      ],
+      "prompt_tokens": 150,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.9565590667724609,
+        -1.7636929562217312,
+        -1.9277002671185661,
+        -2.350913777070887
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Languages/Estonian",
+        1
+      ],
+      "prompt_tokens": 145,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.4352215766906737,
+        -1.5531648635864257,
+        -1.5766402244567872,
+        -1.4220621109008789
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Peak_Oil:_High_Tide_for_an_Oil_Addicted_World/Personal_Action",
+        1
+      ],
+      "prompt_tokens": 109,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -0.942752921062967,
+        -1.8954697811242305,
+        -1.5776019487224642,
+        -1.3876437187194823
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Murals_and_graffiti",
+        2
+      ],
+      "prompt_tokens": 174,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -0.7900145848592123,
+        -1.9453134536743164,
+        -0.9458492503446692,
+        -2.299054282052176
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/New_Australian_Prime_Minister_signs_Kyoto",
+        2
+      ],
+      "prompt_tokens": 148,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.44691744972677794,
+        -1.6426700410388766,
+        -0.8466710249582926,
+        -1.554205322265625
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/New_South_Wales_government_starts_trial_of_hunting_in_national_parks",
+        2
+      ],
+      "prompt_tokens": 196,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.5282504433079769,
+        -0.8664450394479852,
+        -0.750763917580629,
+        -1.0302250473587602
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikibooks.org/wiki/Fundamentals_of_Transportation/Introduction",
+        2
+      ],
+      "prompt_tokens": 136,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -2.0496741585109546,
+        -1.49503417242141,
+        -1.1421017279991736,
+        -1.0953829695538777
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/California_lawmaker_denies_affairs_after_sexual_discussion_becomes_public",
+        2
+      ],
+      "prompt_tokens": 131,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.5532880359225802,
+        -0.9259451380315816,
+        -1.1196577683934625,
+        -1.3798409319938498
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Water_safety",
+        2
+      ],
+      "prompt_tokens": 197,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -1.1165735772315493,
+        -1.8982098487115675,
+        -1.8817279815673829,
+        -1.9641060829162598
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Hong_Kong_tourists_held_hostage_in_the_Philippines,_nine_killed",
+        2
+      ],
+      "prompt_tokens": 181,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.7145564556121826,
+        -1.0781315023248845,
+        -0.13634248340831084,
+        -1.1631810665130615
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "en",
+      "key": [
+        "https://en.wikinews.org/wiki/Former_U.S._National_Security_Advisor_Zbigniew_Brzezinski_dies_aged_89",
+        1
+      ],
+      "prompt_tokens": 205,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.8157105445861816,
+        -0.8808779035295758,
+        -2.350821336110433,
+        -3.2704078129359653
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Babylonians",
+        1
+      ],
+      "prompt_tokens": 177,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.6914119720458984,
+        -1.8518440492691532,
+        -1.924239158630371,
+        -1.6175243493282434
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Languages/Hindi",
+        2
+      ],
+      "prompt_tokens": 167,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.096098130749118,
+        -0.8235689627157675,
+        -1.092210059072457,
+        -0.8486649533535572
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Saturn%27s_moon_Titan_hosts_liquid_lakes_and_rivers",
+        1
+      ],
+      "prompt_tokens": 108,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -0.5238348007202148,
+        -1.2718379020690918,
+        -0.5581811904907227,
+        -2.64322837193807
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/War_zone_safety",
+        2
+      ],
+      "prompt_tokens": 184,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.027731990814209,
+        -0.3016771952311198,
+        -0.49845336033747745,
+        -1.9015260934829712
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Goma",
+        1
+      ],
+      "prompt_tokens": 232,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.6732458634810015,
+        -1.2915390559605189,
+        -0.9551079432169597,
+        -3.5440423753526478
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/New_Zealand_History/Polynesian_Settlement",
+        2
+      ],
+      "prompt_tokens": 236,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -2.991480588912964,
+        -0.20393258333206177,
+        -0.4517390569051107,
+        -0.43042707443237305
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Egyptians",
+        1
+      ],
+      "prompt_tokens": 179,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.665991954314403,
+        -1.7518516887318005,
+        -1.4582472907172308,
+        -1.4506277604536577
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Sensory_Systems/Visual_System",
+        2
+      ],
+      "prompt_tokens": 121,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.5347275733947754,
+        -1.0254920959472655,
+        -1.8363028026762462,
+        -1.2751729046856914
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cook_Islands",
+        2
+      ],
+      "prompt_tokens": 202,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -2.0073035390753495,
+        -1.8885725736618042,
+        -1.4609607349742542,
+        -1.1758443450927734
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Yoga/Yoga_Tales",
+        1
+      ],
+      "prompt_tokens": 214,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -2.324138121171431,
+        -1.5787969069047407,
+        -2.6060617065429685,
+        -1.2285468490035445
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Kruger_National_Park",
+        2
+      ],
+      "prompt_tokens": 214,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.2822738155241935,
+        -1.649082510811942,
+        -0.9759442011515299,
+        -1.0848636950476696
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Renault_F1_launch_criminal_complaint_against_former_driver_over_race-fixing_allegation",
+        2
+      ],
+      "prompt_tokens": 131,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.5109249995304987,
+        -1.9385204315185547,
+        -1.4001426696777344,
+        -1.621789785531851
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Swiss_woman_gang-raped_in_Madhya_Pradesh,_India",
+        1
+      ],
+      "prompt_tokens": 188,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.7377908640894397,
+        -2.4891590542263455,
+        -1.6908098036243069,
+        -0.9694790962414864
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Brazilian_footballer_Gabriel_Jesus_signs_contract_extension_with_Manchester_City",
+        1
+      ],
+      "prompt_tokens": 118,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.0411500930786133,
+        -1.4867300987243652,
+        -0.3528714179992676,
+        -1.4606757164001465
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Accordion/Right_hand",
+        1
+      ],
+      "prompt_tokens": 148,
+      "gold": 0,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.01813413512032,
+        -1.3451618867761947,
+        -1.0333713803972517,
+        -0.9578935875082916
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Funeral_of_Pope_John_Paul_II_takes_place",
+        2
+      ],
+      "prompt_tokens": 142,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.3400732471096901,
+        -1.6569660186767579,
+        -2.382464148781516,
+        -1.1653992970784506
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Bali_climate_change_conference_begins",
+        1
+      ],
+      "prompt_tokens": 149,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.6107761548913044,
+        -1.1826719495985243,
+        -1.9372249603271485,
+        -0.9625674247741699
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Strong_6.3_earthquake_reported_in_Sumatra,_Indonesia",
+        2
+      ],
+      "prompt_tokens": 108,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.476987600326538,
+        -0.9752542832318474,
+        -1.8974151611328125,
+        -2.3059618332806755
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Submarines",
+        1
+      ],
+      "prompt_tokens": 203,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -2.7230401039123535,
+        -1.8584855397542317,
+        -2.0047454833984375,
+        -1.5577035903930665
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Seven_killed_in_Chinese_bombing",
+        1
+      ],
+      "prompt_tokens": 112,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.5747220720563615,
+        -0.4614105224609375,
+        -1.9024740219116212,
+        -2.9896519978841147
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Australian_treasurer_enters_nuclear_debate",
+        2
+      ],
+      "prompt_tokens": 166,
+      "gold": 3,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.2360392411549885,
+        -2.3852882385253906,
+        -1.9513659159342447,
+        -1.5098018646240234
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Judge_orders_Baltimore_City_prison_to_produce_plan_for_improvement",
+        2
+      ],
+      "prompt_tokens": 227,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.7032643726893835,
+        -1.493240209726187,
+        -0.8183602725758272,
+        -0.499870913369315
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Trade_hall_roof_collapses_in_Poland",
+        1
+      ],
+      "prompt_tokens": 130,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.9057497095178675,
+        -1.3851743627477575,
+        -1.3949344914133956,
+        -1.3890126202557538
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Studying_abroad",
+        1
+      ],
+      "prompt_tokens": 208,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.680808597140842,
+        -1.1476144057053785,
+        -1.2793247916481711,
+        -1.1014728546142578
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Alcoholic_beverages",
+        2
+      ],
+      "prompt_tokens": 154,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.8497975667317708,
+        -1.9788133670122197,
+        -2.306623992919922,
+        -1.8598121974779211
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Edmonton_prison_conflict_wounds_eight",
+        2
+      ],
+      "prompt_tokens": 186,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.1258159436677633,
+        -2.6379074096679687,
+        -1.2131478786468506,
+        -2.7985318501790366
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Regional_coding",
+        2
+      ],
+      "prompt_tokens": 138,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.5400399102105036,
+        -1.6482235717773437,
+        -1.3441188600328233,
+        -2.0770846472846136
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hiking",
+        2
+      ],
+      "prompt_tokens": 159,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.2077962493896484,
+        -1.5065314769744873,
+        -1.3667938232421875,
+        -1.3699129681254543
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Scottish_Justice_Secretary_%27acutely_aware_of_unusual_publicity%27_in_Kular_case",
+        1
+      ],
+      "prompt_tokens": 245,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.1050817966461182,
+        -1.1529716344980092,
+        -0.8898907711631373,
+        -1.402619110910516
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Rocket",
+        1
+      ],
+      "prompt_tokens": 163,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.321362928910689,
+        -2.7364068031311035,
+        -2.5514283861432756,
+        -2.2116000652313232
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Basic_Physics_of_Digital_Radiography/The_Basics",
+        1
+      ],
+      "prompt_tokens": 167,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.6231529929421165,
+        -2.579532814025879,
+        -2.268180500377308,
+        -1.435253836891868
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/German_phrasebook",
+        1
+      ],
+      "prompt_tokens": 119,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -2.73574093409947,
+        -2.1050382341657365,
+        -3.588075637817383,
+        -3.8592608315604076
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/H5N1_confirmed_in_France",
+        1
+      ],
+      "prompt_tokens": 150,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -4.372846921284993,
+        -4.52964973449707,
+        -2.998359441757202,
+        -3.7464630126953127
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Tourist_plane_crash_in_Papua_New_Guinea_leaves_thirteen_dead",
+        2
+      ],
+      "prompt_tokens": 182,
+      "gold": 3,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.4074033654254416,
+        -1.8233932495117187,
+        -1.5560335431780135,
+        -1.8096970778245192
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Wikimedia_Foundation_addresses_controversial_content_conflict",
+        2
+      ],
+      "prompt_tokens": 159,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.0526436397007535,
+        -1.295738513653095,
+        -1.443983793258667,
+        -1.9154853820800781
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Corcovado_National_Park",
+        2
+      ],
+      "prompt_tokens": 233,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.6495501200358073,
+        -0.19908843721662248,
+        -0.16715000356946672,
+        -0.5315472483634949
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Culture",
+        1
+      ],
+      "prompt_tokens": 179,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.637626482092816,
+        -1.4390528153400033,
+        -1.4861589247180569,
+        -1.9330338564786045
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Khyber_Pakhtunkhwa_Provincial_Assembly_votes_to_merge_with_Pakistani_Federally_Administered_Tribal_Areas",
+        1
+      ],
+      "prompt_tokens": 123,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.1093074574190027,
+        -0.4310511648654938,
+        -1.0026127624511718,
+        -1.445799708366394
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Effect_of_sanctions_%27like_war%27_says_Iran%27s_Ahmadinejad",
+        2
+      ],
+      "prompt_tokens": 225,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.8887377287212171,
+        -1.137108564376831,
+        -0.3865177517845517,
+        -0.6907529830932617
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Asia/Bhutan",
+        2
+      ],
+      "prompt_tokens": 216,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.4947851148702331,
+        -1.3304594791296758,
+        -2.0097905939275567,
+        -0.6569462617238363
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Ancient_Civilizations/Greeks",
+        2
+      ],
+      "prompt_tokens": 155,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.15466827154159546,
+        -0.35146243231637136,
+        -0.6436949457441058,
+        -0.29325381192294037
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Dangerous_animals",
+        1
+      ],
+      "prompt_tokens": 98,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -2.919975757598877,
+        -2.235260009765625,
+        -1.6582232883998327,
+        -1.2367295265197753
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Four_killed,_four_others_injured_in_Buffalo,_New_York_shooting",
+        1
+      ],
+      "prompt_tokens": 152,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.838030242919922,
+        -2.8581464290618896,
+        -1.125946617126465,
+        -2.8121980236422632
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Funeral_travel",
+        2
+      ],
+      "prompt_tokens": 137,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.2061818440755208,
+        -1.5677017211914062,
+        -1.1237905025482178,
+        -0.9516789362980769
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Applied_Ecology/Nature_Tourism",
+        1
+      ],
+      "prompt_tokens": 131,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.182352066040039,
+        -1.3996691173977323,
+        -1.5055022239685059,
+        -2.119177500406901
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Russian_military_cargo_jet_crash_kills_eleven_in_Siberia",
+        1
+      ],
+      "prompt_tokens": 146,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.8819278875986735,
+        -2.172762393951416,
+        -0.45816905681903547,
+        -1.981396116059402
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Matt_Kenseth_wins_third_NASCAR_Sprint_Cup_race_of_2012",
+        2
+      ],
+      "prompt_tokens": 202,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -4.544722080230713,
+        -3.93955135345459,
+        -5.832569122314453,
+        -5.5555219650268555
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Aggregators",
+        1
+      ],
+      "prompt_tokens": 121,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.269787311553955,
+        -1.3575258952815359,
+        -0.9020323386559119,
+        -1.1349558707995293
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Lucid_Dreaming/Introduction",
+        1
+      ],
+      "prompt_tokens": 198,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -0.9708810806274414,
+        -1.409093744614545,
+        -1.6222508748372395,
+        -0.3403237887791225
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/China_promises_cut_in_carbon_dioxide_emissions",
+        2
+      ],
+      "prompt_tokens": 174,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.7148779409903068,
+        -0.9684983662196568,
+        -1.1991940251103155,
+        -1.200723103114537
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Managing_Groups_and_Teams/How_Do_You_Build_High-performing_Virtual_Teams%3F",
+        2
+      ],
+      "prompt_tokens": 189,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.1519889831542969,
+        -0.5271496833125248,
+        -0.8728093504905701,
+        -1.1402474721272786
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Canadian_professional_wrestler_Luna_Vachon_dies_aged_48",
+        2
+      ],
+      "prompt_tokens": 200,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.9709163665771485,
+        -0.8790121078491211,
+        -0.7943077882130941,
+        -0.3573505695049579
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Remembering_the_Templars",
+        2
+      ],
+      "prompt_tokens": 141,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.339561939239502,
+        -2.2008440017700197,
+        -0.9665003458658854,
+        -1.6568590164184571
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/BBC_newsreader_sacked_after_conviction_for_wounding_teenager",
+        1
+      ],
+      "prompt_tokens": 146,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.8096098692520804,
+        -1.735842810736762,
+        -2.625115966796875,
+        -1.0384756724039714
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Infectious_diseases",
+        2
+      ],
+      "prompt_tokens": 180,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -3.3806748390197754,
+        -2.891396999359131,
+        -1.849148941040039,
+        -2.081554412841797
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hong_Kong",
+        1
+      ],
+      "prompt_tokens": 225,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.6841880480448406,
+        -0.8948270933968681,
+        -0.835903897004969,
+        -1.9578537940979004
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Socialization",
+        1
+      ],
+      "prompt_tokens": 309,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.12259840965271,
+        -2.0823418299357095,
+        -1.67281125386556,
+        -1.7340694665908813
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_Heritage_Sites/Serengeti",
+        2
+      ],
+      "prompt_tokens": 184,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.7543986184256417,
+        -0.7929537773132325,
+        -0.697075366973877,
+        -0.7827709197998047
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Meteora",
+        2
+      ],
+      "prompt_tokens": 196,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -4.229974365234375,
+        -4.183708190917969,
+        -1.1994526386260986,
+        -3.342477798461914
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cross_country_skiing",
+        2
+      ],
+      "prompt_tokens": 186,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.7456791400909424,
+        -0.6076498939877465,
+        -1.7469248338179155,
+        -2.777148655482701
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Modern_Photography/Format",
+        1
+      ],
+      "prompt_tokens": 188,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.687934674714741,
+        -1.2060784339904784,
+        -0.8608045906856142,
+        -1.1131467138017928
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/San_Francisco",
+        1
+      ],
+      "prompt_tokens": 190,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.6759889710624263,
+        -0.507884947458903,
+        -1.2749041895712576,
+        -1.7011892530653212
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Car_women%27s_rugby_7%27s_tournament",
+        1
+      ],
+      "prompt_tokens": 198,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.342666279185902,
+        -0.6940392618593962,
+        -1.5938096046447754,
+        -1.622730467054579
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Canadian_Prime_Minister_Harper_agrees_to_send_%27Clean_Air_Act%27_to_committee",
+        2
+      ],
+      "prompt_tokens": 302,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.5124641418457032,
+        -1.474945863087972,
+        -2.657272611345564,
+        -3.327227783203125
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Karzai_declared_winner_of_Afghan_elections,_runoff_polls_cancelled",
+        1
+      ],
+      "prompt_tokens": 153,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.322558459113626,
+        -1.473252296447754,
+        -1.0115980260512407,
+        -1.9252010345458985
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/24_people_rescued_from_roller_coaster_at_California%27s_Great_America_theme_park",
+        2
+      ],
+      "prompt_tokens": 136,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -2.2392396926879883,
+        -0.7406798998514811,
+        -2.1077353954315186,
+        -2.242923545837402
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Japanese_tourist_travels_through_37_countries_on_just_$2",
+        2
+      ],
+      "prompt_tokens": 91,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -2.8971827580378604,
+        -0.3763421376546224,
+        -1.4119578467475042,
+        -2.7825918197631836
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Cholera_outbreak_hits_Angola",
+        1
+      ],
+      "prompt_tokens": 131,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -4.024271850585937,
+        -0.8005687395731608,
+        -0.4614365441458566,
+        -0.2642153689735814
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battleships",
+        1
+      ],
+      "prompt_tokens": 224,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.1582196143365675,
+        -2.7591625213623048,
+        -1.2365629408094618,
+        -0.9725201680110052
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hill_stations_in_India",
+        2
+      ],
+      "prompt_tokens": 97,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.8631123762864332,
+        -2.202317237854004,
+        -3.369807481765747,
+        -1.338889757792155
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Large_earthquake_off_Japan,_tsunami_warning_issued",
+        1
+      ],
+      "prompt_tokens": 195,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.5003958992336108,
+        -1.4655521226965862,
+        -0.7870814800262451,
+        -1.123433281393612
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/History_of_Islam/Early_Islam",
+        1
+      ],
+      "prompt_tokens": 243,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.9217331345016893,
+        -1.5556998076262298,
+        -1.7545886749916888,
+        -2.043941946590648
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Lucid_Dreaming/Induction_Techniques",
+        2
+      ],
+      "prompt_tokens": 208,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -3.060456085205078,
+        -1.7186050415039062,
+        -1.8933422088623046,
+        -1.7999533960374736
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Huge_Gay_Pride_parade_held_in_Brazil",
+        2
+      ],
+      "prompt_tokens": 210,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -0.4672890163603283,
+        -0.6693849002613741,
+        -0.128079483906428,
+        -0.8221316704383264
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_insurance",
+        2
+      ],
+      "prompt_tokens": 228,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -0.8828825378417968,
+        -0.4653759002685547,
+        -1.203337973736702,
+        -1.5258363293063255
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Video_recording",
+        2
+      ],
+      "prompt_tokens": 161,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.6330368686729753,
+        -0.9291693115234375,
+        -2.3935681856595554,
+        -1.6245400110880535
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Culture_shock",
+        1
+      ],
+      "prompt_tokens": 218,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.3666330638684725,
+        -1.0434512385615595,
+        -1.120640021104079,
+        -1.2579400346085832
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:World_War_II/Battle_of_Britain",
+        1
+      ],
+      "prompt_tokens": 216,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.1691650492804391,
+        -0.6805920071072049,
+        -0.34840230147043866,
+        -1.5430216108049666
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/A1GP_New_Zealand_speeds_its_way_into_record_books",
+        2
+      ],
+      "prompt_tokens": 227,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.651854976530998,
+        -2.6602110862731934,
+        -1.0858264302098475,
+        -1.2694353527492948
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Applied_Ecology/New_Societies_and_Cultures",
+        1
+      ],
+      "prompt_tokens": 143,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.9786048688386616,
+        -1.291995366414388,
+        -0.6483407773469624,
+        -1.8816097804478236
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Tokyo_2020",
+        1
+      ],
+      "prompt_tokens": 231,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.1548571586608887,
+        -1.874177720811632,
+        -1.7230939865112305,
+        -0.8085437254472212
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_photography/Film",
+        1
+      ],
+      "prompt_tokens": 175,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.327298641204834,
+        -2.1877502865261502,
+        -0.6084159704355093,
+        -1.2503511640760634
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Golf",
+        1
+      ],
+      "prompt_tokens": 147,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -3.545411745707194,
+        -3.583300018310547,
+        -4.710211753845215,
+        -2.414476013183594
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Introduction_to_Sociology/Race_and_Ethnicity",
+        1
+      ],
+      "prompt_tokens": 145,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.4091243743896484,
+        -1.3776317009559045,
+        -1.2950164307939245,
+        -1.5969337088162783
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Scientists_say_the_moon_is_slowly_shrinking",
+        2
+      ],
+      "prompt_tokens": 145,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.6565236311692457,
+        -1.3173238876018118,
+        -1.6213401938384433,
+        -1.3177884419759114
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Hospitality_exchange",
+        2
+      ],
+      "prompt_tokens": 208,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -1.35802976546749,
+        -1.5958218183673796,
+        -1.3950052382070808,
+        -1.6051725357297868
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:The_Elements/Hydrogen",
+        2
+      ],
+      "prompt_tokens": 124,
+      "gold": 3,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.3387720584869385,
+        -0.856886969672309,
+        -3.0273350306919644,
+        -2.731212615966797
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Travel_advisories",
+        2
+      ],
+      "prompt_tokens": 183,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.421087118295523,
+        -1.2686111207992312,
+        -1.0036767528903099,
+        -1.0686631410018257
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Glaciers",
+        2
+      ],
+      "prompt_tokens": 136,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -0.6436541875203451,
+        -0.49370663506644114,
+        -2.245177984237671,
+        -0.6563927577092097
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Cinque_Terre",
+        2
+      ],
+      "prompt_tokens": 182,
+      "gold": 0,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -2.2102949959891185,
+        -2.772937774658203,
+        -2.1077969868977866,
+        -1.9211853875054254
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Red_tide_affects_South_Padre_Island,_Mexico",
+        2
+      ],
+      "prompt_tokens": 166,
+      "gold": 1,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.5537429578376538,
+        -1.8604000460716985,
+        -2.093914304460798,
+        -0.8571514553493924
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Sandra_Fluke_insists_she_will_not_be_silenced",
+        2
+      ],
+      "prompt_tokens": 96,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.8158141374588013,
+        -1.9844900369644165,
+        -1.4798465141883264,
+        -0.5103283405303956
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Ecuador",
+        2
+      ],
+      "prompt_tokens": 209,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.5270914877614667,
+        -0.6510519212292086,
+        -1.2595198781866777,
+        -0.9977506637573242
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Icelandic_Hekla_volcano_shows_signs_of_activity",
+        2
+      ],
+      "prompt_tokens": 168,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.2620878780589384,
+        -0.36568424436781144,
+        -1.1699664115905761,
+        -0.9088778495788574
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Spanish_football:_Sevilla_signs_Aleix_Vidal_from_FC_Barcelona",
+        2
+      ],
+      "prompt_tokens": 73,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -0.3764077126979828,
+        -2.122685194015503,
+        -6.00374698638916,
+        -2.135530948638916
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Goats/Introduction",
+        1
+      ],
+      "prompt_tokens": 168,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.62994441986084,
+        -2.577847407414363,
+        -1.3151206103238193,
+        -1.6458142598470051
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Tornado_safety",
+        1
+      ],
+      "prompt_tokens": 141,
+      "gold": 3,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.0646871618322424,
+        -1.719543695449829,
+        -0.46257811579211006,
+        -2.115838623046875
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Mallorca",
+        1
+      ],
+      "prompt_tokens": 125,
+      "gold": 2,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -3.676276206970215,
+        -0.8002277374267578,
+        -2.526811218261719,
+        -2.4450290203094482
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Barcelona",
+        2
+      ],
+      "prompt_tokens": 185,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -0.4114262792799208,
+        -0.5214754210578071,
+        -0.13936975002288818,
+        -0.5639838112725152
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:How_Things_Work/Light_Bulb",
+        2
+      ],
+      "prompt_tokens": 160,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -3.0722293853759766,
+        -2.15728026169997,
+        -2.1446669896443686,
+        -3.4521687825520835
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Mysticism/What_is_mysticism%3F",
+        1
+      ],
+      "prompt_tokens": 184,
+      "gold": 3,
+      "prediction": 3,
+      "correct": true,
+      "scores": [
+        -1.5602427891322546,
+        -1.861473880597015,
+        -1.6279502658669007,
+        -1.1318466703770524
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Women%E2%80%99s_boxing_to_be_included_in_the_2012_Olympics_for_the_first_time",
+        2
+      ],
+      "prompt_tokens": 118,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.7058771848678589,
+        -1.0025588764863855,
+        -0.4457535743713379,
+        -1.1216849050214213
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Charlotte_with_children",
+        2
+      ],
+      "prompt_tokens": 184,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.4970765364797491,
+        -2.308605988820394,
+        -1.223855972290039,
+        -1.7056722005208333
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Leak_suggests_John_Kerry_will_recognise_Israel_as_Jewish_state",
+        2
+      ],
+      "prompt_tokens": 157,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -1.5912150821170292,
+        -1.1764841079711914,
+        -1.7525533040364583,
+        -1.2276458740234375
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Solar_System/Moon",
+        1
+      ],
+      "prompt_tokens": 125,
+      "gold": 2,
+      "prediction": 2,
+      "correct": true,
+      "scores": [
+        -1.7285794709858142,
+        -1.7130664478648792,
+        -1.2772052938287908,
+        -1.497936583401864
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:South_America/Venezuela",
+        2
+      ],
+      "prompt_tokens": 143,
+      "gold": 0,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -2.272790273030599,
+        -2.9039485931396483,
+        -1.9458872477213542,
+        -0.8248109817504883
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/The_Cold_War/Hungarian_Revolution",
+        1
+      ],
+      "prompt_tokens": 158,
+      "gold": 2,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.2901710669199626,
+        -1.3303941379893909,
+        -1.1793360216864224,
+        -0.8199452536446707
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/California_bans_sale_of_violent_video_games_to_minors",
+        1
+      ],
+      "prompt_tokens": 149,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.7206491592827193,
+        -1.4611668442234849,
+        -0.7252356545966968,
+        -1.5589344501495361
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Hollywood_sign_modified_to_read_%27Hollyweed%27",
+        1
+      ],
+      "prompt_tokens": 143,
+      "gold": 0,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -1.1231621878487723,
+        -1.9860636393229167,
+        -0.9838778177897135,
+        -2.436223136054145
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Nadal_beats_Raonic_to_reach_Australian_Open_semis",
+        2
+      ],
+      "prompt_tokens": 166,
+      "gold": 1,
+      "prediction": 1,
+      "correct": true,
+      "scores": [
+        -2.046522694249307,
+        -1.0863028717041017,
+        -2.8457729115205654,
+        -2.0502015749613443
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Wikijunior:Languages/Estonian",
+        1
+      ],
+      "prompt_tokens": 141,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.312499000912621,
+        -1.520062764485677,
+        -1.6116498311360676,
+        -1.592275165376209
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Peak_Oil:_High_Tide_for_an_Oil_Addicted_World/Personal_Action",
+        1
+      ],
+      "prompt_tokens": 107,
+      "gold": 0,
+      "prediction": 3,
+      "correct": false,
+      "scores": [
+        -1.6720762888590495,
+        -1.3470835131268168,
+        -1.5210225423177084,
+        -0.9829046461317275
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Murals_and_graffiti",
+        2
+      ],
+      "prompt_tokens": 185,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -0.8405417442321778,
+        -2.634958028793335,
+        -1.4470955984933036,
+        -1.9547406364889706
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/New_Australian_Prime_Minister_signs_Kyoto",
+        2
+      ],
+      "prompt_tokens": 142,
+      "gold": 1,
+      "prediction": 2,
+      "correct": false,
+      "scores": [
+        -2.6940202713012695,
+        -1.6371002197265625,
+        -0.5576122999191284,
+        -0.9163655175103081
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/New_South_Wales_government_starts_trial_of_hunting_in_national_parks",
+        2
+      ],
+      "prompt_tokens": 168,
+      "gold": 0,
+      "prediction": 1,
+      "correct": false,
+      "scores": [
+        -1.4310012817382813,
+        -1.3322821480887277,
+        -1.692692184448242,
+        -1.8800366719563801
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikibooks.org/wiki/Fundamentals_of_Transportation/Introduction",
+        2
+      ],
+      "prompt_tokens": 132,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.0950626682590794,
+        -1.4638560799991382,
+        -1.4739437103271484,
+        -1.221498966217041
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/California_lawmaker_denies_affairs_after_sexual_discussion_becomes_public",
+        2
+      ],
+      "prompt_tokens": 115,
+      "gold": 1,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -0.6727669926012977,
+        -1.5995280321906595,
+        -1.1351219940185546,
+        -1.6849326200263446
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikivoyage.org/wiki/Water_safety",
+        2
+      ],
+      "prompt_tokens": 184,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -1.3723710893510699,
+        -1.910910197666713,
+        -3.177859442574637,
+        -2.5385159083775113
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Hong_Kong_tourists_held_hostage_in_the_Philippines,_nine_killed",
+        2
+      ],
+      "prompt_tokens": 182,
+      "gold": 0,
+      "prediction": 0,
+      "correct": true,
+      "scores": [
+        -1.4009228812323675,
+        -1.723035216331482,
+        -1.7812122931847205,
+        -2.703545570373535
+      ]
+    },
+    {
+      "weights": "419f3ad443df455110a8e0bbfbd080c040fb5ee5321f85d0e8a0f89def2f620f",
+      "lang": "tr",
+      "key": [
+        "https://en.wikinews.org/wiki/Former_U.S._National_Security_Advisor_Zbigniew_Brzezinski_dies_aged_89",
+        1
+      ],
+      "prompt_tokens": 206,
+      "gold": 2,
+      "prediction": 0,
+      "correct": false,
+      "scores": [
+        -1.073002815246582,
+        -1.2861227308000838,
+        -2.156118392944336,
+        -2.8104455130440846
+      ]
+    }
+  ]
+}

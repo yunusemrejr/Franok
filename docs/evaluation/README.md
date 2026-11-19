@@ -14,3 +14,5 @@ The comparison is [SmolLM2-360M-Instruct](https://huggingface.co/HuggingFaceTB/S
 Across 192 validation positions, the four-bit WASM output tracked the unquantized reference closely. Per-slice results and top-token agreement are in wasm-parity.json. On the development laptop, one 20-token Electron reply decoded at 154.7 tokens per second after prefill. This observation excludes startup, transfer and prompt processing. The session test reopens a saved conversation after restarting Electron. A separate test retrieves and attaches a turn from a 1,000-turn history.
 
 Reproduce scores with `python -m tools.probe` and `python -m tools.reading`. Evaluation against the independent baseline requires transformers 4.57.6. Run `python -m tests.check_release && node tests/check_release.mjs` for full-size Q4 parity.
+
+Later reports: [Franok 0.4 results](v4/final.md) and [Franok 0.5 results](v5/final.md).
